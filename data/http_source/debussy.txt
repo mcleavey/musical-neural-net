@@ -1,0 +1,1961 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 20, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 19, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Préludes, Book 1, L.117
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Danseuses de delphes
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/71Cm3MogT4EKEwwostgeYDzYk6ytC3o-RFXEYQ-7UdrVRdXLqT5Ep-CSa0Knkq7CJmtmSupKe9MDDdjfwBcU7cOfaUd6CRPxh4YqtQYth2DXuZxhB14TEOr-hZx-89uRhU1C1kqxFfbDCCHTJCrYDQ/qYrB_hxjib74hdXXUNYDXA/pr_lude1.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Voiles
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XXymyBQX3oKb7qldnfMvqUkwGR4AyvLO5cR2WY7DDHa8RjXM-Pk8GGuDCMCYBE58vweZXYOYjJsOJqcS9wTSLzqUVMyE54EagNEO45DWjLF-Oz056aPehXFOqSncDzqQTnvykUJFWK06xMtfWdCHOQ/SUwOLJcDyzrS_mgS-_OT9g/pr_lude.mid" onclick="return setToDownloaded('dlBtn_1_1_1_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Le vent dans la plaine
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jlzECeKu1nN1oQcYtui_qm9GLeTPmZYTL9oCxw9ZzRx4Fo84sIOcwoPtBCR3SvnHTdrT4efEBt4GMXewmrF7Dlxbsyatc01O7V8Mx9xF-LLX1muczsNBO2ZFQ0pljOxXR9H1BZEz44jAQyPt2QtpwQ/oiCUMmNBu64D1gAEgIu0DA/pr_lud.mid" onclick="return setToDownloaded('dlBtn_1_1_1_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Les sons et les parfums tournent dans l'air du soir
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nKgFHLObmayloCtp5wMlmYwqVH-Bm_M171T-Sc9maTbHY-txS9mf5nM4lBAVoF5gBHi0-RgVyaUdu6SMhNlQMiea67sN1JSL_DA-YQXyu6DyocCBdtzCOJLj0qwg4CYeFScVV13CT1OVFS0W9HAKYA/wmX7UCB2ydX5yACHw0UhLA/pr_lud-1.mid" onclick="return setToDownloaded('dlBtn_1_1_1_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Les collines d'Anacapri
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/D9jfJ1nzByYF08K0OIgAVL9FaTWWKsXzJbVNOlyalc72XNn-kwfl1KCyqcqybG7kPjmdaayQSmvZf9r3jV9e1qzBRPFcCDtppRRXEhvP9CGPYSBONOYKJQV4YBEOaesMa_z7G8fw7flQxTkXUST4kw/YH_ltthnDYrSw8vx79XTAA/pr_lud-2.mid" onclick="return setToDownloaded('dlBtn_1_1_1_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Des pas sur la neige
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rxSBBT8x1CCp0kTEZHlKcv_FasXvwJ9-MNzxoax5Lr29R2owHGUJXkvmKOV-cLIG3tdw_eND56eJR83spq-nhrYEBOjH9HUJNf-6UrrTACCwv_fvnAsOCGk9btj2ZkWfMv6i7mUhcBnjdxllRy_haQ/YlGXzSp7p4t0iyJfBPH3Iw/pr_lud-3.mid" onclick="return setToDownloaded('dlBtn_1_1_1_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Ce qu'à vu le vent d'ouest
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dkaE9L_dZxcXtoOERGVcR_zMRMvYTG_FUy9iHSfF5GfpXHktIUobqtqoYGu4FqTQ8xALBepep8KbrAolYub8VFisVv19oy_twqw7146pyvQkWpUgeJI1Kdxy8k5lS484jL-1AdoXc8FcowdwdNWYqw/uzsp53_xRy3KrSuEcbyA6A/pr_lud-4.mid" onclick="return setToDownloaded('dlBtn_1_1_1_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.La fille aux cheveux de lin
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qV_XKTHU1eLuC9CM5GdJkmIB586vNd7d-p2B4_1w12HlylSo6iB-mWdKUhMU3q4usn826UFbJD-iqbnrIXNqRAf6hNOwnf0ujQQdO8gjiPxrOVb1MBoPFos0lQDmZKNy1z99PrwjoclboYcWtkhEzw/Q_Evu1VxC-a4GAse3ZR-tw/pr_lud-5.mid" onclick="return setToDownloaded('dlBtn_1_1_1_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.La sérénade interrompue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lVATTBzgZvbNKPVwxDl_8gdfgMejQ0E9EfcgpAKZagt4CuMvKrhgWbSqB5C47keyAeb_r1qaq5La6C1x9GZqa8c-ELlO21AlRxv8K9K-89ZD1Cr6xZK2cadUXrSXG-vLGq0jN5c00Zra6K9WK1vfWQ/Z5GTLME503M61PoVW1H4FQ/pr_lud-6.mid" onclick="return setToDownloaded('dlBtn_1_1_1_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.La cathédrale engloutie
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OkQK_NdpPiGZzXbdqEAAPEzcbvpHNqThHr0kKXu-EA9nJmHN2ikvpKLzS4Z1sqxGh6DUNdS7h-VuGPj7IkzM91mpZ-CfWl0Gw6TfaarGOPIsskmuON6x8olWX4Mq5MZNwsaYEaAeKINCvcm5e7sqNg/69TArSai_EMfeOeaMuD_Mw/pr_lud-7.mid" onclick="return setToDownloaded('dlBtn_1_1_1_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.La danse de Puck
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_11" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/iT9rWunfxwJ6cuNzL9odFxbPQby4HJPiP61B9cyPbZpOHEqVu4XWkG7TuKyfj9bax4_yywFF6_KE505j7GszexLpRJGufHXVQ95kNrylb4gCOX4DQ3CBvZywB2ncVChPJgBDC_fY5LSgdGbv5Bmchg/IawpEMJGNpVwWQgbSHUgxA/pr_lud-8.mid" onclick="return setToDownloaded('dlBtn_1_1_1_11');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.Minstrels
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_12" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BpKrP8OoABaVFEok4dRFafq3vCHKdjKqDwSgBzp0PHWpdBIHcA952wQRJu1gbNORj6PMa4jpi0QGObAeLicORfTk_eW_HA20afUVy_O8RuEwBZdcQcCIeU9kAbKwudWQvfpQrwYKzJv-xt4Sdr51Vw/YXHEj0UhW2FSmKkq4rzK8g/pr_lud-9.mid" onclick="return setToDownloaded('dlBtn_1_1_1_12');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Préludes, Book 2, L.123
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Brouillards
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/hThCXVGScyawMA_qS7F_b9jM8auMhrpClm0_9WrH-M4t2qU4ia4aeevNr6EZ2f8izN-znqcOqW4x1jaBclOjyob1T9LRBlMAj0L6ryx8BVlUja3wWqkt49eJqdwRNA0NmqkqQsyu4kaZl2rJiXh4Fg/gC-ZMy0dLEr2NswyPNMclQ/debpre13.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Feuilles mortes
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2Gr8LvKnYWG0Loq7vh_qZXSe5BKamFJc3aAonAwoHcbdOka0NqAFMSUTxmdIr-GMX2rYKVV6Ox3WbkGQuyZBFKQEvDC36y9kIqoPwtd-WQOmVOfc7mc5oKkDNY9J1fIzpkpYxfsXXSUajE_cWHC21w/pIb035pkNBAiRZ-wghJJ9g/debpre14.mid" onclick="return setToDownloaded('dlBtn_1_1_2_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.La puerta del vino
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wu7izw2VVH_QHiUHiojvQmsZ6255TT10ICctqMfRNVngl3OZvwMUlOwUPKta_ZWPm_vgma3-BsIVjAcqhE_dUulvog-N3aFmZ1CFLzKLTViWHsTgukJW-0u6SuF68FjYnyFacAp9mjmaD5-M70acpQ/aLaKMji-P2HlYbcQtZn-Gg/debpre15.mid" onclick="return setToDownloaded('dlBtn_1_1_2_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Les fées sont d'exquises danseuses
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ah17qLEAMFs8sjQHZChhe2Dz8vWP6fDAh2XZ-cqQOnKhkCcNC2RxE7zpQ3Mv5MwetUF9pGPYiwhi4LgJ0ZCB7MnhuK5tXZwREhqhMxB6ox8rHku-M-1CXbJxo0bG7_VP_ikLw_-f5VYUdeEM0xmTOQ/pWsMU97MrKn5vm_D-0COSg/debpre16.mid" onclick="return setToDownloaded('dlBtn_1_1_2_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Bruyères
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BKhVCRyZMs6Z5BBEf2Vg_OlsaHgGG3sjqDIq0JPvRdEMrEKv_l-Pj7v6cHmLohqV4EoFQ8611--kIiqpWcvNpevw0-LGX1ugN5h1WR_KdaGkM9Eu65ndi-abH3JnvgXmHL0k3SE5ZvXs1gzBnB0sBQ/rRkM6SFsZz1OgOayqXa8kQ/debpre17.mid" onclick="return setToDownloaded('dlBtn_1_1_2_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.General Lavine
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/J5DYOrj7wVs9OsRHPLsRm7LaoKO0RSYAx-YNJ1QOOiAdEA6DHvLqUWxaL9wMVOno8LLfCnvraHPbpcciGYG_XIzJCFHbqEI8Q8Amkg4bu5x44rhCl08SSpyfz58JOLNitXJwW5ic2cjay0f18_I-zA/0I21jNq27umeFPwBhbUEqw/debpre18.mid" onclick="return setToDownloaded('dlBtn_1_1_2_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.La terrasse des audiences du clair de lune
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dE1wUiUWmkLAcEKX_qWGP-znxqvDdSGravpMdE9z1ZB4sav7v27qAxvYyb0Sl75Q2RdpQFJ43rjNGaZwkKeg0BIlUiettY5LQDD8ypfnEBL4giJPOhIK_o3H6Jluv9MNcxcfYJiIH_D6U53PNY3ekA/hOoing5eo7jL7Z5LoSCY-Q/debpre19.mid" onclick="return setToDownloaded('dlBtn_1_1_2_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Ondine
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lEDmsrYXdmxFTfuv8lWxhTexEzsc32Tob66ehHeo4-5DaJqyCNZyECEYC6D1JeCDeW8GabqRo55i_qgjLjp1tIZ8Skoz8vxkFCOcNRVL90p1xisyJ7iIYNX6DiR9m66-XItbB-Ap0gHpaPY1htIHyA/tRqrJol5vjDJ5xVUM-OVVQ/debpre20.mid" onclick="return setToDownloaded('dlBtn_1_1_2_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.Hommage à S. Pickwick
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9qjHK4ITL9NWIClNfAFbAXJKKf60X2a8XyMKZ1Jqfp9zOk6uAvFn59Xpv6OjJxrAUIazyXNGqujhsTKK4AFTBn3qKwDTuGpofF5r-OlxMH5Mn_-RFdUvyj9YLyQh6fDq3G-TP7foJQP7_Rt4a4FDwQ/zFn25fB3Icjfuq9TL2EoRQ/debpre21.mid" onclick="return setToDownloaded('dlBtn_1_1_2_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Canope
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XnRClcywlxFuy_DNNfux_8sk2giHRsSUGellXwbaKHbbjtPwZ5Qv2gDnG0HKbXsKDuddqNBlwD7iQTaO2i1fRG2pZMuaqS6kTFKLoEyfXBVAd4PrzLzuVYVrXyife7Fe_uNwIITy3CrTNhy7LnJLrg/yADNSlWEMEHi0J0qnOltbg/debpre22.mid" onclick="return setToDownloaded('dlBtn_1_1_2_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.Les tierces alternées
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_11" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WeVVpmNNJVt_X8Enzwh6E7AQsLyg3wRI5_xNF4mcbgAD9_W_qLVOKwhIrUVFuVXh6kmTYlQgNgIWeajnVbGl8HOjMOf5ztKYSZeQOdHbgMcIznDBoz6vjiCO5LxB_H57iNTFjL8ilk5-5LigPKqRvA/-peITQ3RL6NBsBokyOWeSQ/debpre23.mid" onclick="return setToDownloaded('dlBtn_1_1_2_11');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.Feux d'artifice
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_12" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dng_FttFuVud6iEqFCb0k8zuaUADSjdeYad2nEaceqMWc8fh0Zfb84CnaYFth9k4v5-35y6hxjHlzhjGgjC7a5UmsNh7pa4r6FSYHSMw6f3qqVwjeFhURyyjrc05MWd5x4eWQ28mD20N2Y4cY5iZFQ/xPao3aTgFDPsraDdEVaH6g/debpre24.mid" onclick="return setToDownloaded('dlBtn_1_1_2_12');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: L'isle joyeuse, L.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        L'isle joyeuse, L.106
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        46 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/u5aiw5yn7AqDPIWEnUK_4hLQ7ok0xXqO9I-GdwkCJi-68K0wSmv05korFmuGbGlooBK6Gr_tibp_ENMccELEwu5WnvSvagX-1Y6tBaLl2ju00a3FDdp8I3C1yrEq11-AiVKVevW2A033rCdA6pRhow/Gg3s01J7r7_r19XEi8oFvw/lisle_j.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Rêverie, L.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Rêverie, L.68
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8E8Nna-GZeUNBSRb3ZfGO1LlM8ZMRUFYJ0mdXHvbv3K26rYY_iCRfsSrMX_iOcv9LF_F2joMr4fxmTmb_zTuyt-VhO4kXi3FMYbXezjctbKsjG9Gc_MQtkbN22W0GcaP9UotUKBS-U3GuBBJrqnT4g/RbYgflUIHO1l0SjJdeJxTw/deb_rev.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: 6 Épigraphes antiques, L.131
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Pour invoquer Pan, dieu du vent d'été
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/q0d9MhyWJQR0lSPhvGaYxkX2gHJ64Vv0Qn1L1M_-u8lHPoRPjGE41UMPDm4SfwO5VCifkFOohR2CSlbNEWt-7d71-O3SBhxBeR8yHJZbTRoYv7HLx2UCso0qdlgNJIV9s6m07Og05E3NAUVeY6HANg/TO7m_I5V57nJBNEFHJSNng/wdcdepa1.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Pour un tombeau sans nom
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Bte6IRjD_HNBGnZ_nPe08H7nGsCgxbvr5X28RlCSSE1F98RlddGHefiCoov-UDf1cQ0PzXj9tyPSAYpKfWem7MLuPpffnxPCvXSmNQmwKn3_QyMZtrWzwIoA28WTGZenzgmNyc6ODG7Z5sPu6JZ3ig/vW2IG5W3dLDzZkKqQyDtvQ/wdcdepa2.mid" onclick="return setToDownloaded('dlBtn_1_1_5_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Pour que la nuit soit propice
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Gu8n8_xLZXRYWwIswoP716xx_nTWRuwJ6HI-45AZ_frUmrL-RVs4ISlXvmVVb9fIQjcBtYdFeSzqW0Hb1e0sRXgYJ7i_YB-G6qbU7p_uGFcQ33cOo3vneoDTSM21zhk_hBG9GiU14O1j78EfGo9KSQ/BIPeQ6lpREqrj-B2jMHluQ/wdcdepa3.mid" onclick="return setToDownloaded('dlBtn_1_1_5_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Pour la danseuse aux crotales
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Mv31446XPZHq3zHle3jbrkyE2OkhAJSyt1Emf6gdQ5MON4mWKhH4FFbkcpnFdPREqOR_Rqt0-H5BXeDUKF8tqDdhYmPrm9k6XqD0dfjXnf3UwGCVruU_dwy_z8nfjDugNUCj_FkAynPvfZJegXdnsQ/7b29DQ0ex_Zo0tW0M93m1A/wdcdepa4.mid" onclick="return setToDownloaded('dlBtn_1_1_5_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Pour l'égyptienne
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/x8AoSxaZZfYW-z4RWT2wbyzA3WmooXiw-iy_uxf7vkrlcZC_dVoppNu5jmjerZfA87VNvnctuq93Rf2ajxRUkYPmSSsV1NfAYUmDo7E4MuIxN_Cmh2ogWB-dQYXs0YXulb7GDmzT-hgvbQ4Rs2y79g/8RXTjd4KF91HjbjG5Q23eg/wdcdepa5.mid" onclick="return setToDownloaded('dlBtn_1_1_5_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Pour remercier la pluie au matin
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GjgNF7dKHIAyOVOhMNPFXtplvtoadAVmIiG3sUGyiYmRP65UtC3lQe8L6JmMHO3eaxpLUxOxQQvrXSqpzynZQWaUi9BdKXw-mmBARLOEOAiKRhAUmq8T8O8Zv1xqWPsWQZ4QoSHArBi65yW4w4Ao4w/7MDThqLCjtWbb7LYAOoxng/wdcdepa6.mid" onclick="return setToDownloaded('dlBtn_1_1_5_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: 2 Arabesques, L.66
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in E: Andantino con moto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/77AInaYG_qJLrIe6XYdnzAnZ_qiHxHyHPNdlxUe-PYHJ2GyI4BulK6zP9uvlVnsEzUCsETnLtqur3JpyGGdccNrL1CB0_88tGlO9VYxS0uZcfwU2q43nUistaHeL3MTEogquRhnQcPZP0XudpKlsgQ/Mt-iQf6KcSRq0yPRWTmAlQ/debara01.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in G: Allegretto scherzando
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/NfKtOywWOUq7_pIR8POJEOkv3d3e4qPyVjsqT_Yep-5N5hyfrSPMdvS-q9DY6PBJ5vSDgiH595_odUuGX6ILKkjT8Ula8WeRC7-isd-IazAlUGtVnkwVQiESDiYLeUsZhtHZxxBAtl7j4tktH599Sw/LkhBAyXJgLc3THtMUeYt6A/debara02.mid" onclick="return setToDownloaded('dlBtn_1_1_6_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Valse romantique, L.71
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse romantique, L.71
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZaTNRfl4edSyJXHK-yD8bQ61RIFeXUdhZM6NSCOX8lJvkEDbJQ23hJEergN3jsWByGLVHg1F_X92Y-VtoFzhUsHUDPVgY1s6pWbowQkVYloHPp_rQkKYCgctuLzPsV-w30QeI-a6sb6iys5cDTcldA/5jDt1KjQJCLy5ZtQLpZ2jA/debvalse.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Études, L.136
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Pour les cinq doigts, d'apres Monsieur Czerny
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pv7VSewtG_Vp6pgFbjKWJCg_jY8Mbrn0fAt2ytu09440M7vfV71xv5MsqYWQqXiUVHbfwft4u7_AyItBe7g2u44RCyHR59_s5kHL8zvlUyCY75naObLbD0qHfXlGEWqWubeNPTWxRwxWxsNDyKNLKA/572xLe2QizREDvY3ciGCWQ/dgcdet01.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Pour les tierces
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/huE5QiJeBfu0I2JoTHWguBzG8NJWfqlcoGniQ6UsuyT33x0Dc8Ec0NHO7a8LImGfhu2lmPNW0R55G8pWcWLEVw15bEk2LY5714KpacDapvD5xOO-dksFxy0d79iOP1wSV9V_PgmdDz6TuLj1WTIv7A/VeKSGVsygSdfbp7RO0VKpQ/dgcdet02.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Pour les quartes
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/f_yqIWUgYLQ6l2OdverPF4_clE56pE5DoJ9IYRK8JLa0azrlVjVAei_lYnk0QvgNQwQWsgJMJbRtFan-AxS86ZwI0Zel7HktB3rv6Qo7CaW22y7C_DqbIIJzt-Yp4_tzZBcywx_iRAcMQ0Cw_6hXQw/oa9bt3-lGxkt33pn1lshNQ/dgcdet03.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Pour les sixtes
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/C1pLNBEJzVBMzYHvdnPrnb_VoS21VgH4Mh6xrYtaf6SZUoMO92rFMFvwFTE8YUPCRpDaqoiqg7WbNwLTR_zSBRqFdTP5OguJ5nJ3f_cNIH67PEY2oO5OdVFM_-z5oihQeSSvWP1W58MBjSt5cEiXGw/simFISqDXZTQ6eoF0ycTmQ/dgcdet04.mid" onclick="return setToDownloaded('dlBtn_1_1_8_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Pour les octaves
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GyiLcZF8BoZfqAQrHj28W3zh3NpxcMtCf41sosqfu3jpRdtntOIJ7CggZrSE-sK8vwsjz5P1-an-jauwp5Dhm3AC63AVFanZMSMWHvHV7GQMZAuIy-fd1inDt5-qT1gKpaBFP-Ux1DSf6swgvf2lcA/nCl3Ezitm7jDYhxoVwE3fA/dgcdet05.mid" onclick="return setToDownloaded('dlBtn_1_1_8_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Pour les huit doigts
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nwLy48ZS_4WkyR54p-YgqTj-N41UCvzDYyNG8sAeMa6t7mZru-Zy2GZwk0Ff32ZlVK4sMWRHEfiqjxsB2dB2mZRdlOzeSGAgY5WVXaEh_FFbALdOqwLOjeqITANVqzhRxXKKzY8zyXi3iWorNZ5pkw/E80GSiUossKFdFveVyewvA/dgcdet06.mid" onclick="return setToDownloaded('dlBtn_1_1_8_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Pour les degrés chromatiques
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/857eUouuWOl9Iol937Gxw57MsoAzpjH9263_bq7w9--xvWKv1EDG1vkwWPMyJYG-2dj6lqCTWQ0BumT8GE0iSFcdlMQr1QZK15fJUB-Y9sLaY8AnkuFdltAlKM-ZVGfSO7T_lXS-13F5SI66qrW2bg/FkMOuoRTqa-2lt0TN6chYw/dgcdet07.mid" onclick="return setToDownloaded('dlBtn_1_1_8_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Pour les agréments
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EPuJgb5QDdRJFv7EL1DJRwAlXPHAdKUejyklNarlDNoALdIyF2JF1NJPQlEUx-45RH7BxcYiLJg9gNyFIaA1uG8QAh5otrA55vFrmedmr45xotDQK8ZM-WQpXqTVZf3jLLVc64rprBjyA2wNS7vTcQ/lNU727tY_OBBPoexrLMyWg/dgcdet08.mid" onclick="return setToDownloaded('dlBtn_1_1_8_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.Pour les notes répétées
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_6Q2-P3eaVb0j946AM2sDgkS4He0EDswz4s1vI9rTgl2i6ofYvL8Ie3M4yLnEwH00F1cMQgxFQsKC0wVGIM-MzzM2cKGgF0n2RInIaz2ipXO8UwDorXwsvSF_m6zS6Onu_8ZRnbMnSh4MQ213G1J1Q/GTwTanI5rO6gvqgigltn0g/dgcdet09.mid" onclick="return setToDownloaded('dlBtn_1_1_8_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Pour les sonorités opposées
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0jfVRRkVIW8Qj3JzqsvD_gngzT8Gr9hj1FuUf0cgeFRg4swWXD81zIDVYRChtu_zg8_L8IutkF5qemkQ3cgxhq1ni4pP3TS7oZ4Z7bsUlg1PYNcny3L2i3IHUsrbhF0ttUP6bWPJhCkcXiXbQ_dreA/sVfLAJYD34LJhqZuYG829w/dgcdet10.mid" onclick="return setToDownloaded('dlBtn_1_1_8_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.Pour les arpéges composés
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_11" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bqtYzB9chsMnfYuIfwUB87dNOh9P_CTi-0Dmy151VCeBmkWkZoHqBxQ880ajOO-qsXvzJtpGS5t_ztVsXFyDhnzkhLyE-QPS9LEB9u_xnmF_oe_xAqsGkqjsXbcmcvmNSOiAK1PHKqWuZ1DrbqKvnw/_jyYP1_kihFSCfidvS0oJw/dgcdet11.mid" onclick="return setToDownloaded('dlBtn_1_1_8_11');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.Pour les accords
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_12" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Ap6GL6UMJbqdBI01PZjV-kF7MzaI-3HaYhu7eGAk8LD4ZFuAF3oeLqevL2Yg_CyHQewSPGKfiuWhQNwCDJNTthA_HAg67-sED8Nwg0yPjdawTUHEMIqAi5-_zrp2W5l7AxpVTzUZHtMOGjr2baKdpQ/2xHDnXnK480jcG1lrSLcZw/dgcdet12.mid" onclick="return setToDownloaded('dlBtn_1_1_8_12');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Suite Bergamasque, L.75 (includes 'Clair de lune')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prélude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IkbjVcKAtKwd5cwcozE40szXCNjCrKW2QqtpaZWLLZ0bZcLu85FnIDI3p278PZ_wZojqzguu9ks5w_W2yhHyygSJlvQi6AU-v4Pxk5Gg3FH3a5IOhmZPfc0xmXQ9wLqsn9_iPGnrvMpcPsPuAVlESA/cnh-YGF5Czy9RvsErLfkjA/debberg1.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Menuet
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/h22o_zdiet5Ok8oGfBGJPM1h_L93djB78-l24jvHiieCsn-RSRe-WDh2NuTsjCGEG20B3ebqtyDgcONKZk9nmZv6EV1rZOxBXvJjCJniQnrTLATxWOvOvMVYYVNERkbz0FHS4sEZ4CgsRSQDvf4aEg/a6CTcfKL-nX55cPQy0h3IA/debberg2.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Clair de lune
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LMnvenoaDtfMZKICE1vFO_aP3QAKePxWWM4db7O1yD4ktYCbR-ALOFpqM75B-4pKidrjLDG9tIzgXSWm2q42ulDWsJqGokHC17V9DpsW0a_HMXpvZ2hYpkV-XzprtnkOfze05smkRDgTneRfqrklNQ/N3dn9FqCimtbHuVOsltUTg/debberg3.mid" onclick="return setToDownloaded('dlBtn_1_1_9_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Passepied
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GELnFdZVBVa86N3EgnnbS20h8NxuDyfqz1jwZnDMQLvgzcGa08DSMonJAPj62WTJfOqlJqguyeRNFWWKw0sv_Nb6-kv0yU3yGPAiMuRD9CvJvwj53d_sHxLD6L_n47LPrg8txKPh_m7H3nMkbvH0QQ/sZZJDWroC2TVahfMKCcQig/debberg4.mid" onclick="return setToDownloaded('dlBtn_1_1_9_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Children's Corner, L.113
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Doctor Gradus ad Parnassum
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/obdGM3OdDV_V_zxt8KgvPCX-HolwVEp0a4R3Qgqvq3-BF088qdPKHyU7k1lskVVo474xLf1GAvvVE9EA0xeJPbsnbtHnNdV0BKXvCyvA4dNCUH15kuv2LiiOcDAuC7Q-k0sd48qWyEOncpUK0doErw/Q9WShGv7xkIoEtSVongmCA/debchi01.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Jimbo's Lullaby ('Berceuse des elephants')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fkcooSXQMc_zBQrKA0v4NvTcPtB1o2PcKbmCYV1qmVt78Po8K8YXpk_HqVqaZfxS5_6QQu4IA0-U_yLSmMa2r4FJTNJ5sFFr4TMS3FYWAWnXZBrcdmsUzGVQikkTe5liU6c0OofKEXaSxvzSAYJNhA/V7Ow1-rg7MRprl2yQEZ3ng/debchi02.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Serenade for the Doll
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_mEPJ0qY2VgODSeP2DeY14-Fb7U2wfZjgJkPYhGY1EQJhva_5P5uSYwSNfLTktw6c7iyPIP3zhljob5Ecexjnh-WBzIlGAz6gLmUBYx_JYgJltk1QCVTOJcyMk_vh0KlpCzUTa-PB7SKjwSoy2KX6w/aGFRqy5hF6SfY30B0p0msA/debchi03.mid" onclick="return setToDownloaded('dlBtn_1_1_10_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.The Snow is Dancing
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mLFGsFDJ4CpcDatIHI022RYsvBJag6s86323pTvNd37mpXBE6rOtwEfM-_zmdwLOMngoyuF9apj_wu8UNajguti92muI7zCDWYcAqo09vDUeVTcbWabtIq_ogyqlavGFstiGxMelNkmngWG1eSNXXg/s8k6FeDo2akSPNQoGEzmXQ/debchi04.mid" onclick="return setToDownloaded('dlBtn_1_1_10_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.The Little Shepherd
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-mxipCqoC5YbB-nl1-fnKwxP5o4Sh-EWE0NDRo-p49IxGLNkYFzSqByCddNrhbf7_oU8ZkF0sm0H71N4mj-jVMVNaAgvSkVIZRqr2puF2vXQ8_cPr2ou8sR4GBEqYwI_8S9x2MVveLMTO1jBG_s4Fw/aHBS1gDdyWg6th89KV24uw/debchi05.mid" onclick="return setToDownloaded('dlBtn_1_1_10_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Golliwog's Cakewalk
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pPKl715Iqmlk3qVmTcrcz6TTLTCSRek640U7zRlM_RS7u-d-NxEDGAx3rGYteloJ062F3xreIKvYhF7NJwKOz5hYzMzeYJ139AHtK3S3ZBpfn5QUELF73I4FgvWzVbi8_hWEQHYLLdMP80OcZPSV2A/Jw1IlWlO70MvVaYOiM1DJg/debchi06.mid" onclick="return setToDownloaded('dlBtn_1_1_10_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Mazurka, L.67
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mazurka, L.67
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5HyAu1o3-_gya8955pyCl960ppzH0ROYCWOigpTNmPU8gTQezvJ8FYF-5X-Y42tfyDkHOjY7mGDwGOrevc9a7QExiUWDxxhdadTJsYNpnXINpEJlhrtzQ38wfJNp8BUKSmZEspa2SS0cZAXZTO-I8A/ExdT2v35kK1eGbKCMp00GA/debmazka.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Images, Book 2, L.111
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Cloches à travers les feuilles
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9HsP8M7aM8k5DoBFnqT52Xb_ek2JsZyqg6LbP9VREuCaHzanE8Xyg3BFDoeOGTLxXY_EGRyzq3lXoYIDiwdJTMNlhOx07UdfOU2mvXZMZXPLYcniFLowOa9PeJ9Yma8lkoqmlk1wOnfcwhLKT78SzQ/CM4RoSyl8GGQGkUTBkbJLg/dgcdimg4.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Et la lune descend sur le temple qui fût
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VTTOOURMCbwMmKMiWqsjzoq7GTqbfuWjPSTWesokCFFW7SYqV2_-usETOGwvS4jNMmAoxLgOr0MfYSS-Q6I0E_-v_UyBu-_qnn2Du8u6xRHFNrIHIQOl1-PEtoKInfpF-ywKsWcQCNZJUbEHtWtLgA/XIwsIYygDyBrGGiz-klwsw/dgcdimg5.mid" onclick="return setToDownloaded('dlBtn_1_1_12_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Poissons d'or
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/s4SFwOu7q4Ye09qg7DqXjQYmZBf5gzxrW92d2FfVjKrdMalRj85Cn3zxFZssMF5MOWhCWDWKIzf-nys20I6v1hxk8VDAG_Z25ZLV9v_YK2QryubkTDTPjF6ASHk5lUwTHhZAzcAjP_N6YwEXO6Q-AQ/DCoabd-YwGCQ14R1BGR7rA/dgcdimg6.mid" onclick="return setToDownloaded('dlBtn_1_1_12_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Elégie, L.138
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Elégie, L.138
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/I9OCf3S8UyipH8ct5-AT8ABOMIeYAaeptcmWmsU9MGv9Z8BCOFvnoYWxTJcML82RIenrnCqNNMcWC4r7l6JK_BJzrz16KQneWfPVjjhO914qYQnXC8unwEH1bXu_4B024SSlIt2NIFTA0Q1hP2N3fA/M41Ub_M0m_fx74qc4lHDvw/tmdbelgy.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Berceuse héroïque, L.132
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Berceuse héroïque, L.132
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LQlwdSZlmBiSxNXCC-Ci5XdArg4tehVHhhV-hqpb-1AzHQspo5oklSz4RHGqml8R2AI-0OJQI8NjxX5hbfJRUjpcEK2rYnky3t5UjueBkdUBL4I2m0A5-3o844P7MppDbQCQ_2E8zzvjFbJx2WS5Vg/gxmWw01U1TzPnHPTmlTo3w/lmdebbh.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: 2 Arabesques, L.66
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in E: Andantino con moto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/CdlLaX6DA8lwVa3uj7VLjrwVwcG6PqvPinwvA_LiXZ43kYmcTUSeaXMmWukhuLL302iVQkpiLyK8krOuK4nUme2tGgzNhz4hB53EOaO8aHhxHTj2FvEBgzrY-elIvAnHRXJFuWDSi6qeOzI7IJQDsg/3md-x0qbMxoZLXyIcV-nSA/arab1_gs.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Masques, L.105
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Masques, L.105
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        37 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/n6CGWyiEm-lXf83-R7B2EXoYUTH-OsjU1sDdahYnfwunQmi6t0ld0YulxYwlPcOvOSrEc7vfU6LfqESi-HDP3CJ5j0UH_jeBuzPPvtCBG4HeOiXuovni6c1YwNrcBFxmL-gz_18T79Js4cXxsdHhrg/kFcz6rA4-7i_0Wp5tzDjTg/wdcdmask.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Images, Book 1, L.110
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Reflets dans l'eau
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FzQ11y4FoY5KIE_m3YZXr6EEgvfqcqm-n1sdkTBGckxnaJc40wDHfUec9iB_rMZM2E4tTaQiyu1jy4eMHR0KNbVeBQepF2IPJrbzaaTs6qdAU6pBduFSWSvf8CpD2UbTfqw2-4wxGFi6zuPvm9u7iQ/bS3CdQ9VgcBZ88yfHmWruQ/dgcdimg1.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Pour le piano, L.95
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Prélude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/JnTFJk2ZXJkvb-gPwPUSQB-c9n_158yJty2Mf6L6P5cBimUijL-ACRiSnlEfk_mUfEdWGo06LISE8KACtmttqc9hRXLt8parRjEK4AeLGDxxsMeQe9AChj3dm46n-JeKeDi_ak9IfTnVewY1-Eh-uQ/08-l4oh4B-iylXz9VW-9XA/debpour1.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Sarabande
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/QKHHdzck93jRaN7KbyAM36I3PcWpPkZNtTeTr4Nu6WJQU3m4cJFx_oJ70DESxEx211_5NoohWZkxtwt6eW9_aRQyipsNIKtPpGCsgPnC4-OfohugtdTrng484vwI7XP8i2lFf4gSY3JMUymB8rbhEg/5m7HBIg6ga-bghWcrhSlVg/debpour2.mid" onclick="return setToDownloaded('dlBtn_1_1_18_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: La plus que lente, L.121
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        La plus que lente, L.121
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ejmnM0LAvLPeObK31oYKH_ysJwzYcPzwg46S9X21rt47fX_e-CYRCGZwHaHV774CK0oxg1kNt5fdk77Hu0ZUZiyGl-sVz8FwKNXehNPGNiI9IhFrYh1HJlddlYhcqXnuLe_cm-aBxEWPiyJuLr23Og/qYcoXfHSRjUcBS3ITwQQxA/deblent1.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Estampes, L.100
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Jardins sous la pluie
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/v8nqTOlgEQ7rj8HWPDGsTpEjUMIzPwoFcbq6mplpzaoSjv6HD-7g8eQbqPaLqLMhg6qwnPZxL3eiBui7olGhW4wb5GaWAQThh46XBVf9mK_FBrwxU8tI36r0riLwDtroWDY28pBBHlVn45KRvx57Ag/wesguRuQ6GuBdcSdgOyZdA/jardins.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Children's Corner, L.113
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Children's Corner, L.113
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        52 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/H4pmJx9W_x5mNtPAabWPvninQPaJMrraWLFSr17Bql6Qtmm1iQV2fCky7B72OGHTsDFN__aFX8vsMPuc9rTJbbcn6OE_5xyQibGOn-sC0J5zMr0N-zmyalqmjsVufwUx2zOg4ZR0RM42ab7DKVZaoA/m4gIgM5X0a8H9PAzxiJYSw/dg_child.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Morçeau de concours, L.108
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Morçeau de concours, L.108
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/A-ByvaJvUW6LQIJk0CmVfZREYZwU3HqCbQKWWBQw57r6yHykiqLaXWo-vIrabTVPzc2KfsQmoyGFBDMXCThK1bzXsgQfzqDrPGtEqRjEWWJJu3V19gFb5MSOaTM9U_Cu7gr6zefJb8TIWnSsbk9xrw/kJ9eEJEkxZYlq4Z3gyT5nw/lmdebmdc.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Estampes, L.100
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Pagodes
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3TFDtp9rFaoWG-JMh1QpvfzTU7j4PfIbO-Kb9kFxmSOENwN8xlIV0m3nrI7p59Vp5ha6oW9nyZ8wNE4uCK3wRCeYgfr0Pv9i96vKgVF9alyyWuaspMfk32T9wfOwCp3KmNFq4E5nVokjxMRO3oz-GA/UHUxuOw8J6LOEIIQx0e_5g/dgcdest1.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.La soirée dans Grenade
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/PLBDE-sfFWOF0Y6-lVGtbvsxCUmhw3Q51OLsP-XoHJk8IDrjHmInBcX9EQEoeqE5GIGi8zm52M6LSTmVZxcw_cwawzDAGVlasdASTEMFiA7ssKrVqcTLFSyIeid0FcX1GWGIuQoNrd8MadFeIhdSEA/zfTYPaggis5TUoEKiJP0mg/dgcdest2.mid" onclick="return setToDownloaded('dlBtn_1_1_23_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Jardins sous la pluie
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/M8s9bl_2y3kOL3HQkQhmIJjN7HrDQz7oakgw8PMqhwKU4-Jo0mWLRyAbIxfWaWz7C1NH7035RaJpkuacxr478k5EiFUwirAHq0OZp9FypxI-2GXMu67kuV_wu_870DBKBWvls59l8UTgYD15N9ovjw/U-FrRHiP-5gdMhlxYVqHyQ/dgcdest3.mid" onclick="return setToDownloaded('dlBtn_1_1_23_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Ballade slave, L.70
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade slave, L.70
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gjPX6uN7wzotxdpcbJBN-XPY3Fa8gqz0AOFwWd8aqf1hdy_SThJ-si9NwdhrAARpKLHxlEB1ZYkbWNw_VLtq8RQt9uBOcgo5zri-PTybZDp0RnTk-XQH8LMGFhEcFL7n-nQ9cA8Du97topsxSM8tbw/cedVyGZAbNPI4CwvPuVUig/debbalad.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Images, Book 1, L.110
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Reflets dans l'eau
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/c5AZdV-tREPqVVtdgO15CyLlW3PL6vSdLZcpyp46mKEYCszRHQJoduGNDITZgO3mL2ZPlMmaAJcZPOAVBOgQDzLDsYMdZoLSPqBL5fxucASvcah0ormVmUTofMHGDRsTZ2caVdv8SUyQm8Q068FdSQ/DIaQwI40lqpYU5tgxrV7sA/debima0.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Hommage à Rameau
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/eMLGeQNkkhifYl1yOVe66gpE-12fe3dTX661Si47h_eEP7C99wVs6w-5eMVOL8qtfXELJajQPSoh7dIyWOLweZkmBwzO8g07JHTcH4v9kY5FxpzoZs1ntwv7IcOof1GdmgRJ4k772Kugt5ejFRe1Wg/kt4tZ8NKqCSnhinhjqpcbQ/debima.mid" onclick="return setToDownloaded('dlBtn_1_1_25_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Mouvement
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YeN1H4XiJJjAc4bbyjICJ7X1c0qbrjpphMz1tc9Ch7vTh6ca998Asioj7COlfRq0Wto7HUKn3UD_zR4EfAVoq5bR4vayMUcyOWZJIZZ0hna4W1FA9D2vOs6Ed_Hpkq5U3bD73Pbtq_jWpzGElrgSfA/mNwYpW9fPBkVtvHbOgpSTg/debima-1.mid" onclick="return setToDownloaded('dlBtn_1_1_25_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: Le petit nègre (cakewalk), L.114
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Le petit nègre (cakewalk), L.114
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GzgUs4R8UPIym1D_Xyf8D7wu-a8nfMb_dK2PyjrP8mWLPtAz1KzMKyS_0qgffsflJ9ymWXYj1p7qoA3t7s1-j5OLedpkaLPXthuBr8EqaXpYQCXqHcdokzbC2_VHKxV060BIVYUgiYdCtk8_YBgxIA/0zY_pg9pbDohwQWngC95vg/debptng.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Achille-Claude Debussy: 2 Arabesques, L.66
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in E: Andantino con moto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fYehZ-oixays3nNnKKobz20mf7BdGPBfYes80PyELSIvbsEsQJMoGHeW5TLK4WfpySHVeyW86E_DKgCH3DVxT8JKPvI5PmRCgExDp07yRw0ujK0u8HjbiwVPnQZ5fOq3AXtAeAk7FnH-HZR-FJb7Jw/0LINSkwIiY8rxOfnPIJpeA/arabesq1.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

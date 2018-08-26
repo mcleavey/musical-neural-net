@@ -1,0 +1,1898 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 14, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 13, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 11 Variations in D on an Original Theme, Op.21, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11 Variations in D on an Original Theme, Op.21, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        63 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Hy6zjc97LBlpwAPhgG1e0zoAAn7KgDkUVeZVqFIgBoKjcQwVgNYEfSWsLJXhvActEdA07rRVwF4vYwuFBC69O0aPp-I13wYECRJweT10kJHWHtcjeEjS1z5zAnU6lw8l/9S7Nx2Pjs0FjzgKpgjBtVA/br-pv211.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 7 Fantasias, Op.116
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7 Fantasias, Op.116
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        92 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mv5q3B72UTjoX673VVGQaMz6ATE2AF5zVBbiDqckXDJN7fSZ2n8D4JhX13j2e88oz3Uwh1uBQC461MVnpoNAFW19HveqnBMBWwi1l21pVcStjAC6oAOFzwra8C5_F6aKItblgvOOvn0ZvvdDmabbXQ/zXLhAiojN6724AI80fldpg/br-ph116.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 8 Klavierstücke, Op.76
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Intermezzo in Bb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lsugD_0OyyKU540NQ7qEVuPcoMP6naFulrK78RCgj_axEc-wa0m8Gp7kKQSLaEzf4tjRhtuvjD-GZZ4_QiMYOQDISYMlJ_lwUe5akbrNQZUDERIXntrLCLviCO8CygPIIBwiKT5GXqkV8cVTTDqWVA/IcjYf7f0Mt9gCC6__l2AmA/brahmsi4.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 28 Variations on a Theme of Paganini in A-, Op.35
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        28 Variations on a Theme by Paganini, Op.35 Book 1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        169 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vcngxEX_SacydbZEyOJymRazg-5YdQ1oomKt80iGDqSlMKeTDZEhnbT5KgvwyZtDvlBeXXZW4UbBIeB4vAnYlpUftIwdxznVblhDGXsQUuxCNwAx-SncS6L4I5nNvByAzS9LC3aOZhDfXIjuAzUBew/za9JATGNYWvkwqg9NIShkg/jbop35b1.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Intermezzo in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WCGPbRqSlRrY7f6dY8gpO6tB6kFCBomln8y9Ki49q5329GGLkhcDRZdm3qzfVrFqhK3N70LeIQ1xYeE26ERlX6jRDPbsmOo2-3njfspEtSgOvDGuwjO3f0tbvi0iiPHlMXEwAEX3we0I71glEaMzpw/6Br8Mu0FDwtQM37DOJbSfw/in_118_1.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 8 Klavierstücke, Op.76
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Capriccio in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/RVbovwZmxJoZCU4OqBAVDq1BTZIPfcAa1FzrPKmFBFQ-UB4dDY1h7jg-5iC7tOuDlpx-Uwl3qlPjWl6bF3pVqKyrUiM9RShCxCps7ucoNajJLqFhhj0qadlTb0GHzN-aRl2H3Mxv_AC2neg6CT5m9A/5YhnM-ZmC23YtBZSULk1xA/brca76-2.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 16 Waltzes, Op.39
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in G#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-Wm_rhV0Sj6961tFjy9VSs63tbCCaneFB4RpcAWrKe_rrhRdizg1XYV1qBcSU-Xqpcc15LwuPR3wnXPzMAOYKkhU3nqpynQBYx3JqqCSrCJyT7su6yj0Xzm6bIiPobYwF23D-Eqag849KLP5D_XPtQ/Xb4GxSjcWi0GzJqAW6Jt6g/bms39n3.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.9 in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YXueAcTeLN14W33LJ5iDW6fXrPfNwAxkmJPg989WCMuQZfEcXzhKskToZ5NBfZ1TNEQu24sKMD6Tqe4c4zPben5Ux12m18fwQD89gXtQTmFYD0i-dOb-eqfIN3uXoRsnvoBeDg_YZhDdQ0YSfAe3Qw/yt09Z7AgFuA3vVJhXA7BfA/bms39n9.mid" onclick="return setToDownloaded('dlBtn_1_1_7_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Intermezzo in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/S-07yWgdGrvV252Rd7ugc3410mX96gyrKWN06N1UcqxuvYIvclHZEzIFLtzuPiuc--u8UV5Cs43lCxHnqFxRscejKJKAGFc-HQ6-T7vllrv5rrZvlj1enS7glYqK-TplvxJZCIaxG6cU_UI8Iokshw/_chCW6kTmizKYDkJP0AXIA/br118_1.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Intermezzo in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tq6H0sCka68bv_E26idCnZA3zMcGgS2gB2zOfDrfqVLNapNgKw3fPnSNpPpx-Jx-kEXpBZiRdAIrln0sUFDH63K5baC2UpxMGwYLH8YNhb0m3j00LNNjZke51PlpdKpr_iH7CkiDdxJUreD17m3RhQ/Afl5x44TXZb5HgpD31mDig/br118_4.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Romanze in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nrW3uLOSKYATO6BsZPx-yYMBcC1yhH6emCCLJ09avl9AjohP42Edn8WeR3myAipmTDcm3ci-aUjezbrxkt2ZQnDpwGBrgBFjH_736NVM_isPuqOG-rp59W0xCCwZkdWr1kkJWfBx1ah4APr_0yvU3g/5YCRB7Cbr4IBBbLP49B7qQ/br118_5.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 7 Fantasias, Op.116
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Capriccio in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/id8zLyBwU6vxeWUXDfk4mgYAbLk-S6mUzTG3-wG70sy0oA49J93hevw4qNEc5yhWdbSTDUryExUpVsqeQfCotorfQ5ZxmOt8IwxR7r9z2YEvHnEk0LrTNAO76yjN9nFzPTI2oz01kFMvjLJXMPfjMQ/3J6DtgeisGJFZao5EhpTAA/br116_1.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Capriccio in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7bUXZ_hfIDILahTKEQ2PMJcDuG2rkRZ0nhFCc2edEXUGR6ODA0CFFr0eVIh1pKFbt8BbrRpM4OmIAbrqeMKeDi9gBg0_oLhAMnCIG17eCy4lH7W3V3xFaAElrZ1zEf68OP7cJ0IPia-SGkVJu_p-QQ/CSHEyviCd6VM6Jb_pEjmhQ/br116_3.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Intermezzo in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/tbkX2RK-sMcah9Bhpr9rS1F1wjS_8d3jb8s6IvI2FZBSWkx3K-xZbFTdhj3lEahIT30v6PFdFBbj2PvkC56YHOforuD-zxxy8f54SgNfYDxoFmkntKoOZGkJwvybcfR0_M386fnb4xC50rt-_ZBGRA/A3ARZ7bajgL4WwVGhvB4Iw/br116_5.mid" onclick="return setToDownloaded('dlBtn_1_1_9_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Intermezzo in E
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/KIsNKEoXkP3DQxqjE7hvjt6JAVX4Nox0F3ExXcht_UORRhIO1l5VHoGR7-hjCgLVkf4JR_36ZA6AFE6O67zil86E1rhSLVsaTmUp_7uztykJqMmFzS5qYMAcNnz4YRKN-5NkZ8ZDOg7qyq8s5Ndxmw/5OgL2OrNN45dFec9khfFgg/br_116_6.mid" onclick="return setToDownloaded('dlBtn_1_1_9_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Capriccio in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/I97tawOT6sgplNa9PVOjmZQ_Di3bRyV-c7VUz3XgQXDT-C3SHAoBZUi4EBex90V5FPbJIyhRSGq2Q3KhcG0EBkBBhFs0awwiuzXlKX65CxdbpODszIuyt1eKYkIHyI9vx4xlcyuHrKFQ7E-nVWuLJw/OIzEYRUudPRZqkSiG1r3dA/br116_7.mid" onclick="return setToDownloaded('dlBtn_1_1_9_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: Piano Sonata No.1 in C, Op.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        50 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IkShHKH60tzc-DB18NKpQcEhVhtNY1h4NBMJ2ufQiSKutV4l8SDLAjd1h5qrT3yjDZ0tf4w_qU6sOB26QPnyJlUSSq5qHtbM9jJ8p4U2dOp5hEiCZlvT9ZNlFFdIbfu4z9E5Hmk5ScPfAzaWp4R33g/iaryCDZuKSEww984wcpmIQ/jbop1n1.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Finale: Allegro con fuoco
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        45 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5QM42Jn1DxCGajYLk25gHQy4ivxlMeOxmHHYKXpzhfmN7nfvr11pfMFBC1xEKLt2WL9g5xYaNDL4E-XyKGXllk_KrKsYFicSHY8G55q14DTIgt16zSu1gaewWm5TO-0ZJfkXEYSgxEc-0gtoqaG3LQ/PHYNvnS4hrsMkZCJxSEJ3w/bson1_iv.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 4 Klavierstücke, Op.119
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Intermezzo in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HcNJE11BX5r5tawmFByIIAtt8js_BNOOK_DZyCoIxrcOTdI8SJtBtsVy6rR7PaXVWtEaCkY5ks07bEusH4NDjr4HtvPdRFe38u6D9h2sYOpY51_8d5ygPK4YWAlIEdzRdqy3DEzGITuW9FIIT3jp9g/qGtS_ESoAVyGVxmiltaq8A/br119_1.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Cp3EAzPprzFtj4JKT3idB8tIJPznGwhrUkRFTi4epQIPTQvgkC3vTby7_Cb044awMMEQ-Ma79sWGn_bK67dVSe32nEQpYH8Ep_aj_BAnVcV7zub-CwF2EKBgQx1gHkNgXUNjJrkCT_zDwTRYr_OoGw/YW2J90EZ0q3jgX46m6DAVA/br119_2.mid" onclick="return setToDownloaded('dlBtn_1_1_11_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 3 Intermezzos, Op.117
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Intermezzo in Eb: Andante moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/B6Chi_SfnR3R5Ayo6BhlSQL_rJGa1K7noHU4hCCucDRGmUCEcR6OCNrab19t7G4v6n8eERvcu0DTgkUHWsaz4fH2gMpSm9kGEPfft7M8D7L3OiR83_80CC4g76QFzBrZp-ex3GdgH-PGzhp-YDyFCg/H6gCO0Vcu3XAIPpzEO4gZQ/brahm117.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in Bb-: Andante non troppo e con molta espressione
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OtY5RNFMZIcd2omOhdZ7P5srGmEpULqBIGB_e5X2y0zwWmrmLknsrR54OCriz4DH4vyiJa51FBPpSufqa-jy24lV0uixIRfcWJ_q7RqHy1zhXfAK8_CXA5ySYPMu7d07CeHG6PwF11jUyH3FwsZgTA/jnSnUVPRzYHrqKLrhxPgKw/brm117-2.mid" onclick="return setToDownloaded('dlBtn_1_1_12_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Intermezzo in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6cojQsJy40FuPr9V7E0p6r6sltuD2Ck2c1gInG0YAZqurUj0cIOWEHJY1CWzgdy9hdIsa4XhI9kxxPP9FvLG-aJpLfq6gdF-8LSi3XSCTI92luMl4mUGmnbcTUZZOqh17swyqpsc_uTTZ51KtUMNZw/ZJ5UrES2nhGy6tQpwCL96g/brahmiz3.mid" onclick="return setToDownloaded('dlBtn_1_1_12_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 28 Variations on a Theme of Paganini in A-, Op.35
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        28 Variations on a Theme by Paganini, Op.35 Book 1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        80 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Ti-koQ8tVHE7Lhnh5jaL6PGkbujb6i-_YAoD6A2wsHldZsQFZn9TWvZEQNaZAwYTKgLWIrI2wSLvgD-gBhsb0zwyjZZaeQ2GfvvktzE6ri3pmyCiClmuY96AuaM4EkJjTLbhWB-A1F_QdARbD-hTLQ/4ALepWN-RwCnOGCAJ5iwWQ/varpag1.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Variation 1; 3.Variation 2; 4.Variation 3; 5.Variation 4; 6.Variation 5; 7.Variation 6; 8.Variation 7; 9.Variation 8; 10.Variation 9; 11.Variation 10; 12.Variation 11; 13.Variation 12; 14.Variation 13; 15.Variation 14
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/RkXa57HO4M5zmgc1WIN9JDB-REdfMda9C0GAZZM-wTSqsnbyNjfuRru_DxQtTkm-mn6gv8c4SRWX1AQOHr289aYimGBgOv3hlPOkX0a4RE8DhD9bCFZfXooDY6iqThFYnEzew4V6pbtawmf8zECmOQ/TjqNX93jchgPfTa1xpZ0kA/varpag2.mid" onclick="return setToDownloaded('dlBtn_1_1_13_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 16 Waltzes, Op.39
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5 in E
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/AnTDqwLzPOqfUjjp7VBOVN6xNY53OVyoUcl0OubwjFRnN77i99IIHVL0QmoSHG86NSQwXqUaImhZ6Tbiq1jmcRRLIBdUkv5z7ZliBNYBs_cZaFB1BvYnXfrAkVCw9F-tH_TmxfNemTo_bWr9kENAcQ/Hcb50MzcVmNj0rP5MPE_Xw/bjwaltze.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: Scherzo in Eb-, Op.4
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Scherzo in Eb-, Op.4
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        81 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IDkaKOrUJ-HUnax5AfnOaqlZKqRMSazjEQRdPKU51QlPVRkDtH0Hp9NJZuJS3VjUoWHpYCOyXOapUH_ez3NCQKUd7huWPUCmAEZDmfsOiEUgnamM5bR6JG1xPL3SxJ9XUjXo9AYi7RyJGsrfu7CF1g/2ZPdeRM_nOmq8pDNMAbwPA/br-sche4.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 28 Variations on a Theme of Paganini in A-, Op.35
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Variation 1; 3.Variation 2; 4.Variation 3; 5.Variation 4; 6.Variation 5; 7.Variation 6; 8.Variation 7; 9.Variation 8; 10.Variation 9; 11.Variation 10; 12.Variation 11; 13.Variation 12; 14.Variation 13; 15.Variation 14
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        63 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xGvINRcwmGzAIvlsFuZNTWCNFz6qAHQm7GRyREVmYqTCnmneAp1hPZxCeV5nLI8E9RfSEE3ur8jvd-5_1bHFWAqZja-Foh3sv00KyzBgcKGNJ5ceYZrKL-NFq2h2vJPKWxT5aptGzrxDE5vtU50M1Q/3ahjxRuJxzTwNpXMGolYAg/brahms2.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        28 Variations on a Theme by Paganini, Op.35 Book 1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        76 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vL5MERS_P5Gc8JqLPqZpFfZyjsNIopLoChataPeSMwYCQltcBgaV0ts_1dFNeEOKVrfO325atQcpAPN7Y7z0lUOGqdz4RrjpL8RZ3LW_TW_f44El8uDYMjEqR7ymCO2-yTy-iDeDLiv_AwIRFpRBPg/TcXYPj37z7BxD47yDiYM4Q/brahms1.mid" onclick="return setToDownloaded('dlBtn_1_1_16_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 5 Studies, Anh.1a/1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Study after Chopin, Etude in F-, Op.25, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7nRAprzR7ibg-gPaxPTTFHH16tykQ-4oFgvxZN4-uhUx1oh2IDDtBdr1bRZURc81kSmiMkZ5snhReQyNxNs5gjO6t7mSL1ZhWc3Fju0LV9nCnqnpPt365lx8e3FqHWCKA9hDjEUa85CXJKDQPYy0Cg/RLFgNTn7MPSEY-vAnX2MpQ/brahms.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in A
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        46 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/q_9WUUtvOtqZMZr_Z3JUFPgibQvslhgW8DmRtcvHbrUJYj88Rdle21PfqXOWbl93lhWdnV7y5TJcSGL7GqRCv5gKwderzboTII_jIyDn-WqrisICgpWlZt_4JTwwXO7XUUhGh66ZUR5M9FPBLN66yw/cnQRQ74LThjUqEz4IGaxTA/ku_br118.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 2 Sarabandes, WoOposth.5
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EW0PRdHRbTvzWzq9Kbr0_evj7KGCZpSMld-iEq8BuHMx_vxlxMg3JsrHvl2LdCuCpLyiUIKpXNL4gNgQaLmp-_HzL5UA1jlyh4XS5yxTAW-KnMeEo4J0dB0y2Mm7_yByzcqb55bbMfAhb2RqUmGkKw/w36aHr0T0Ti8EsBDU2IfIA/brahms_.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vGcXQ_T51Wbla2AcsKAkoC4CgJQZM2RK05bxyErUobjs7DMdjqq7J_msUVrDh4JfphCoejBmSbsVJRa6K5cHjd0bPp50-hnCnTw9XaJZGlIQs_dmaIooX43L7c4-qJOw1sU7F8-uDWAdmZXkifDyBA/42NKtZL95EifY1OikDXplA/saraband.mid" onclick="return setToDownloaded('dlBtn_1_1_19_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 2 Rhapsodies, Op.79
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Molto passionato, ma non troppo allegro in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_nBMYFdH5kZe0BIuMbvxPNLB6No1qlTt3ps0gFkscqc14m8iKit0U5tH4qAyA5Auhjls-efjd8QQVTDT0xnJ1ffYDkkwgqolVmB9VL1ZZe9d5JsXus_-9AMPcntmhGu30UndqzQyKCrEqKNoQuvNbw/yLBA1rFr9GgzO32Lt8VqUA/brra79-2.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Agitato in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_xxa20FEil2nih9_YbzdSFuNqTjZh8xzVc2Yu9qFq0SqBzwhYcWmS2nZPqlEz39upyud2EKjsH-GqkFk4xsfiv1s3VLIe2i8cpxbdrXv34r3SZJxszJx7cAcwj_tIuUjJpxa6At9l2Nqg22CX9_4og/rAx6LOq9V9zDKcEotCpDug/brhp79_1.mid" onclick="return setToDownloaded('dlBtn_1_1_20_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 4 Ballades, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Andante in D- 'Edward'
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/SEMv8OV0io1X3oUjxLSQMnBRlx79pIMfugCH-pK-5rz72ucVsfJa_36buGPb09hJbSM9fejFLyYd27KcILCDZH1kn3YE8Pwf9MwEFYAv36hqk2QcvcPZ86F6ufKjxseYiS5GThH2VbeLh9DsJXhgJA/HxljVyfJLO5Qp7ZRYbIi4g/brabal01.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Andante in D
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8RV3O7iRk-7qMYXDq9oABx4M2E82JkSSanZsaZQL-g0d95eLQ-AJjmQSmGgR8t6s7epcKUMKXQNDAXTPF6P6ggU3zo_SVl5ti2KK8UHPIP6QDKf2UO0Hw3aew8uAHHF0oBK2SF164ZOE7RvR9jrAog/O6SQA70hbkcSCL6W1ORijQ/brabal02.mid" onclick="return setToDownloaded('dlBtn_1_1_21_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Intermezzo in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Uh3kS2gDqL-jfsW9YnMCjlqswVVv2ySc4xRPZ46IRacMavNTq375PhxI3UWQcj9zG_Ep6IEzW5GaSaJpAOJG11bFLbcLkla887e73mJumPwE3eC-g79j5JMquVmcA9aIP0hmIFu3r17tm_zBFjhoCg/b1KjxipAe7lCzIUpvggXOw/brabal03.mid" onclick="return setToDownloaded('dlBtn_1_1_21_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Andante con moto in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-2apD2yKZH4dvOWyjFeeYNuE4r-dXR4iM08urBW2TyxgbXc_eGZoRrvLfOLsLMZYiu7-DC9DjE4Cp8bmsU1Wm2a6sydrxzFysgKtp0y49Cds1F6lO4PWhQmQdmiaO7WCAbU3uAiDnrT98v2Q9gqMog/r4JatP7hYAV5Gack2k7zNQ/brabal04.mid" onclick="return setToDownloaded('dlBtn_1_1_21_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        115 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/g8aJRRvsRBq5mSBjR1gWgaztlTLQ6x8R6o4tZBI08YqhWF4gnQm68RfxzzP2BJy4D-9E30gEXMNrSywFd_utnOFY8Y4WCsRPULHDRRFr-9PPuvyT5Y2qn9DTCBMfCBlPA1PyHWLN2dTexbzGFIBazA/_enB03f2wmkbN0AvXfEEiw/br-ks118.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 3 Intermezzos, Op.117
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Intermezzo in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        52 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OhZCeKSEX8R1Hd6MvwclvzbRO40rE5Rk63zW4Fmjs0J2hOqcDyaUrATkRLlZZDpSK2j3vdqeueVRmqPdHYXESCBjaKfqHmj15-BJ0_TuTx4mZYFyANA83hbItrGxnICy52mk7U2O2U5YX2e729uidw/I4trHMpm4tcSZh64P0-lrQ/br-in117.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Intermezzo in Eb: Andante moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8NMsSardR0yr-aCRAQj3pFFOja_-w7uHNGe2hqNAUv3MqoLwtr-sZUzI9Nm9uYVJWwM6CSwNiPJb41mStmQiT94NVTz0-Q0mb_XAoelKuaXSTNNVfTN6H5mB8xZ05b5GoRzwRLuDPnL7uXeE0KTqJg/vi7Bjf0XOObm8_QBnDrGQQ/bri117-1.mid" onclick="return setToDownloaded('dlBtn_1_1_23_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in Bb-: Andante non troppo e con molta espressione
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Z6Iep0BZoOi-ZF5xYsSdUoie1ASMSIkrGI2Z4A00Ybm5ukACzCLi4f_t8f01hoewfv6Pz03javmNqxLvnZSm6iR7EZuuDq57i2On-Z0W9Nq1RgpDsdeQRzzk2Loq0fEfLzPHtPB_uGyJV5JfdIj_1A/MOrRB-fA45QEWj2TEePOKw/bri117-2.mid" onclick="return setToDownloaded('dlBtn_1_1_23_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Intermezzo in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZmfxizSMWj4oOheAK1TnClmTh8iAURm8nXneW9YY-f1Hj3ExcfVvW_3YMD-e9zys9lmfX6sm9NiHUkga8TxzEQHB2v-7hXf6SIigamZ7mp8Dt0hIDrhA0YtlL2hofTw7we-bF9HfASrSatRHfj8p0A/fKX4QNncKTxkQn57EbJXjQ/bri117-3.mid" onclick="return setToDownloaded('dlBtn_1_1_23_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: Piano Sonata No.3 in F-, Op.5
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.3 in F-, Op.5
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        160 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TBtXP36OHlo9GQqetHVv-hQUWFUqRjcP6tMaMwHsevxKfWleEbJ-XfqvJF_ycxuzi54xQ1G8lW3VxHYRLGojNU-35L68UYQiQCdc1dxezAHblMKorff2oP4RmTQxRW6m_LgCXb58rxZInJD5H2ZZQg/1D5aECmDlm0K4daagIEQGw/br-ps-03.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 8 Klavierstücke, Op.76
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Capriccio in F#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Y8_JRB1l1JKVF6hNoKcJA6u-29yrozUnGGVegFgfePPk6Uc8RM-8ylXQ5WpJiWrVB6vRpk4LJsjKo87jhp5k2EQK5TeqS_lO4KzjcUeJm_-LrIhcEOnWoFZeZzPLO9NCZrhJWv_TGGpkRRRjHg8h1A/RtKO4A8w3nC1jO1rWRmfNg/br76_1.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Capriccio in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ebuzvGwy90EpBpur5pu39JSWOMTqhs9h7ZMoHgcUeduupjoAFaaYFetjSKzHURbmoBjIZLAUSU8SEowi_EdhNJc2PJUW0M5RuxebmCFS4fPDBX-dLOUTz0FJZ6yeQk5O3yktl0TwGlHuBDcbi3CSAg/EfnNf7SbDzLlDTIgNd3uhg/br76_5.mid" onclick="return setToDownloaded('dlBtn_1_1_25_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Intermezzo in A
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/tqYL93dKX8tz2qjLmIs-EmCb8mfa9uY4D9cuTK1RGFi26JAAqTrieg1W6Mx95qJDm3qD3meMXgv6yv66VuYW6D9AeJVhLlrUk4ZMJN-U6nqr0K5pxDJHkqUdEixJBitNYkXMNLEY21sOFcgfqR5O3Q/T3Upf3qhhyovgidMVR4MpA/br76_6.mid" onclick="return setToDownloaded('dlBtn_1_1_25_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Intermezzo in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/eWz2dUgGyZYZ15EjdRvXx1utuFhEsFH23cG6GJlKI5kshGRtCLYDKyApaosgDyQ9G6lEoZox--jkyw2p7TV9P3s97pCc_4zSTrWFdlkuo-jY09UEBua7kw8tgNhK-7q4EU_zy-cwRThhbobDMUOShQ/btMmRgUzBsi2r--5Dz6BDQ/br76_7.mid" onclick="return setToDownloaded('dlBtn_1_1_25_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Capriccio in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FzM8TqCgVrmGj1OHnLjDGF0LtcUUBjjrHB4PzNwjJoV4hADtYPEhbxoV28syBcjZqtyK9S7l-NW4cCPC33yON1W1HfSSI1BuowWlnwgVJVb0iSXqmygYyeZj1lXnkWlw38omBuKN6mchB19QU4Lq3A/1KWnDMmRdmh5Hu8PEr7Zzg/br76_8.mid" onclick="return setToDownloaded('dlBtn_1_1_25_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 2 Rhapsodies, Op.79
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2 Rhapsodies, Op.79
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        80 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Oyf5sfQaP0G59slZx1V4hFukE0NiG5bCElogjAIgc055YV9oaIQs_u8VT5dQQ-m3V05bTVuNgpZF9FMolcQKJ8NZAGize9vFNEeE9MRC-KX44U-Y6d__0XoIP6KGirTDrjLAJ9-E8qN9XjGwKxg2DQ/Q-_ItyOtU8SE3mibWzs1gg/br-2rhap.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in A
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-gBOLZMghf7qXwQ6LP5bTAiLqDBJNg0UzSfi9QSpIgSUIPnfsZ8uu9tZTE13-Dn8DYt232b1VXxP-Tof3HDcYmEpZbbEu3bC1TbaHucxh_m2b3nHI0yxMGzKfoO_OxeR8M_AGHRbcm4VskpB-wsupg/yBdVrloRyy-nHCVOkVL5dw/bri118-2.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Ballade in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cdat_r9rQdactJCJLSo4eC-Jfuzycsb9lVUMZ45P8U7YvuElJpaGfGi5r4NVG0eVOqq-kOebY9-NAWtUrj4c91kpDNOh_TL923Des0SOTwTuVPRfYXyYfefsBt6-_yMDvxjUd9jMIgKH-e0ekhvl0A/LOIdmNgcaaY8_qoASic3sA/brb118-3.mid" onclick="return setToDownloaded('dlBtn_1_1_27_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Intermezzo in Eb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kO1kPNnrmsXTSeHClcD5wTqzqI821gqURQdcEkQhpDJYsMFo7ttC1HffTNq04Ztk5XCdn1sICqrVSqtGgbUrlyjLAGB4OJZQNlSfC5-mZRJyDbosIMEtspHA6K7qXzd-I6PU-sPiJxT-UD-58vEMmQ/HkciKxFvGYPdm-sCDPpz6w/bri118-6.mid" onclick="return setToDownloaded('dlBtn_1_1_27_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 25 Variations and Fugue in Bb on a Theme by Handel, Op.24
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        25 Variations and Fugue in Bb on a Theme by Handel, Op.24
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        178 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w1MTlydUMTIXVA9JVhZKwUvUTnmH8olrmHL8x3hEodqxCh8mpsx_HCof7BhRzURdELroIQlsb4HhhZTK6Nyf1vwJE-MoSqHsqVHFTS2NDPHM9lpjAsRbkxJKzINMVkuTKpzOlowwBRE9ZtLOZLx5yw/MqehQM0ryDa4n41PSSyfZQ/brop24.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 2 Rhapsodies, Op.79
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Molto passionato, ma non troppo allegro in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/S9ArakpGRgGZqXfAOevocEhFwDIeozSiweoEUiQ_tYtIiVTyO2Xv5Q8wmUsb42kZY9eRpHBaFbU6aS9HwrDd3j8yhHziFyysD70RB-1gMpeZ_PGh7488nrtNAbv30ZpjEYamDYWV_wXSmPeEeNbtzw/HljT2US--d95q0wLYaF-vg/br_rhap2.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 6 Klavierstücke, Op.118
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Intermezzo in A
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EBfNi3g5jITtPCQFb1iZPI_B3qOAVxDFwTtO3P0qtNyqRdexv8JFxndt2VxM52TwtXkAiuw0GmoDP5Jv-bUdLEE7g-SNm1DAGztK_igx3RkrNwXqIij-jh1QGi5MW13pcldt2VfKfNVVL0KlnXBIeQ/Lqk9ZxAFyV11FiMqpVPyEA/brahm118.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 4 Ballades, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Andante in D- 'Edward'
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4Hk4V-gWIawLLhq7Fto7j3Galo9IbzoYQgZdeYRpjYlqNFzJAXnJ94n3bMYJOgKH6SjxL8JwxcRo3F98M452DKEweA3Yda04T3axno2yljsxkNdbEQtY30vt3VvsiRSHXclNpDC7LGdT2g_98d0sEg/llLQj9-F1scWOrHJWtlqGg/brba10-1.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 16 Variations in F#- on a Theme by Schumann, Op.9
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        16 Variations in F#- on a Theme by Schumann, Op.9
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        70 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-ijVnHcqRNQeL7D6LGE_0AgSK9zpIDZG8ir_0BKQFrRuJOrfvbr-FpjTAKEL4Ou6RA5zqSD-otjB6XWFDtE7bPrhadXJbeXMUNWH3jEtmSo6q0_ohQOi-eM70YyHQKOGzzPtEp8HTR-RWuAFlUartg/98hH8NfgkKgAKmACSR0zzw/br-pv09.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 13 Variations in D on a Hungarian Song, Op.21, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        13 Variations in D on a Hungarian Song, Op.21, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        41 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/taEaGrpkEzq-VJq5erOiGaHo7Ol5ciyE8mGD57B26L4bDGwZW41QLJSSLb0-7PhAddGAafLig3L3NjVKEe1MBUPe-pLotCK41DsoEsioR47KCJxTajEcJBSoIfj5uVqFzhcPuCUlSlUtIPTEjV89ew/SO-x22GLDi50UTYTLbhSSg/br-pv212.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 25 Variations and Fugue in Bb on a Theme by Handel, Op.24
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        25 Variations and Fugue in Bb on a Theme by Handel, Op.24
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        284 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Zq_KEGnqSTZoYGvhtmrzATHsGxUu9Dpou9sy-v7mb8HCgOnKztY1sN1n8-91l79QkKfuvGg_ats3zWkYoytjyJxWeOvy4iV-joxFMNXR50Gh4uNgUG-pL81sAMADg212JE_UYyaa9uFBu7IhrmUS0Q/OOe6_Pwa1I2OofZiB_U96Q/zbrahms.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        27.Fugue
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        280 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/COgJ4GobX9W6s7IYjkzAA5V9ZKLNaNNCo97pU-ibc4aZ3Y3gzw6Dl4npXmw9_jtyUY0Yx9qPku2S0v7GwyfytYl5eZd87LMcAn6K9SNFkNC-pNvxAgo7duTb_x12xysxvPBTjqKN8oBZTLeg8E7FUQ/zAqMsRwLQOd_vxoioVAb4A/brah24bk.mid" onclick="return setToDownloaded('dlBtn_1_1_34_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        25 Variations and Fugue in Bb on a Theme by Handel, Op.24
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        160 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qs7GF2mdh9HXnTRT7WYP5r2INL5yY2v1YRy8oKuRPZvAUu5vdtY5qWeBvlt0A-5ct21jOL1aEO7WtvKtcQYHuFqFv7TXEYivXtNki0VZuGE4lutrcLsKvRQ5f_JTe9Hkhp7reZ343ViL10Rt9JK1SA/kif3EQdEB4loUJvxlzaO4A/br-pv24.mid" onclick="return setToDownloaded('dlBtn_1_1_34_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: Piano Sonata No.1 in C, Op.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.1 in C, Op.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        168 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/sa8Gx9lm7m7_hFFZo9pDKFMfMNjQSkU_oYEHFE-G39OnNA6RTmTzicQb1K9x7Mv2TTeU8TGU8SrgadQm8cSS-npmXiy4aW-CnBEhtih6PSJ2dv_pl4Klx7LNQVUXiFJ7aFET8qW37EiydQCY-ea7Lw/RauAmF74T6AK7uGd4sWm9Q/br-ps-01.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 8 Klavierstücke, Op.76
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8 Klavierstücke, Op.76
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        121 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/e81AzWjXLG68Lf7VJZpwa8JWdurDZxMmxIVsNJVIqm0R-njhYkjM7oJGyIuK9WIWH5pk98k4hY_uRXadNcJgvrx5L1ghTJpAThqqGkcygcZxpAJ1_q1GY-9SrbVJ6UthI6alLk29Wun3N02pfbj9EA/j_a8MvtIMM4qf66cDXuDOQ/br-ks-76.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: Piano Sonata No.2 in F#-, Op.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.2 in F#-, Op.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        149 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Y0IZDCFZGij84gvfXi48VAncrXuhjKzFN1wFkVyhwyDdgVUmhzSsnrPV_p6C2LYUDaWfa6eL_SNtxLleMlsEXUgy--Onk_SMP49n0algv1HpXB5iis9wq37JZf36ZsBBIUt60ijeMiNRilNiNJLqCQ/GnW4XsCCh2oQeLiIbW5OvQ/br-ps-02.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 4 Klavierstücke, Op.119
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4 Klavierstücke, Op.119
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        90 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mbn6wHy9OhI11mO-9G_7NhOhU1w-Db5cf2XkHBjJAa4betoDbWvNLhsiFMYd7-odZ1RoRh1BvangUWy3X4P6AVxuyDebQayUzJMg6ApcV015KSvVxHHZIUx3p_USof7qpZmdWMtSmRqM9f_0T9pqYg/gXU9UDqQV4s96a2i6Z4GHw/br-ks119.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Intermezzo in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/y2-fgv3UVheDK_k-pEO2plUXREzQHT7h2iJp3Lpw9Qa_LdlzKZl4EtAUG5ttHJgvtWlgE7Tk5nx8DcHp8rtU7TffNYQ9h2bg2PMUGQ5YJg5HPkSvTBrP6hz0MCA6xL6zQLJNsMCqyDLf0V5bOaBdHA/H94tfg4NQjiQ99gSX59V5w/op119-3.mid" onclick="return setToDownloaded('dlBtn_1_1_38_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 4 Ballades, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4 Ballades, Op.10
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        87 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gaqExSqiqKvJAZQWOeOxv3QCh7rrCIIXH0_MDzk25eCDXGmpCYefL4KTiNiUQ_vNEBXGS0LZbiekNHhkhFfhNNg24wAz4A7Cy-LOzYJlojo1i5PB-zALugPb6eH3wXMeSLh2iBJ1hxHQNYByZ2PViQ/CtLXRQELAR70K1VxXqOPlw/br-bal10.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Johannes Brahms: 5 Studies, Anh.1a/1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Rondo in C after Weber, Piano Sonata in C, Op.24, 4.Rondo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_GhLkY7_UR3ZRvYy2727MA_ysGEsRQ180TwoalCHNkQqtj48uSwTZRxWb3C1-fHtHdV4NsfCmI-ni1K0adtb8_WPsWIcwRrunLYyLgywmqG4MmDPipaleJ_v_DRlT8_yvNnAoRdIdujz1yUhy7BMFA/OZfPEXyRgHWklh6glW7kGw/br_st_02.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

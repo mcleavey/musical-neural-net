@@ -1,0 +1,2353 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 18, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 17, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C ('Waterfall')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LZewlHLl-5aNN4tugVxB9LWjYpwfUGpSl4bScPZ7KrOny2XaJBGRWSaO-veN7FQ9oU2Q4fgVkCj4YwoAh9tm1JWkV-A3qPapQWjqaoqD62IR2pcFX_kiWIM2hQ7C6MBou1svqgodISrIlzm0k5PaIw/5Ta_Lj3ZPax0nInMKonITg/at01op10.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5: Vivace in Gb ('Black Keys')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LjmmueHYQ2O76FRRIyONhNACF5yw3vKLlygP8ZfBa2ukZfuQyYjMWGTIZtZVLUGopJzXh7fM6HuJH6u97vQ--ejpUOL3tVJi5Y3Q1G5VYNdaxO3PhlZvaOc51jhHwk0VO6K6UtHOYAGd1doi-Ju5aA/qkX0yUz1BfHEON6q0FNltA/at05op10.mid" onclick="return setToDownloaded('dlBtn_1_1_1_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.9: Allegro molto agitato in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IagNXi7Itc_k6pn5yMt7mMJDPHxJ9eNoeATGGgGOTFp9RIbdt9qnTw32eF0oE8VQhOljb0SWpqkdQB4BODDScxd9rTbzCrCfnjlm1ULyqX4MldZQsHxUNzwqkhFiPSs_-z7If3motBwTg4-nDIGuYw/Om9AvudLOdVbWIWzLUg8XA/at09op10.mid" onclick="return setToDownloaded('dlBtn_1_1_1_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.12: Allegro con fuoco in C- ('Revolutionary')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LLTi1gNXTIvLubLv9TOjIdYjqVbbYblZAOr29oCpfQ1HJ1vA3lv3msD1voe2L8s-tHIkW7hn9OkGM5TvHWETM26g63cNMkvpat70qUcsf6YZcDUBwLCWsdO0J5cJ7b4wzwnmQFepFcPNufK69IUiiQ/rS9xcQzepUuxhpSB6B9OTA/at12op10.mid" onclick="return setToDownloaded('dlBtn_1_1_1_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.4 in F-, Op.52
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.4 in F-, Op.52
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        53 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EOp613j5Nj6kamkHj9rF86QRdOHjHwxV-pioBUZjYnr2KNbUL-BF4ukOv-S8yRUqu6xGt_J2Zx_rMnuLsdKDYtm_eN11UxmQNSxGrlzHb74MMLLpUO0EVtFmmj04aQJDa8zLwE0036APvu9VAuvnbA/mD_jVGRP5AhQhRk0Tl4T7w/ballade4.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.1 in G-, Op.23
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.1 in G-, Op.23
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        38 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WMkWugRJrl26SFu2t10KkSJBGNzL4IkzFfJDYax8FPiZJGIFzIvszUDXpc6YFCIms3khTBQ217g9PjFlsmVG9h0nIh-5amzHm7ItTbSsn7IfbER70_Q3msf4jo6dgZ49PaIqLiGxQrEmrbhnANIRng/T56zqiCs-sgap07QvG7CWw/chop23b.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 5 Mazurkas, Op.7
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in Bb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WoAz-2YlsfVODw2K2N0ORnxuHbtsSgcSfTmTA5gSkPTRUfYWqfqAT9kUbQhP9n_XhHvbkV2t4rldts7YVkiGPW54b7K7qF3j7IPkAGHjHaczkYt_XtDhaBCctw3RZum2BCCYDm-582sD_hLI6Wdw5w/m6kLJDobooZaC4SIALM6ag/mazrka05.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/x1_Q9G83zngwy4T6krbedZEcqqCWnAk-YBfk0qcsen--3wv7kxlCdw0o9z2yhH0KEGTrmOURBjXb3wl5MpfHddFe6iaHbN3twc7og0yIX-ECkf3NXSDLj6m3mSd5sDOMUVxzAXRsukwhesbRXONldw/ELFbhDDjBoJiFS2aA7eQfA/mazrka06.mid" onclick="return setToDownloaded('dlBtn_1_1_4_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/P9IU55Lc3HfD134CWMXTxIRp5aGBWaREy6ljTR19LC3b1vbT7vHpLH2uNCfUTS6vl3092V3h2K34XtTmyDFrdA7BID6IyVfnJYAPWfAVfReVHZjuBFzEb1uKcDc3Gdh7e3CRUPyB6I4CbGnZu_P1OQ/fH2i1BrOUNXKn49_OvV57A/mazrka07.mid" onclick="return setToDownloaded('dlBtn_1_1_4_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in Ab
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xr-CcB21H9cwpP9PMvEPGPDg0rMGSVilOcSeImjQlWDf1sQkG_4xDDPnc0MVxF75p9U-lB2ZconPcIl3VkF9KqkY6VV0j7hVTP5xcFuJTVFqwwOtPkySRqK-YmX9Yk4-x8FXpUYrEDkVr0nm2fH0qA/GsQV80ddws5T43pckOe_xQ/mazrka08.mid" onclick="return setToDownloaded('dlBtn_1_1_4_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TDV8dgAydsYFhckXUlc5iYhVuX4CGGj8oGy3ZjeCVyrRVEmgkGe6g_hKzW7qIOUp7Tm0VCsA2gErSx4rnZ7oiYZwtCi4BV03m_YT0FV-BfD7lJVoGsnV6zofVDsTH-FkubHvbm5WDdXDG3tfJ7Qp3w/q4OvWguiGvo9eJpMTdhM7A/mazrka09.mid" onclick="return setToDownloaded('dlBtn_1_1_4_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Mazurkas, Op.56
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4mfevFOqaAKlgNXq0SUDBdu3A4UqVA4LSVcM-H0EduVEv6Gbh-f2IYZpTXcvmdkoEz3OK6SRDq4R7pGF-F8jh5G3tx-g33njKX7hnKtyR3s9i2gkDYVt8SIPEmTqpUqz_mdNWnelgqyRIV3Wr4yJZw/-DKgcbpszKWIQsFDRslKDQ/mazrka33.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/iN3wXgD9laBLeTFC46DmHojgae2-A0Ceee9kxls_FUh9wF9el19QgsZgw04JygpqqKYhNsCJPykpTFYDvG1YrYklKskCXfULKgvnSDrm4jXNZb6xPhfYCfHIq-k-H-KqIQrqpbWVHoYatuNB0jkXpw/S5sFDKRPivxpNdKX-8ok9w/mazrka34.mid" onclick="return setToDownloaded('dlBtn_1_1_5_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in C-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Qg1WqbqeT8d6rWL2hXSSQiQXSgjG7LUhopRS0JU7wZcvK_Ta3ZYYpEdBeNNFalwMr5c55wWbW_RNWuvehtgImOSZ5jdilhShGHuzuCQsx9Rtm6_YKuir52bz0P_sSV8Jh3Oe9havmT_BU9HAojOpQA/PEAu6YRHo9euknzVnDCytQ/mazrka35.mid" onclick="return setToDownloaded('dlBtn_1_1_5_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.6
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in F#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yYja7vtJDuixfknDvRRAqZ217q1-2-HUuyRY16D627376pg1zrDuvelECsHzL6nhdv6bj3iAyMMxn-6-WHXHwZNFPC3fQNhLNCBNL5qzWCip3dRaX6xVglDYIiZxIKPaDARwQhpNTFHc963VlG37pw/3lBThHdmghe_XgitPqDlng/mazrka01.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/b5UAnR5yT8EjvWWB2mDuKHOiZ94YuQZOIbl23Dugp8nsyORcIUENPYPb9j_j5hkvwUJrxs2dx75IyXatKaq4bNSdJ4GNgecxiZitbM9gLkMe9YjjGwMq4_y1Lzu6V4rvYmahzJsVvqTdAUmV6wpYbw/siCML-OytUOuMHc3mllVDA/mazrka02.mid" onclick="return setToDownloaded('dlBtn_1_1_6_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in E
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/SxMwJ9DtazNArYIe0AWkydMG3roFhvFUpaJRSpddHG2O9ZJh5HGLDxiqVWM-29uKXD1qFg_aWvqC7OkMLI1pLxRwe2Seu_9Mt9C5p6qu_5msFWrthR9-Yhpli5wF_tVb7g1C-mS6hr7R7s8dxIc_qg/ttz3060bFrG4fXdi3fgl0Q/mazrka03.mid" onclick="return setToDownloaded('dlBtn_1_1_6_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in Eb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vtw1RKQuMn8ABBEbuNibwnlDIp7BlrBln2RFQ0BFz108KkBJQeDsMX5D0ppl-LLBO5DCbDrJVgTyiV2jphQPrM6QCv04yXPX0mXR3Mdlmk3N_D1v9V0LhuO1xutFA6_XoVrNKVkhRP3nZz9T-v8IcA/E7sgyBkGwZV0XWkBTWVNzQ/mazrka04.mid" onclick="return setToDownloaded('dlBtn_1_1_6_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Mazurkas, Op.50
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in G
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OGmhaVHVqjT2aquWA2mp-1s92CJXD7gXfzEv6U5KJXtW66S9m1u5zHUi_OCMRWtmryzKfUBNeXtlSiFHJD5kwFSGfvC3F3EYyP-OsfqCw1ggbBOgzCI1nKbxEntMaHaFVX7XCwi6w9RdfTqMWujVRA/scMMGpktldJbLoKpZuaszw/mazrka30.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Ab
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ErGbAO507ZDNW_YvL5v8UufZPrCn-LhqyMJMU9r9KsixfCgJiGxBM5-OrSKLwe7AQoI6p0tIkw8hQkDEog_R0mokWrhC7668OFFl-PSXvJEwVvJmIpOe2xq1XNogVsu2xmfHZIHBgvHVHMbaq-E1AQ/bUbKVWvOOfvS3Nsem_1S5g/mazrka31.mid" onclick="return setToDownloaded('dlBtn_1_1_7_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gZ8oBcQg5rNU_wUuBPEcIXhpq35Bs2g9lC_VQ_PTe3nNos6oduSiGuD6T4dZ32zks8snA326aPyp6lmlqJyoLUAcewjmLU3BpVI9SPUGYYhGVL3sPcaivmlTPuvHQ6HlZWkHWaEBIf87nv5tQLHluA/BNGgVx7oaG4Gbdiw6iWVxQ/mazrka32.mid" onclick="return setToDownloaded('dlBtn_1_1_7_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LivyMmg0skaZ0zHN1EyCqgGCZ6r2p_akGSTLhglxQVtzbf74DgkpkNp2VLg0aUu46y4DG5H_Pz-AffQcKrmSvYWyR-GDsmwDZU6JhaHMsEFxzBoeyfhOru9TUeHwdIxZmAycb9BK_Q5sbiU8vVw9pQ/l2sc-lxnMFFBq3I4bB3TSQ/mazurka_.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Iy7PyCDIBdyx9OblU4D9Cmbej0qXY_Z44uWJpBIR02v2U_SKJiWx9F8zXxmTe-S3BaE22s3AaUSGtGPChth4c5kdKkl3wKD8s43t7MxQpf0VzwsS1Zs3IghZL2G8xkGjDHQBjXURwtjU2CGJ_SpIVw/J35dLYgo52fxMkhGMjstxw/mazurka.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LS4inzrddMQdHQor4eJikW8GIxn2enrVSRhq7LH_bz-ZtSAu2RYz2VvKF3X0MYO2n36I6WZ6swMdSEZRv2GCF2QNOBx6b7H95YG9A1bPP69EtmzPk27381BOx-qoRJn6kJuhRotcypgTzUu2TTGZMg/G4O7Sh9C22Q_vpI1Zk_kKw/mazrka46.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oY8jyY3PLSJawp_NR24HG9DfxNFWmWvmFx6YBirltyqau8VRO1McoRBdZMdG5VhNL-zzhqUfGXifs3rR2IzGwkKTGh4JHXigiVUmDpveDX7LsDdPYtkZn_VT3R-TdZ1DMywJKpzl01wNBP9DH9jE-g/rcWOffl9n3XpB_hJH2eo2A/mazrka47.mid" onclick="return setToDownloaded('dlBtn_1_1_8_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/F9IQcQTG6xRUSEjaIYVC3EN9kzbXHsJE5_3_Wcy5RAm9e5t0hl5vjtSTkPFR_xdfbMWrJJEki0ohKUcEU5rwAAjYolU-N9DQE5dIq1gQ5W-rsnRRlFEAnfMk5caXWMu6DVpxnPNC9k0cswAetjZGQQ/aVs0RLmeDT7epmQvENdUDw/mazrka48.mid" onclick="return setToDownloaded('dlBtn_1_1_8_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2CbzGJ_kqfHzpzSnq6TE4u8tlIMb_uD5XZHhSrCrXafY3Fx3zUdavY73UKg1GK5QlxdTDCvd1v0c_KUuhPILzQHo_flPoL1Rwn7mZuQSXRKdz1a5AagsVcRIbFZyOCGnaisvHSs0DdUxc9_mPE6i-w/UPtk9t8Id7gmhkA-o5xbvw/mazrka49.mid" onclick="return setToDownloaded('dlBtn_1_1_8_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C ('Waterfall')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Nm1B8-9ewkpDIJC4CBoxwUpokwR3RqLX9kL8JHDktkt51TE4D9yXz9ODZlPYViPLR9rIMJnsA1NDxMJIJMLfFbgPjlBFE8cRYS0HUjXNnGqTXrXzukirpTKzDUhk1PuE68nuMZurc2HihUnSbyX3_w/xAfGEyufg_7jgnoHMYH4DQ/ch_10-1.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2: Allegro in A- ('Chromatique')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ey9-0bGVh86gZQOSeSA7DY6fgRY0shsidSUfIpSIbYrWgd7qfKe1EQlhMjdpkajMKR51QZjzJHbEeNUmj8sbo22YVlHjeScZOyiO-GJxLXskSBBICUJzNHQ7Kphq3bHfOUlztnZIU80-ezpI8Uov8g/u421hQh2-QtiECYgU-Xz5w/ch_10-2.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5: Vivace in Gb ('Black Keys')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BEnjrlxtbBSOJ8hK-ucT_ak5sDuna35jGHw9KVtT7Faq4Mikt_jQLdFzwYzhGpB7_gtni2HMEhH1AVri1fxfAXCYwEw0LCDPkJm6AAQoJuhgB873APpz4oQBF3FNVZjKGdoSumDUmzOJ3t_jJRqRHg/MEaGXiVquU4vhEHPHQ-UBw/ch_10-5.mid" onclick="return setToDownloaded('dlBtn_1_1_9_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.6: Andante in Eb- ('Lament')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gcfdIMRtWmiv2loAf4tcZpvOHR8qHuCRm6BwYvy61GNumTN5t56eLhVnFukkVVakMBSLxNV51Q8OwkyRkxFBJ0g4QUf38wQZMtwEmmMuYkpUOUsIMLFQaNqQ2n_fMSi7yw87TBI40Bt7FRCXOyS0Wg/xHFerzDvYOt6cfhQtpVuDQ/ch_10-6.mid" onclick="return setToDownloaded('dlBtn_1_1_9_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.7: Vivace in C ('Toccata')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/G3ti6XANNi8IoebV_ahbB8Kv5Ch7cJ0vPJtdrmjgmU6efUebeApLo5JJk9gg2Fut4JBBwkg0dH0bS2GFYQoUVOiL5VmuMuuw2E0uNfriPEZnVCw-6dW7pzuPH1hMe7AqQUNVl2vNGI_6gLVT7bCm6g/6w5v-QRHV-L-9YPjxcIHBA/ch_10-7.mid" onclick="return setToDownloaded('dlBtn_1_1_9_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.8: Allegro in F ('Sunshine')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yrtTR1D5kYmbGiKqzPY1KugJwYzr1KaTN7btlz2nNwOrqvLOlrs7YgSQ6_SHVvgpvm6ru-HvzR4hMb1zMkN0_tj2iBKy1X2yDSANBodcnxSEy8O1AIE8U-mDCH1_ObrNVlB9FUKibXy7SnbJ3-qJkw/rHgyBJJGjTzYoP4S5bkYXQ/ch_10-8.mid" onclick="return setToDownloaded('dlBtn_1_1_9_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.11: Allegretto in Eb ('Arpeggio')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/j3a_EGPcyyAjkuYbaXNwUxm3PmQSiFX9Iv1aRalNnzPzg8JGYm6uxxKdAOq_I4JonkIRlQ-_MCSI_i4N3xbhxkzKqCW7GVCMTkOv5poNcu8K9hm43J6gYvvA6ieMfaAT4azNOULCYySYTdPoDlpOmg/K-D_KhPzvctGtMc3CibYvQ/ch_10-11.mid" onclick="return setToDownloaded('dlBtn_1_1_9_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Mazurkas, Op.63
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kwieRDg2g7h2T9uw0mYSKrmbobmv-L7Re_ETRZ_GJU3Up-wym_LlKvG3ljjHS2NJ3lw4g1WlOVeykHSyYZCDdjyPTb_uBYB1gfPRs5HXTZojckdm3kfiEXw3qbcudFef0A8puvfRKzdb0CAIAk18uw/ySB0M4GtMxds0J9L0aQ1Rg/mazrka39.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/hSOpjapFX2-vO1jJrKGx3KtjGa3cVo38cyRbSP4nVsVfyAQ6WqIhWmQMSMHqms4skGa5OCQaWAFZMcqSjNQ1k6VdO3zCH0UBlgOXN-j_AJPm6Q7bAtgpapiFDfWd478alL4cCSONI8pDSr1Ss68lzg/eVnGKNdY4TUkpWYNy4L6uA/mazrka40.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8MsAgS2V-kQMvJvvsyI14SOudZ7fenP23V77yUh_qPnPNGuj7NwmQN8WterDuWRx31HE1tKBPz1PJtOuSxX8aaZedpwn_t5-d8D1WObBN3Bm8MT39Szz4xzF2MD3L5XMgrQHY-K6jsoLrwPafBkRGQ/vviFkEz8dmLwjMQNf4mfUQ/mazrka41.mid" onclick="return setToDownloaded('dlBtn_1_1_10_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Impromptu No.3 in Gb, Op.51
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.3 in Gb, Op.51
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/emQZ1D76eyWWCFYyHS8CaJbiUVJQ99Q4CUHj3xB56W7-qDKSDZUBDKrfjg7pgZkdf4iJZyUk6A50w-R6jHKYFM2uI-Ukm7afUZm96UzgjSVzN3bF6JxRXQQb2AjuGPjFj9sBzfy4BEHBmQyO_l598A/CCuPaLgrKH__w6woLD7-7A/chpnimpu.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.1 in G-, Op.23
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.1 in G-, Op.23
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        56 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/QR6PSVXK0qjjMlE9D8-GURakx52nKYPsGVZ4LxcjhTjxqLWKplYgJ0hcXkLKtEg-aXoR1-2OW1Ng38IGJeOS7fbVXjufBrtbOb2N4BoKeUUJxaTpaf2KHJgEeJ_r2TyVFFDGzZT_tDuYNZUciG3-Qg/5hVi-AsLyewCJX8YE1GhvA/ballade1.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 nouvelles études, CT.38-40
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZKgHvnSS_Nt5jIzbzH7M3u-KVeRARdZNY2_euIKA9yX8fWoksXNiIGDBfcPxMOBliwE12ccBzW5uw2Lr1d8irSqKrnGtlgCcs0IaBhaN7DKF8SIY1zfTfjb0cGzi3n-VePNNzsyR6LEyBoR5q0OWMQ/JjEu5PFM5thNBlm-jae0MQ/nouv3.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.4 in F-, Op.52
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.4 in F-, Op.52
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uSYtB-5sMZFamsDvoxk56s3Llc6nrOFOoAxGGIWFJqu7o_ciO_cXwMFyHcGf7xBjOZsx3_Vo63M_Iw8sWoLKSiUQ-g1B1icW9INFuPMe7eBddI59y0G8p0G8k10ToQ81yVIfd3V-O2u-sgOf0fyQWw/70fmvwSqorhbjDOGrM_3rg/chopin-1.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.24
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VKufkcHJzAS3sZhIuUIn6HyRfb9C3ndVsJLOIDIDRVcrRxTu9rhCv_NJJQGaEmJqrgQylX0g0vRkdPQzutGowssMNOGUiX8VPfylVHhK-AJm3ebuRdOacXzNTo1-h4mUt0Ie0y812INRniDCu2U5jg/goIviGk6fTce9ab-dA1e5g/mazrka14.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nIGyt2T5Ch4dKXSBitcLtBR6UcWwg6mr6TWAdoJhHdWnY8ESfZ0r34O2r36_HQtV5ms0Xt1_oQJQRzMFQdAm-G6rGQViaV33d3LZna6dSB7U8cjxGo8cBoeVI8Q0dgt_D5UnoThxrvYojm_HT5wM6A/aAdQZ041WobjmyRxFoyFFg/mazrka15.mid" onclick="return setToDownloaded('dlBtn_1_1_15_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in Ab
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XkfvaZwqNGkFMTSHa6ZYtO-2ivB-jdb_g8QRnj8297Yy0_qA7oWVYWQxHf9r9UGIL4WWaRWUClOdTOLIPjAX5tRFH0c7i8bgtKJseH7AhqoGzoC0WXq_9Bt9dKCPDx-ZYF0XaUcmIwpomq69G9aAlg/NPmDKBabed9vyT2nc3i1cQ/mazrka16.mid" onclick="return setToDownloaded('dlBtn_1_1_15_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in Bb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/20jDdEJkTvqN5P0VATAeOmzkKVkpK0UPd1iI2DoRggTrBjtD7H67gzXha5o_gvFEQtPVvhPJaYZ_FhFNqIKN8c3_nXHyaQJ_MzG2-uGW-8jM79mPk9FS26Zf4noCfCX4678_IDnrzI1k3a3U3jmDZg/YFKMf7rT88I-otTwkSc4vg/mazrka17.mid" onclick="return setToDownloaded('dlBtn_1_1_15_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.3 in Ab, Op.47
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.3 in Ab, Op.47
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        39 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/I8vtdMBsHrCVHBx0srUvkZx3RFOJmi2iuHltVRvYRjPbiezLuCdgkD-6--AL671RENOzKtnJVSpQM3zbexFo_RZXnno64z35lbV2_vaF8_z722ResSIgCm-PP5qQiJUCLpi6QslNilWIBo91BBXH1g/RYGgtwkktSiqFHipL5O9Fw/ch_ball3.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2: Presto in F- ('The Bees')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BpPqGQdhVw6fHFdQ-8G5MVpPi9SC543ELEQ76uGxhcZplZi-HopOP5S22knj2CsX8ll6yTexlV12Fh4ARevKiRgZpXjM4BxhGoeM0Sc3OKBYmUK1URYDaH-FS2V3ALazoxFYWw6B8MEcXcYCYEn_2A/2y3XwNcjXiV8Fm_WUJlhkA/25etude2.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5: Vivace in E- ('Wrong Note')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1elXlcgkm7GdtHoOJLAUOpHnL_nH3wOtWZ-BKH2t3UXVGl8InQ6JsYjTepL0mm332B6w8EJ_5oBt9ti8LWkNpCkRioFjQpvVcDoI8AeCHCShsZNEX0wjox-D_h8Vk_OEXH5xDVYv0nwPmRHK83TZ0g/wQeSELCNmf2hGNUxucI3-g/op25_no5.mid" onclick="return setToDownloaded('dlBtn_1_1_17_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.6: Allegro in G#- ('Thirds')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7pgDoCrI6cBVmMCTPSVnipkIgLW594OQAFga_l7bxRvd51RBEuSEEJtM0A_X9MQ96AwzUfZw8_eP2WsQmqQnORVKibfjQHISBARThXT3cbXu7EX_huMvG6P2dP2PNh_yXCJhONObFC7Y_hOKG7z2Vw/ATdolyBC0TDXASp5cSOoHA/op25_no6.mid" onclick="return setToDownloaded('dlBtn_1_1_17_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.9 (includes the famous 'Nocturne in Eb')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in Bb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/141lbpCFAVRO5oydtIZePfjRRTQXCIbsa2iwIFrbI6KE3puUDiJn9CqhyKzR35ZnSRzm1fBtEdLj18_fBSbB1D31P4_BFtwkrQOZZMo75RfFz1Zmq91wISdZoJMc5jdS-NTJep6wG99xGq57DRbjKw/0l1YJB-ToUz3MKjFZcq4Cw/cho9_1.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.17
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.No.1 in Bb. Vivo e resoluto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qIR3GRF-jQp4ep5QMXJpzcrnuNjtPRfk8Sj1Xfq-gDNQcK27yFwyNmRc1QdWe8MW35ZIEJgUwHtpH_YGlSmSkfCLO828ph95JJ5CYum5NPomJrW7KHJniXyJVg9e5Ia3QWvMDHAYw7NYPnlRoYLpqQ/DrD-1dpO7CakYanzl5Ku9Q/mazrka10.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.No.2 in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kzJ5byzUQtwVjKU6a38pgEeBql332XHpvAiSfVWbHXO9yikNKDXaR378TloKDRzZWHrhiQK8MHGn1TpURikDodFZRp6qkCOfO7WSG9s2GDIAxDMaco5WwFHlu35rpkxOpR3fcWCw5k0muyoHo3HC4Q/kjYCYPkBvkCD2Dixif3sNA/mazrka11.mid" onclick="return setToDownloaded('dlBtn_1_1_19_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.No.3 in Ab. Legato assai
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1kpmaeA-s66pf4jHg03DYW0yhkQTAh9McJ5oMgIqUBUslwiMyytXb8jROEsPDeSIAHVAJJN3Zj0aw3uCTyikR1zTPnIRmt9fLZKZXcsnmX2f7flNFrw1uQZMV9ISYQREfIw-4uDTHb5BLJ7hueWKUg/Nj4IzS9iURwcNmUXkrfDoQ/mazrka12.mid" onclick="return setToDownloaded('dlBtn_1_1_19_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.No.4 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/C9NEVYlW5pqODO4_hK-TdrnRWSYCjgJLvojQy_oA7uzDO88tZ3ke4JdFqDeJMwHUULEtpO3e9c7oBUnf6n6NDV-O2p9NIHp3Xxf3sXIAFaFoV1CqiwlAB7Ro5bR1S21RsszxjOPMRmZQUnK95Xbp2g/E51e9LXELpfYwnk1avJCnA/mazrka13.mid" onclick="return setToDownloaded('dlBtn_1_1_19_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        224 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/RGvELMEPkLCvzPAVPOJjhiStBcUkJZcJMRADabtKPZj_-mY2JChSLMMRIFEXYeHuSrHRqz0I4Nr19MP2zw4roNlwYBP_m_MvoY-dX-zyiw_fz1tqFbWpixMd6OGg5aDQsGUB-xwZwaNbL9TgiVChGw/DqIw_P6fNIUE10NljV0dfQ/ch-et-25.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.41
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3x3T5g2U25_VHsvwjOCqJN-sYmvJnT5vVUJnlZNrJZIU7JRXOWxLsu4vwL2uUup-Qgcyl2XvTgsbgjN5JY4g7vvyd8aCmnqWw1pct8Td0-Hp_fiVLpyGuwPrChpYpu3t7mY1qJm_JnFZAbyEpZPKQQ/O67NXq3WPMfi0XROgSeZig/mazrka26.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/45j9w6jJ7_VcZSGcDWLqm2hUFd-OIuh8C5y3S__jfoAo4jnQHWcz61_yzk2-TotuQEZKC0l0IT9VderHmzC167dlEZ4n0staUFfkhrb2Z4YxkJH8ggnD3sixhDVGra-6KVMNhE46_-Sm-8YZJpZU-A/9Ulz-Im4uzyeaqfOLUCVCA/mazrka27.mid" onclick="return setToDownloaded('dlBtn_1_1_21_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WjtmuObKuk7fNl2UtLHKSTnFf9Ec8tPIPnuANW4Oo7TWLmFvUH9RFjlY3NTCtJK7OogmYrSPMCdNXyGwYcXaO0QDVSUUzejeFx9oID_eOnNzpoGmxDV3olhWy4-gk3JM1eJpvijZjRF932zqDbxfNg/wKEgabKjtAwidg9aFDN87Q/mazrka28.mid" onclick="return setToDownloaded('dlBtn_1_1_21_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in Ab
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oRhOjRt_PGzueHUX61KStI9_-v93GiXoOjz-mnsj4VJBEylP7INekr6mkYiFE_mDw5wxAyREW-h6aACcIhNm_S7NipvvIztFoJDCBwoCHYq_blrXg4SvVOM7KEoorDiDzppddAKmu-FwXRyZMAz9SA/G26jpPtMCPNkv5bviv8nRw/mazrka29.mid" onclick="return setToDownloaded('dlBtn_1_1_21_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.9 (includes the famous 'Nocturne in Eb')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in Bb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ahlc3Ec6WtL8NVWLYDCdc0sn7Ad7dyTjwKDIykCF5mwy53Ep3lULZxCijWnMgNHR0LiXAU-an2KeGiIKJvdPU9gZJH2t0_2fMYDl7ncm3ykj3ISGEPEm3YakbWawcHumOnBBPsL7WKevjndFuY7lOA/hdNpjdwLAFj5N1w6gRTAqA/chonoc01.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Eb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nPpBpju4xM-Tx83U173sU2F9rkuemwUTZcyG3mgInGY6LwjbMB-SCDyy19YDJk3BIcI-QpMD5RRDzSDQ9kqt89yBSIIfWpA4rfK-aGWG6bPNCX-af41lVRCRR7FX3OtkT2ar9BPZAlOHFBC0p7ivnQ/gguxfDHNJp0nbRIut302NQ/chonoc02.mid" onclick="return setToDownloaded('dlBtn_1_1_22_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cxYDihoZKisohLn14y9heIm8o1lGPwerSRCZZUnT2iHzZenkZRcKJg9juuk0s84WumMhltyZHZU6rLh-fLO_zB4m1wG-Tyr-c2rnkLTu8m6SfCcm6cAulggD-vCRR3gJE_4GTBt3jX_Lc_DVm3IMlg/PZRFQL8GNZG613UMyI8GSw/chonoc03.mid" onclick="return setToDownloaded('dlBtn_1_1_22_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.2 in F, Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.2 in F, Op.38
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        26 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VteEkJivtl3EcpAt0B0Be_1bQkIXQVagGIgmmrXjnHmjx3Oxwu7d_6nAyuDfOYE9euZxh2eVnNN5wbfHH6ltdl9jZGKIVuLueC1JY24IRKf7-LsJfKIOcAVuZeCVkdkrZu0P0FuFVBytXEmYqpcsQQ/xPpLYrE364ShoubWSL1Ztg/chopinb.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.8: Vivace in Db ('Sixths')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7iYOulC0gB12lVGKZCPLWbswbca1ESLaKK-tUTTTMgU1q02KbMKga3_bKwBUchpRWbxx8lBIsvTY9tyqN7Wi3Yt-7U683JSU2GPBHJcsG1MD0CuYcMDCyGfeu9qVBjBAPDawOVZe6jQzDwNIqgV9tQ/ySl0w46t-s96-9LVEczcDg/lecpe8b.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.15
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xul4mnYQs7WNTNbu_GKj_O4hsgVu8ceoEDoF6NiRVDMBQeTy9uOaVplZ2DS7Qm9tstDqCHeccreaUbPtgYe0I0jBn-G8YBi5on1ycRq-bFlhlzFr6h7EyJp3E3r-TE6femjCDTg4hLfI_TXZpV7OIA/kd1fVfFkCjAZuUYeBhvqlw/chonoc04.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in F#
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Nky0F23fpAIo2W5HmkU54-p1JR1R7mjJnffi0KKRE_izjJs_WgI_Dg8haR0gdDchGVM-CcB-yFe5w8TSPBXH7yeN39P83uo0xXOuD2HtrmUrT0zKhRqguum6WLfqQTrYkXFZTJcyt0XYflrJ-Ai8Iw/Fi1o0sgKFN0EfoISkKno5w/chonoc05.mid" onclick="return setToDownloaded('dlBtn_1_1_25_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ofdzuXQTKXo7FynShQiqzS7VNuxrTZTC-ZCFaPN3KaeUe8WNMwqXigMFb09kuYJ4eSvskMe_E3VEXt4gPLwo6-dpkN_TYoygVCvfcdGym1A9p-5d0K3hnT3SyC2M46FoFEgXX_exX_htf6mVexyMSQ/my-S2SzIjC4A8-8YKv7yNg/chonoc06.mid" onclick="return setToDownloaded('dlBtn_1_1_25_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5: Vivace in Gb ('Black Keys')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/W2LC8NnLNHv0t6cJQmv5cUNtdqARIULuSvzOQJvqNZjs2Dmm0vCQbo0g1mijSMLjuASiJNnAb8894YwZQnf7szKayZaqDSMWQ2WhWmN__iwiHRWP1EPJZhnzxmBCUea5Xb6zhKCLUYNYNFPYrq5MSQ/xnIH1gqHevSSkLiOj8MCpQ/blackkey.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.12: Allegro con fuoco in C- ('Revolutionary')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pUMEF78PcB0Z7Hvrud1uPI3OxUKS9QpkeW3iyvECVPosannOaSPboYSgFfrLwVPgbDWlRMnPHNzlLk1Nne5VewUmiyK_7srpcnWzzWOCJrDD9cRdSlT5JMkds_QtUYO62gsjuK9hUuSviOR1jDgweQ/16ZFnLsf_QSdnyhHrH3lxA/revetude.mid" onclick="return setToDownloaded('dlBtn_1_1_26_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.9: Allegro assai in Gb ('Butterfly')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yiMijy2YOPUXE5IZ9IQWf8bLOygJmQJYFWG7I0CLTpU5RZrnutwvvIKTERqjJb2p-So1ZOrm_UMQpOD0zRifX19DEY-I6q9USj4dCT-JHJzagD6aT3MsIUNHmVP8Slc4U-x5DpdqieLsgRVR1XAJwg/6oNmbdr9UzInr_qvr5DXEQ/chopin_e.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.33
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in G#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kBC84oNp736WYlARLVMeeO9GFyr8Ue_EI_GMvv3XmXa_N_ZUsyE5SBuTQlKVrrC6Cz0wB6wZ_rLG8j_gb9rC2diqOXShi6XzlzFPC-IFBMy_xiLChvalxjbFjg49CL1h66oDc6TQ6Cr63xMSthIy_A/Pwcj3sirD6Dj16E1rZiTeA/mazrka22.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in D
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/g8iBNftvIzBBmHu0HE8bnI7Cm8u4NdyNMWhdSsVLph-5FzK9m_rFJhWL9nxMe_oh-g3qHh2sZ5TDDKHptbT5QP6YsJEB_uHDiVMYr2cpnC8USBe7vngbNVLEsQcw_1_2wtB9KkmFApnhgFep1WXZLg/RtnosqQGB7Q3GqjTA_5S2g/mazrka23.mid" onclick="return setToDownloaded('dlBtn_1_1_28_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/iZPu82CXd2UQxjx7IZolkkP13fmU7hfAhGdLLXh2W2zvbrPCaT7tEpwtAQ3eA4JW6dhFzLdgit4eq0EEXCEPeYVzTLvScml2GiG9ADuYJGirbq7lRR-WAf32UCq7UOl8z0yqQ7vhNoe1zVI4dztKnA/1Ok8z2kDZKPQnl7vY6cXyA/mazrka24.mid" onclick="return setToDownloaded('dlBtn_1_1_28_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qOjqBkugjDBGW0QWz4QIQIhBdEXP43dLWRqwWN9z4ejyUWxWJej3Z4C_BwxgCGbeKpwfL3HEXRSObhySYqkyu0eXpkzp6-TkP3zoDcVzzCXt5RftXNz_su12NXHEakgqCYap4QO7oEDZgjcv565U1g/9_TMt2kAAZIvdLcCdhd4Vg/mazrka25.mid" onclick="return setToDownloaded('dlBtn_1_1_28_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.67
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in G
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IJGMkHENGADAU_7KIGrYP-Yl8bjHl4NbHb1UTPQPo7d4vD2Zm6Nu4UOwW2xc1AEF_ydAWmFyy8LXJUeKKPfml0aTr0K0o5LsMgELaSNv21oqm5Gt5k3KjWyMH16Kk1OF7YcwgYj3zPEMg4xiYYoQ2Q/USFJAw73KVoAf3PI1PPeAg/mazrka42.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/E6JM05UKnkW5mP2-Q9dYu0VjTyig4xmJftZjvFXFkDtRHslJfBQINKo2QX8OGUk7Q1a3jwcPDMxmN-emfyougeq5e55H4PeUjrfAGCtLzrp_M1tGe9f2iaFvlYALwLH3TDGBvwo7VSCYN1hu2Gq5uQ/v3tnURlEOPKoAfkLjunTHw/mazrka43.mid" onclick="return setToDownloaded('dlBtn_1_1_29_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/u-lg6Mv5oo8jJr-1tIZNJozPtR5m69pz5Cwpwvq1WBdtx45T9uVpri-z-rDxGv1RJLsOojCLfxM9n5aBiVUPfk5DUisAvRD1Aji1NBwTdhhz3p5HN6wnKUIPCTTh2VrimeBkZx0T_uQPspQOwOsM9w/NJK_PEnVF-yNWFDAhtF-gw/mazrka44.mid" onclick="return setToDownloaded('dlBtn_1_1_29_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fjMBGzoAMYzTsuAWmWXHdbzAWy6B2CFqaSDT82AhgQaLhyPEf68W8i--daGDkmZeFCeUnz8QLKUvvwNhSJTLzboUORJXesVS4CzZxHpE_JQ5hq6AD1rOYjg0oKSRBbRRn33nZ3ACJBHoQrsCszEZVQ/JftQwseTyupI-MRK40sh2Q/mazrka45.mid" onclick="return setToDownloaded('dlBtn_1_1_29_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.12 in C- ('The Ocean')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_M4MMtX90Iu2wGFCHZZqv4O-XNOB5sNeBtS3z3rcvIuJYfP0ZawFpTsh0D4ZQFjW249dWQNZUK3C6zB651rCHdyosgPL3HshUuaErhoG4VGgb0vZUQRoc_DOlSIyPl3NoCyBuubz3ep7RRzw6VrL7A/1L_RmgDJ-anHarPbdZzGMQ/fc_25_12.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 4 Mazurkas, Op.30
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/djm2Se7aq1VtV9Fmnr12nnAdyfNiUY5-tSt_DzARcGUbNNUL-uu12vErAPc39lFURTC0RHzuvBGQqvP5Fou6_bwneCUGuspVMvra_CViUChhK4qqGbKf6QG6WsTMiuF4VtuWfRDMWWEzxVqIplqwaA/Pe-JX5t7eMpCflS2iLOv8w/mazrka18.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in B-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FHPWKfDjW35HQTdFz_l1QgwqKtlg-BYblYFDPyuXkJyTmttzX_JEYv1r8IIwhHamxf98FCaP3XB5UkYgVyWoylg5XktioRlb00VeRe5MEEgp1_rzs7Y2vMp2ncnWwHUguGcn7ccq_f2-vczLnEUkqw/v7iKLxOqJ9nSIh--dTSTHg/mazrka19.mid" onclick="return setToDownloaded('dlBtn_1_1_31_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rQFqJtzzzuvqO7eh8ueZLnOQVQk_M-ZUs5HZa6TPOrFDAihfVYBrxh0blr8YSve4gsHXrsKIjEU41KELd9cXYAr_yqEt1NQ-w4YBu9xkTtU5U0ouWipTl0CfDpV_VHkysPcwSVWptFVSNaeb1xG04g/mjbSt0eqOU_XLMlKGNVYow/mazrka20.mid" onclick="return setToDownloaded('dlBtn_1_1_31_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pDBW7fCUdLwwv9gtklbift7ieObntLT8PMAoiC739Wt5mGZYIslAQyeg0bZV4dG3rXAUiADXMi74wVAnM7Zv8LsGwDCVAjI6-DCFZqqCr_BrfsBeXeB00NLATyRCCttesJVg8TVynFES72QaxEsqcg/b4AP8vv6L3o4aJ0NDl-JUg/mazrka21.mid" onclick="return setToDownloaded('dlBtn_1_1_31_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Mazurkas, Op.59
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/F8Mf4dLSwpA0BEQYKYxDkTTx6cx-IUAzI4bybsoCnRCvd2ANn-PQpIrt6-1i1oHKKh6FH884k-CtyYC351BrXN0UfaHjXiHd7MP5SKLPS5KK18Y48AvuvdRslNXguR5_KGiDHjYDHXGMtNqli6qtOQ/HK44rxgNjqrFSg94tdwoSQ/mazrka36.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Ab
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HtAqW9iCEVlfLYdQMEIJ4ku1DoFSabnw4etmX_DxgxtEeT-cSB5ms1HY5yxGEzM5hrpDLmZOPxh6aVZToS6U1FxqmH5WQTIDCte6uWqdYWxjMqXZLe-AnWOXFfEVdsFeBtLKh-6t90l5BegHJI5Fag/m3PApbaPrhWjsyzNoSXvng/mazrka37.mid" onclick="return setToDownloaded('dlBtn_1_1_32_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in F#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bWG3NE0uYjN5HUrU3YLR5o5UhbcD0p09aYClihvwu9dBH0guaIOPXuHocuf_DVmAkDkspgjPNxLbdozFdMtKWOYTsr3oKgWn1qUj9q4-FW53M6WXcFaq3ccHxacK56Ydj5kY2CXglNyJDr44B8dfvA/XY9Oq1u2fjj1OjSWIVLYjg/mazrka38.mid" onclick="return setToDownloaded('dlBtn_1_1_32_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Mazurka in Bb (Op.posth., Brown73, Mazurka No.56)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mazurka in Bb (Op.posth., Brown73, Mazurka No.56)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w47DE3tSShuZjmvd7BE7Vte6Xz9N7kAJNJQKzcntAFoyYZ8yt-GwJK6ENy3ONBeqNLMTW66cUN6o8NEO_0ioEk18qdtfZZC5rEo7hB_3dsr2jzltfg4W_IM5xGrEhcUNi6wQ9w5srRhQ6_gEqKgvMg/U0o_ociixeWnyBly4DFswg/cmazurka.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        236 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/auoErKw0yCKtVU8GzWgU-u5KGLcSj60eP-mPAqNjuJV-AZXIUkFH_RXAVDYNQlfBqUPhgDtION-79Jb_Q9oWbft7JKYLQ3AzihX2ntrq19XstRziHjYj1WI5mHIqg2mhVt8KuGT6AwvQpdo_jH_REw/-tfjSMv9O7EC4oaGw_GoIA/ch-et-10.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Mazurka in A- (Op.posth., Brown140)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mazurka in A- (Op.posth., Brown140)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dqZTz_TtG08aGTq03eYnJnZOP8zKQ6-ItpdtCoyqImnV5Bmjhb9SAPGWWlB-GVkJAEmOLdCjkMlJsAajO23atelxpQUREvBS5VxecxYvtiUwy8tgd-avV2t9mlE7S0AJW0R-r41MjntsSWtRvcazTw/LpnnHytK61OozWG2YBwiew/mazrka51.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.15
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tg9YNWebBxfhwOjFJ7yFw2LQvyH-z2zwCA6rtFqrus9iLn9aizpp1en4qxI0uKhm-t2yUMQIyWi_Kp3xDtZaPuGpH0KZgHtSmUqsSIznVo8b51UHrDpjldT7PMI9I3E9dUKhFVeqe9EsdxyiPPHr_g/W-obbxwl-2Tnkvfo4_mYjA/noct15-1.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Mazurka in A- ('Notre temps'), CT.105
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mazurka in A- ('Notre temps'), CT.105
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/T_5qDlWZ0KxfFUec-rZshoBub1Wqgp11pAaPG7TxPUlpawAy8y4iI71F0TSFI20cBIupvvnjSbQr07QHBBLeL0qGFKqigt1ifjS-HY-Qgu3o_tg7S7HmKttlBNuFzgUr__nSk0TL2aNKBsUzafpe_w/6y9rAseNWrlh8a_LGBbI9w/mazrka50.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 12 Etudes, Op.10
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in C ('Waterfall')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Iy62dYmW5YgxBA8KqpDIYK7kf18kLV7Ft0MeGRyRXqHEGho4TnQZEdEX8nsqSYw8LS21Bx611m-hiscD-7EWLhIslkRdq_43ePpO3UcuYlRwcSN1P5UTMRRF9tWgtaAmckdRmWBEigPib-44NCCbfw/PTIWZ1BOquu5crOFO89Hww/chetude1.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.12: Allegro con fuoco in C- ('Revolutionary')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1eMUxFPFXg0eVcrSRdolmsJeL9M6XK-XRAPEeQmCu36cvmH4_dUSy7i7q8qQjt0G2EptzZBmeJ28tB4DRFKdyWqDyHRWBfryJGfxIG09X83-lTPoTYQNJwHWOhlN9AnUvLL3O8CSZR9wdJs8iEgw9g/-sskBly3JdaKu-X1qbJJtQ/ch_etu12.mid" onclick="return setToDownloaded('dlBtn_1_1_38_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.9 (includes the famous 'Nocturne in Eb')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Eb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kKRf1Im_8l_pe6fjy0aZr_QkD0HsE8wwtiT3WchEHFpjpmuqcKL_iRrjLvNvuifr5aAFWWyhG89q09R1Uwcp_kNOyfpMI9W3W7nfHQ51twIiYaJbY-cAJS5U_lGuMinevp59dOaCwYmAVLQRdMFtkQ/gnv6Qx_MCdB-r3ESXpyrww/nocturne.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.3 in Ab, Op.47
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.3 in Ab, Op.47
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        39 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3_HfSr7IXYYRJP_VPzY1xJ2_ub8_uC7KKbT1SVkiwxr6_R7pfQxKBylfN7fMR26V30pnn0QlPAthiBXmimaOz0nJXhujFWav4e_VtfdW4-fWbtfAzLmZepYOYOAQEl3fsZUVCrpDJK6jKitSgiOraw/Hfz7PbPc4I7yA2t5grsDng/ballade3.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Impromptu No.2 in F#, Op.36
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.2 in F#, Op.36
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yrPkKF2x7AQloblSHwpKkd7yJzUuCqv_DFM-1ez7vXpTf6CtvmQ42tHdAhhu5LhmkqZsEBZRN7rk3svQvRehPRXDTA7JGW_70vRpuuKl6IGS3Dn6mZzn5hDG-fk_2qn3LSQq2CfVxKHlmSvYyfpOyg/LjHT9EMY7vJZMI-YEkWKzw/mk_chim2.mid" onclick="return setToDownloaded('dlBtn_1_1_41_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 nouvelles études, CT.38-40
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_42_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xHyPKd5vE8H_mfZWn2bdO03cIsXAqkIQKYpH1WaM4EU-GpkocJKl3sKlbHD9pQNIilfvuhahPlEK3LpsFmTl5rCeakCwCwMDnfDR2PuJNF_gKeUNMJdAxElivJj-xwclTtKcMia_Z8cMh56oNelO2A/c-TNahy9vsfGpXJeqMr27w/chnvet02.mid" onclick="return setToDownloaded('dlBtn_1_1_42_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 Nocturnes, Op.15
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/PR5WfhzoGBE0CqSjCUAY-JvUJ74BZpbHbw2yeJYDbk1pyAUibqOdG86_1ycL0QlI4kJ4lkUd95Kes8KdB3_I9eua_Pd4zVL8EQPli4cJj7EV4IKq0_nj2wtUnvdm6PsiTYKp_nep6YM9DvezijkXYg/9iZIto5BvXkakPXvLrLilA/chop15-3.mid" onclick="return setToDownloaded('dlBtn_1_1_43_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: 3 nouvelles études, CT.38-40
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_44_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/JNIyJPNrojYHS-kKRU3_7OMFmHVdBoNCm6WfYcG-NkI4IXK0kAheDotkvQZtyH3nv2kC5X0gyRHBs0AG2-E_V0TXX_oxgqg0Y5JMAr8rno9kYgCA1gq0wt5saR-hDzcWrzhDFKgEljSZ9QocX4vOPQ/WKoRpv9Fn5-ezY2ekLu0HQ/ch-etude.mid" onclick="return setToDownloaded('dlBtn_1_1_44_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Frédéric François Chopin: Ballade No.2 in F, Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Ballade No.2 in F, Op.38
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        45 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_45_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mktf57Epfarg-bJK3ZBi2nO2rM3ObzBYn-wahSnziTpNPCzfmI_YXRs7YDsQWa2Jm2b7BhJJgNfd1TTUZ6rLH288pXs4hYfu5UplSH30JlyFuqCJnbvVb2-q5W0WaDfO2vf2XJ9VyLv8T2lZ2VnJqA/3L2wIBUbfcjRGo1AISA2uQ/ballade2.mid" onclick="return setToDownloaded('dlBtn_1_1_45_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

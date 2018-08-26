@@ -1,0 +1,357 @@
+
+; ----------------------------------------------------------------------
+
+.Patch Names
+
+
+[GeneralUser GS 1.43-Drumsets]
+0=Standard 1
+1=Standard 2
+8=Room
+16=Power
+24=Electronic
+25=808/909
+26=Dance
+32=Jazz
+40=Brush
+48=Orchestra
+56=SFX
+
+; ----------------------------------------------------------------------
+
+.Note Names
+
+
+[GeneralUser GS 1.43-Standard 2 Set]
+35=Kick 1
+36=Kick 2
+38=Snare 1
+40=Snare 2
+
+[GeneralUser GS 1.43-SFX Set]
+39=High Q
+40=Slap
+41=Scratch Push
+42=Scratch Pull
+43=Sticks
+44=Square Click
+45=Metronome Click
+46=Metronome Bell
+47=Guitar Sliding Finger
+48=Guitar Cutting Noise (Down)
+49=Guitar Cutting Noise (Up)
+50=String Slap of Double Bass
+51=Flute Key click
+52=Laughing
+53=Screaming
+54=Punch
+55=Heart Beat
+56=Footsteps 1
+57=Footsteps 2
+58=Applause
+59=Door Creaking
+60=Door
+61=Scratch
+62=Windchime
+63=Car-Engine
+64=Car-Stop
+65=Car-Pass
+66=Car-Crash
+67=Siren
+68=Train
+69=Jetplane
+70=Helicopter
+71=Starship
+72=Gun Shot
+73=Machine Gun
+74=Lasergun
+75=Explosion
+76=Dog
+77=Horse-Gallop
+78=Birds
+79=Rain
+80=Thunder
+81=Wind
+82=Seashore
+83=Stream
+84=Bubble
+
+[GeneralUser GS 1.43-Power Set]
+36=Power Kick
+38=Power Snare
+41=Room Low Tom 2
+43=Room Low Tom 1
+45=Room Mid Tom 2
+47=Room Mid Tom 1
+48=Room Hi Tom 2
+50=Room Hi Tom 1
+
+[GeneralUser GS 1.43-Orchestra Set]
+27=Closed Hi Hat
+28=Pedal Hi Hat
+29=Open Hi Hat
+30=Ride Cymbal
+36=Concert Bass Drum
+38=Concert Snare
+39=Castanets
+40=Concert Snare
+41=Timpani F
+42=Timpani F#
+43=Timpani G
+44=Timpani G#
+45=Timpani A
+46=Timpani A#
+47=Timpani B
+48=Timpani C
+49=Timpani C#
+50=Timpani D
+51=Timpani D#
+52=Timpani E
+53=Timpani F
+57=Concert Cymbal 2
+59=Concert Cymbal 1
+88=Applause
+
+[GeneralUser GS 1.43-Electronic Set]
+36=Elec. Kick
+38=Elec. Snare
+40=Gated Snare
+41=Elec. Low Tom 2
+42=Elec. Closed Hat
+43=Elec. Low Tom 1
+44=Elec. Pedal Hat
+45=Elec. Mid Tom 2
+46=Elec. Open Hat
+47=Elec. Mid Tom 1
+48=Elec. Hi Tom 2
+50=Elec. Hi Tom 1
+52=Reverse Cymbal
+
+[GeneralUser GS 1.43-Brush Set]
+38=Brush Tap
+39=Brush Slap
+40=Brush Swirl
+
+[GeneralUser GS 1.43-Room Set]
+41=Room Low Tom 2
+43=Room Low Tom 1 
+45=Room Mid Tom 2
+47=Room Mid Tom 1
+48=Room Hi Tom 2   
+50=Room Hi Tom 1
+
+[GeneralUser GS 1.43-808/909 Set]
+35=TR-808 Kick
+36=TR-909 Kick
+37=TR-808 Rim Shot
+38=TR-808 Snare
+40=TR-909 Snare
+41=TR-808 Low Tom 2
+42=TR-808 Closed Hat
+43=TR-808 Low TOm 1
+44=TR-808 Pedal Hat
+45=TR-808 Mid Tom 2
+46=TR-808 Open Hat
+47=TR-808 Mid Tom 1
+48=TR-808 Hi Tom 2
+49=TR-808 Cymbal
+50=TR-808 Hi Tom 1
+56=TR-808 Cowbell
+62=TR-808 High Conga
+63=TR-808 Mid Conga
+64=TR-808 Low Conga
+70=TR-808 Maracas
+75=TR-808 Claves
+
+[GeneralUser GS 1.43-Jazz Set]
+35=Kick Drum 2
+36=Kick Drum 1
+37=Side Stick
+38=Snare Drum 1
+40=Snare Drum 2 
+41=Low Tom 2    
+43=Low Tom 1      
+45=Mid Tom 2
+47=Mid Tom 1
+48=High Tom 2   
+50=High Tom 1
+
+[GeneralUser GS 1.43-Dance Set]
+36=Dance Kick
+38=Dance Snare
+40=TR-909 Snare
+41=Elec. Low Tom 2
+42=TR-909 Closed Hat
+43=Elec. Low Tom 1
+44=TR-909 Pedal Hat
+45=Elec. Mid Tom 2
+46=TR-909 Open Hat
+47=Elec. Mid Tom 1
+48=Elec. Hi Tom 2
+50=Elec. Hi Tom 1
+
+; ----------------------------------------------------------------------
+
+.Controller Names
+
+
+[GeneralUser GS 1.43-Controllers]
+0=0-Bank Select
+1=1-Modulation
+5=5-Portamento time
+6=6-Data Entry (MSB)
+7=7-Volume
+10=10-Pan
+11=11-Expression
+32=32-Bank Select
+38=38-Data Entry (LSB)
+64=64-Hold 1
+65=65-Portamento
+66=66-Sostenuto
+67=67-Soft
+91=91-Effect1 depth (Reverb)
+93=93-Effect3 depth (Chorus)
+98=98-Sel. LSB/MSB
+99=99-Init. LSB/MSB
+100=100-RPN LSB
+101=101-RPN MSB
+121=121-Reset All Controllers
+123=123-All Notes Off
+
+; ----------------------------------------------------------------------
+
+.Instrument Definitions
+
+
+[GeneralUser GS 1.43-Drumsets]
+BankSelMethod=1
+Control=GeneralUser GS 1.43-Controllers
+Patch[*]=GeneralUser GS 1.43-Drumsets
+Key[*,1]=GeneralUser GS 1.43-Standard 2 Set
+Key[*,2]=0..127
+Key[*,3]=0..127
+Key[*,4]=0..127
+Key[*,5]=0..127
+Key[*,6]=0..127
+Key[*,7]=0..127
+Key[*,8]=GeneralUser GS 1.43-Room Set
+Key[*,9]=0..127
+Key[*,10]=0..127
+Key[*,11]=0..127
+Key[*,12]=0..127
+Key[*,13]=0..127
+Key[*,14]=0..127
+Key[*,15]=0..127
+Key[*,16]=GeneralUser GS 1.43-Power Set
+Key[*,17]=0..127
+Key[*,18]=0..127
+Key[*,19]=0..127
+Key[*,20]=0..127
+Key[*,21]=0..127
+Key[*,22]=0..127
+Key[*,23]=0..127
+Key[*,24]=GeneralUser GS 1.43-Electronic Set
+Key[*,25]=GeneralUser GS 1.43-808/909 Set
+Key[*,26]=GeneralUser GS 1.43-Dance Set
+Key[*,27]=0..127
+Key[*,28]=0..127
+Key[*,29]=0..127
+Key[*,30]=0..127
+Key[*,31]=0..127
+Key[*,32]=GeneralUser GS 1.43-Jazz Set
+Key[*,33]=0..127
+Key[*,34]=0..127
+Key[*,35]=0..127
+Key[*,36]=0..127
+Key[*,37]=0..127
+Key[*,38]=0..127
+Key[*,39]=0..127
+Key[*,40]=GeneralUser GS 1.43-Brush Set
+Key[*,41]=0..127
+Key[*,42]=0..127
+Key[*,43]=0..127
+Key[*,44]=0..127
+Key[*,45]=0..127
+Key[*,46]=0..127
+Key[*,47]=0..127
+Key[*,48]=GeneralUser GS 1.43-Orchestra Set
+Key[*,49]=0..127
+Key[*,50]=0..127
+Key[*,51]=0..127
+Key[*,52]=0..127
+Key[*,53]=0..127
+Key[*,54]=0..127
+Key[*,55]=0..127
+Key[*,56]=GeneralUser GS 1.43-SFX Set
+Key[*,57]=0..127
+Key[*,58]=0..127
+Key[*,59]=0..127
+Key[*,60]=0..127
+Key[*,61]=0..127
+Key[*,62]=0..127
+Key[*,63]=0..127
+Key[*,64]=0..127
+Key[*,65]=0..127
+Key[*,66]=0..127
+Key[*,67]=0..127
+Key[*,68]=0..127
+Key[*,69]=0..127
+Key[*,70]=0..127
+Key[*,71]=0..127
+Key[*,72]=0..127
+Key[*,73]=0..127
+Key[*,74]=0..127
+Key[*,75]=0..127
+Key[*,76]=0..127
+Key[*,77]=0..127
+Key[*,78]=0..127
+Key[*,79]=0..127
+Key[*,80]=0..127
+Key[*,81]=0..127
+Key[*,82]=0..127
+Key[*,83]=0..127
+Key[*,84]=0..127
+Key[*,85]=0..127
+Key[*,86]=0..127
+Key[*,87]=0..127
+Key[*,88]=0..127
+Key[*,89]=0..127
+Key[*,90]=0..127
+Key[*,91]=0..127
+Key[*,92]=0..127
+Key[*,93]=0..127
+Key[*,94]=0..127
+Key[*,95]=0..127
+Key[*,96]=0..127
+Key[*,97]=0..127
+Key[*,98]=0..127
+Key[*,99]=0..127
+Key[*,100]=0..127
+Key[*,101]=0..127
+Key[*,102]=0..127
+Key[*,103]=0..127
+Key[*,104]=0..127
+Key[*,105]=0..127
+Key[*,106]=0..127
+Key[*,107]=0..127
+Key[*,108]=0..127
+Key[*,109]=0..127
+Key[*,110]=0..127
+Key[*,111]=0..127
+Key[*,112]=0..127
+Key[*,113]=0..127
+Key[*,114]=0..127
+Key[*,115]=0..127
+Key[*,116]=0..127
+Key[*,117]=0..127
+Key[*,118]=0..127
+Key[*,119]=0..127
+Key[*,120]=0..127
+Key[*,121]=0..127
+Key[*,122]=0..127
+Key[*,123]=0..127
+Key[*,124]=0..127
+Key[*,125]=0..127
+Key[*,126]=0..127
+Key[*,127]=0..127
+Drum[*,*]=1

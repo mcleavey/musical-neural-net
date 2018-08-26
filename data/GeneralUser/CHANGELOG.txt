@@ -1,0 +1,97 @@
+GeneralUser GS Revision History
+
+Changes for v1.471
+<> Fixed missing chimes (C6) in Power and Orchestral drum kits.
+<> Fixed Marimba crashing MuseScore.
+
+Changes for v1.47
+<> Unified the FluidSynth and MuseScore versions into a single version now that MuseScore bug #72091 (https://musescore.org/node/72091) has been fixed. This version has also been verified (and slightly tweaked) to work with the latest SynthFont2, which now supports SoundFont 2.01 modulators! Requires SynthFont2 2.0.3.2 or later, or VSTSynthFont 1.081 or later.
+
+Changes for v1.46
+<> Fixed high-pitched squeal in Electric Grand
+<> Improved kicks and snares in Standard, Standard 2, Room, Power and Electronic drum kits
+<> Balanced C5 sample in the Bassoon to fit better with the adjacent samples
+<> Improved the Harpsichord and fixed weird loop buzz
+<> Improved the Tremolo Strings
+<> Slight tweak to attack on Accordion
+<> Improved clicking loops in Fretless Bass
+<> Fixed bad loops in all strings
+<> Fixed Recorder release (it was too short)
+<> Fixed weird attack and velocity->filter response in Chiffer Lead
+<> Fixed release in upper extreme range of Muted Trumpet
+<> Fixed flat loop in Acoustic Bass
+
+Changes for v1.45
+
+<> Tweaked velocity scaling in FluidSynth version to be less extreme between FF and PP playing.
+<> Fixed Slap Bass 1 & 2 release to avoid clicks in FluidSynth.
+
+Changes for v1.44
+
+<> New license
+<> Fixed loops in Concert Choir
+<> Improved Bagpipes
+<> FluidSynth/MuseScore version: improved programming of harpsichord, trumpet, trombone, muted trumpet, and pan flute.
+<> MuseScore version: adjusted balance of orchestral instruments
+<> MuseScore version: modified default drum kit with orchestral bass drum, snare and cymbals.
+
+
+Changes for v1.43
+
+<> Various improvements
+<> Re-worked strings in Live/Audigy version
+<> Separate versions for Live/Audigy, FluidSynth and other software synths
+<> Removed brand and product name references from presets
+
+
+Changes for v1.4
+
+<> Countless samples have been replaced, improved, cleaned, re-looped, etc.
+<> Just as many instruments have been reworked, rebalanced, etc.
+<> Improved overall instrument volume and balance
+<> Previous versions of GeneralUser GS only allowed 20% of the total reverb and chorus effects to be used (this is the default setting in the SoundFont specification).  Setting reverb (CC91) or chorus (CC93) to max value (127) now allows 100% of the effect to be heard.
+<> Added self-test mode (activated by playing "GUTest.mid")
+<> There are too many improvements in this bank to list, you will have to hear it for yourself :)
+
+
+Changes for v1.35
+
+<> Made compatible with Sound Blaster Audigy and EMU APS.
+<> Minor tweaks.
+
+
+Changes for v1.3
+
+<> Combined AWE32/64 and Live! versions into one bank compatible with both sound cards.
+<> Resampled Marimba.
+<> Standard snare now sounds much more realistic.
+<> Cymbals act appropriately when played soft, making decent-sounding cymbal rolls possible.
+<> Replaced Synth Brass 1, Square Lead and Sawtooth lead.  The old Square Lead and Sawtooth lead can be found in bank 12.
+<> Countless other modifications to instruments in the bank, including balance fixes.
+
+
+Changes for v1.2
+
+Both versions:
+<> Adjusted piano 1 and 2 brightness.
+<> Adjusted tuning of Marimba -- attack still sounds strange in Live! version, can't figure out why.
+<> Fixed crackling in Clean Guitar (and variants).
+<> Increased volume of high Trumpet notes.
+<> Other small changes.
+
+Live! version:
+<> Fixed Hi-hat cutoff bug that showed up courtesy of the Creative Labs driver.
+<> Fixed bad attack on Harpsichord sound.
+<> Fixed some more synth sounds that weren't right because the Live! driver screwed up the filter settings.
+
+
+Changes for v1.1
+
+Both versions:
+<> Reworked the string ensemble using same samples.  Sounds more full now and is in stereo.
+<> Adjusted balance/envelopes of some woodwinds.
+<> Made orchestral snare velocity sensitive.
+<> Other small tweaks here and there.
+
+Live! version:
+<> Fixed some synth sounds that weren't right because the Live! driver screwed up the filter settings.

@@ -1,0 +1,1968 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 21, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 20, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Valse-Caprice No.3 in Gb, Op.59
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse-Caprice No.3 in Gb, Op.59
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TYA9HrMoZJp1vBJxSuWAMOJNfnb4uNCq4jHHv84K5lDYYMeXr49VbKVLUwdH6Y90CqJuBDABU7kt9ukyxx-X0T7jOUekAJx_0Az2tb3fvp_1eLZo5bG9Rk5GV2Yy2vLtgZV-VyUjC8PNUZgA2zolRQ/O8bSMJs-mdI3kCqEh-YMeQ/fauvalc3.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.11 in F#-, Op.104, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.11 in F#-, Op.104, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/f8hvbeosObWZke3-ZXMdmNJC-0buaxb1JFeWoKGO5cKJUc5PvOuiU4PrMLwvVn11k89TLCM-0mFcF2OysQ_3ejuhwyyXLxSQdCztCzVglpHN8p-ECpl2Gq99Om7ltrc42ZlbrtmaYXFtWqPQvEijtw/NbI8C3V8Z5JJ0jG2tOYO3w/faunoc11.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Valse-caprice No.4 in Ab, Op.62
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse-caprice No.4 in Ab, Op.62
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lg24rNepJ6QEof_fkRdkyP6QeaBnS3SQL0LmS5j_k5T99uqtXz5PP_FFhTVjXmlR3SC3goMCFpIwQHE2ReWzhU45BqKuqDallW6RJN0iPBUB1xotdluYF-_oCXX9XyRjGF80qNF5iA5T2R8Sd1yLLw/fRVXQ7N0EghfO8_wt6CS-g/fauvalc4.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Theme and Variations in C#-, Op.73
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Theme and Variations in C#-, Op.73
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        52 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xi22vAhh2GLpFdBJBGCoGrn8Z9jPWDPeS7pGTLb9O9xWxwdlzrcjnGFY95nNFCTgB3DZDfTkJMmxUsC7wpthy4yZ_XAuXDan62_A_qfOC-vdTi1xCh9kYaOV841lqMLo5a4Fsuv_tlrC4OPfCqdmiw/xWR6HQidSlmbZH9OF3NwSw/faurop73.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (ii), Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Vals (Waltz)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nscoQskaNl6AMMY7qySFD4XPj8_e5hNevBLuCFkaXKgEJAGEdffMh11WMg4V-KoDe8OBtTVVbLttHXtZrvZGXS9j-NtJ_ImxTILDOHPpdcy2oDNfH0AkijUokqIhai2njEkvuRJE_jrAATurNiMUxg/M3yJKOMQMrndjG0AubjGig/grieg38.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (i), Op.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Vektersang (Watchman's Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5NCEeD3CFd0mM7lOZk62a9mex3Zx-iOH6Cb3-sUud49TLHpD428balevLQROdM-KWpXcxHovbIk06YWzG03SECZG2Re4rFyuZdNBrCqbE7g2Np17jplsEPnR_Kkz1FCIbKmLRvmp-lewWA6cYkB6Og/tn50DdikgfCnBdb5zSl_pQ/tmgr12_3.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Norsk (Norwegian)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7_4j4PiT4lV1QNJ_yamrTk0edkQxxLWHQPM34g1pVI8xR43ozVkDulovv0kNIvLPkP8yDWrvKYwyte1Yf5jmpXGksIis0f-ZX3snexMJ1D89ZCrKJJyMMXLyLYTsjfLTOn69X7J5Nb3iY_qxBh5Eww/HtXWiwKa8ZOW_cTwgit7kQ/tmgr12_6.mid" onclick="return setToDownloaded('dlBtn_1_1_6_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (v), Op.54
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Notturno
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/x1ArzZIQNIlqOFYgDhhK88Te28HLvu_e8fUZl28Sykqp5F808hGWDod_2FeKDJzLbEuBdJeaG8-oKqKoXPscm4UNpH2MCOMxhitmPMJKAraE6wyMH_uh7IJG-wQ2bINAGcotJGvh_RaCI_jgBhz6jQ/Q7xmHRI7d0j6h3q5s0rQgA/gr_nocte.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: 9 Preludes, Op.103
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/k_2WSlhc5Ha4RcG1A45iQvtQ_SDzWlAAOhxpV9kR10T5rw-IsddCzj0MDuKthX0YsuHcDg82nk_KEi2hIdAXwcpHSRKvCvp4610mafMhtbROfHUSBj_sQDKf2jZMPNjI1wS8yjS_oJJ45stXfoCx4A/UbkYaLTHTW008B_KNNLmow/faupre01.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/JJU60yH8DR1p8BZzuDunq1_gOdTERDuAz_5QmyfmsAbJlKnh_YpdrOGNOO9R9BFFrrJWwvedZPg_uSbaUeY0Ow9oylI1s8XyZ7JCBwMedFqZPD2V6NedJWwtyAAs3xq9H9FYyGz2aaGIwjXX3zM4uQ/Tf91ZFLebOvr0biyPDWBzA/faupre02.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WMqW7H6vKpzOIuHu2jB9pU3cCJmDtOy44T5jmgfRfZ-eVbzyTOkaF1MmQp2crXV2iKwQEEqkvBstVGPb8mCPegXAHzYhxOTzD2cDeJJ8SgPxd0lnv-E44kBzOj6IKlSrhBkaDf-6qLSWheQldx5_1A/6RouS7xJVqC-AYzPj8i32A/faupre03.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cf5p0PBMSSh4wSTMto4Hr8Phw5WpwNLvyNFHjBK7nybxFG2q9VyJA9EMRr7ANsp5rJRz7yG9cL7MrK2Q2VUTypTDNp6yDPTgG6IS_le5ZfjOGq6n_ndOJ7-GdoR0U0Ni-Ki5SzdYnDaIdcbAra5jzA/YsE4-yLIQAHlwPy7IKWzDg/faupre04.mid" onclick="return setToDownloaded('dlBtn_1_1_8_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5 in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kmn-X_hrWq1ywvmZYubmI05UdaoXrxm1R7sbvnIhyFSHnsGgEzqa13I3ByAnutylCQ8bhADkzkfDJSi8rRr7FoZkX4f072U45Hhw1ft51gVaIR5KbC0TrGe_3hmIA6D-OiA4yWxtFlk8cJp5ZV0rbA/9brNoCTvOBYzn0HEioBm6g/faupre05.mid" onclick="return setToDownloaded('dlBtn_1_1_8_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.6 in Eb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XaBjxY_Xsj8UHvo3v6Zxb_IqpQWBBZBSMIk7WP1EB0AVqjllD4Lz_M_oIYlfHgewT-8A3eBq_VNwHlqQ88YnhmCRjYxk4U_ZZpxYwoustbfplTuS6unzFqjNS54GK5HG6LKw2bV3rhgivMjFExlJyg/zX8g8ilO2ZaLzwbqQcKM1g/faupre06.mid" onclick="return setToDownloaded('dlBtn_1_1_8_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.7 in A
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Vnkkd0oqDEnJeuBAXXgcxz9XepwDODNYFN4QNKna1qBs0fi8QsIia_kIbrmWpkf2VlthgwPwwiINcBsI6cmTmMn7Wxv-KojHU4Yt2IHkYYx3cOhoUXKWr_IExnSE5ZKZLu04X-zuiBv4a07t-bVV3A/9MrxYsaU8kcE96vs6Bv3Qg/faupre07.mid" onclick="return setToDownloaded('dlBtn_1_1_8_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.8 in C-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4IlZD9RxyUM2HqRvxLw8P9QCkERn5an-yb4NbWvyqNQ9Z6NWvrEUHrRMGa8BPu4uFiAwV_daKthijvmU0Uem89wl9e1K5Gg39Sop2QdzikVj2ItTGrQaCTri1Z9wakhv6rLb4FLVt-QMFMExgfS5BQ/wjV6QrdeSX8wz12sY_wK_w/faupre08.mid" onclick="return setToDownloaded('dlBtn_1_1_8_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.9 in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/j49n0KMrl6CWv5_gt_pg3W3ljMNUt0SdoRN53vb73cKJW91dWLMbi4cvgrkDOg1hNKBkEc8cXGlgN2EXSVFQyotIIJBG0Va2w_08kWuteQI4h8LBSctuvgnrtAt7HsmK5pDA9TIj8lyfa1pmkypbcg/E8epOv7TH1PpjDtnfiICow/faupre09.mid" onclick="return setToDownloaded('dlBtn_1_1_8_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 19 Norwegian Folksongs, Op.66
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Kulok (Cow-Call)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        1 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/v0RQ-8HE0Bgyj26C9goYicJWLUOc6mhyMOPmn0muMnyDPxjgNAGfCfVSvxWKjeCyldxa--6GJTQ1hg_w8LUBLc8bmRO4quF5UJ9us4Zmg7xnWS0bxU2OCooGEGOFjicp_dJiq4JgzGFDyEbpjXa2rg/Ssqw73983Aje4mbSYz8caQ/grieg_ca.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.En konge hersket i Osterland (A king ruled in the East)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4tIrCwY3jRIJ7HpV8TU2TvM9aBfqj-miojpaDa71-c2hNRfI5m-qgvXvZI7TaHVejmJAx9ndLOMX6VpVfJ_TuajHWTdHwa3MPfjBQaQQPe_jGqoQ51AIessTSqGFae8E_906-BkMGbgfSQ7zloaiIQ/Hj_GM_DYOFqX_cHKn9zXYA/grieg_a_.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Siri Dale-visen (The Siri Dale Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/olJMoHwMbjcbTEjn9iUZHQ8cnHwwUzk9xlyS7OdDTl1gmSmFZ2jJW3Ny8wY3kNYdMcZNYI1znt4DdK900AjleCoD1l1Ut0fi5IShyQLKHklRXoBy-Ru2cOyS8lBu1gdV3FMWz_Ax9_rWosoap2z_rA/vG53DaJK5ARDzNFWA0sJLA/grieg_.mid" onclick="return setToDownloaded('dlBtn_1_1_9_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        13.En liten grå mann (A Little Grey Man)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0vwfLYz4t4vlW10FGFMnbhyJAqYWmi6jV5heqt2dA9h3547ptY0uHxC0MfRFFRavc2MxffMdzyM8sJVJvyA3l7k52A3dcv6Jk-Y7Z8yslVaAnn3CrdpkJTromIBvHYq8bJ8AFuMPGm6ac2cwsClXOw/RTeIiJ5AjaFMLtKRCcht3Q/grieg_a.mid" onclick="return setToDownloaded('dlBtn_1_1_9_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        19.Gjendines Bådnlåt (Gjendine's Lullaby)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/PjF5PT8uMbSwVG6l57bDueMvQxClPm_gFCC-i0j0syQirAx4R4GNLNYFiI8R5yEXJD11_HhCQWd2g-YQsqfZmMFiF0uO2A342PuIHrs8TIj-bmmRPBH6DhsIAMpcpkeIMhtAdtnZJEAShaOQinTcIQ/ZCMYKQo1VTpym8qWuGSb5A/grieg_gj.mid" onclick="return setToDownloaded('dlBtn_1_1_9_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Valse-Caprice No.2 in Db, Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse-Caprice No.2 in Db, Op.38
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        44 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6d_J7RxZKkUnbrDGFn4ExIzGK7SFcAcqYgAnMgRh9dxevkhkhRHwfHM5FsYrqFHalGNqSy039abte19gtJliMzmjiGdVb4cJJ1KwW9DnHPOrI0o2ljvv1gP1OlSPi2jz6Zci_b60rnAuSLzhsHgJKw/WBXlpw8GQbgyv4usmd7Xnw/fauvalc2.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (iii), Op.43
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Sommerfugl (Butterfly)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/G3zleBkq1ozOHKouz6yamb-0dbBRhQJjqTYTxxpMUgirRgw0ZwfyiD9-E6ke7pcgMNRml_rNtg82Y4G6BGv3x9WGnlKTZkM4qoONoj5ZIZW7rtppQUaKiRZykcpl1OEmmoQrZeW9Xwc8HXgC9QzPjw/kICrQQqUdUATjnBB1nE-Kw/butterfl.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (viii), Op.65
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Bryllupsdag på Troldhaugen (Wedding-day at Troldhaugen)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2ziCx85OTrtZ-ESmGcnsdhrgzJShWcCzcSw63be9GTaTCMJ3F13frxvyty5puoR3qaLPywFiScH-Mif6MCMHttfanca4cQ_ultdA6lN1Cse8e2_u9WlY1ASzrpZvoennc_34K5eEqEKvDhdcwRpLhQ/NFlZVrC_EPpN1yCPMtxoGg/griewdat.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 7 Lyric Pieces (x), Op.71
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Puck
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/v6f3u9jzNZ8QwTHKhQaYvtlrpcdKp1La_82gna1J7CtMW7npmRKpfvGLT6kE9MJWrex8YfqkxeHKHlRXkRQxkbHg4L7eirVVbObaYoxqCm9BCjAuUzh_Y-k_WWlwlXoz6PkeT9G9u7sT7pjlegASOg/J6YT-doCODKy70XrVN5P5A/3puck71.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Norwegian Mountain Tunes
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Nummedal's Spring Dance
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/td9balz2z2j3CiA9VUOWj_lKP7VHHFT2Xl0uFHrtwC56Hp3JCvmFskqTLAcYb-gl5to461qUbrKjB7KQMVhmLi1kJ9VrT64EfjymG2md5VOXqZnym3afTelU2Un19hU86w6RSLnU4F4nbDgvDJf8-g/lu9nhijr05BW9x3T_a1bQA/stgrsnf1.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Cradle Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/DXFbV_4uALFZuzW-h_HlHyFz6_PHnkJDgPzTEN5ZuDVZ2NfsIz9-j0UBQAA0M3T_1iz9jw5kH_VRt7sLU7ibyPI61bs68SwF9tvJSJl-C8HHXOZ10cVaAZ0zof2zSnGPIUC4sg5v_L9B1j5Ql0Si_w/G8_FznlcZgEnipySsWw64g/stgrsnf2.mid" onclick="return setToDownloaded('dlBtn_1_1_14_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (i), Op.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Alfedans (Fairy Dance)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/CE7pGjdJMlzKlHC6DXOPAXLn2CviV88aORlKyMTxp6AizdUuVMmB1yk8Yp0ekgnOEXN6nyPJE_fbsLBTHRPmuVitWKyZOaquav20nxazZNZIOBbso1sqXQj8BuAgXtkf7ac9NdgzAATFty-8eX8WQw/uVZyuaAIaZV9aTZBWAEC5Q/elfdance.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Impromptu No.3 in Ab, Op.34
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.3 in Ab, Op.34
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZBEl7ChXTXueu-7nc7vA57Bliarr9VvBob3kOYa0_r-OcUOEYr9ikAw4bhPAWPpI_HVSi4Vq9xq9KvdecFX9yay41yqYFXUYr-xIgZ-ryHWiH8t5LDh4QzuZeTeE_hZMkNySzHLhI3h_la_gxEeg5Q/OioVAJZcDEIhAN6OQy_zvQ/imprmtu3.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (vii), Op.62
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Hjemad (Homeward)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Z_eBpLNuCDHV7ABuZlONItNwdjXQiG6xEDnpyMt5n6iMb4vYL4eTlCVfO3Oke6TCqIc10HiWSURU74YvpKiXsqNW7IfCo-5-34ihTyZDTTbot6jE-kmLoVOtDbvbBqFbLOIMlxgrfd19XAmnONT-rQ/JKkBFWL3ME01UWp5AA9tfw/rugr62_6.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (iii), Op.43
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Til våren (To spring)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_CrKjrwyf1nfNBG8U2ljwuw4yNuxmVfHNdOcjoHAjYKkj_hEGXYDYE7-We1phX4RzAAhf271c4gbbZqsZwQgpcyS__3f1Cvay5R7-Z3HvLmkZoJ4qVL2PQ9-N27XF0q4ExWA5S5YcrO612fPv8Bofw/BwteTm7FRyVeXhs4G48b8g/tospring.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Småfugl (Little Bird)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6GelG6AxykXrJMb96f82iLcshlMH-8Ws0ADMEl_cxO9FkTG10OpJwlnKQr3HZcNWVCGyeg7rDR7fKNLFlb07dv556F_VvPjhgPZBl6UdEr4Ghg12H5R0XqT5XDBkxZtg7tSqua3F92WHjnD1iQbJ7g/sl08mytQWfbBcoRHwH5WqA/tmgrbird.mid" onclick="return setToDownloaded('dlBtn_1_1_18_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Impromptu No.2 in F-, Op.31
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.2 in F-, Op.31
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Bmr2fl3AKqvPa6omEAL3mADAhrb12NdOoA2e1-aOiJ7Wf9YC96vwlB53L_rjOZgSKg9kGq8qr8MEN-f6CGKkbrCGdWllsG9mEtYQby8K4O4H0UtTDdnzoCVxB8Bse-_aNeY53Yw1Ruo44cvMSRQogA/vjpM0L8gT8WLeF0aHPgMdw/fauimp02.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.7 in C#-, Op.74
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.7 in C#-, Op.74
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/81eTNOy1zsnnGOpO2yWJlh0q0ZtiuE6qEoPs3weZ1QauJd-myqdKhU28u1Sdo738a8DlI1dt-3oBpXqxjmBlaXo7hVWew2RYeDKHBS4Z98LsEZiahsMq-DNuwTnHOVtFzI2UJXcjxApaUikW3IYryw/RMezeCaxJ-GB0DiRWvEPLA/faunoc07.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: Improvisata on Norwegian Folk Tunes, Op.29
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Improvisata on Norwegian Folk Tunes, Op.29
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4OxBBSuzuGSgsi41myKNgJTqoAd3rQc2APHpboA7QZtuu-_qTZZs00Mty-90MUsgZ73ou6jOqXKGgEEFoWC-YxXP-2i3bjqzxz-4LIyGRSWTfZyyRA1L59sVsOyNy_xndTQQF10RumeepDPt8K56lw/l-VnPi4eOc9fTumHkTIHpw/egitop29.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (i), Op.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Arietta
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BKJp3MLuBAqvAe6O5fm4AWkB5QmwClSnepZgUuW_4oHNEptOfd3Uq-zcvqPyWSgei9C2MogXnq344OtQXd2onlqjllU6jX2gU73D6u5BZXIt24_7f1UVhhoWqNHf9rK5Xg5ROM6TtUoUdk-Z4RFuRw/6GLnPsuT5StCdthc6wSUDg/gr_ariet.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Vals (Waltz)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Ax1nABM34a1m5N0vURjhC196HVlWUSj_FyniqrFbBpcZaEXMm_IiAYx2nrlrAdBGV9yBBUz_bBQQuaq6P3sW_HGdLyDIXojQ-KWsgPrEm741peq2yTk5D0Sf4m6mZJ8joqF_3QcRjsEPqvxQWlqg3g/PiyIAHT5k9yLtOkiyZ2tzQ/gr_waltz.mid" onclick="return setToDownloaded('dlBtn_1_1_22_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Impromptu No.1 in Eb, Op.25
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.1 in Eb, Op.25
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vFahil0dfS2O_r1gEcDCXdrAXHvCeFN1zTr24OeRlMq-U9g6jfEfgSFj7OziYYpCh-USQAKhdOXN77EjKm0a1NQMWHsWKrN7Pv1Jr1CshBvVGZf92uuDbyt8cVHTFKF51MMpBUAGC5IMNHRkdIUsLw/9GFPw3ZR9LvntwBBBzcI6Q/fauimp01.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (v), Op.54
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.March of the Trolls
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0QvucDLa5PZqltkXpoEp7oS3ZQMOtLH6Rul__WAV0fUuGadGReva4Fh1u6pl2mv3q-YIcIe7euYRObPLOHFA4JDmHl5WhGAwxyKbmL_5TmY1rHZGZXw9J1soERafGz97WrY14koAsdhFWYkLHg_IRg/_PmX2OJOqAp6gI7ZKVB7qg/grie54n3.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.4 in Eb, Op.36
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.4 in Eb, Op.36
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3jM5kSwtruC-YzJu5QfuspohOlxmr-3v5lLztinX2GWdEXuSz5bDj2HoQwyKPeiOH5agd4lSdYiUEEnlh1yFYD0X_NhS1-xSxSPvbdUFXn312qoYniSq0aSoo8N76Y-QNEXicaWG7CmS5O17Wf34hA/oWKyVOl-I3DloMTNph_1dw/faunoc04.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (v), Op.54
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Scherzo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/PAAbHUdaS1tPKFDRoMpyOb9ro6QDj2eNuM0tgaoXrYvEu0EOv_2mglncvywQ83Wi3lXYGjOlP4TEfO50W9rs0jjCslvQxkdK2m9nAPxRI-O0k-f2RwfLDXsMdLX3oeEjk28IX9K2f352zQna4qKcuQ/BlNwLVnwqtoX8zaP-5rwXg/tmgr54_5.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Bell Ringing
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-ZIw0I7ulHvHLdTCrIy9kE9xpG_ENdsCSKUEuyYfyjeTnLg9-FByW9cKMSFRPpZBDupbKVDbrrbsCAbVy4xoh9HJUbUf6vstYR8xKgPQPJFb_0j43aJV5B_OMMn-NcGd3ASLG76nzLKXTXyfeSJMnw/UhYLlva-7dI9CAOQXXYGhg/tmgr54_6.mid" onclick="return setToDownloaded('dlBtn_1_1_26_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.12 in E-, Op.107
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.12 in E-, Op.107
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/KbakgzMr7ZjPyx4mHFePUR-ik-H62J2DaCifS_jUScrbz9JiH0mQ77bFr7paj9xGHg8ttnrAjus3JZu2xYX5nnWwRdKjMv6Op6iqYyW-iTf_5VurkkZFSchEWlv3B-wxWH0HsIK_VX2k2K38Yi1urA/owFAt8MvuYkJruj3gxMjYA/faunoc12.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (ii), Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Elegi (Elegy)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yoUSgr3TIJRm91BO9dT8rlgjpDI4rmtjLdrbOGRuAoMJRLhmRJRP9avEb1ZXi_HnOVshisMapakF8f6W-zFfbeP4RhNG0wiFiY92ms9VwD3G8gZcs9k3gKMsb7H6SRlPe-O0vA0VfWW8lSKK82gAHw/5ynJ4Lf1Wn6ymrNSSmD14A/gr38_6.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.5 in Bb, Op.37
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.5 in Bb, Op.37
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        29 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3xHavbaGvFDi4n8r25S_c9OyotTqfxloIQCjS9c7r7_sB2WjG2wF3ADORs8e2ljfYpurPHC3PYhiHVBxfVtAJEzcde4sj-vv9iVebTqVUX7e9ePkMSIooij9q25y50U5ykrArG5LI8bDj6KHPtEoZg/jO-3R4Rt_lzDDoXXGvuXfQ/faunoc05.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (ii), Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Berceuse
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jcvue5XYdnCzNp_q6VN-kFyYjb3XGQlPqSdAILaPq_wBsZUBV1n1fnTRxIG6M3-Eo7qFc6lUyeIlu_S_rFmA2X84R22j0Qr1fotT1L60HyQDvMrJXRaVABtHed2pZ67BlY-T6SpHRdlJSmirdHI8bQ/iJbkexUi2WOIAxdX0NtOcw/rugr38_1.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.9 in B-, Op.97
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.9 in B-, Op.97
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XO-Yq39Q2ijatXAETENmm0XnyC07FqnYBigKQctlgeN_IHlwriBGBLDLy1uDGbFE8ELJLly0c4zEXCFwm9Lr-sp6E82XzOD2whxaAOPHD1YGSzURxoLj9QbSnP2fXCEFTNVrF3Eq5_pm7x00pPch7g/ai5WHK6pfZvh2hybEENT9A/faunoc09.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (vi), Op.57
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Hun danser (She Dances)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lZOYK2289ViasTsamJex_0-7TXOHjfwJJqC4oYjHs-rCZ1vv7W1aHKICPtXG1tsX-K7wSn68yjOK2r0_3gTebFVhj1WeHbg_U6bKfPRfIYmTPE_h2Gs-zgVIQ4DcwTu5BOxuq22nCT7U5pA90HuEaA/1AZeJUh05vFtjqiZHMwUQw/rugr57_5.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.3 in Ab, Op.33
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.3 in Ab, Op.33
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Okqb6sLmlblUNp8iEtoYTKr04fSktMNfRvKoNS1mGTTgMBbkTV1DEBtUdaBJFQ7kS4CVdxhMA1DHr1S_QuJOJWmUyNsdbjgp1U1pZLS_okVR7TU0JMux8dx30Nirj_rW5mnZzD9y3ED63CwwKcLv9A/_gZLds_0UQP11JaLZXnpkA/faunoc03.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (vii), Op.62
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Brooklet
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4c0Ah5LeFO_pg9pC2DcfYfr0saqHLv917OV12sjmDKk8utgXZ0cDufR5yeIkDPXCP5ybHLv7FEVU6LZAhP57xCr_8ltuV9OYbh3A0Me2AVdVn0WLQQ0Jk9YajPGf8HXdJ1oiUvH06h6AVRVAQnwUjg/UhfMLFLat8dSYazLfJOmwg/tmgr62_4.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Impromptu No.4 in Db, Op.91
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.4 in Db, Op.91
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TTdmVyyvuAWBnVnxfWSxNCc-SFGXBUXMETGhXKaAym6P9O8IRbsbgrAo0k58cviV2jZPA4MyIXJza5xVDSwTn19FNSxxVzk_7FlEVH04A9QOZtNtwTgjm6YOJGovY9pW_C-I9YXTjThb43w44L2RrA/TWflofYa89iCuiJ6X8IeQQ/fauimp04.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.10 in B-, Op.99
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.10 in B-, Op.99
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/T04q1tCd7CStPWvExu0TBh42wHwv1sIZl4y835DGLceM-GNxrk_aXhQzt16X7DVOpRITqa2jedtxj9MPVHCZlz3fcU23BNw4EnN0QNJrIkvOjTcN7R1QWiIQ5EXbCKlBkf7lyGU4UZGyKrijARq5pQ/TFkDGK9fT7XSO3z9nE0Mgg/faunoc10.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 7 Lyric Pieces (iv), Op.47
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Albumblad (Album Leaf)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1dK75MsslHYyhypnk8YZoj1fnQNRyPWMvD8LY16HGLbb-0mpdv8KLhREVm0eJYS-cScpKXrHUuazHlvWE-_q23iGBoj-mtfvG87TmTSr4chN8vlil8ZKrZzlcv3IMRi3h5hFSsbTswTmcEWXr4UgtA/KgDc7RKHJDDekkme2sn09w/rugr47_2.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: 8 Pieces breves, Op.84
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8 Pieces breves, Op.84
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/maC7lePYyu88goFlbudsRFRF1cHhkaRFpqj7k4uD4UgS3y6RrE0zH0hZIlg_fVE6U9QXqyypUX-2X0YY8JH_XBGiC3MEorSWDbvGEgplbTz07d991ZoW8pJ2GnJMfVwJpw6SGRUzVS6AGo47iJYxag/11VZo0utTv9Tb00Q4NhQ-A/faunoc08.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (ix), Op.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Bestemors menuett (Grandmother's Minuet)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/j1ybTXXqBBlyBNnQgqOz_7kWymkl4GJMZbcwqFqr1w3DZRybqEEq4pkO-IZYOZCpk08a0yjyxYfFEjO7zp2EtQf0tvn0Bt0AVGUWx1YPbWPCQdJgQ9yRayXvAf1kOTzpeGzDEumgJTt1He0NkLiETQ/74b_wrVEeQgXhiZ3bJ0Ojw/griegrdm.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: 3 Romances sans paroles, Op.17
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in Ab: Andante moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1Z_2RjIM6kYTL8CKhXE_KDXuD3PUjzP7-BFR2sklHNPVDXdt-dwgZPhGP5-sQcp_pqXtbIwayHPtQ95COV6fSi4n6cAPHpP2iLCdrOm5GY1hXk43j_Ib18q4s4Nu4Mu-Qq1J5DE-eZh5EykBlLqQeA/Uxq9vucB4IdC3qn8E02C1Q/romance3.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Impromptu No.5 in F#-, Op.102
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Impromptu No.5 in F#-, Op.102
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/MG8tWh8jjZMeLtqQZXFTHkOTdCTjH4HwWxIT9JkH6pE2f80AHKiApY0oSninvv1V0JaiTmv54Yi_VuPSFKA8v2C8QeDlZJ0zSvjupulaQRiaZQoUkyTRffjXKqqIC1232YrD22tm7b5Fwl3UKm15xw/IHd4ziz9tCHS9qqrgQWEDQ/fauimp05.mid" onclick="return setToDownloaded('dlBtn_1_1_41_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (ix), Op.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Matrosernes oppsang (Sailor's Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_42_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/DwS3bF-fKbQOBQpxTMhLxfimqvKFtxXMm4nETwJfCokSMJMtI703uHuUzuq-qGLgh_Ie5mqAfKk7je6Ub7BvQZDX4ZtoAUcpl1C77E21owsNR4dKPp-ijEK4ejNCgTnmXUmQfnbZTw8ilYqGNevRDQ/280COVj38IyWWcnzKTBJtw/grieg_sa.mid" onclick="return setToDownloaded('dlBtn_1_1_42_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.13 in B-, Op.119
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.13 in B-, Op.119
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w1vaxXAcgywco512NKARGhF45CS1WwkSY5iy5W1C1bjXM5P4s8JpdGCNWYZsZcGgGiGtx2Gvx19lIPzronaeAHQLM0gnbWeBpNIvUn73Tvb4DM76Ywm1ublBRYtaD_Mi2O1n3F6rYVawrGkkePgTmA/OKEGyS5E3tCk6MpOHKGsMw/faunoc13.mid" onclick="return setToDownloaded('dlBtn_1_1_43_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: 3 Nocturnes, Op.33
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in B
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_44_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7KtMQmFsB4zcCi1zALk54Dxs-O1HpvhiRJHXYY6qcG81xixWYFQdPrzdHCJu45r9plfujkKxs1QTOS6eR-Oi7BopWKmXof71pe8eVSSzQ2-P12kSTDRLL4UuBXMfMy9J21zuCG6lMYbhYEgnWv2ecQ/XgEiBcLkKt5go0zowe-CIg/faunoc02.mid" onclick="return setToDownloaded('dlBtn_1_1_44_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 7 Lyric Pieces (x), Op.71
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Sommeraften (Summer's Eve)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_45_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qj7bTxF74Ir0hj3dXiEvkgz-a6z34mI8rD11X4TBwYkKr5f-vM2PRjk7K_rtYN1sh1XJb3_tvLKwSDvfGWUxwc-3_THmeM4TdfIHNNqb8zeNIBgFcXO4argpNdXse57jX4_RnkvS-FwnU_kN3cvE9w/oA5GBbig7CEn5xzXEFidZA/smrevnig.mid" onclick="return setToDownloaded('dlBtn_1_1_45_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Valse-Caprice No.1 in A, Op.30
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse-Caprice No.1 in A, Op.30
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        48 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_46_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Bq7hhfhN_UZdauSIDojUSE2WhqfDsvvyEeirgUPXmbgDjWvnFLwdL9jbULVk8Q2Zhyrm_9ZwgOxrwGluZ1U_L_DOkGUMrChIqe0AncsbQ11GTQyNM4nIgBxwvYwV0Nm3ilrWcIR5EGbUKzUgbjw4ZQ/bqbTpJU4L1D2-0Pz9J7kgQ/fauvalc1.mid" onclick="return setToDownloaded('dlBtn_1_1_46_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.6 in Db, Op.63
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.6 in Db, Op.63
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_47_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/eEhlsOhzxkiQIFr2HXcalDwleM13eny37WpaEI_Ynh_V79_2n21H7BHTVJhK2NLSJaUVIgpHYg-aG6tITRiU1pQBDHGXz8nPUG1bxsXJMK-07PF1OgPJGEPxwiHL1IDEFa69-69joSxOan7xsXUpTQ/h9yz4yTERoYmKn6xMm-mtg/faunoc06.mid" onclick="return setToDownloaded('dlBtn_1_1_47_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (ix), Op.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Bådnlåt (At the Cradle)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_48_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TMm7LCKGRifrI_2HQtepq-OzOmU9Aaf24mZancNMOfDY6iw2A07mHBiSbfLQoVh_qqw2sV8Q3c9R1I1qbgHrjjshzy4-9nwgGhQePigdsnDZ2uS1HjV5p-wMWz290mUCDsCt8N2G8n0hLb9JRDIeXA/RX1nAONBdeTgWkNYgnD_Tw/stgr68_5.mid" onclick="return setToDownloaded('dlBtn_1_1_48_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 8 Lyric Pieces (ii), Op.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Folkevise (Folk-song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_49_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HWL3FTnyDVBoPeRutkOHMVobaGV-a4I30lqJx3Ebdla3_rkqlNOTVm2f2JyCNdCgS1BavrGnqGIs4owZ1mO4lXuIL5Bzd6LeR57P_45TAjQquTIDgyqjcHqGrb93OCwHaX2hrnm7CV4AJ9Nk09jYrw/k4Wjy9ku3NuyHfyPogvr3g/grieg_po.mid" onclick="return setToDownloaded('dlBtn_1_1_49_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: Nocturne No.1 in Eb-, Op.33
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nocturne No.1 in Eb-, Op.33
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_50_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oT5WkBrEL2ly4M3ZjYCw7CV_xXu_n5iDtZ4rYvNvS8OgPMvk9_ziBiwdz72LD4Y_-BNnAkJghwXrcLs7_5Avna_rapE4iUBvY2---VSVDctpMdon9EMkobzkrmfPcDDWCkL_yna1CEfbOsIE4RJ3FQ/u5GWJZGDalmAOD-loUBRCQ/faunoc01.mid" onclick="return setToDownloaded('dlBtn_1_1_50_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Edvard Grieg: 6 Lyric Pieces (ix), Op.68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Aften på høyfellet (Evenings in the Mountains)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_51_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0vh4NDP42xuFLg4LzvkcjHNCfuwjH_-doni6dVKG-0wNSeWGz0cK-3fWZovbqgHQgpjlvR1WDs6YHanvsqtfSdVmzsBgFahcN9voJJzCeENgxLynJKC0T0UD8iBZQc8ujitmriIjGd1zBF2UOpqqNg/-P9dQIgKbug9Od0fQFxQtg/tmgr68_4.mid" onclick="return setToDownloaded('dlBtn_1_1_51_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Gabriel Fauré: 3 Romances sans paroles, Op.17
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in A-: Allegro molto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_52_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5eefK8XTQz3bDKzPHb9N97qlxuvMOu4j83GzfJ5M0DLnVepK6-9bMghRSP10H41uyaQ8Si5fgGUq64cfl2cO_0dk8PYv73jc4SY6v4IQznrl9O3vpuepGN5STbXT_jWjGKCICbRLfdH9lZMjjra6Dg/w_1NJ-Lm6RrvEzWAEYUAmw/rom172.mid" onclick="return setToDownloaded('dlBtn_1_1_52_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

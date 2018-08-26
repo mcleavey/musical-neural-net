@@ -1,0 +1,2332 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 23, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 22, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Vision: Lento, in G-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xf4T5Bw3gT_olCY_GKjoOQqdFjtgrT5XFGMqus3ptzLSi9WGnrpLImCHT2pQ6llLlqVKbjpKKf397fUL1lyRKQzkiPtKik3kgNCNXtvzdPUw9_R7FQHuLyad-DLhb6aSqH01jJzW-75UH8IYSWKUdw/DI5mM6xOmxM4ZgVPr89fWA/visione.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Wilde Jagd: Presto furioso, in C-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        46 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HI_5kY7FtIHJr1GwKeIFPXE1XslqZlqv19rPwhWejIJXI27HO5h3kjhHA5EhxTsOOn5k7-0Y9hCoU6y5D2MzjMtjqiT1SQz1gX-7PQXnRGHMSFKGdrHPxvprNINq2b_VgXw2yuPn8qNZmQ9DHT-E6w/5q7AeACmBd5wpn2PPn2ssw/wildejag.mid" onclick="return setToDownloaded('dlBtn_1_1_1_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.Chasse-neige, in Bb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        47 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0HikLPcB5BIiRXh9WgSq4b4dTQLXlKfRu8G1ehrUjkYn9W_E6626F7hvYHDWieuxHjBg-QdZtQzI6le4QyVkRT8VJzzrWEpmT7WA9X2abrrGMjva5GPF0E2NmyooX86J9ppg77oWM7phmS6-deXCnw/SZh_gG24CDcgDInTcbDm1w/chasse.mid" onclick="return setToDownloaded('dlBtn_1_1_1_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: La cloche sonne, S.238, R.96
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        La cloche sonne, S.238, R.96
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/t8o42mH65Y9SsQa2M1tFjlmdTvRLpi4DgINPdHpqRsVApY0SJmn_f4BuX0MC3J9IwBfP0uxfHoEBIZ-IJ81yKSF0BaIwjQS0Bxnuv5RRir9FVnEFT8b6W8lFR_IzpJDezcUCL9lN0rgEvlyI0CdP3g/2ZUkW-QYpj3tAk2K2ekZDQ/liscloch.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Historiche ungarische (Hungarian Historical Portraits), S.205, R.112
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Stepan Széchényi
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1PIga6IKNcqccMwXdkgENfoOIFPqLJtIz3CQjFzZykVB_F21y1QSPMa3wO3ulD9sNgxqqN-6XkkMygSrs1BkPejunRRF_Qm81LZxNnM7t7jJiuDQpx5TZKAJ_V0KH8YDDeiLrSK-7fsnd5AGpyfAqA/VJWBhl7X1I03X9_IvO2AYw/szecheny.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Franz Deák
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/N1TFM-7-Cv4jBIK1zsV20q1tTNw_1ihL7jPPargShlBku00PDuTFCtu-t3VrRsDgCkTN0jVMUP7__IyG2V0eir8aHAtjW4dS-YseQdLshC14E5L1TjB0PArIgPJ508slRdBKk9BKt6sK22n2v4qmzw/52Q91Qm-mU74FIixSK4Hyw/deakfere.mid" onclick="return setToDownloaded('dlBtn_1_1_3_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Ladislaus Teleki
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        21 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1pVpMw_jNBFRP1VMfFdDwmKwTiK1nPLIH1KMLtrDt3K_ek2IVTEe7u4EZEgXb6vSYFIgOkRXsgJA9izy3HVhTcPP6PRxg1ll3zRpyG4r4y4aLn1iBbQmCBQuSK16HEddWZ9K5p2GenDFfVvCEumAtg/dvMCj5QeEw12rBh1n2QhqQ/teleki.mid" onclick="return setToDownloaded('dlBtn_1_1_3_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.16 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        53 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/LdTNpdCLWoTZA4R8qsF1dLVFB5JqJ7rwXiyLxisK0M39tsS-gj3gMTToipaGBZzkZpuOxdcvBCyVo2ClVh-xcwUTUwU2plVWlMEz5RsSVpN2HYCzTy79MsBeJHwv4eerGjrmxKXDEUzVkcaypJrrqg/RPSPmRWB7YVgvIlfjtgiiA/hungary.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3 in Bb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gsL1QIv7H6LynTFTV8HxQ6J04pdbhtXBL4CvZLEj1EU5BvxYZ0CzDW9lFApnL6RG5KIKGApaAW2AZr5AH8EtvgPGK8ngiV_LaPsARQ3SPe4FSdVE1QiENT-oN0J0I1RHszPzuQ2yGPn9G6Llcfeg1g/Y3owNkGjzNmf9Vahlvp4Qw/liz_hr_3.mid" onclick="return setToDownloaded('dlBtn_1_1_4_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.Harmonies du soir: Andantino, in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uxkx2c3ZmXBEpFVt6Jtr6UFhjHp5Ew_nkM67FwfFuhbZZglpEqe2SF3Mng04ApMt7Do25fVfNLhdHwU6en1zCpbACvUMFwN-UxaZYpIgR-0XIn9j9Q-VYgDgEqH6LMhmHYA1LJUpxVmBGB19Ur46Qw/eXTtgEY1INRf3-xpyo0Y5A/et11evng.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Weihnachtsbaum (Christmas Tree), S.186
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Psallite (Old Christmas Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/61XcvIbt-5-OyjythAWJdnYbWGzY1KjW5XGaoEhf6awCwyL0Ncg0jnXP0Rys0tFGoP6AI2pkLrTiq8e5iJwUSuFbLp5fymtMv0iKHIg7lEGkI3TsqjsCKqGXFSPGyIEncF8pGYdwq2JpOGvFsWVprQ/Qe9VWnqe_SwGw27RqYzjwA/01pasali.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.O heilige Nacht! (O Holy Night)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ztHz3Y62iDlrif52iRfm8VH7PxcpzVgK_cIMV6tKydhakWCq5aY_MUyR9pJxXsfyPrJIBbAazgTBZ0LbjaIsi1Dy0xb8yA7vdU5sYlECLEPezNKcj-gn51hbbERpzNHrMfhhIkQroxyG-C4VeH88VQ/Ng-eokDIeyS3qGXf4B72xQ/02holnit.mid" onclick="return setToDownloaded('dlBtn_1_1_6_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Die Hirten an der Krippe (In dulci jubilo)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/glrkL6hlII_kH9XOFJax5i7EdfASa54jm3uWUi5R6HKwScKpoicpN9dQFE5Pz4QO5TAvLvm9u4QI-eAzZkp01gdJrAFIoAtE_5YUX-1kugOOwacIx3z9YhWTd95FZcX6B797TpyoxNOGCt3oDAcV2A/jMObCLCtckWN-IvCKWVDtQ/03manger.mid" onclick="return setToDownloaded('dlBtn_1_1_6_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Adeste Fideles (March of the Three Holy Kings)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2GEwCfUyzsC63gWTZjg782LA9aZmQ59OP9VuVE2MKVH8-lr-ZEBq6hoyQv_qczCYwUrTs0v8qFgqfTbu_T3-SEiCvQoiaO73V3m-6dXXggQnhMVIvnPyfxOxLVKOuL8HeF1_-Ka2fqYm39-TxFrRnQ/JneqD41oxwZm677UY6AfGA/04adeste.mid" onclick="return setToDownloaded('dlBtn_1_1_6_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Scherzoso (Little Scherzo 'Lighting the Tree')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EfFFqXQy6Mjz9fvZ9h_Hbuxz-5kw-geeYSXCKEGRpCZiz6bGetMuaQUfrk9f5RcsA8hWpTMPz3xViMjZY2FVQeO4Ym8GoqmvVaABqrWHiotP8jsBkv6iqGccjPrwGV7D6gUGInvbHSVTJ4CdrDk-_Q/YUwU_8omLk3GdkJKXWpO4w/05littre.mid" onclick="return setToDownloaded('dlBtn_1_1_6_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Carillon (Chimes)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7GTslpp2gs9ouYrIOcGeL6LBPpPVjcniFqkcL6tXoI-uZI5vr0qWgETBWeZYPbi0jwsjdXFzXtIseXLLPWRzB-QD10cB-UAqB0CZdSkWlJvCNxe6wgGLSSYHCuSzw-HMpSOCjXSLZCVvWBGkZ_kWCw/Fk5L1MacD-KbI9a4Eyw-ZA/06chimes.mid" onclick="return setToDownloaded('dlBtn_1_1_6_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Schlummerlied (Slumber Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/JxfM1qLsK9mtyRy5cel_N_6mcYwnyYrNZbcIQkjddR4vhX2KJiwzg_7rJNkcFhwAZLtwHGpq67i7GsY6Wa9Wk_csYCIePgHe0LgUsYfSyYx-vRyPNgp6RzTGMd4g6tQEkLoD_J_4rADt1S1o7mW8pg/MhHEjLEYHomP1yICoWoavw/07slumsg.mid" onclick="return setToDownloaded('dlBtn_1_1_6_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Altes provençalisches Weihnachtslied (Old Provençal Christmas Song)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8QKpI9s2kIChacXfMsW6Ve6dY8QR1vr9O3wC8JCizRYBawSS7LwZsjTX0UFIE8GzRHaj_duGXb__hdYBFyBrc7VwW9O1YZnrhMgxKDrlZong5R8HpXcn8acXCCzj-vcLS6K0R6Glj6KuiSKkgr5YOw/ZVgsyMAVe4aoHjWkikyYPg/08proven.mid" onclick="return setToDownloaded('dlBtn_1_1_6_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.Abendglocken (Evening Bells)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        131 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/SFDYTHDfIfzBukgJot3VWQws5hWDsfvLbjPK9NYNmuGNPzKOcdxJh8ZYPPWPN0Ol7FEj0IgWil-LToHwMUD1K7Y5gEh0IM_SdgElHkyA2mAlR438m6FZ_AgqrF8KE-k-kXDzjqQ5iE4azMn92RVCFw/vTNz8bRYksu4gg7n_pz8Cg/09evnbel.mid" onclick="return setToDownloaded('dlBtn_1_1_6_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Ehemals (Old Times)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/k8ZOLbG8vMn7rfLIyW6D05vd20eQKpV8fXAwt6Nd0-pC97dRsR4Rrx_0yxT22KS0AIjUWBNloG7WZfYRPhi1j3oX5a7YGiNJSUNKxCpSBphPqNQzXRE7FBOzTZY1qVtNtaf22duQzjrXk6Xmk5SYTg/0XHrWI4AP_TmIfNS4BBlhg/10time.mid" onclick="return setToDownloaded('dlBtn_1_1_6_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.Ungarisch (Hungarian)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_11" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8lzNUdkVaewnssBOZpKOZDiduwNs3dZc6ySPvseg8mPVs1MY84axuuKpckZ5JzsJCO9UCRFy0jbPr1x61Rjt6dRGkVWe3kS-KewV4nfL2IOqxFIySDq2adWp2A2fGyaHDsVrdRZANzTEr_uTRilTAw/FQs9R8mqtkskKXXQMy-C4A/11magyar.mid" onclick="return setToDownloaded('dlBtn_1_1_6_11');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.Polnisch (Polish)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_12" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lgZgf5gYluwjazr56gHz0hLE6rjfrI7fU9Rhb53vbM3zRTjv1C2UXqWy_Amisf5dKuFrJs3HZAKzp0SC4sElevIwEBGW3bP0nKPJJQSr5dfwwMWo4poc03PPSZNhr-X3pAIoqJNysNV9GR8gf0XDVw/hkObfKtVJ-7v9f7qofbhSg/12polish.mid" onclick="return setToDownloaded('dlBtn_1_1_6_12');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 2 Légendes, S.175, R.17
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.St. Francis of Assisi Preaching to the Birids
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        110 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OYsnWacrNVaA-V-IN3inJwyWoDLkg_CwiF2RcsKdthP_2eF5j8Kn3G04zEx-hTskatcPA8kaEmPdDwEQ33-u4IK3b4sG1kXpVJdvj2GP0mQmOsw204YsDk8ggRuakWgcyTOlmquXKp7k4N5e3TJJlQ/Q9U6r2sLIT5eCV5s__Artw/franbird.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.St. Francis de Paola Walking on the Water
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        54 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/25532QWWzZZftzX0S6SADEAD5l_ToxDvSb8ZsYBItGOzwFrA0XoAVneWZs9ZU4V_Vk-nwGHyuUWtP1VuZ4nP4a69zAVGDC74q-W7e1K_YXD53HBhziC5RJaj80WXh2O2NaOlbp0rDccFpXYw9nuDbg/RlL-P5pdHAatgOlbEG7z3w/paul_h20.mid" onclick="return setToDownloaded('dlBtn_1_1_7_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Paganini Caprices (Etudes d'execution transcendente d'apres Paganini), S.140, R.3a
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.La chasse in E
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/tJkkdraLJDy8fYuDCZ79u1aakcMI0kXLW5D-oQkpOV6Sn6zpA5-pMeMGGQxce8TjxTcjclS2QuhJp_U6OeSNEFlnP_zBJML6p_VQPQ0kl09AGs9nGwutxqs1MDFArb9EapidfKLGJFw5ww4HFIDIhw/BBmlONbdgfdq0waZj7JE0g/lispaga5.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Thème et variations
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        29 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VK4P4E0oENZnRQhKPvUftVnTkC7qb8qLGkcx8D4AU8Hadqtkt0hPNGfhIqYnrhi_LpYgAnnJLCQkwn0A6VYw0fIt7FhXm8AjjlyTUMbMTBS1yvSyFHoePbynGYXLDnJwAEdXyQbfqCnhS8uMyQVZrA/E2BNGXOngfZBLQ7lFz_bYg/lispaga6.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Preludio: Presto, in C
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/eaiZ0kxBN-2k6ODjGKyufwOTUAvHkb99uZXsJU35Qxcqd9_rJDwLpK1dvlqU8-Vz4AYkqKolC0qiT7q9LRAulAsTu-B9_1jgYZPfKWLkEVe7O_zxeQjP-b-9ekA_7gwsuDwLZn-JlNX6YWPI7dxFpw/AtIXw0vsnEhv6FCEAn1hsw/trns_et1.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fusees: Molto vivace, in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wmQ4w8nBm6WCt4UPlRIcWV7nkP7C22RvWF-JX22OKvCHtwa_z-15DQvW1hSST-5LbOGmzHU9zgDLFhuC3hIdHg6uJ30e4M4TN669nYJN5gcR4XYshwihpCr4dRvU1zgB6SujJLs0gV8_PSCSVkeYBg/j96lXPTsWwZwK90STdP2JQ/et_trns2.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.4 in Eb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cH5VNnAnlIx3te7_m1iU3Rkx5et5Kset1Nat0QgypB62PWWY2MRml4xrp22hcmHL_2LJjyGd2vjLkDzy6LQeepAJg-6BEEA5lJFwg8p5Owem7lEcd_yXabTzqk0-Kj7Gbc_r9CuhH55tsccLN2MaCA/wE21wkg2GE3q1_irSY1IyA/flhryno4.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.5 in E-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/L6tL3MX_j8ttZluJuVFX8mOaC7KmzYSz4hUwt32O-5d6IX9NwdyeFg35uWVcLDhyCah_TdmRPiEmSnuXnaMpMGy8w_TeNisLvK15nIQWqQ_eqO8n_dcltuUhmyz-W5p9iOgQefrMmekTFls74emy2Q/wuwUxejk0pH0JgfUc8JYTA/flhryno5.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.7 in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5u-y8ac_exsnQzh4KcU4TDydVhkdrkzRXjv4jHOIiavvqyLh5yxPzd5EWYskhh4AipIkDn1WtNjHrGiK-4GSFy_vTtCSY4V6D7VzWmXESSFtBezvNR1wxnxVqxyCXOGjz68ioZu8vD42-nluBQdO9w/CZDTRAd5FaINCf8xkmbeDw/flhryno7.mid" onclick="return setToDownloaded('dlBtn_1_1_10_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.9 in Eb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        86 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-5AuXlThIv5UuQTHdn6napsbWgXhDKc2BqSqCLq1jVKrzmR4gSdAk_DGmrF43T7tsHngmHdooh7mbhDT7KxAHjMLKD5YkrQcyWRfPyvjNTvpl1e0NI2-sNLmtatMZgnwd57zV5_w9qJpomX0S3iAlA/jkWzNsAf2ypBRt6_zqkhlA/flhryno9.mid" onclick="return setToDownloaded('dlBtn_1_1_10_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.10 in E
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/aQxO-VBk9355mTak6XUtSNbGxEEbotDUG0W7CaELmjlmbbgNoY670tOZVSkj09-aXE5ni-wBbpQ27ViuNwxHgCFReztHnpcP66VnziQZP8Rd3yv_Fez5duZ62zLwUvZN19fobRp5utVEoyfw1yZUtw/Vgb7AbDaA3z7HFLiYPUoFQ/flhrno10.mid" onclick="return setToDownloaded('dlBtn_1_1_10_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.14 in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        87 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Sy87fH7ugqyfefdexQfnB1_QiZgcP1-qUiNVmV7BJssAg7GZPhhliUO4j_px-XRGWqFSBBifNG-Fw9XroPQM3WRV851xIyy2ANWWQJ8kEh2NXPhNmO2fQMTwMUXPbAiK6ZbWe7pnLryK0y2Z4sKiFg/TXuVOSPYCiG23dCRrapy2A/wdflhr14.mid" onclick="return setToDownloaded('dlBtn_1_1_10_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.18 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fMxNfXkjBANnRFBfdXwBej0LH2Kb5iH___y5YiNSBAJ8wTaSpW6UZG9FxAE97NfdFQTsbztVTeV7nnFVl7a-xdjlCtYnFGbaD6QegTurLxynqLjHOwZu-mIcgWD9yCz9FDp-kjhmcNXLclrIsvWrpA/sVM9D5e-iUCHnDCepvCgAw/flhrno18.mid" onclick="return setToDownloaded('dlBtn_1_1_10_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.19 in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bDymV1w0B087F6dbaYrD1kmxz6koLJXgJxSoWJQS7OgHedSX5YwSDb-RlnNDNZhREcFjdJp2ZY4RVMasYxJoFOZY8O8b2KtXAY_gcsDRLYLWt9z8H5rMHXJ23K36Th3nL25XgNJUWmqAQYbWCjrZ_Q/9aFRqhVy0uEofrp0kCZrMQ/flhrno19.mid" onclick="return setToDownloaded('dlBtn_1_1_10_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in E/C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        53 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7gCGilkT0G6UlxgHlZjsIqnD8vvAnDHXXcLrbpCe0gCal2QZMqYaHRWRuxq2tD-NZpU1MQWs2dw8yaWkcBRE66357v01jpjzOa6jpGPZrFJ5kgOE_Agw6TICPTQ3oumn9pkF2U69Glon39wRYLi5Vw/ju72cW-LrfLls41IgT-bZQ/hungari.mid" onclick="return setToDownloaded('dlBtn_1_1_10_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.17 in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qRkd7A4xFZoMdAPeryIpL4BeauQkiUMNFoog8S89IQ7CxeJj7ySebeo5R5NYJHgkap8Wkt4vUr6xfJZzr7ft9uTR0c7N-SZ4p4NVZZr6mbR67nMd8sGTMnU49FGGgeeYfExc4YetBWVMu_76iGMV0g/MOuavhIVU5Zv4HB3SuQI-w/hungaria.mid" onclick="return setToDownloaded('dlBtn_1_1_10_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Valse mélancolique, S.210, R.33a
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse mélancolique, S.210, R.33a
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/8m-ebaZHIlQSZOAcelGeNRfkXvG5vt6DSFTw6DACPaCCKnCLek-6S4qP0zJPkqZ5yMH9EH9R8PMlhUzEmvCGCisS6lVZuiLxnT5akgRyGJ7uOqWPULkpnFZpWahwdlQ9zD5-l7HS7l3VDDsYimsnGg/w8WflZYa1KBDnjWQ0UXryw/melancol.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.12 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        58 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Zv-9mh5HVhcUdrw5lzIINvjaJbpfm56W3UfbAHNOG1U04UVD_KcyY3QUykTrlInEqMEwUM6X3QllCRuPU0Mz8O0XTgvqXEk6gUw-7M3aDenTNvdDHVIXyo0LBwi_yujYC0XFwEJmtSw4eRAVp68OOw/rPmv67mR5kvYX5znWpIHfg/hungrp12.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Allegro agitato molto, in F-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        41 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gyesf7MFhLgIjA08st6Okt_phOdOOVoxrRBKfZqFphn_L3GqE_SO3ReqFtjnLvFHrOcGghsIt4PGdUt6KM0MUINS94G1XjGzYHYokldmSqJ4zFpp5vzrgHj594So5cQmanKv0BSA6LLKWelJg7ZTKQ/lFZYOMcUe8eZpCE7lyd06g/lzttrn10.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Grosses Konzertsolo, S.176, R.18
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Grosses Konzertsolo, S.176, R.18
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        77 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HKNzw8n4kBFIj6t7Tg7BBotXBIWmu-oAYr5pCgxt7OUHumuRUap6zBdHLVQ9ZNGL8WkCTxuE8pgItJK2kK9e9deF20tUv4TZW2MYqyRWnT3hpqawp1I887WCAhC-Lze2g_rP982SJsYN2Ooxo8yGiA/BoAB0MPPgKJ20iYiYBYS-A/lizwierd.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Large Concert Fantasy in the Spanish Style, S.253, R.89
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Large Concert Fantasy in the Spanish Style, S.253, R.89
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        152 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jQVDdZ3IQ11OhkxEv6A323b-wNlJtIbtFHmBq4m-N952tgCvltXhOFaHeVVkWKwwOC4Ai7vBpaXWgtZDRmtlrN58INixPAbpwU27bWIEBsyDRuDpva4QOUqlJViIRXliqouzGF0nilZapD2PJEN5TA/UJ_x1tUDRuAMfY8fkgxfIg/spanisch.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.Ricordanza: Andantino, in D
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        37 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/R7DyPzcNxhZ4XpPA3zF9F6kQUyKptoBgshBb-uLWw5qW1jd9qpKxoKdAI_8VBLI8ndej3FEShFld0UF58MMOjXd8YPl1L7gnl0Jvn-GE0LejUP-UhhAMZbcKMfinuhGN1wvZkwfincNlJaZSZf5qYQ/poT58DdKhctTQeHjpilVmA/lie9ilpb.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 6 Consolations, S.172, R.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Andante con moto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vLf6J4x7JLWvszbHHJ0ebsQRh912N2RTyFJivVbInWw_IoOEayJD3a8DxB7YAh0uOHpJEseO7xMjhxtT_jrVd5qaClwyrBcZx-VmtSbbOFjmG_GaVWjlEBa1pn-HvceNPegG6cddAbzh_zVUMJ2TDQ/lsbCxRPIIXfyozKxCjZ2Eg/lztcons1.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 2 Polonaises, S.223, R.44
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Polonaise in D
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        61 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wdm1CI3V4-Q0fgNOX-RtlKkNBHqqRuTM8LZwJD1XIW9lNod63SFPokwFAxEEApmawPIwZ5FPFzMsdgAU5e1q95h1lr3akxJgboy1NJ8QQnSMnrAYLQBcSIIOP-Y37mzlUUkddRmmSCGWlqXrXuD48g/45AlVr-_WHnYLLtAiUPSxg/polliszt.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 10 Harmonies poétiques et religieuses, S.173, R.14
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Funérailles
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        154 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fzKZ_i6YX4PxRH7wTZ-7jPRf0U57nyAWBHzs2MBuDahE-Xy9xag0CH_jxPSrQK67rxoMbKdKkt1f5V0DOwFEAeyWAwVN9ITCfGNzio2oUwTuIArM-ynZSDuV2jfLgT4SElvD3gwGyffgPrGujBiHVA/ZoaStdbqRJQ4HEP8Sl0Jyg/funerai.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Carrousel de Mme. Pelet-Narbonne, S.214a, R.60b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Carrousel de Mme. Pelet-Narbonne, S.214a, R.60b
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VOCfcgpjb0EV4CjDieNifBXJKKJSxPne1zrxKQ1Wa5utvCU5AkVwgYbq654p-6faCv4DA9Q5DxSa5x6DC0w5GgVeTJlU-Y3z98OpiNSbmNduoUebIt9H2RSS-Ogn2yKHAoq2q1LtnzfHGUCfJaFvzQ/73WStRqcs6DLCizI09bduA/carrouse.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Nuages gris (Trübe Wolken), S.199
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Nuages gris (Trübe Wolken), S.199
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nyOWM0H4chXRrQaKo_VhoUrvRwHQXOiLgyDXIOV6rtS9lYCrattOunuTWqN-3K5YzdZF-bYSVYuoKPeYIhVN3FHTN6oKUw46YffXirHWdJQpCzdp98dtDH4L1VBEmMyW4vaMZou91iBcLPfd5mJjRw/9waKgXa2iDTv5vz8kde-Hw/liszngrs.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 6 Consolations, S.172, R.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Quasi adagio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pAWhAlFIG4AmcoJ5wcb95M1A7B6J4l4aAuPmEZHghJRxP74Ne8HbbGLdd818YuDMrP3tfzC1InNY-XzbEvalulU4encbQ92YbvnTLEVMFOhbgVOsBX1fyifY6Z3ZIEFIGa45AZkU9MdWehMXZk6wFA/Vsf9e0HFl3EgZdqZt5nDBw/lztcons4.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Gaudeamus igitur (Humoreske), S.240, R.99
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Gaudeamus igitur (Humoreske), S.240, R.99
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        104 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Zt_QaF1Ucdz25XF1kMTsTcdF4DFGCmOgG0V-P0W9hGDGh6x2Lbiq6cyJy-cciq8UaeKtO6tHAEmQieMzDCKTgP4Dm0ImPNBNQUJgW97TTSpdBv9aa5OB4KazxeLHGzGYa2Gg7UosfhFs7xi68obSsQ/47gNDXCEdMN4zxeO7oX1VA/gaudeamu.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Transcendental Etudes, S.139, R.2b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Paysage, in F
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2q4To0vT3mlVtIwulc8aWMbF1Db-rKD7TTFTvwiO91DdT_P8dc_ixlNajgd8w5x_RDplVAfULBLd5qN0jI8gunUmhfmY_UYQfZLmiGaR7EU1wjOxqTtsfvjlFrfH_-cOndC1wtSZhmqekWEQ_74zmA/ZBh9Uj8Jpxt_HVUIBKHTyQ/paysage.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Mazeppa: Allegro, in D-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        69 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Z4Mk0lV1A375-prv2NPovvwYz5A3Jl9sZlSzXeGjZV8F0osv7S8_Nzh-A3XOAi4I3KR14zss3Gs6xI_k-cJnyIUdMYEk8WLYi3x08dn44wfr-sc4A33CMSTzK9TGf346XnVALX4j05fvPyb3-pVP9w/cYTDhRKPqdPJEBYPDvjhPQ/mazeppa.mid" onclick="return setToDownloaded('dlBtn_1_1_24_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Feux follets: Allegretto, in Bb
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vW4i4M6Akjo-owJk6X-BrLmU8tRNrd1nMf2azdEHlOX204yRRdyNf0NAPODld6W7rp25zYZERVoWSuWywtP15GETU-4ASk2Agltxza-LV1TPJ6ocznzxzz8RgVQvoQoQL6MOccR5rxRgk7tQD9vVfQ/-wJRpNKjOOOhQlkA0ioFFQ/feux.mid" onclick="return setToDownloaded('dlBtn_1_1_24_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.Eroica: Allegro, in Eb-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/r8QZ_AfJOpNy5Hyux_z1xpz0LeLh9qXqyUytVsLDr9dSRVDr3vtU0PzjMDytapJ2bW1Ua1X_8M9fnIK9BsHabtdYZEfhH2rNpNsjKdvP1VYPvMlMMwqXzsMjm695ZqUlmqhx5rR44BQ6GhU_QpYPyg/ihkkYTGixUKreMjjDJLNAQ/heroica.mid" onclick="return setToDownloaded('dlBtn_1_1_24_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Mephisto Waltz No.4 ('Bagatelle sans tonalité'), S.216a, R.60c
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mephisto Waltz No.4 ('Bagatelle sans tonalité'), S.216a, R.60c
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Rv8sbRhYcoOmDas6-gu1noJtf4v8bO1wwx4IvnXXni5aU9hQd4XQSTGFiYu7405k8SvsQ1mmAn9_H1ISq8x_Go1UqgiHvU252DMzuVDncZxnAgIiNsS-tfCWmWbuvC0ElY10ovJc1YVTVBquyGd9mA/MGa3lYDEXXlGHqivfwhiqQ/mefnokey.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.15 in A- ('Rakoczy March')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uSS3UkHSPZjOoUXvv_OXswoaoOaa6vl1xS_kcUecV5K32dh1KsUrNjBOmH6Sij8q-EaNCcIYnmgoBrdd7ucEvkm2KHsTf1jRBnrFu8xpyszP6JpBX17RdxBU3Cwjz9-Dr2DsccOcDHbms8HoJfw8AQ/ipHbpUtF-POUhrj5RWqA2g/hungaria.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: La lugubre gondola, S.200
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.No.2 in 4/4 (version II)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/X-wVk_u4QJPLe17MlW86DHeK4Hqn5H50nQF0vFK09Tljxq4L1YFSbPJe_MNMabKIaFgYrR23X8jaJlgNfSKCrvkE2q95LHPVk4S0zytsWox-HOKZLw_NHXAmlQaO8CRhJGW8zWpt64iYkWnaC_VJaA/8NqXDRQZjmp5fEmCY19mTw/flllg2.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.13 in A-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        41 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/CxyxH0KvtJhPbWWb6mvnIzSE1Hss-M6wYL4BYLZNuFHAJGIYcwj4mEX9TWEZ4e7R2tx77_fQT30YZt7Zw6cyXnKwqFqZRlj29gbrxLr9Mwjbtu-6u5EJXI9-dhuqwsKNMU0U9TLbyzwz7F0_E_pPAw/MU-aj2yLKIx1pag8M08_1A/doh00da.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 2 French Pieces, S.236, R.93-94
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Faribolo Pastour, R.93
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HBlLx2eRePFHRm3NzTqEJph53bUNgfUWsJScUsdtNQt34iQeAKi8a_5wUfJRbXKsJpirNc4yT3uMer-CmdSvEZzKFVEGvqJepOJSNybx1fxlvWB1cX6KDMAP3c_XGwzx7h6w3PpMVquQANQWduxf-A/0xk7IA8m3yAHZuPBIWL84w/faribolo.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Chanson du Béarn, R.94
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        27 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bMncSR2vm0MDGzT6o4GN-6ltKgjPBPhWrDHH5HAMKklwwILymmu3Kvd_ZRC_Ek3Q6_1lfzvMyzHO2aKuukovqg5IouBRInhL9bCPeDFjugwgJ141tjzjlK-g9IF1Q1ekIvWskPJEfw7WxOAvK1XKkg/zNb33w1A0xjZ9-I-N7JsGA/chanbear.mid" onclick="return setToDownloaded('dlBtn_1_1_29_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Trauervorspiel und Trauermarsch, S.206
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Marcia funebre
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lpLpvxponqA2SSBy_8h_3fb52Fxjac4SDFeABp84-bvXP6FHJtk1dqjLl0lb7RuQPcJtxabkOGIcKkJqR2-I3YmPHgJ-csAWGodQt416xQPhc4AJFGXiqbDFyTIooYLghcrGVcSrvdVcdc1McJwVSQ/3VfnS7bBZ4kqa7lnFVy__w/trauer_v.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 2 Polonaises, S.223, R.44
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Polonaise mélancolique in C-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        64 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7Vi5Nakwycb0eD2th0YyzJca6aUzWE_zewla4paUVjAgh51djn88LNE1huPFKToEO5PGtSXBm7E5Jbtef5vjnmml1ITdxmUfvwsS4wE7hXHC0rLsVcKtgLPNNRnorvPFw4rfsS2FBw0kb-MPkdW2vA/VEPXXSeJoa7AeKzI4fjlvQ/polon1c_.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 4 Valses oubliées, S.215, R.37
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bb6ktBZMXLyZxxExvBG7wfdMUk5UBSN7pTD8PYsPWw91vXwgizDeb0DiioigaxPjOgDiH9dHGYwMtVA7N17UL7xsRw1FYxZTTY2rltaZU4rIscD6w8RXJ_ioKOidBPHRanBRVE2Yk_LDh7InxeBIxQ/7tv8DhAzlaDsu1OwNph3ZQ/valse.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 6 Consolations, S.172, R.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Un poco più mosso
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0OVxLAMwNUM8QDhDTWR0ODeq3F5E04UbmHtrjHIsZ7DroIxoWNm7YTj49i8j_hZNHVWnvlgqTS-1my0bmjAXyKM3yS_XqfshhGAugyphx_c1UBjQMES_qeFOHZ0UqF5ho_4SRVfPuEjw9dKmWyst5g/LEKlbxE-Y8QW3HTiYCgg-g/lis_con2.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Allegretto sempre cantabile
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        13 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Mo_xLlI-BoulovsZpf6VozalhtQdUZPsv0Z0O8M2LMbwr5qnQuDnxgZTYGp2onRr2mhylAhRRYgViZ-NIir1wOYrTYwik8FOoq09fHTVJ1FvZzeQoiBxLrZTv8MRgDXHFcAiPJ18PhXZ32TXQOGq2w/gqF673VAloIc4YjRG6D9BA/cons6.mid" onclick="return setToDownloaded('dlBtn_1_1_33_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Mephisto Waltz No.1, S.514
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mephisto Waltz No.1, S.514
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VGSM8cK96ETHdzSXWgZ-ZfOWTnHGXM-qkXopbyAxRKiAejfXSA1a7QI6KIDy4aHUUTmI5vCdBD4W5qJoAyMrQX5ha8x2NfwKNkSDBieiqsGE_SdoT-TcPk8IU9pkAtEmnPHwdU6uGrS5K8ADR9dAwQ/HL5rOWa71gppiFSb5AZKmw/mephisto.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Bagatelle without Tonality, S.216a, R.60c
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Bagatelle without Tonality, S.216a, R.60c
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        20 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nV0_i_R8DPDO80YGyhEwTxNcjN2QBIf9MI8azKklNy7QxbPI4qJhcTW6vMsY5Wi_MEJhTEmNmZekQoXOMp05vCrqHG-VfshLbyTzfgB1kY0Seka3bWxnbZqLu-giSf_bazrp1Jbbx-CoGLEfSiDk-Q/LGucNaAPF6cULJjFr5-Fig/lisbaotn.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Csárdás macabre, S.224, R.46
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Csárdás macabre, S.224, R.46
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        55 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yz-iyKuqA-D7VdlVdJ7-1Oi6xyIFnF-1-LivZnCPRsZfxK5aLpCpmp7_88hakUwu6OmCVwebXpMHciwYFyeF7YVRPAnuLa8Y360a_Qd-dhhlvnaeYBkGl1WXoTQCwSE6NLqC21CeUp3OL3BvzjRbYw/KueJo-87_N853N7Ej66mKw/csarmacb.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Glanes de Woronice, S.249, R.101
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Ukrainian Ballade, dumka
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        31 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Ef4FHe52cYV1Tg3y0W4sDsdeISkiXUhIQk_3Mxhr89YPBejgJSJcE1xvMBSgUPpF6nwjDVf_5-g5j3OEna8tiKqfSUORkrelSEHWHOgWkKtH9wZPk2qYqIFFEcPeRJI6kQwQGBnzBNL7goPvAU-E9g/-UxTeWlVJLVC67RnL1jceA/balukrai.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Polish Melodies
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3mQE6inq4uKUVtuXTIjpbFW-u-CmrVgytadmGGIIXgTlXYlHl5RCwFm0XKQhPcjgKn8MPKnW5guIY9zDpbAF5kkd1giU5rUaJRi-UR-7aJ3uDGyTErsB4utSqY47fCZln8JNNlq3W6pwcC5oyGTbkA/jQzQ2LIfu_y65zY07HQ1Eg/polimelo.mid" onclick="return setToDownloaded('dlBtn_1_1_37_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Laments, dumka
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qQcbBEA7HzDlEfI7tqRuopLN2Lm2lmkwVM6zWvBPNKWqe1JnkwSU7_80n827GROowDQYW8U8bkgjgl3ysma-dVmPWJUMYZaQDIvar4y2y5ZSLp7Iy6n7SjHEb3kacYR06rz2T-Wfxc5246s6j32CGA/UxIkw_SvoMdM3rnXAx1uVQ/sadlamen.mid" onclick="return setToDownloaded('dlBtn_1_1_37_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Galop de bal, S.220, R.42
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Galop de bal, S.220, R.42
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/S21Tfxnzrl03tcULul5F4Vxat_y8U7y65V1rnWmnJ-qVz88vbjMrQ-kTg_Ldz8Z-eaD_yl6u6u4l1sqDPhE1o4orZrenaTRbgeu3RgmCLMTyY0X5N7_9lnSSSMIl-c8BL9N7etgKQHtomUhXJmfcXw/e7tZOnXsRq0vcSJMJtfggA/s220.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Mephisto Waltz No.1, S.514
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mephisto Waltz No.1, S.514
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        81 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/4ykXm_ESMT0bDxV9AsMLIH1COgYyYhtEyeMzRYRdIi9Q0UcQyBIORuy5LjdcKdlKxeB-Lw2KphA5rsdACERBZ_i03G4zzYpmlE_klLtGMgwDtTGdOZuARSdiRLTWR4AjR34oKlykd2d--vsWOIkmVA/3if-O3vx7Pk7QlDOk5al3Q/lisztmef.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Mephisto Polka, S.217, R.39
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mephisto Polka, S.217, R.39
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        29 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Pq_3xBbqInQpltxjL5URrhfkLRcUpW3lcyCBFfPAfMEtFIBGIq8A3u-1K4yZQ1DN4SyNpUf933k_YHHB-ABMbXILioDv3MyIWvL-MCJeA1zq94sT0XVEXhdd1LaLruBD-VN0zRz2E3q04Hmuxy0iRw/eq0g9C81fi77HJtdquf0RA/lismplka.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.6 in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        34 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pJqx9yZcfa2oxU0ekzipwLCc5dEV9RBnaD6Hijqd09AeOAGlLaiSSZhVtPJrDuyjGN3DuCbqJ-WPClInoeQFJa-qh4pwygErMPw6ydG9JsnLdN9Gz-G_xyhi472J_vcWtr-2cphwxITAObi_H2uhJA/_oRDgztWisBegZUMT065nA/sylhrp06.mid" onclick="return setToDownloaded('dlBtn_1_1_41_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.8 in F#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FuI9VtwWVT-1fScsvb4Ez-vZbdMaFop5QKwsJGlejNkBLKhfQMSpsr6yVwQH65-O7UJXXPlQH6JCVzwzn7FsM_pknPOBRBKYLQh02-9I9zQHFM9jiRRb6AO1Ez37TodLHyOZ0ZAbQM7A8WchJ8AqqA/sSWwyCo5NtS1oc98GXZz-g/sylhrp08.mid" onclick="return setToDownloaded('dlBtn_1_1_41_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Vive Henri IV, S.239, R.97
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Vive Henri IV, S.239, R.97
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_42_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/XUMEbkvLeE4_hUJN_Nou7_MICHIiXj9HYSAd05lQVd_e2_iQZwrQJ-YSkGzaCy0kWjulgcARGmCjTd-4VAgeYMhimiFkMsDzLSjziGCoeh5DZwrmfWO545xImnvHmlkwaPpcovND51IUXDRgZqhN0g/nXDFDrPzt0AIVSREHPCo8g/henri_v.mid" onclick="return setToDownloaded('dlBtn_1_1_42_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 10 Harmonies poétiques et religieuses, S.173, R.14
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Bénédiction de Dieu dans la solitude
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        48 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/BFH1rFFaelLs7VlJAJwcNvuMVedTz5jNNlnzHGtYkMxiZv3QVKJGQ-MIeB8O4WgZKgzTIzjXEMpGNRNNyBD0p3yUmukR2R8S1u0Ddw_UYTeXLvXYAhe22x3cdFrnrItxi_48UV4OLwUFmm4odYTzFw/xFevnMqUnwuXevBlsMJA2g/benedict.mid" onclick="return setToDownloaded('dlBtn_1_1_43_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Cantique d'amour
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9Bo8yCvFycCUMMwUyAn7ypw7IuiGTXul9u4-EdJ1G33q9Mvrw6Jh5DixO0B2-rkw6TL4bGFEe5IbUroSqI7kGPe1K7dB2JVNO2TNK8gQABjn5vPEQzrgp8p_aTsZC8pFp7Q_rX_KFdMEDmweM2A1xA/wiPMGUFwM8NSQgza0DoEvw/lisztcan.mid" onclick="return setToDownloaded('dlBtn_1_1_43_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 19 Hungarian Rhapsodies, S.244, R.106
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.2 in C#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        44 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_44_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fDNqX1cMZb7aXksj0PCjrvN0HOOJKHzoccdYPShZCH-qBoupVkA1RT_1oszYJcBdvbBs3BiFEEYHMS2NO-6RMXSMRnVOyziGTsx0IzAAY4Oj5SzI9HmREXjh2-hbP5hmei7PgO6C_IyuqPN3OzR4sQ/6Aufa01ZUbTZVpdu8tEAPg/jd_lhnr2.mid" onclick="return setToDownloaded('dlBtn_1_1_44_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Piano Sonata in B-, S.178
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata in B-, S.178
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        115 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_45_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Pe23Lyf2fDtgBLyk_42gVHFtjXoT5Iwd-lF8K24BeMiwV4-N_hVrJzYqA5cde4Xm_2JurytqCuYoFzAc9UgfLUrS_m9itQ4WlcpGiKKhSRlsztdmFdXfmZp6PBuFcl56BfepC3eQzpRZRCLw1irK4w/kc2EDRExeaVEhEQ3hIBQ6g/lisztson.mid" onclick="return setToDownloaded('dlBtn_1_1_45_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Grand galop chromatique, S.219
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Grand galop chromatique, S.219
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        42 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_46_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/CCzcESvzozVGMymw3MXqcCs-_UYF5cdkR5Tm30jgsgyPcjxz0kYlrp2P8wU-o0sJyRozMVxEkTWGMG0QKKcCtha-nJmykxbaQj5qI50ttGPa5p5LP1fPoyHqV8kHiwVcvPhUCx5F39gfQXLudDB_NA/MgGGmUbgyClpoIxHjehb2w/ggalop.mid" onclick="return setToDownloaded('dlBtn_1_1_46_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Abschied (Russisches Volkslied), S.251
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Abschied (Russisches Volkslied), S.251
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_47_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/C2xQ1faJQhldMINERZzLreoyu4HlGaC60OZDI2M9L0GgxUFcdR73B3C158c8ECwyNIlFZSSfopItckjEIyhp8kyoRG0_PD7cP5SzL6S_vgt2jfZ1t_vMl6CtGZVAMpX7TzzPqgeolPy0dV1Z0IleDQ/_dBeBqYoeQs2O3XIqxzf7g/flabs251.mid" onclick="return setToDownloaded('dlBtn_1_1_47_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Toccata, S.197a, R.60
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Toccata, S.197a, R.60
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_48_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rQmgeeMGdHHu-lN2RG7PcBOi4dwkBZUnDKR79wK5Zdy9DoLeMpu3xIsrbkU5w4R-QEj-0eBD5oLl29QCZqdL3TXlJbg8whMmwkfTpz7BOy80Db0qZ-A4xP_vp_VpN3oTt2xcy1jE71S45YOSE5q6tA/8LNUn-PRTW9NzSzyulyqZQ/lztocata.mid" onclick="return setToDownloaded('dlBtn_1_1_48_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 4 Valses oubliées, S.215, R.37
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.3
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_49_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FgjpQvymgybuU_26RgLnCWYqdKXQuAKTbD0DUVmD6n9amSuAtsb6hS_LmQiXlCUIWNMBYfuR6ejYiLsL-197c66iQ35tFLKuhX-ohB1fLaBsvbFCsg-Jr1lahBGSB7m4XDbJvvO6g8jG4h_50mM4Xg/CsDJQ6zhOQkRPgAqA0ixAw/forgtn3.mid" onclick="return setToDownloaded('dlBtn_1_1_49_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Mephisto Waltz No.3, S.216, R.38
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mephisto Waltz No.3, S.216, R.38
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        85 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_50_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/PiD1cSYNVhPDhQbAfAgw2jd8ph7IyMcLgk53b2XisJba4cZVXMQwoB2Zd678bv5Ev5IOgdXhyJrVI4XRGoUcNrYZWrcAmv-zORO-9xU1KbhyEzJc5IWyJLiHaFz7hSwt1KMsyYBdtq67bJxXEm8gEg/awPwbSnoec1lOTpeQY1irA/lismeph3.mid" onclick="return setToDownloaded('dlBtn_1_1_50_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: En rêve (Nocturne), S.207, R.87
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        En rêve (Nocturne), S.207, R.87
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_51_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Wjvmk86AXmsY5m7sYsU7SvIDRxrA16TTIu-Qctxk_mGH3MgNkrr8Hn4CSv6Qxmf9eNNr_tiZlYzJylcIuoF3up9WpI74m0zSQcsgl9CJYI75txcwI1l_exlVUbKLMw2kFu_OMCglf7GzdjnAfFceRQ/KhRX7qNZ82N_3Khbpbl98g/en_r_ve.mid" onclick="return setToDownloaded('dlBtn_1_1_51_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 6 Consolations, S.172, R.12
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Lento placido in Db
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_52_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/1fYj7AiyTiC_QBsBO3gHaG--s-7chVTurtigzNVqeI0BD-ickwAIhOWX026wMJCOUxIp07SklLhTP2aQHWREJM3bqdQmBqq0d-rVao7fksYLxT0OTML17TI9Burrgg1snwYQAxbfmr2l6WhOp9pCZA/Gsl_FF-n34QK97RfYAsPJw/consol3.mid" onclick="return setToDownloaded('dlBtn_1_1_52_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Valse impromptu, S.213, R.36
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Valse impromptu, S.213, R.36
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        22 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_53_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/njil-HtoTpA9jBd9w5TAUxt8LEJtkDOjDJiKdoftf9uTMM9-M7kkR_V9o56v6P6-D7OeSDG9Dw_YrPmlXTigtveLH6kHGtI02whVM2xW40vIKQJsjWovouKd8nwNqiLsl_I7V_l8eSNaJE3Q6_040w/JUDM2OeFoj1wHS4qpzYivw/lis_imp.mid" onclick="return setToDownloaded('dlBtn_1_1_53_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Piano Sonata in B-, S.178
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata in B-, S.178
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        163 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_54_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/R_OPIv25-jhfCrOwCtUsgE8gY_pzgxT5FMLs5g5q4pFMHkP33qq69HNUfBIZl_Ho8T-HVo7MCjo7I8GLxPFGAkhSAnOOMADWqj5wmJHsTp3Ivq9Abr47aKpNugmBjjUHzQxAlPnboBGGVSDogMP4bw/tu7hjeZilZoqS3947fIFXg/lisztson.mid" onclick="return setToDownloaded('dlBtn_1_1_54_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: Rhapsodie espagnole ('Folies d'Espagne et jota aragonesa'), S.254, R.90
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Rhapsodie espagnole ('Folies d'Espagne et jota aragonesa'), S.254, R.90
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        99 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_55_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mOrA14x-cx-7CsWovhFmvNGF4--rSqJIvENeLUJKy-j_8gw8uO3U6OqbSi85gVXgvZPBTzeYO5GnGbl39_vLVFe2i3DCcCYSKwFnc7WTC6K2NSY9-gywzXAYNFC_XU1QkAYMV_wlu2VlpFCEcyfJww/wyV4zY9A10o2hcRI3BXHtQ/lis_sprh.mid" onclick="return setToDownloaded('dlBtn_1_1_55_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Franz Liszt: 4 Valses oubliées, S.215, R.37
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        No.1 in F#
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_56_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bJTEsh12T0U8C4OWmK34WBo7UL1SXbvSbXo0omsp_LOLoYXNzY_Nck5ZNq3itB8rW6Nji5O73o2EO0C7PnL8DPcZP5nhyu3JRhYSZZ1c0rwLemg0L9YsgothBTulOShfZ4dYWVyt_Us_8mvB4MAzjw/HPRlW3OEInGp2fMNMG2ymQ/lis_oub.mid" onclick="return setToDownloaded('dlBtn_1_1_56_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

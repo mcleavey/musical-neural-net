@@ -1,0 +1,2045 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 17, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 16, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.31 in Ab, Op.110
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.31 in Ab, Op.110
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        75 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rKlWXxavUpWHwi68WQfDc4TGqhAbAd2GXxLE6AaoqiPJTy6okc4S0AByojEitKuWuiaqKJPATHnrWM6L8UzudstqQyMtTu1NlqO5LnafkutdxNeJ5_CqXkf23JfqsahBC_9AMiM8Xo-YtZI0EDVoZg/0x1OcQ_z8m0gqZPoGgdzyQ/be-ps-31.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 33 Variations in C on a Waltz by Diabelli ('Diabelli Variations'), Op.120
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        33 Variations in C on a Waltz by Diabelli ('Diabelli Variations'), Op.120
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        272 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Xi-AaraM3ZAVUJOA0txOZl9l87xcCYXh5XrgK5NSjvrTJ6k1joFmG1CGkdEx_p__E37w1aKjTzQH4de_lnaN4l5suSeg3QYtRInsKgbnGL0c05sF5zdRBic2sH1f2KI1EMGbwvh_jdMDowvl3HYZNA/du-puoHFwGc0I6fvg3X4rQ/be-pv20r.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.23 in F-, Op.57 ('Appassionata')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.23 in F-, Op.57 ('Appassionata')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        146 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w5QW7j4k4O3u9Az4U25HUy_SlprY4du-QemH9GTkr3x-WVC8qibWMiC-pdX7PAC59qpx9NLohGpGGrvGgyURir5GRNk2WaaXwV5d0a4g06rfBt3w7cUkxNjqIK97oSfJIyFmqo5c-VqVcZmqcmwYMA/CO-x4xurYj7LbU3a7xGuHA/be-ps-23.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.32 in C-, Op.111
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.32 in C-, Op.111
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        132 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/jFrXMKlUaZEHVf0D_xkI0_PUiUxitSwtFR5i4ugz26rUx68lQqefuGXIKtcPK0ExFI2wCInp_hAMjVc-LaPsCUG5wZQtm8qTYqUGGlVNUJaF7TBpKL9GG5VTKtSdJWpw14TlUGC2zaUv-fLxCLdBJg/rypm5Q-5Q5cy-HTOysyvfg/be-ps-32.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.29 in Bb, Op.106 ('Hammerklavier')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.29 in Bb, Op.106 ('Hammerklavier')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        211 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/VkuG6wEHO-YLZd0kbwSpGnvFOvP2qMbm7_8rYejEk1lEaKIXaqPkNYscoAn-Z-VK2-tUNeay4hShhxb7sCnmA79vSHIHAUt_oEtZjSf66xQlPgUbPHQnUXmYe25iCamSe-WROijv8hL900q73UgABw/d2tgu574svPsutfyOqM7ag/be-ps-29.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.8 in C-, Op.13 ('Pathétique')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.8 in C-, Op.13 ('Pathétique')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        81 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Ml_6Sx2ihZxQGf-uUHBGjxS5qSRNi3gndU5uWstxOP1dE0LHBHMSRsr7yQ_KEO3O2Go2ocGYTfdniK2_64CctrR7ZcUunzbEwKD-XdUdjqoU2gGMAVa1ScP3l_FmbbbpbC3NXfeslLYsT8GvoCpXdQ/vjhRD_XMAi9kHXIas7PqBw/gsp123.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.27 in E-, Op.90
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.27 in E-, Op.90
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        69 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-9fDbtz_KMJ2G4HRJFYcnUc50XLCUJ2MX2aFXtwsIo-Xk1I9m5yz8qcLvSPqjsFUG_aCp0kWODaThha1yuey-OpfGycTbBvzwYyMHwpw78YYnsh5dZwFE_G6gznyCG53Yz0hPJYPy6MMwQcwGj4vlQ/6u830HOotDFAPFaf20JlUA/be-ps-27.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.8 in C-, Op.13 ('Pathétique')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Grave. Allegro di molto e con brio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        33 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WUkWxRy1j8XuHM7w1Kei2SFW9uZriO13JA7Vq76gEg5knS-vu2SjWTf-4OnvzU9d3fuCPc3CzRkNJBfvw-WtQatLrQnsXZ_FczPYCORw5BRXd0L9SFnp6dysTH4T8Xnr3OIHGfgFYHE2Sish7SXCKg/41U8CJ0DHiBcIfmaC84WiA/beps1.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio cantabile
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GGqNpAZtmK2ezjukP4RppgwphzZ8wZTpMME0JOhw-a4EPRpoyVHvh5bEHg7qkm-UFA2bR31g_aRM9KtzUdWiMcaNP0SY4Up6XuCNeLU8OhrKBspLyFsvP9IGXCD3KAuuJl44n82PDipEohCkuf0eLA/4TkPK95a0HaeIASsC5pwHQ/beps2.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Rondo: Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HTRmfnHjfsmqeXRtIrz4kngQV5UlzK_QqAV6j3YhDFArUC1hIRW-um9CMY0Ug7RJvps68cdRnhxcpEpVpMHqg_pfVdocjU92zl5L9sTUAPmLm7Xa_beJSdFsBnYUR7h_EOX04zkJfTtR4DZ1mxmGKg/ZyE5uW9V4RKcSaW4BFiuTQ/beps3.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 9 Variations in A on Paisiello's Air 'Quanto e' bello l'amor contadino', WoO69
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9 Variations in A on Paisiello's Air 'Quanto e' bello l'amor contadino', WoO69
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/B4Ls4tnKZS6F0q-BvlO48J4DRvAHuTZyNGrI19d2Au0lE6TV_V-9aprseXzT_7aQr6nxdji-phN3XhtmD0omdnKSLUu5jXcW62SHy8HPV_3ta_mr6qi6JqPcp9tvlRav4K68JKFZvnqym2KBLKTdPw/QNfBTZwdwnbiXRO8WuHh_w/belamoli.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 6 Variations in D on an Original Theme, Op.76
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Variations in D on an Original Theme, Op.76
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        49 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/AWj06dMjhglmN4Bm9Tsaf21DxgfwhfO1-6gxur2VSUwfOKD7jmMApdROPxFdsGsd9M3jDOiQkI78akdsniTBz0EK8A3VZCAPviGpqtQlisxogPnwk_2tbQ7ZUkP3tOotT848pEz0JVljfokZEyy-eg/igl9_3KKVegU15TK5oZAiA/be-pv19r.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.11 in Bb, Op.22
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.11 in Bb, Op.22
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        122 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_j5d6YkjpnW03QNlOEsFTGdUKidPja3N5-iPGu44DcXxe54vXPR73K0y1Wjz45eoocP0bmYh1_Mu14V9TcK9vFDMz1xy9LtMAglTr_h4LXRKy9p3HUpAcI3VzYQtwpbBuWGnjKsd0Vb5FFeCtdJzQA/wBvdhfmIJKzZYXIG1WJyAQ/be-ps-11.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.16 in G, Op.31, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.16 in G, Op.31, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        132 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fYXY3dMVBjuoz5frpiKKVQj3FI6Zoe9gBBQcOvPnrfbTmZA9A9YTPbUcASKfbnEVr9PM1xDBA0mWtT5QB48hsrRD6ev6JtJNf0EsY_p8XEH7wb6SXeT1Pgh3Z34RxfeZ8QskGlYUK2a5_MOUT3JF1A/kgZs1342ClYeuIz-WU3-bQ/be-ps-16.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.14 in C#-, Op.27, No.2 ('Moonlight')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio sostenuto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/w9uLfGybHAh8iyJyG5cNGJCrIZq0eQSOKurRANFQGWhZbMlC_Y1iTdx46RzF647iNPM206pfcYanN5WWRbmZxl1eSzGhK5JnH7sNHCJ6LXZWa2dp2vkZtmFB9sR6zDSnPrOMjyjUlewN-sNvKTxTOA/UqTcaovxOhAXRO4OO0QSGQ/firstmvm.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Allegretto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tpa3DNBArN3TReRaKAF1TTbtyFjtxQiBX-k6TI-x1_1NSNxTzeRfSxLph3XGWM3Xhq8NS4rIN2B_0oC26c7ABcmMstJKe-NW5S2ryVjJSBYP3UObGZyeRlAuqKsagnqG2wJgYjV2CV7afiXKFTxmyQ/wN6TGtFZcsjq0YtI1x--TA/secondmv.mid" onclick="return setToDownloaded('dlBtn_1_1_13_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Presto agitato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        40 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bTjBFDfJ5KO8eaXG8WB4JDjtotre47EoNzWS0e7yHaFCvipZVKvqYGheTXTKmkEVuA7zpGxLqqrQuy_Lt6SbOLzgWzKYBn3IP6zDawjTl_Emon8fR4bMmaQrNID9JoGVR9UOFTD-AUJK5twIRfienA/We5z0olQKvlqcYTjdp94Mg/thirdmvm.mid" onclick="return setToDownloaded('dlBtn_1_1_13_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata in F, WoO50
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata in F, WoO50
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/V7GJHjdqHLqQv_hP6Sw8JiSl3rZfOMimS2DIW9-fwM7tFu-4IAyVPFoqXeUo6sRosvWCXsqUvGUKSpaa4rDY9BMX-N0dC1F5N9HOYr41x-aIL65tPfvRUjwQiZjhWCah0VQYVdeMVHKBTiXRnp9iNg/eSTW657yh0gNkxuDpxhWrg/be_so_f.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata in D for Piano 4-hands, Op.6
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata in D for Piano 4-hands, Op.6
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_15_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Iyhk-5pRsO1jBdbjAj8VGEheVenndJ2P_TO5aWD0w4Y3AyC8gH16T0JBgL9J5ZHbPzqazicQ40TwiZfnI4lldwhvYf_3hPmCxtZCd4F1eOlSAewFBae9OrRogAkBMJZcSJ-XBzHFFbtaqnHnY6nlxw/BMc0DA7YAMBiGJw1UvE0ww/be-op6_.mid" onclick="return setToDownloaded('dlBtn_1_1_15_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.13 in Eb, Op.27, No.1 ('Quasi una fantasia')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.13 in Eb, Op.27, No.1 ('Quasi una fantasia')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        79 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_16_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2q5g7cjdkqCAXwDOj08kxKsFKbvsiAk5uNli7_ADz9C_aqeSwzQwqU0e0Ps0Q94TonJra0fDbbFeVe0hd2Nax3J9IsxAdSDRZZc5LZ61R-R6X-JxPt1BS9-GKOIEsxQmWhLMPDGDkqqaiqNt3GlILA/oXtgeAfqcdn9oHcKlVRvQA/be-ps-13.mid" onclick="return setToDownloaded('dlBtn_1_1_16_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 12 Variations in C on a Minuet from Haibel's 'Le nozze disturbate', WoO68
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12 Variations in C on a Minuet from Haibel's 'Le nozze disturbate', WoO68
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_17_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/s2-n-k2bR0zVGh-Zsfz3IWK8FU4fOuhvKNO4x5BJbiYDqCXa99JIRJLCrOnzkCINJKTsVG5nOk7R__z5DjlgdlCCSWZBv5VnffoaUlQ7mhE872-Eaky0J233XCJtfSpUTAmG4bmbZASSEF8Z9DgFng/WNDPXipPQsF0dJyA-eq2fA/be-pv05r.mid" onclick="return setToDownloaded('dlBtn_1_1_17_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.18 in Eb, Op.31, No.3 ('The Hunt')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.18 in Eb, Op.31, No.3 ('The Hunt')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        123 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_18_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3lQaGr4MR6tHCnLmW9SpkiBpukkD8ZqTIRPLbnTwJ9B6oFzP4N3CFpNLN3FfGdTU2zd4q1ss5CnPL9MRJtNsCyp5quR_0UwceYQKv5N0l4npu0VKx0N_hubwnt62hUEUrVdrc96YIO3OXU691dr51Q/w6tvPxueTtoS8558MP9rRA/be-ps-18.mid" onclick="return setToDownloaded('dlBtn_1_1_18_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 8 Variations in C on a Theme by Count von Waldstein, for piano 4-hands, WoO67
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8 Variations in C on a Theme by Count von Waldstein, for piano 4-hands, WoO67
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        49 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_19_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/6-iXUJpXKaqz9ebPs6qj7wZNL2_0Te3kur5Y4b2_SqtqxfjK1rF7tud_JDG9d_NdJ7e6RaSLra0Vuo-uV3zRiugVwMFIJDLBYnooGoeJOeKBBIDKXQZ-ay26kp-lB25YtP061vMYiSXJ5qJRnR6dRg/3B1AQdSGtg1PmmOIDk4MIA/be-wald_.mid" onclick="return setToDownloaded('dlBtn_1_1_19_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.9 in E, Op.14, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.9 in E, Op.14, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        66 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_20_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_cbcWLw1H1I3i88iTup790IQNEdFLICpzKzov6SebjDhUt6JBekbkvG0FIhWIRBvBWFOZK9C45q6btKQMmUpStNeD7dw3bvTuJ8mo9avnsNAoAdPVV8h-BsUizdDIiWOOFbvAvgJyS00c3nwIXC-5Q/cmecGX9oZ7de9gu-HJt8cQ/be-ps-09.mid" onclick="return setToDownloaded('dlBtn_1_1_20_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.21 in C, Op.53 ('Waldstein')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro con brio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        94 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/P-nR1fxvvS3LB_tpEPimiJbtBBTAG3KLcLOk7KsUp2B9xDMNhPQlvTQQBZXYVLOQz1wbh50QLj-AGatIJUVQ9MKn2-L7BlZr_EqhSMkkEELQvY9BikGiBrYewGvPqY_W6pjOZDWjqJ7ZBM7st8X-vg/yDXYu_s1rgiFp-uXl42agg/beop53n1.mid" onclick="return setToDownloaded('dlBtn_1_1_21_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Introduzione: Molto adagio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        90 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_21_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YV1dtvB2yxot72J1-RtHxMbafusaThxqkjnH-TvK75y8mQ9AGCC2O4LRUWn6bFspnogUc0Ewc6FmqmIfAl_zW6l9LYNQgOxOEaeYE8IkO0I5L6iucXZBvOd9SAenZxHBlnvqGIAHcoCwxQ8ulVze_g/uHtAZKRw_1geudR9KZemDg/beop53n2.mid" onclick="return setToDownloaded('dlBtn_1_1_21_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.6 in F, Op.10, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.6 in F, Op.10, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        86 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_22_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/zcwt2mV5-qVH9Hk4c7jpQPeoyg-WesWVry2uXC_RAxbY2FkrPAOmd64741HnMdt5Xf9WRjzhcUB0ex2vieewo7sTgHEPxZfgsw0cDdir2GjOuQck-kmxWP2rC5ymLyTdcfBrNZVtcx7Nuhefu5wTrg/j9AWAtjLZL1I2THblzehtg/be-ps-06.mid" onclick="return setToDownloaded('dlBtn_1_1_22_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 6 Variations in F on a Swiss Air, WoO64
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Variations in F on a Swiss Air, WoO64
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_23_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nhg_DDvvsbRYT2V-v6p70Q3w3XitLWfB-oxp9539sFF837hXeTYkSucDnOs-FVtQNRP8o6d7v-7R_6j1Plv2a8B3o_2bmT4JAcOKzkb5r9VJG01p-8t3ViCt847mi2ecVBB-9kk7GGzMlkRNr19grw/z5nYskyyC0psyCRPCrAExA/be-pv02r.mid" onclick="return setToDownloaded('dlBtn_1_1_23_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.25 in G, Op.79 ('Cuckoo')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.25 in G, Op.79 ('Cuckoo')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        52 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_24_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kTMEjXRnBizeN2XjSWo4ciXq3bJXIe26x008YZ-Zl3_otfvR-sNZawVK2224MsC_IZoF8GtG-Q11epb5pZbD2xxrnBcjBouUWRwNtOodjuAp_vFuUKFi5ve4b0VozPgWymWlvKdAKU67BPCve5E5Vg/7s_2MXXPpxA2zl0JDv9dyg/besntina.mid" onclick="return setToDownloaded('dlBtn_1_1_24_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.23 in F-, Op.57 ('Appassionata')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.23 in F-, Op.57 ('Appassionata')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        113 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_25_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/0piw2nmfdYOcSGnc84LiylAd4Owj709mseypZqKDf2UbTn7H62GMTBa3IInQhqMuBE_EfCC9fLWH5HDmvNOqudVp41ZgQYjLg9xQJWJB4HVS6YXLzKGFVRBOzS69O_adBOVhmGtEkMDSdFK9iiqhNg/wxpcENCaJFvxyJB5ab_6mg/sona23.mid" onclick="return setToDownloaded('dlBtn_1_1_25_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 8 Variations in C on Grétry's air 'Une fièvre brûlante', WoO72
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8 Variations in C on Grétry's air 'Une fièvre brûlante', WoO72
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        42 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_26_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YATtLiPLDZXV9hWSl0SGH4O4pSTSYBe6UxnxasfvVdkYfztfkA_671NiGiIZl5waOioftqz8CmS2ptHshVM0hugBGtPlWzoEhjO_pMAzBMXjSKqDZXmDkKyW12L0Ef3GSSxOB3k9wcw_eV2o0FW4kA/_uATmziQmTD-P_nRmVSSuA/be-pv09r.mid" onclick="return setToDownloaded('dlBtn_1_1_26_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.12 in Ab, Op.26 ('Funeral March')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.12 in Ab, Op.26 ('Funeral March')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        88 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_27_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-YI8RpiR4NSZ7ZqCeOAhQzr1Yu1tlxJ8SyvRAFLH3WPemnaFPGH0Oq2QbiUto0LuD-vwoPZ97NNwkKTIt5Ijfeqr4QP1Guot8PSQ6J8eZyHoDUbU04k4bghlNJ60dNWnEKjSe_H6sJfcGJ7Di7ftOw/sY6S082C66O4enpQhonwCQ/be-ps-12.mid" onclick="return setToDownloaded('dlBtn_1_1_27_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.24 in F#, Op.78 ('For Therese')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio cantabile. Allegro ma non troppo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        32 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bQLbklGxKYsO19MSI___Hklp6B_-9v-pCkenM1Zqz2bn0TXIQCgJT5J0b0nMdTt_mJM3nebneMAuoQPPbVLzZ6_xU7YpKTnxKawCMrhC2DqQgy7TWPqevke-Tg12xVDz7SG-J1rRbWTg9tgitGqJ5Q/YlfD9GlulZAycmjY-raBQg/beet78n1.mid" onclick="return setToDownloaded('dlBtn_1_1_28_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Allegro vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        34 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_28_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bc0vHOzWzEZ2OhG8XTCD0FMDosCAsqtwFaPtEjoMoTH3mn8UxkQkdTbQNZx9zJu2cfIly-T-ZH_lMIq6_HzKLnKLuxgNUN-oUoDlG_g17zmzy9DYwKrGHIaQ6jLpuFEXiQ4GFzIDVyKp7VKbovX7dA/-X2C6j4ltyKgkzDH0kW84Q/beet78n2.mid" onclick="return setToDownloaded('dlBtn_1_1_28_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.1 in F-, Op.2, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        30 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wUBYlgo0z0ki607xfYnd56jWDOlxCEMxMvyrHPT-TVv7x87eEk5vSitfJZE-rzH5KesqJdDv_Qt_VHX_PZwoXmRTcQan2Fv43rVdbF1zJixg3CnzHh1qqRTY-6xGFlg6vYM7lRT3hY3p0_WIoDVUoQ/67S8iW-zxZ1-MJ20-KxgNg/be_son1a.mid" onclick="return setToDownloaded('dlBtn_1_1_29_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        12 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/L1ptmKG0rVNAyPp4BAT2JUiyvQ6LADkWYw42HnsWy3RvuXuoIO1Z7cPwMgndR_2FWHootq3LjjGC_tYSSRh8zP6ld89AdLa-ElwAkB7m14PyHnhARLoCGOfImSGvNcg9qriQEpvu4kyL_uDM6tJxpg/qmTySCCxIt79OKNNxkiQ6g/be_son1b.mid" onclick="return setToDownloaded('dlBtn_1_1_29_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Menuetto: Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wUty7lvsjz2CxrJx4p8HXMGjWOckHyGJPMVXaI4HFsRGariwC0cCBGAVu7_Oo58bqRQgMhqRLMQKABtflUG1CCCaKMpC4ePEC3ER6gA0HCqvll0yc_hGTPwLMZ8vCZ8LoF0K4DY_ADQxweylVt0HCQ/UD4gVs-amV2UG-vK2AJSrg/be_son1c.mid" onclick="return setToDownloaded('dlBtn_1_1_29_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Prestissimo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        55 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_29_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rYhYYgWtqEIwZrIlm7ZKU1mb-q-tVAdN5vA8v250rwWzbseicSwtVr644bcNdgIx2ouHRnhuuIdTIJ05nbJPK_GQ6CB6s-2hR7SLj_f4C5TrV5aIjdlJPebs7amEGkZOAG4BnENnzuH2Va9yJeDMHg/nbGHshjMETPsBMJFuJ-OSQ/be_son1d.mid" onclick="return setToDownloaded('dlBtn_1_1_29_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.21 in C, Op.53 ('Waldstein')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.21 in C, Op.53 ('Waldstein')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        157 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_30_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/a_TRr40W5t2--XpvYPK0RZPx-GOwwqgaf9LuZ1sA0LfjHThmb3O_upfRa6Pctgp_yKkSgtwXjOUjL7xCxTHwcDc_D35FNN85Nd-zHsSR-O1CNsl4ZW0BonX880KPaJLRFxFcqgrZhghw1Dmejw0UCw/NXjWgM80iknlOZwlQ0PWmw/be-ps-21.mid" onclick="return setToDownloaded('dlBtn_1_1_30_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.20 in G, Op.49, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.20 in G, Op.49, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_31_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ktWtG_lqqAa8fKHsR72LGYDsKN1Xaum7Yvdwu9lmcMZDRmRi6rGrK6tfigV38PbERU1QqvdBsOhFIMwesVXEptoe_81OB52faNp7AZytDXaEN0iw7QE7JNUtz0gMb5LUBGWBNCrd1wjwGCpZdYqDWg/XhgQHgrDGzJr5JmaKhVFIA/be-ps-20.mid" onclick="return setToDownloaded('dlBtn_1_1_31_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.7 in D, Op.10, No.3
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.7 in D, Op.10, No.3
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        83 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_32_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/B4vFyi3fr7czukP26yiwmBscDtqtNBWeB3RATMfawK644C724KGTumqg2q5HK3UlPqM8do5FfDoToMk1aoefyDNeruugaoJtpMOrgw3e2_75dx6h5BqsFZPLCs0acQXnmC3EC6oBBbtk3LGjMvU-YQ/M2me8tUgBys4k1h0iW3xrw/nf_be103.mid" onclick="return setToDownloaded('dlBtn_1_1_32_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.5 in C-, Op.10, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro molto e con brio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        14 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_33_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/N-yCEifs7m9_uD2k49FJHwus3xt2CIt_j6nm6Q5_AqqGomLMzzZLxZeI3RazpHpj9iaC7B97MRhLgqZxHSDx3kgu_mMMg_y3ZM6OrIKm_gPgRqIgir5tQ39iXa7SZn_kRz14ZXzcEBLnuhrEzpVIiw/BMqB-NiI_GeyKSWkk_1F1w/beeth101.mid" onclick="return setToDownloaded('dlBtn_1_1_33_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 6 Variations in F on an Original Theme, Op.34
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Variations in F on an Original Theme, Op.34
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        66 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_34_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Xqbwxfxgkuy94_nq4OHCb_ksifw1dtBoKvQ5kp6Fnv62DGeewf6ecfCWQvooOKnog5WGtbg-JPq4Ywz1NCDfXtM0JMhEa-G2Rj-xdDSRgSOdRjFhlg6U2c-Sf38DxfYEC1VX8y55x4D4aRc9jaG3Kg/HVn9WwQD8nYQFau9l_6V2g/be-pv14r.mid" onclick="return setToDownloaded('dlBtn_1_1_34_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.22 in F, Op.54
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.22 in F, Op.54
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        69 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_35_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tx1CWXlZ1g8yVPMmbmc9pJiyFxPnyG-yL1saVXel5_rx81Q-681Xk_7j9D5Qy-9fNeUIEp7KvOMKnbbEbOovL4VY1iyXtUQRrEnhBpDnm8cNx7VMZpauF0EBGwRvkzV1UDRa4m4TYevZw2NSydbRyg/jgcYVE6uW9c6O9ez4Og7Fg/be-ps-22.mid" onclick="return setToDownloaded('dlBtn_1_1_35_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.27 in E-, Op.90
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Nicht zu geschwind und sehr singbar vorzutragen
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        44 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_36_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5OA9is8yRbR9n8yhQFTUMmUGnudZU6G5TadxeDyHM8yWOLdzntW0SGhjbDXt42ZKzuEbrYyWHlzfelhKNDFT5ocGBf0Oq8KifElCWUqHhPe2-35Cy6G_SAbgeykiNxD46Wzil_n2hnSQV06D__D4PQ/VCg1zOpAytytMXaRX-5pkw/jg_bps27.mid" onclick="return setToDownloaded('dlBtn_1_1_36_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 13 Variations in A on Dittersdorf's Air 'Es war einmal ein alter Mann', WoO66
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        13 Variations in A on Dittersdorf's Air 'Es war einmal ein alter Mann', WoO66
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        58 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_37_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mk_Ib54U4OguMQWAtvcDfGTBHA0MfAc4cG-2Hit5D20v6x-23kASBrxHnicDOl-SGZmlLes-j_wFBzaMaq-WiuO5o0AFRCoogHlyegqxT8ZtNEscPDarQ_AT8sx0DJeZNAknUSl7FLF2Men7RmiyVQ/3g34RhjxKQIXqCjYBy5obA/be-pv04r.mid" onclick="return setToDownloaded('dlBtn_1_1_37_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.4 in Eb ('Grand Sonata'), Op.7
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.4 in Eb ('Grand Sonata'), Op.7
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        150 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_38_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-MjTyVu4bU3b14Zqx_QworP61EbgCzBCJ00P5UN-u22PHUjTEThXZDL9sd4CqcqUzpVMVfFo8JqnC_grNV5s_aU3u9497Z5-VE9ABOMHG4Q-RoUma6LpCITZrlW_xaEGyymbY8eWx2H1-Ys_0noLLg/9UetCNA5UkivkZGxB1V4mg/be-ps-04.mid" onclick="return setToDownloaded('dlBtn_1_1_38_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 6 Variations in G on Paisiello's Duet 'Nel cor piu non mi sento', WoO70
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Variations in G on Paisiello's Duet 'Nel cor piu non mi sento', WoO70
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        28 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_39_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Idd148ztXFJTFZHdMd6f3BLFSpa4cSCGoOAque1OHHNBJ46mtXGQQLPkohYLDUea3CH7mQp66Rm-x6sCzQ1FMDLdOqaSELZxv0XqOY2ivBgTIJgqTE3pTm1XWieBOY0YBxttjOh4OMr0L1g5tJGNrA/Sgdv6JqMhAWebHz_LzSqjw/be-pv07r.mid" onclick="return setToDownloaded('dlBtn_1_1_39_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.30 in E, Op.109
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.30 in E, Op.109
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        82 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_40_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9WU3otoa1fLkhumedMfGZpToGrIMjBHG4IvfqpbKzE7a-TGGJFMIsWTzcGr7Wx1Ua6p8ZCQ8nDRdCvd4avqdxecZX0pzI9E4N7o8I6q4VI9MOgezOaeN8DyGishZPrpffpzM1jpYcyggm_PgFULKTA/ou-Ybe4JLLfuecthYe7kKg/be-ps-30.mid" onclick="return setToDownloaded('dlBtn_1_1_40_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.10 in G, Op.14, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.10 in G, Op.14, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        75 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_41_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mEpHXPfZy4JDgICSJl1_rzl48vFD_Va_Ytflm5Vdl-BjiDks6Q5P7JDzO4dePwMmMhar34tt6kOLOW7H2j14_naN6R5xI-Sidxf9efnNXSpHMw-B3OefIRsw7HE-VNysR_51CwYhzG0WpnThKDIydQ/u-7Z08wmji3RkwOeAqAp8w/be-ps-10.mid" onclick="return setToDownloaded('dlBtn_1_1_41_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.3 in C, Op.2, No.3
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.3 in C, Op.2, No.3
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        134 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_42_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dtqYrYtl54xHr6cdD3-8alwXClJsoICnJFiLUxKrTVWAbCMUw6rYAr1ZEx0M4W7BRF57ujDpO7_gUYTXmDvjC3pGvEBm9ni6vGCIPat5gRNtVYqLLJXekt-keVFtcU_1Dzs3m3RBeofOHhperD6OUw/mMLG_PthqmGhfAgkqMDhdg/be-ps-03.mid" onclick="return setToDownloaded('dlBtn_1_1_42_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.28 in A, Op.101
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.28 in A, Op.101
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        91 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_43_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Skj-NJFWbAMya3cF8gzHXChIfP4D-guSUf71-14Ici5DBKMqZT2ovFQLR2YqUJfSvgbiUu4KM8hgRICK9FmafZTdWO70CCDywdWPHg-KANnp3w5yMk88Pd-wBkXGPxBMvCo4a0QxGqaloyHYdO02ig/CYdnUYvHqd0NDcjZ7V-WuA/be-ps-28.mid" onclick="return setToDownloaded('dlBtn_1_1_43_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.25 in G, Op.79 ('Cuckoo')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.25 in G, Op.79 ('Cuckoo')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        59 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_44_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/K1_cBx9fSZCS0TGfTd4IccKs1FgjDVDFY_DSJRigtagTbLbsqPPLl2qDziNuW0kkh9p4mljBbDqb5tHeeuz3wrumHLoD7Z-bygszfgMk2Sit4QiwxwGtAKlP_7mIp9HzR1bW5wofPOpOons05glvzQ/hNMME2IwsX39Pgc6mQiuVA/be-ps-25.mid" onclick="return setToDownloaded('dlBtn_1_1_44_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 10 Variations in Bb on Salieri's Air 'La stessa, la stessissima', WoO73
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10 Variations in Bb on Salieri's Air 'La stessa, la stessissima', WoO73
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        57 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_45_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/pfLM7OZ1QtcR-GKuALjmIvX03flrA_GBtdgoRxRdgR9DiLDj51Yi_at0FO_bnWu6pUk0e_Y6AcPEtVqpwiWoXrefIqmBYDfzBsfUlMOQgIR-fVX8OTK9iFw3ulKCBoemMsCGxxsy8UOMWMlxomgXrw/WIbiA7Hv-vLqEVaNYQhIBw/be-pv10r.mid" onclick="return setToDownloaded('dlBtn_1_1_45_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.14 in C#-, Op.27, No.2 ('Moonlight')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio sostenuto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_46_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Gu9O8OccSkx8mDwUp9gpPnHIonKkOhqo-YC5EXUpUQ8fF9uuxNGQklzZyGm5OIznMSqi1RTUcMHPPTtbnlIjmqC-BwFsaPD8oAawX61Gs3sLSA-8PQkArmhAEb7gzPLSulkeuv8tgZH7rPMg_Pmipw/a1aaCxhI8qNOSYdhwpKp-g/moonlite.mid" onclick="return setToDownloaded('dlBtn_1_1_46_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.2 in A, Op.2, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.2 in A, Op.2, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        117 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_47_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/gz_nnnYjdTysyXoHUU3x-grnEbjO9Zkm433wuGLXneVSdWGZubRPtCp25nRKkZJ0zbaM4KUdMnVVBSSEvD-ctsiwikgawyVd0IsPY57yL_PchuKews3n7ZFX9zpYCdPaDneLEsNArw-nJrK338REdA/1tyd8MjD0--4e01oROJesw/be-ps-02.mid" onclick="return setToDownloaded('dlBtn_1_1_47_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.26 in Eb, Op.81a ('Les Adieux')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.26 in Eb, Op.81a ('Les Adieux')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        89 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_48_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5U26vEnchzg6XR8eQBg3GkG2F1LM17cKBFnGqNPk0GvDzghwBRnYyQwDtCxm_kg6Fk_Fi6ymcUXHLpQLGJ9BpF3o0vyx9Fj3OOq5S5WlmAxn3BuOrd3Ixp_TYgw0XVWnHAXdwKfRyL9nDxMAXtNe4A/Q7LIuTGbEf6uWtsTYJeJ3g/be-ps-26.mid" onclick="return setToDownloaded('dlBtn_1_1_48_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.17 in D-, Op.31, No.2 ('Tempest')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.17 in D-, Op.31, No.2 ('Tempest')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        101 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_49_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/S_zE5BXw-Ou8IYXuZ_cgYwxK2XIwOLZmzH2rOeQ-xWAfmKkF4mEjMYrNj8SXBOoYB_pphw6NA3odDj367o2QB6O_1gPVN8T4Lh1gyNu6oqJxQdLxvjMcyath46EnMhWRvh782ADGPdZXj1BIXew0Wg/dsW_mDDasTkz7Zh_DeKUVA/be-ps-17.mid" onclick="return setToDownloaded('dlBtn_1_1_49_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.20 in G, Op.49, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.20 in G, Op.49, No.2
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        37 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_50_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/TDPxAo6shCuwTUUlnYWyybPOMQFC50xZB9oNUZ9vPAEnzrJSLhZv12PCuOOF8twzO49MZ93W67Vv7F6SPHjYTiTwzZSLZ8IhvWus_qMRLu1qMbtHbuL6vumkG0-i7fGfQYTGYn6AuFpKBpvqgVtrfw/jvOWFbL5KBo7FvKGykvDew/beetson2.mid" onclick="return setToDownloaded('dlBtn_1_1_50_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.19 in G-, Op.49, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.19 in G-, Op.49, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_51_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ISdgOl2hfZaQuQaJ6qqr85GVhK_q4Edz7PdXywH_swLx_V0AJMGZPaGshcwWdN_CUoIeQ5DxpnOjkxQ5eIXzjbB2Trv29WMSpndpsKLFZQ9BgbPSAdyyU0aJBbIJeP2fx4v3kqcRbl9ypbyqwl16GQ/Bs34EBXL06ADNFZnJNYmbA/be-ps-19.mid" onclick="return setToDownloaded('dlBtn_1_1_51_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.18 in Eb, Op.31, No.3 ('The Hunt')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Presto con fuoco
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        27 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_52_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/MQk92bLF1y7RAg00Oy1zIxHpNHYAswYuvW4tyUr3OPpMd0dyxQuBzw9XHDN1rDaQmjTAaPWS86Rj5n8HVdA94vCiXEM09c7HNaUd3iDWiKayZP--pN8HlbPCAfTJ4GBvYkM7iORXeSfHEqEln0mEWA/Mn6xkvUyrTLX2kyuptbO3Q/presto.mid" onclick="return setToDownloaded('dlBtn_1_1_52_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.15 in D, Op.28 ('Pastoral')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.15 in D, Op.28 ('Pastoral')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        109 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_53_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7SgQ7q4tpgUNBSMt09ZkO-dNnMhuSI7zT1WKMo-4R1-CM5sCVPdmt-s5-m7oanBm_G3Sr8uruZomXOpTh5ebydsYecqJcLL1cYjct0TAeQmECt2ed2kgAyQB5rIHYbgexD1U_O2rSK9U8MZQKjdD7w/ootUyy_9m6uU47N1NeXCeA/be-ps-15.mid" onclick="return setToDownloaded('dlBtn_1_1_53_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.12 in Ab, Op.26 ('Funeral March')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Rondo: Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_54_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/B0S7nlCl_20kandoW2OfiFq8mTr_kxUNeHhFpVMa47EZx3jZWXmL41UV2ZOdVdJalskLJ__KhnNbwspb1LHqNO2s0i15UT4chT4B-Ml6Oqp3xLTy4v5ZQaVG8TUmhaobw077REtwjlmOIU4zBPa6YA/HIl6UEqNs6tQWMPfhOFrPg/beethov.mid" onclick="return setToDownloaded('dlBtn_1_1_54_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 6 Variations in D on 'Ich denke dein', WoO74
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6 Variations in D on 'Ich denke dein', WoO74
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        34 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_55_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/FRpzbMeZ73WeMQCkreKr4casQj-nzgrDANt-ej1eIDXb3YRpAUgnneDM4cw_1GRrgF8xAqkVDoHWXmuItgR_ONyH38anuYvwaq5MHqGVC-a-lkU2bFxf3C0WYGkkUtgmfCzwKytD81QpGUNC0UOEiQ/N7Ex8empdgV-AXfrcTVCpw/be-ich_.mid" onclick="return setToDownloaded('dlBtn_1_1_55_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.24 in F#, Op.78 ('For Therese')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.24 in F#, Op.78 ('For Therese')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        55 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_56_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mEzQSz1zHfHJZKBNAmSUhxAIHsRmaGFgQ5fcaIXKMHsbMHoyaU96QjkStahebZluySzxYVHuP7zj0Vp1e1wFyXzJjrhpsdsWl9wcvqEO_OgAjk4HhPgqprC-ENRdsJZWdIejZPWnQgTwFNwVQAsCRg/I65e-pQEkYIAYM9Rv9nxrA/be-ps-24.mid" onclick="return setToDownloaded('dlBtn_1_1_56_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.5 in C-, Op.10, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.5 in C-, Op.10, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_57_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vwqxO33nv1HCDd56o9drRJPX-QGxwyRbH6Hz4eb4XhnibiCCfd1b7aNv7i1tc4swS21c6urfSbInlDMM0tuWHHKQcc1-ZTGJ2SdzZVducmCh4_JPTZMZ6t8pdrYFoJcPNPeluwtBolKzwTue3HU-jg/1T1U-JjfJUKe3TyQTuwNxA/be-ps-05.mid" onclick="return setToDownloaded('dlBtn_1_1_57_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 9 Variations in C- on a March by Dressler, WoO63
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9 Variations in C- on a March by Dressler, WoO63
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        72 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_58_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Y-OjRcXhfu-QvvKOQvEREkADqHovq-MvCZo6xnKitc4KS7GP9LvUoEt81vKesFRaU7av1vj4TWZ0G4mVCPR-t59bj1m8QNaLPxA9mDoI8Hm6j8prq5RCkCsvCa4Ufz2O8k69848LhznsT8KCtN0A8A/d5dGaJw6Np-jT-P4fSHrxw/be-pv01r.mid" onclick="return setToDownloaded('dlBtn_1_1_58_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.1 in F-, Op.2, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.1 in F-, Op.2, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        120 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_59_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/wmxCoyAsjW-Bi7zbvzN7IJ8uBdio57dGcmZp3rGA3hjeQpPpgZd_k0kOy3uX8_fePPDW0xL3GxqVFAVIRQP38hG7eDiP-y51wenQ2VLjao2lIZf1wVwALsH8A9beZliG1Mypm2fDSgpIAqFwT14B-w/4-3dMHIhm5iB6cttnbjiNg/be-ps-01.mid" onclick="return setToDownloaded('dlBtn_1_1_59_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: 15 Variations and Fugue in Eb on an Original Theme ('Eroica Variations'), Op.35
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        15 Variations and Fugue in Eb on an Original Theme ('Eroica Variations'), Op.35
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        115 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_60_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/WkJ3oNcwdMySbW1y3c-g_hQbfQse-QNtVn27erGws0Mh2gnxpX5Vn-Wx1cRmise1WlWb526RUOs0kkY_a9r7GZQ7xRQ7i2n8GhYnwqPGkT_ZNk33iyaJ8cePbsgAISnxN2AUbc4kv6xaN2ZzbzWp0A/03pKOldfOwekLLclYWp5TQ/be-pv15r.mid" onclick="return setToDownloaded('dlBtn_1_1_60_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Piano Sonata No.7 in D, Op.10, No.3
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Piano Sonata No.7 in D, Op.10, No.3
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        102 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_61_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/smCVxoU1XZeErvsbss3FNWbxJVLcvSrw6QF8ncAPl3uRDyCgOQ94y8XiWX-ylgizLi-ozf2vnSBTptmt_pqJoR0cHxJLMi-4zwloAUTTC3zj1KGHAuxNu6F-CWmjNDWmGsQGgah_gZbZm1NxQ_ckKQ/w6_wqo70iKXPBuGAcUZbpA/be-ps-07.mid" onclick="return setToDownloaded('dlBtn_1_1_61_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>
