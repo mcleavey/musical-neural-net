@@ -112,8 +112,8 @@ def main(model_to_load, training, gen_size, sample_freq, chordwise, chamber,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-model", help="Trained model in ./data/models")
-    parser.add_argument("-output", help="Folder inside ./data/output for holding generations")
+    parser.add_argument("-model", help="Trained model in ./data/models", required=True)
+    parser.add_argument("-output", help="Folder inside ./data/output for holding generations", required=True)
 
     parser.add_argument("--training", dest="training", help="Trained level (light, med, full, extra). Default: light")
     parser.set_defaults(training="light")
