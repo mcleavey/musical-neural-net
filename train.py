@@ -18,9 +18,40 @@ VALIDATION = 'test'
 
 OUT.mkdir(parents=True, exist_ok=True)
 
+# Unlike language models (which need a tokenizer to recognize don't as similar to 'do not', 
+# here I have specific encodings for the music, and we can tokenize directly just by splitting by space.
 def music_tokenizer(x): return x.split(" ")
     
 def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_multiplier, epochs):
+    """ Loads test/train data, creates a model, trains, and saves it
+    Input: 
+        model_to_load - if continuing training on previously saved model
+        model_out - name for saving model
+        bs - batch size
+        bptt - back prop through time 
+        em_sz - embedding size
+        nh - hidden vector size
+        nl - number of LSTM layers
+        min_freq - ignore words that don't appear at least min_freq times in the corpus
+        dropout_multiplier - 1 defaults to AWD-LSTM paper (the multiplier scales all these values up or down)
+        epochs - number of cycles between saves 
+        
+    Output:
+        Trains model, and saves under model_out_light, _med, _full, and _extra
+        Models are saved at data/models
+
+    """
+    # Check test and train folders have files
+    train=os.listdir(PATH/TRAIN)
+    test=os.listdir(PATH/VALIDATION)
+    if len(train)<2:
+        print(f'Not enough files in {PATH/TRAIN}. First run make_test_train.py')
+        return
+    if len(test)<2:
+        print(f'Not enough files in {PATH/VALIDATION}. First run make_test_train.py, or increase test_train_split')
+        return    
+        
+    
     TEXT = data.Field(lower=True, tokenize=music_tokenizer)
     # Adam Optimizer with slightly lowered momentum 
     optimizer_function = partial(optim.Adam, betas=(0.7, 0.99))  
@@ -29,7 +60,8 @@ def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_mu
     # Build a FastAI Language Model Dataset from the training and validation set
     # Mark as <unk> any words not used at least min_freq times
     md = LanguageModelData.from_text_files(PATH, TEXT, **FILES, bs=bs, bptt=bptt, min_freq=min_freq)
-    print("Number of tokens: "+str(md.nt))
+    print("\nCreated language model data.")
+    print("Vocab size: "+str(md.nt))
     
     # Save parameters so that it's fast to rebuild network in generate.py
     dump_param_dict(TEXT, md, bs, bptt, em_sz, nh, nl, model_out)
@@ -37,6 +69,7 @@ def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_mu
     # AWD LSTM model parameters (with dropout_multiplier=1, these are the values recommended 
     # by the AWD LSTM paper. For notewise encoding, I found that higher amounts of dropout
     # often worked better)
+    print("\nInitializing model")
     learner = md.get_model(optimizer_function, em_sz, nh, nl, dropouti=0.05*dropout_multiplier, 
                            dropout=0.05*dropout_multiplier, wdrop=0.1*dropout_multiplier,
                            dropoute=0.02*dropout_multiplier, dropouth=0.05*dropout_multiplier)
@@ -59,8 +92,8 @@ def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_mu
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--bs", dest="bs", help="Batch Size (default 16)", type=int) 
-    parser.set_defaults(bs=16)
+    parser.add_argument("--bs", dest="bs", help="Batch Size (default 32)", type=int)
+    parser.set_defaults(bs=32)
     parser.add_argument("--bptt", dest="bs", help="Back Prop Through Time (default 200)", type=int) 
     parser.set_defaults(bptt=200)
     parser.add_argument("--em_sz", dest="em_sz", help="Embedding Size (default 400)", type=int) 

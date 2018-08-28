@@ -8,17 +8,13 @@ from pyknon.music import NoteSeq, Note
 import music21
 from pathlib import Path
 
+# Midi files come in a variety of formats. Here I try to handle files that
+# could work as violin or piano, but aren't listed as such.
 VIOLINLIKE=["Violin", "Viola", "Cello", "Violincello", "Violoncello", "Flute", 
             "Oboe", "Clarinet", "Recorder", "Voice", 
             "StringInstrument", "Bassoon", "Horn"]
 PIANOLIKE=["Piano", "Harp", "Harpsichord"]
 
-def playMidi(filename):
-    mf=music21.midi.MidiFile()
-    mf.open(filename)
-    mf.read()
-    mf.close()  
-    return music21.midi.translate.midiFileToStream(mf)
 
 def assignInstrument(instr):
     # Determine if instrument is Piano-like or Violin-like
