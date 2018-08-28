@@ -5,8 +5,8 @@ import argparse, os, pathlib, random
 TEST=Path(./critic_data/test)
 TRAIN=Path(./critic_data/train)
 
-def main(num_to_generate, model_to_load, training, gen_size, sample_freq, chordwise, chamber, 
-         note_offset, use_test_prompt, output_folder, generator_bs, tt_split):
+def main(num_to_generate, replace, model_to_load, training, gen_size, sample_freq, chordwise, chamber, 
+         note_offset, use_test_prompt, generator_bs, tt_split):
     lm,params,TEXT=load_pretrained_model(model_to_load, training, generator_bs)
     prompts=load_long_prompts(PATH/VALIDATION) if use_test_prompt else load_long_prompts(PATH/TRAIN)
 
@@ -15,10 +15,11 @@ def main(num_to_generate, model_to_load, training, gen_size, sample_freq, chordw
     	fake=a/'fake'
 	    real.mkdir(parents=True, exist_ok=True)
 	    fake.mkdir(parents=True, exist_ok=True)
-    	for f in os.listdir(real):
-        	os.unlink(real/f)	
-        for f in os.listdir(fake):
-        	os.unlink(fake/f)		    
+		if replace:	    
+    		for f in os.listdir(real):
+        		os.unlink(real/f)	
+        	for f in os.listdir(fake):
+        		os.unlink(fake/f)		    
 
     for j in range(0, num_to_generate//bs + 1):
 	    musical_prompts,results=create_generation_batch(model=lm.model, num_words=gen_size,  
@@ -40,9 +41,11 @@ def main(num_to_generate, model_to_load, training, gen_size, sample_freq, chordw
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-model", help="Trained model in ./data/models")
-    parser.add_argument("-output", help="Folder inside ./data/output for holding generations")
-
+    parser.add_argument("-model", help="Trained model in ./data/models", required=True)
+    parser.add_argument("-num", help="Number of files to generate (default 10000)")
+    parser.set_defaults(num=10000)
+    parser.add_argument("--replace", dest="replace", action="store_true", help="Overwrite existing test/train critic data")
+    parser.set_defaults(replace=False)
     parser.add_argument("--training", dest="training", help="Trained level (light, med, full, extra). Default: light")
     parser.set_defaults(training="light")
     parser.add_argument("--size", dest="size", help="Number of steps to generate (default 2000)", type=int)
@@ -69,5 +72,5 @@ if __name__ == "__main__":
 
     random.seed(os.urandom(10))
 
-    main(args.model, args.training, args.size, sample_freq, args.chordwise,
-         args.chamber, note_offset, args.use_test_prompt, args.output, args.bs)    
+    main(args.num, args.replace, args.model, args.training, args.size, sample_freq, args.chordwise,
+         args.chamber, note_offset, args.use_test_prompt, args.bs)    
