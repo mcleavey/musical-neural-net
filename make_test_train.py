@@ -5,8 +5,13 @@ import random
 
 
 def change_rests(filestr):
-    # Chordwise: Model doesn't train well since ~40% of all chords are rests. Here
-    # we re-code rests to 
+    # Chordwise: Without rest modification, model doesn't train well since ~40% of all chords
+    # are rests. Instead of listing a rest as 00000000000, I set it according to how many 
+    # notes were in the previous 10 time steps. (So if there was one note in the previous 10,
+    # the code is bbbbbbbbb, and if there were 8, it would be iiiiiiiiiiii.) 
+    # This way the model doesn't learn to do well by always predicting 000000 all the time, 
+    # and in addition, it needs to learn some meaningful structure in order to predict the
+    # correct rest.
     single_rest="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     notes=filestr.split(" ")
     if len(notes)==0:
@@ -32,6 +37,13 @@ def change_rests(filestr):
 
 
 def remove_duration(DIR):
+    # Currently, for Chordwise, I don't use note durations. In 
+    # midi-to-encoding I keep them there (0 marks no note, 1 marks the 
+    # start of the note, and 2 marks the end of a note). Here I remove the 2s.
+    # I don't currently have a good way to handle note durations when predicting
+    # Chordwise (probably there needs to be a parallel model predicting the duration for
+    # each note in the predicted chord). Directly using the 2s makes the vocab size
+    # too large.
     for file in os.listdir(DIR):
         f=open(DIR/file, "r+")
         temp=f.read()
@@ -51,6 +63,19 @@ def remove_duration(DIR):
 
         
 def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample):
+    """ Clears the current train/test folders and copies new files there
+    Input:
+        SOURCE - path to original copies of the text files 
+        TARGET_TRAIN - data/train
+        TARGET_TEST - data/test
+        composers - list of composers to include in the train/test creation 
+        tt_split - test/train split (.1 = 10% test, 90% train)
+        chordwise - bool: use chordwise encoding?  (if not, use notewise encoding)
+        sample - use only a subset of the data (.5 = use 50% of all available data)
+    Output:
+        Copies of files in data/train and data/test, ready for use by train.py
+    """
+    
     TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
     TARGET_TEST.mkdir(parents=True, exist_ok=True)    
     for f in os.listdir(TARGET_TRAIN):
