@@ -36,8 +36,6 @@ def music_tokenizer(x): return x.split(" ")
     
 def create_generation_batch(model, num_words, random_choice_frequency, 
                             trunc_size, bs, bptt, prompts, params, TEXT):
-
-    print("Preparing to generate a batch of "+str(bs)+" samples.")
     prompt_size=bptt
     samples=[]
     offsets=[]
@@ -93,6 +91,7 @@ def main(model_to_load, training, gen_size, sample_freq, chordwise, chamber,
     bptt=prompt_size if prompt_size else params["bptt"]
     
     prompts=load_long_prompts(PATH/VALIDATION) if use_test_prompt else load_long_prompts(PATH/TRAIN)
+    print("Preparing to generate a batch of "+str(generator_bs)+" samples.")    
     musical_prompts,results=create_generation_batch(model=lm.model, num_words=gen_size,  
                                                     bs=generator_bs, bptt=bptt,
                                                     random_choice_frequency=random_freq,
