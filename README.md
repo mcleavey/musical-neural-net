@@ -1,5 +1,7 @@
 # musical-neural-net
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music
+Project structure overview is <a href="http://christinemcleavey.com/music-generator-project-structure/">here</a>.<br>
+Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
 
 <h2>Requirements:</h2>
 <ul>
