@@ -2,7 +2,8 @@ data/models
 data/output
 data/train
 data/test
-data/composers
+data/composers/notewise
+data/composers/chordwise
 data/GeneralUsers
 critic_data/models
 critic_data/test
