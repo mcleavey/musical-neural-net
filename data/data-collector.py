@@ -17,6 +17,11 @@ def get_pieces(http_file, composer):
         print("(First login and select the 100 pieces you want to collect.)\n\n")
         f.close()
         return
+    if content=="":
+        print("\n\n** Error **")
+        print("Empty input file.\n\n")
+        f.close()
+        return
     f.close()
     
     results_page = BeautifulSoup(content,'lxml')
@@ -47,8 +52,8 @@ def main(source, composer):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--composer", help="Composer name (output will go to ./composers/midi/<this composer>") 
-    parser.add_argument("--source", help="Page source of https://www.classicalarchives.com/secure/downloads.html")
+    parser.add_argument("-composer", help="Composer name (output will go to ./composers/midi/<this composer>") 
+    parser.add_argument("-source", help="Page source of https://www.classicalarchives.com/secure/downloads.html")
     args = parser.parse_args()
     if args.source:
         source="./http_source/"+args.source

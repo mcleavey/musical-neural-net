@@ -1,3 +1,11 @@
+
+# Code taken directly from:
+# https://stackoverflow.com/questions/33417151/playing-mp3-in-a-folder-with-jupyter-notebook
+# (I modified it only to sort the playlist and to play only .wav files)
+
+# Refer also to:
+# http://devblog.lastrose.com/html5-audio-video-playlist/
+
 import os
 
 def make_playlist(music_dir):

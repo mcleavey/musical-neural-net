@@ -1,0 +1,1247 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 27, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 27, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: Children's Album: 24 Easy Pieces, Op.39
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Morning Prayer
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yzKIRO3Y7GsSv8dMfFUSQ3fdLkNs3M9Bg21gQ9mYgu1bbf91DyBKiwUOivlGJBmgONp2-SUStSiD_DrNktBH6-GCgfjxbhYM5_3AI0PjBHJMAmj4nXW1Zxrc_n-Ff-FGkFlSEPEadPitilNxLxXj1g/cjA5vLM_CFePv3RA9pzkVg/tch_y01.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.A Winter Morning
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bFpoYMt4maR6-_UAiou1atM21mE_mIWGLslkgqRVDsIcrJvwtGVxoSVR6i6N525VZ9mHBPVzFzbGYsr1S0Ds77tO8EZ4GNRjHjBB5Z6cpkS30U9lqBNJpR8ZpgxS9LVLk1Hu6oO43yvdYOK27MHaew/UVuuZA9lafh0lQbvdxTCgw/tch_y02.mid" onclick="return setToDownloaded('dlBtn_1_1_1_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.The Hobby-Horse
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/2Pb9yDdaRORcMk0hgWUzJIYo3mDqNdC2LiDNXGIQvPDF58l0_ARYrgYO2ngmAdLgJ4LC7rL6FoD0qKrfyF4RBwqjbA4wLzaWQYS0NuWqLxbYE_T7gXAd_jbhb1_GXTst-vzUt_XIl7ixGPpUeE-PNA/HtZICczDmSeI_yXeAFba9w/tch_y03.mid" onclick="return setToDownloaded('dlBtn_1_1_1_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Mother
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/lUNuYpQPs-_nbdTqPEe3UacUszWTcmRkHZGQ2aO6bbVbW1D3m1oFiW3Y3gc5BYhRx8xnmBeD4HgU4v_O4AeJ1_M9uDizACKe_6R436e5mRTAEmg_avm7F8h1zPs6DSksK7doTfwhC65gSsqE2I4f0g/MsAfaDPSmjq6pMlfQY02LA/tch_y04.mid" onclick="return setToDownloaded('dlBtn_1_1_1_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.March of the Wooden Soldiers
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_5" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/P5R9KZ-O2fMb1iqWWHRNr0tLh9A-buKB99DaGvpyPeJ3rJwmnF-dmn9g0Lm1bmfvtRBehyRogva6oeMO-Qg6YEGKYxCpoYQNu-yr0S3SzoNxyFTVJwTtaZMPwxk6E5SS-NjzPBjS7zG4aa-XQSMDsw/oFAIRvCn8hf6hvgQ-XcCMQ/tch_y05.mid" onclick="return setToDownloaded('dlBtn_1_1_1_5');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.The Sick Doll
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_6" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/t1njkdGGtzYqrtmZyPEsqlnyKBdT5BPo1iYODBaiBEUqJL7eeXV6bDuqSf0zl3xQ63StS5AWny7LFr_RaKvyB7tL4Mb68i-qi0LZEzOc2eF9qkuDF-pIzzoESsjXPPgbc7SBBVoG9eBqJa3B5qjUgw/wu1aNIb1w1yi_M6alEdsdQ/tch_y06.mid" onclick="return setToDownloaded('dlBtn_1_1_1_6');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.The Doll's Funeral
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_7" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oCVnIU3AE9nBuAPVGBxJjgPCPaHcrN_reICmuErGLjrUmpu4zk8cFO5sM6OIn9Svn46fTfiG-aY3vspjhr-ezFpPlFlWFTjhAYngGEamWruAP7uq69CJN3ieJ1e8qWOob4KW5gbe4YVstqKRcQElkQ/zWcLVMcgwyifosJOLvwzxg/tch_y07.mid" onclick="return setToDownloaded('dlBtn_1_1_1_7');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        8.Waltz
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_8" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GhIcyMJ-rqBkSmUCdjyJbGNyAtu3eZ9Tp-gw8xAJ1GbHSk0HFcPiXAoQYX-lZuSEQXm6KDfuquqsAVgIqMLxXG_KgWi0heEhoBNJhZ6RkN4mwh3s5YLHrpykyT8Y_-8JqPPOAhsZCeKXIjlhZ2QP8g/g6sehbCBKx44C4L06p46ig/tch_y08.mid" onclick="return setToDownloaded('dlBtn_1_1_1_8');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.My New Doll
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_9" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9qDxb0wzwyPOULk7WaeprwI8Fc54I4eGWiANUlGQcjaiWJaxrl5Y5HBDxdelR7If6qsDokmTa6-OStj_Bx7t3nTTxzQeC3vzYQO0fi3rL4qZJaaSVmPQ48Ja7Gd_D6eKMtdbqKzGU_J5cdfu4MYwCQ/y-COURWzxqLgwEhEI1EGKQ/tch_y09.mid" onclick="return setToDownloaded('dlBtn_1_1_1_9');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Mazurka
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_10" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/l8dXSE8Z0uRL4U8qDU7E9GGZXgmwHp8ck58J--bmnlEQJt3JLR3Da9RhXwQoyAwFUJWvc48-pQ4s8IdXgYhmd0xgOUrKof3aqX8WVVBKKrzt8Oy68UOQ7Nh8Q2bMYYq8hs4S4CSs3sn9WrRbWePk_A/Vjd9__EGjtPCDdrjzlbPfQ/tch_y10.mid" onclick="return setToDownloaded('dlBtn_1_1_1_10');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        11.Russian Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        1 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_11" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_jXbAvMHbZUPX1bGhyO-gvCvQG6ppd2-dX57HETSdg7qtalfnFn62-cDLn9LNRHH4zL7DJ5IvOcGd9H21pozIgoa3azehlA35lykelQNxjJbS2f0AWSEpNM8PuWWIjgAw6vbFBD8Y2J1BYgss7D2KA/KvkTDxXvXSEOPvD9VDiK7w/tch_y11.mid" onclick="return setToDownloaded('dlBtn_1_1_1_11');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        12.The Peasant Plays his Accordion
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_12" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/nSOmppbISZGmMkDM89v8s5vvA-d84mSuKeGlfq46RU_VRwASzTlUg1BX8jrgtgAdoUnnpRAUIvTuST0q1pRLueU8tJ8Vl1Veqp0fCg7W89Rc3XorFN7NXoBzGmqaf81IAK-rdQ4S0jplMqNgEn5LBg/XVaeNwPPWqbO69L6KZm0mg/tch_y12.mid" onclick="return setToDownloaded('dlBtn_1_1_1_12');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        13.Folksong ('Kamarinskaya')
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_13" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/KfhFEE0IPCUVUSiz0kNKIlW-MUYBTtPfd3E94pr8EIgOU7uom0aq_2jjjY9gCpyq5ZHfAuteLYhlk_4WdlB1LrT8AiiDabIH7skwFFtIbF1w0kEzgmIo-bYZAB2T62SnzJ18gZ6ySPVqmbt6sHLmHQ/CO3RYALeM_L2O4h4969abg/tch_y13.mid" onclick="return setToDownloaded('dlBtn_1_1_1_13');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        14.Polka
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_14" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/HjUrWLl22aLsZG377xO-p1vE4ZP1vpgcmhYKZDUoF1DVdm8CDLzpldOmKMSec9tU-SijovnNb8mqVtGQihVS8B2D8zMotHHTEGJZVIk2Hy_1PfbwbajTcqb1ZulSLzHINhGBEy1QIadFtDrbQJFuPA/gfNdCCQCLnpiuFHRbjt-Wg/tch_y14.mid" onclick="return setToDownloaded('dlBtn_1_1_1_14');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        15.Italian Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_15" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/fRT-rEQ4ITg-e7horQ4YsdTwnTG3p7lAU37ppR-goBJ9Dtxz9AGQel7qf7e5WEeNofXnm4Wx1clfxqnm_7oz4cA2_W4nxExklURrkaAhlChMHm9LXLaFhPjP07_FsG5Rhxyk2iJQvdTWWkIjM2X7UA/y7RuAD8uvfdrNckikH9oqg/tch_y15.mid" onclick="return setToDownloaded('dlBtn_1_1_1_15');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        16.Old French Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        1 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_16" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/K0sydkCG-nd4pW54nZJVgPgjwWrmNJcxHK7PGFAmvefy9yY8psQMba95A0o5RvEsVuBcRgNO9oATmFjj8cpTzoIk_5vMETvJuPB8K3W4MqErwbUimEOgc4EjcEAm1eVoNPKsngaE8Nb2G9of518BFQ/TByYAPKsa7FFVnbIEd0jfQ/tch_y16.mid" onclick="return setToDownloaded('dlBtn_1_1_1_16');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        17.German Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_17" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/qqmDp51FCjytGrpWcPANdm2EucmFtjfpCaFrj8HCaXFKsJpyb_pgGZ7Hzph6aY4-yhNpweZIDgXXhZoFWoGMn5OO7l3T_KuRKLt6hDj6zf-G23cgMNKWoxXGErcgD24QtXroGrAmdtbPtDykdw_lOg/Cdb1kp-uyoygjOR5Q9PIQQ/tch_y17.mid" onclick="return setToDownloaded('dlBtn_1_1_1_17');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        18.Neapolitan Song
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        5 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_18" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tr_m7sgQVbBuTT4QH9G5NqFLfmUG3Y0bmxjao_EoaVtPhfPnZR_fvVxGJyE_FoLobQ4nm3YJhUE_kE016IOesVF7KHBdQnC4rJdOqJm4o28zs4hdvWrNM0ONfekpWMYpRpvIxseKmV9H7aE18g9SIQ/qjWPhxa_YdBxDw6V2bft5Q/tch_y18.mid" onclick="return setToDownloaded('dlBtn_1_1_1_18');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        19.The Old Nurse's Tale
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_19" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dBjerfEvNeRJ2hPra8kwL61eGL9vMyhIxru-dFOwgVdhM_ofOmaAFKjkU1pLqmP4SrHDjf15natLilmffJO9BD4rMBz__S130yJSevuyrHgfisR6sg_DDgMt9KLQGgUuUtDE5XpDi-j7h8AU8F7r0g/ZP8CAH6ibGjZcwx2FgW-eg/tch_y19.mid" onclick="return setToDownloaded('dlBtn_1_1_1_19');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        20.The Witch (Baba-Yaga)
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_20" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/uFfRDS4K_C8QsudLh5RvyrH6-y29pUNUXWxqf-ReDMlWZASM2L0gUk0IBauYkARwWOS2iX8aYg54IkuJ5JdOQTahE-qNhYdJH-gIk3nPgIli3KxMIrUHvlLadHOn47qsmKim7HCroWEh4s7AvqfjRg/pVBEsClSBzkfJLRgNfv4mw/tch_y20.mid" onclick="return setToDownloaded('dlBtn_1_1_1_20');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        21.Sweet Dreams
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        4 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_21" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/bwGVM8gSU9LP-XMW-C-1QnbHiyuLalB0JywFEV0GQjc55fvbQNGvJ873CbiKbNFsk7FvxCo9kk_5vgrOjFLxYp6gs4-c1CQAeklVIvlS6fcx380n1aMV4q2CtMTOq9OZ2hHGsvObei-tHXY4M2Mf1w/V-uqyRzHpiszy_rGDF37WQ/tch_y21.mid" onclick="return setToDownloaded('dlBtn_1_1_1_21');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        22.Song of the Lark
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_22" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/rQjRoDBPIxpnHgHcIMQuBMMXUk8zb13Qn5TbRnP_xwIJdaVicF4FNDHgouKtzv2B3FkFGyy7AT-D5v8sgCEoOF6K4cWAExdL_sSLoPRSAEKaHiey0YV57L7lu9GawE6vNsdp4GJ13j9hKINj0kPC8w/a5SNHSHf3Ua8JJ4TN2nm1A/tch_y22.mid" onclick="return setToDownloaded('dlBtn_1_1_1_22');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        23.The Organ Grinder
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        2 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_23" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9azz5qJ3Zn6tfuaGdCxLL83fQwe_exzhn4NA1kgP8gBRCky1ZZjXIZlyThWbKHSSWbM71OCBbSeR8d4n7l_seKane1aF7AidVA3tDbvXO6PBXFHOX_fe1_PjtYtB9mPBkWVn0iaVkUCBEwTtbGeTCA/oWx5_YPGMkOSnyx2Ux8n-g/tch_y23.mid" onclick="return setToDownloaded('dlBtn_1_1_1_23');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        24.In Church
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_24" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/NYpY74m_Fxi3kxDpJ-EA_6IAtQ9id_1PfF9rtPduxF7kqWgKCccHr4_2QRIdIB9n32H4RcWt0N7WqSEA0IumL7tNdpRq251F4Dq587hkwYnntHGiezS5mcmNeL-ccLdq-cOrT5_63IjFn--1K0XpUw/8kxuLWLArr6NAZXPUzf0hw/tch_y24.mid" onclick="return setToDownloaded('dlBtn_1_1_1_24');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: 12 Morceaux, difficulté moyen, Op.40
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Chanson triste
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/hkDlxWu9r564tPVST7EaEp_QK6jjaqiAHoMcTS-S47LrhSpAqXIfPQtxjZwMVlTyWJ5pTeaxyszQ_KQkP9UBs8KWstJo5dZxpH84Uvmt_Kge48MQD-8zX-U71BJiuANmi1dG4j5O6ypwRRbdz52oeQ/I4ZXdBzL-2bX2uT8bdXjDg/tch_o402.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.Song Without Words
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        6 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3Wo0MpKqk2G4tuTxUi6sa6S1Nfp3fZNQJFJ0YXoiBNmau4v8wb4VWrgEJUuNrcPtteCKkvJzy8uAgpCSsMZnO4U4qXRWfsD8K8WHoaRqyJAApHs2UL-CRwfaNN3y9HeYXhiR3n8ANxwYhXLmlddqYA/Zw78tyWxxylQyokzEo7XEQ/tch_o406.mid" onclick="return setToDownloaded('dlBtn_1_1_2_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        9.Valse in F#-
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/88dmykeSlRye-dHgM426P7_q8yhEuiJAg036LDBeLVfiOwrNLYfpUiW8x2hQVndDs4Q6zpCgoYN-b4jeF5xTlpydcNyaBlJ6qjhlw4W4TEEpTKYvk0J2kKXTyHNE89c20Hd5gVeWRp61TZlTR-9iTQ/gLWM5bB1vctfen8C7J8QQA/tch_o409.mid" onclick="return setToDownloaded('dlBtn_1_1_2_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        10.Danse russe
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        9 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vF3rGj-Jpvhe7_OR4mCF-tL_gUt5-Pwm5CBTnZkj8D5RA69BWVQxSbayki4odWgJwQOxfLBNcgt1sUaU4aiaPywHAX1TH8jx36py7gUgx33kfbxf_1u3Lmzbz4jKH0f_QCwW_YfwiYGRdCLBFXuulA/iNn1nii69otwllAhCOGrmA/tch_o410.mid" onclick="return setToDownloaded('dlBtn_1_1_2_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: The Seasons, Op.37b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.April: Snowdrop
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        11 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Rpl8kVxf8hJ4nXGbfsFLpyU3_F0W-g7tzScDi_0uJA1nT8w92UR-M0jSQM4d8CEcC8Yl4fvTP5Ra9WYPYXIZ11OeCh2wxQqtyj7uX7d4vA4CI0ROvodeOYVsSUUmCc_cvd4Rx2fz4sRNO4d8024hjg/F3oW9dyVwHe5vH4elkcfvQ/tch_se4.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.May: White Nights
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/RLu9uUHPOX5srMY6P7o54zDDiYyGbUECg292qjCdkYTWXg5rlh3xg42DgwNd7ax--CC-o5w3XIw-02_ouvMGzb_yvCYuIG7exRBO_Ktim0JtYP-lEFIO8Mt68_74qRLQPMEUUCsWC1jDDcoy6jRHwg/JlNQxKOHeRYGwx-4TUSPhQ/tch_se5.mid" onclick="return setToDownloaded('dlBtn_1_1_3_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        7.July: Song of the Reaper
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/p8CyqTNhpijfNXAxlJKVW7ec762uRAFcqelVahFHrEF8trnbVj0GTbcshIa0UmxyWR9mua_QQc4I2ulYNLy4kv5f1UUVuiDrYV2M3AaVEUXXqbTfnI89EXUUhOei8X_Z-euaLJnoQMxtaW51bqP6yA/PYV3maWMWa5b8hs5DiQkKQ/tch_se7.mid" onclick="return setToDownloaded('dlBtn_1_1_3_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: 6 Morceaux composés sur un seul thème, Op.21
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Fugue à quatre voix
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        7 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/_IrxwgzZ4jgCAjkUf5skLixU7wHKxHYIX0KL6H0XH3UpePz2mGVAFDbvExpR-WIcOg1c5Ij0FnQn4Q7GKwdUvSthiaSPWFDVL0n2FzFsHdU_tIDvjy4C4mvaR_bj-U-1yJ9HcydJcCn9df2c05m0xw/Sm5Vd8OheiaHR287XPakMw/sytc2102.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: 6 Morceaux, Op.51
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        5.Romance
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/MZUb0ISZgS-bfsKJPs_hmF1O4Tr4vbksD-wbakeEvgzuD5l7-7jaEtWkw_zsTswdUg7nWVsk54QVLuWB-ErCrcsV7hIN6o1NgWL8mQZ13Hy2zDBAjcAQje6ciwbWtWubxNeM1oaI1XsRs8K2bBwvtg/2Pp61y5o0AFfu1yjW1CkxQ/tchromnc.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: The Seasons, Op.37b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        6.June: Barcarolle
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        26 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/g-VswVXjEUndGmnv0n3Xl9ldqczoWy3l_PVoaWEl6JR3wQ15W4kiLE0F261THORD8xte8DjaUb4TTvqbmWDhGq6c7JxBCoUJKLPhUlMgSi_rFcnavSIgimCgMCpxjetIHCjLWOVKh3MurCK38gy5Gw/0tzh3z0oHGZB7fGukU4zbA/junetcha.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: Souvenir de Hapsal, Op.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Chant sans paroles
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/P6BBQMd1hJzPh2qULUzNy-EtALNYPwWlk7vDr_GagaWK-AGsCXmOJX_WR1qAY-KwTyXCDLAqvoeXG1OBxv6bp2B9c826J72bqE3wHlIYRMf8uzNAep7Z2Ot0LyZWESRrP3hbHszw_UvYgEEi7reA2A/cG0TTxle4f-hQ6fLAe26jg/cstchcsp.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: The Seasons, Op.37b
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.January: At the Fireside
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        23 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/F-Ipb3aUxmMUj6E4SHplsOx5jZI14DLPy73lC37vniN8vzLgTHAG92fYA8maD_jyZi0fOpU4ONTJHzPBNetVSeDqH34Prm_6zpa1c1litUidn6Bbfzx8M1nQo5yiMLktLbYHL86H9mLIAvKJNL7DzA/_qB3dT_5cCuOitcWGL75oQ/tc_37jan.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.February: Carnaval
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        27 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xf07W21se_eedsmMRGfTC8yaRu6MTD2dNCrwkJINx7Y_SQ2kMLZkB2GAoFa_sEX5IX_DpEcCX6vr1lhdeciQbGmTdK_gr21b6kXqBffPI6kY4aT8eft1F7LPIxEUVV69TBLJREcbPM_XJMLwwtRGVg/rH3r4ykTqs77jy8dA1NNvw/tc_37feb.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.March: Song of the Lark
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        10 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oEnoHiDx8Uh20T5RhPS-eaY3vmusFawSzjTlRZqiwIHYAyG1PrchsFCdQN9xJ1C8Spl0tJ7dFrTQlIMGkEIr_Rc49GE5_yKJ9CmIT4uEtJJooh5-WvQ6lkJFDs-Ht-aQh8c47BaK410KAusoZOV-Pw/muZ-1dEoJxEJZL79kuOM8g/tc_37mar.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Pyotr Il′yich Tchaikovsky: Romance in F-, Op.5
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Romance in F-, Op.5
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        18 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/yfE_Z-FwRt9_JVJGVXSDGRHKVpND650T26YcmkPWhVPBBJSzHcWmzd-hW_eV-k1eGo1emFoQcT73cBGv4oyI3gjv5F0-kA_jbGYV3NfozSdwCKRgmj2yApLLQZmcz4mWjt9mMvQmelYPvYa1Kow-xQ/Q2Zg5YO0WzEDllaQY-hiZQ/romancef.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

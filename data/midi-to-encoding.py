@@ -205,16 +205,14 @@ def translate_piece(fname, composer, chamber, sample_freqs, note_ranges, note_of
             f.close()
     print("Success")
     
-def main(folder, chamber, composer, replace):
+def main(chamber, composers, replace):
     BASE_PATH=Path(os.path.dirname(os.path.realpath(__file__)))
-    
-    if folder:
-        IN_PATH=[BASE_PATH/'composers'/'midi'/folder]
-        composers=[composer] if composer!="" else [folder]
-    else:
-        PATH=BASE_PATH/'composers'/'midi'
+    PATH=BASE_PATH/'composers'/'midi'
+
+    if len(composers)==0:
         composers=os.listdir(PATH)
-        IN_PATH=[PATH/c for c in composers]
+    
+    IN_PATH=[PATH/c for c in composers]
         
     CHORDWISE_PATH=BASE_PATH/'composers'/'chordwise'
     NOTEWISE_PATH=BASE_PATH/'composers'/'notewise'
@@ -240,11 +238,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--chamber', dest='chamber', action='store_true', help="Multiple instrument types")
     parser.set_defaults(chamber=False)  
-    parser.add_argument('--midi_folder', dest="folder", help="Folder holding midi files to translate (defaults to ./composers/midi/*)")
-    parser.add_argument('--composer', dest="composer", help="Specify composer (default is source folder name)")
+    parser.add_argument('--composers', dest="composers", help="Specify composers (default is all, separate composers by comma)")
     parser.set_defaults(composer="")                       
     parser.add_argument('--replace', dest="replace", action="store_true", help="Retranslate and replace existing files (defaults to skip)")
     parser.set_defaults(replace=False)
     args = parser.parse_args()
-        
-    main(args.folder, args.chamber, args.composer, args.replace)
+
+
+    composers=args.composers.split(",") if args.composers else []
+
+    main(args.chamber, composers, args.replace)
