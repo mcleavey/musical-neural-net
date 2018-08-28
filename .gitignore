@@ -8,3 +8,9 @@
 ./critic_data/models
 ./critic_data/test
 ./critic-data/train
+./tmp
+./__pycache__
+./ipynb_checkpoints
+./fastai
+./critic_data/.ipynb_checkpoints
+./data/.ipynb_checkpoints
