@@ -12,15 +12,24 @@ Detailed paper is **TO DO**
 </ul>
 
 <h2>Data:</h2>
-Some sample midi files are included in data/composers/midi. The complete midi dataset is available here: **TO DO** <br>
+If you use your own midi files, they should go in data/composers/midi/piano_solo or data/composers/midi/chamber (the project expects to see a folder of midi files for each composer, ie: data/composers/midi/piano_solo/bach/example_piece.mid). <br>
+
 Run:
 
 ```
 python midi-to-encoding.py
 ```
 
-to translate midi files to text files in the various notewise and chordwise options. The midi translation takes a long time,
-and preprocessed data files are available here: **TO DO**
+to translate midi files to text files in the various notewise and chordwise options. <br>
+Preprocessed notewise text files are available here: **TO DO**<br>
+Preprocessed chordwise text files are available here: **TO DO**<br>
+The project expects to see: 
+
+```
+data/composers/notewise/piano_solo/... 
+data/composers/chordwise/chamber/...
+```
+
 
 <h2>Training and Generation:</h2>
 <ul>
