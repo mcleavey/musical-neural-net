@@ -21,9 +21,9 @@ and preprocessed data files are available here: **TO DO**
 
 <h2>Training and Generation:</h2>
 <ul>
-<li>`make_test_train.py` - create the training and testing datasets (adjust notewise/chordwise, optionally create only a small sample size)</li>
-<li>`train.py` - train an AWD-LSTM (adjust model parameters, dropout, and training regime)</li>
-<li>`generate.py` - generate new samples (adjust generation size)</li>
+<li>make_test_train.py - create the training and testing datasets (adjust notewise/chordwise, optionally create only a small sample size)</li>
+<li>train.py - train an AWD-LSTM (adjust model parameters, dropout, and training regime)</li>
+<li>generate.py - generate new samples (adjust generation size)</li>
 </ul>
 Each script has default settings which should be reasonable, but use --help to see the different options and parameters which can be modified.
 <h2>Music Critic:</h2>
