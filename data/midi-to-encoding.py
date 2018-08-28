@@ -239,7 +239,7 @@ if __name__ == "__main__":
     parser.add_argument('--chamber', dest='chamber', action='store_true', help="Multiple instrument types")
     parser.set_defaults(chamber=False)  
     parser.add_argument('--composers', dest="composers", help="Specify composers (default is all, separate composers by comma)")
-    parser.set_defaults(composer="")                       
+    parser.set_defaults(composers="")                       
     parser.add_argument('--replace', dest="replace", action="store_true", help="Retranslate and replace existing files (defaults to skip)")
     parser.set_defaults(replace=False)
     args = parser.parse_args()
