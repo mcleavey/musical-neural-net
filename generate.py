@@ -86,13 +86,15 @@ def create_generation_batch(model, num_words, random_choice_frequency,
     return musical_prompts,results    
 
 def main(model_to_load, training, gen_size, sample_freq, chordwise, chamber, 
-         note_offset, use_test_prompt, output_folder, generator_bs, trunc, random_freq):
+         note_offset, use_test_prompt, output_folder, generator_bs, trunc, random_freq, prompt_size):
 
     print("Loading network")     
     lm,params,TEXT=load_pretrained_model(model_to_load, training, generator_bs)
+    bptt=prompt_size if prompt_size else params["bptt"]
+    
     prompts=load_long_prompts(PATH/VALIDATION) if use_test_prompt else load_long_prompts(PATH/TRAIN)
     musical_prompts,results=create_generation_batch(model=lm.model, num_words=gen_size,  
-                                                    bs=generator_bs, bptt=params["bptt"],
+                                                    bs=generator_bs, bptt=bptt,
                                                     random_choice_frequency=random_freq,
                                                     trunc_size=trunc, prompts=prompts,
                                                     params=params, TEXT=TEXT)
@@ -132,6 +134,7 @@ if __name__ == "__main__":
     parser.set_defaults(small_note_range=False)    
     parser.add_argument("--use_test_prompt", dest="use_test_prompt", action="store_true", help="Use prompt from validation set.")
     parser.set_defaults(use_test_prompt=False)
+    parser.add_argument("--prompt_size", dest="prompt_size", help="Set prompt size (default is model bptt)", type=int)    
     args = parser.parse_args()
 
     if args.sample_freq is None:
@@ -145,4 +148,4 @@ if __name__ == "__main__":
 
     main(args.model, args.training, args.size, sample_freq, args.chordwise,
          args.chamber, note_offset, args.use_test_prompt, args.output, args.bs,
-         args.trunc, args.random_freq)
+         args.trunc, args.random_freq, args.prompt_size)
