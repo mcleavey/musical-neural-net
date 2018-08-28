@@ -21,13 +21,13 @@ python midi-to-encoding.py
 ```
 
 to translate midi files to text files in the various notewise and chordwise options. <br>
-Preprocessed notewise text files are available here: **TO DO**<br>
-Preprocessed chordwise text files are available here: **TO DO**<br>
-The project expects to see: 
+Preprocessed notewise text files are available <a href="http://www.christinemcleavey.com/files/notewise.tar.gz">here.</a>
+Preprocessed chordwise text files are available <a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">here.</a>
+Download either or both of these files and put them in data/composers. Then run:
 
 ```
-data/composers/notewise/piano_solo/... 
-data/composers/chordwise/chamber/...
+tar -zxvf notewise.tar.gz
+tar -zxvf chordwise.tar.gz
 ```
 
 
