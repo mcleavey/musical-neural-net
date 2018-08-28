@@ -4,9 +4,12 @@ import os
 import urllib.request
 import argparse
 
+# This script will only work with www.classicalarchives.com
+# The midi files and text files are available for direct download,
+# so this script is probably unnecessary, unless you want to download 
+# new pieces from the archives.
 
-
-def get_pieces(http_file, composer):
+def main(http_file, composer, chamber):
     f=open(http_file)
     content=f.read()
     if content=="Replace with page source.":
@@ -34,7 +37,12 @@ def get_pieces(http_file, composer):
             hrefs.append(a.get('href'))        
     hrefs = [h for h in hrefs if h[-3:]=="mid" ]
 
-    directory="./composers/midi/"+composer
+    directory="./composers/midi/"
+    if chamber:
+        directory+="chamber/"+composer
+    else:
+        directory+="piano_solo/"+composer
+        
     if not os.path.exists(directory):
         os.makedirs(directory)
         
@@ -44,8 +52,6 @@ def get_pieces(http_file, composer):
         local_filename, headers = urllib.request.urlretrieve(link, filename)
         print(local_filename, headers)
         
-def main(source, composer):
-    get_pieces(source, composer)
 
     
 
@@ -54,6 +60,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-composer", help="Composer name (output will go to ./composers/midi/<this composer>") 
     parser.add_argument("-source", help="Page source of https://www.classicalarchives.com/secure/downloads.html")
+    parser.add_argument("--chamber", action="store_true", help="Chamber music (default piano solo)")
+    parser.set_defaults(chamber=False)
     args = parser.parse_args()
     if args.source:
         source="./http_source/"+args.source
@@ -61,5 +69,5 @@ if __name__ == "__main__":
         source="./http_source/http.txt"
         
 
-    main(source, args.composer)
+    main(source, args.composer, args.chamber)
     

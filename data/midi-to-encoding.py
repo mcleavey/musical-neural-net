@@ -24,7 +24,7 @@ def assignInstrument(instr):
     # Determine if instrument is Piano-like or Violin-like
     if str(instr) in PIANOLIKE:
         return 0
-    elif str(instr) in STRINGLIKE:
+    elif str(instr) in VIOLINLIKE:
         return 1
     else:
         print("Warning, unknown instrument: "+str(instr))
@@ -208,12 +208,16 @@ def translate_piece(fname, composer, chamber, sample_freqs, note_ranges, note_of
 def main(chamber, composers, replace):
     BASE_PATH=Path(os.path.dirname(os.path.realpath(__file__)))
     PATH=BASE_PATH/'composers'/'midi'
+    if chamber:
+        PATH=PATH/'chamber'
+    else:
+        PATH=PATH/'piano_solo'
 
     if len(composers)==0:
         composers=os.listdir(PATH)
-    
+
     IN_PATH=[PATH/c for c in composers]
-        
+    
     CHORDWISE_PATH=BASE_PATH/'composers'/'chordwise'
     NOTEWISE_PATH=BASE_PATH/'composers'/'notewise'
           
