@@ -16,6 +16,8 @@ OUT = PATH/'models'
 TRAIN = 'train'
 VALIDATION = 'test'
 
+OUT.mkdir(parents=True, exist_ok=True)
+
 def music_tokenizer(x): return x.split(" ")
     
 def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_multiplier, epochs):
