@@ -51,6 +51,8 @@ def remove_duration(DIR):
 
         
 def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample):
+    TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
+    TARGET_TEST.mkdir(parents=True, exist_ok=True)    
     for f in os.listdir(TARGET_TRAIN):
         os.unlink(TARGET_TRAIN/f)
     for f in os.listdir(TARGET_TEST):
