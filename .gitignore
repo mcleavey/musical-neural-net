@@ -6,8 +6,9 @@ data/composers
 data/GeneralUsers
 critic_data/models
 critic_data/test
-critic-data/train
+critic_data/train
 tmp
+fastai
 __pycache__
 ipynb_checkpoints
 critic_data/.ipynb_checkpoints
