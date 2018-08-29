@@ -11,6 +11,17 @@ Detailed paper is **TO DO**
 <li><a href="http://schristiancollins.com/generaluser.php">GeneralUser</a>: install in data folder (this is needed to translate midi files to mp3)</li>
 </ul>
 
+<h2>TLDR:</h2>
+To create generations with a pretrained notewise model, using only the default settings, run:
+
+```
+python make_test_train.py --example
+python generator.py -model notewise_generator -output notewise_generation_samples
+```
+
+The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples.
+
+
 <h2>Data:</h2>
 If you use your own midi files, they should go in data/composers/midi/piano_solo or data/composers/midi/chamber (the project expects to see a folder of midi files for each composer, ie: data/composers/midi/piano_solo/bach/example_piece.mid). <br>
 
