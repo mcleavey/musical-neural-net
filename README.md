@@ -27,7 +27,7 @@ python make_test_train.py --example
 python generator.py -model notewise_generator -output notewise_generation_samples
 ```
 
-The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples.
+The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples. I recommend the free program <a href="https://musescore.org/en">MuseScore</a> to translate the midi files into sheet music.
 
 Note, you must first make sure the requirements (above) are installed.
 
