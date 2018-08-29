@@ -2,7 +2,7 @@
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music<br>
 Project structure overview is <a href="http://christinemcleavey.com/music-generator-project-structure/">here</a>.<br>
 Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
-Detailed paper is **TO DO** 
+Detailed paper is <a href="http://christinemcleavey.com/files/music-generator-paper.pdf">here</a>.
 
 <h2>Requirements:</h2>
 <ul>
@@ -27,7 +27,7 @@ python make_test_train.py --example
 python generator.py -model notewise_generator -output notewise_generation_samples
 ```
 
-The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples.
+The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples. I recommend the free program <a href="https://musescore.org/en">MuseScore</a> to translate the midi files into sheet music.
 
 Note, you must first make sure the requirements (above) are installed.
 
