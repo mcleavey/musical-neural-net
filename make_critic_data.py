@@ -7,8 +7,7 @@ PATH = Path('./data/')
 TEST=Path("./critic_data/test")
 TRAIN=Path("./critic_data/train")
 
-def main(num_to_generate, replace, prefix, model_to_load, training, gen_size, sample_freq, chordwise, chamber, 
-         note_offset, use_test_prompt, generator_bs, tt_split):
+def main(num_to_generate, replace, prefix, model_to_load, training, gen_size, use_test_prompt, generator_bs, tt_split):
     
     # Load pretrained model and training/test text
     lm,params,TEXT=load_pretrained_model(model_to_load, training, generator_bs)
@@ -67,32 +66,17 @@ if __name__ == "__main__":
     parser.set_defaults(training="light")
     parser.add_argument("--size", dest="size", help="Number of steps to generate (default 2000)", type=int)
     parser.set_defaults(size=2000)  
-    parser.add_argument("--bs", dest="bs", help="Batch size: # samples to generate (default 16)", type=int)
-    parser.set_defaults(bs=16)        
-    parser.add_argument("--sample_freq", dest="sample_freq", help="Split beat into 4 or 12 parts (default 4 for Chordwise, 12 for Notewise)", type=int)
-    parser.add_argument("--chordwise", dest="chordwise", action="store_true", help="Use chordwise encoding (defaults to notewise)")
-    parser.set_defaults(chordwise=False) 
-    parser.add_argument("--chamber", dest="chamber", action="store_true", help="Chamber music (defaults to piano solo)")
-    parser.set_defaults(chamber=False) 
-    parser.add_argument("--small_note_range", dest="small_note_range", action="store_true", help="Set 38 note range (defaults to 62)")
-    parser.set_defaults(small_note_range=False)    
+    parser.add_argument("--bs", dest="bs", help="Batch size: # samples to generate (default 64)", type=int)
+    parser.set_defaults(bs=64)          
     parser.add_argument("--use_test_prompt", dest="use_test_prompt", action="store_true", help="Use prompt from validation set.")
     parser.set_defaults(use_test_prompt=False)
     parser.add_argument("--test_train_split", dest="tt_split", help="Fraction of test samples (default .1, range 0 to 1", type=float)
     parser.set_defaults(tt_split=.1)    
     args = parser.parse_args()
 
-    # Defaults (chordwise usually uses sample_freq 4, notewise uses sample_freq 12
-    #           unless the user specifies otherwise)
-    
-    if args.sample_freq is None:
-        sample_freq=4 if args.chordwise else 12
-    else:
-        sample_freq=args.sample_freq  
 
-    note_offset=45 if args.small_note_range else 33
 
     random.seed(os.urandom(10))
 
-    main(args.num, args.replace, args.prefix, args.model, args.training, args.size, sample_freq, args.chordwise,
-         args.chamber, note_offset, args.use_test_prompt, args.bs, args.tt_split)    
+    main(args.num, args.replace, args.prefix, args.model, args.training, args.size, args.use_test_prompt,
+          args.bs, args.tt_split)    

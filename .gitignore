@@ -5,9 +5,8 @@ data/test
 data/composers
 data/GeneralUser
 models
-critic_data/models
-critic_data/test
-critic_data/train
+critic_data
+composer_data
 tmp
 fastai
 __pycache__

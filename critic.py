@@ -29,6 +29,7 @@ def train(model, training, use_pretrain, epochs, bs):
         print("Loading weights: "+model)
         m.load_encoder(model_name)
         m.freeze_to(-1)
+        train_and_save(m, 3e-4, 1, model+"_fine_tune.pth", metrics=[accuracy])
         
     lrs=[3e-3, 3e-4, 3e-6, 3e-8]
     trainings=["_light.pth", "_med.pth", "_full.pth", "_extra.pth"] 
@@ -37,6 +38,7 @@ def train(model, training, use_pretrain, epochs, bs):
         
     for i in range(len(lrs)):
         train_and_save(m, lrs[i], epochs, save_names[i], metrics=[accuracy])
+
 
 def best_and_worst(num_samples=2, bs=32):
     best_eval=-5
