@@ -4,6 +4,8 @@ from pathlib import Path
 import random
 
 
+
+
 def change_rests(filestr):
     # Chordwise: Without rest modification, model doesn't train well since ~40% of all chords
     # are rests. Instead of listing a rest as 00000000000, I set it according to how many 
@@ -60,6 +62,20 @@ def remove_duration(DIR):
             f.close()
 
 
+def clear_prev(TARGET_TRAIN, TARGET_TEST):
+    TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
+    TARGET_TEST.mkdir(parents=True, exist_ok=True)    
+    for f in os.listdir(TARGET_TRAIN):
+        os.unlink(TARGET_TRAIN/f)
+    for f in os.listdir(TARGET_TEST):
+        os.unlink(TARGET_TEST/f)  
+
+        
+def example(TARGET_TRAIN, TARGET_TEST, EXAMPLE_TRAIN, EXAMPLE_TEST):     
+    shutil.rmtree(TARGET_TRAIN, ignore_errors=True)
+    shutil.copytree(EXAMPLE_TRAIN, TARGET_TRAIN)
+    shutil.rmtree(TARGET_TEST, ignore_errors=True)
+    shutil.copytree(EXAMPLE_TEST, TARGET_TEST)
 
         
 def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample):
@@ -76,12 +92,8 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
         Copies of files in data/train and data/test, ready for use by train.py
     """
     
-    TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
-    TARGET_TEST.mkdir(parents=True, exist_ok=True)    
-    for f in os.listdir(TARGET_TRAIN):
-        os.unlink(TARGET_TRAIN/f)
-    for f in os.listdir(TARGET_TEST):
-        os.unlink(TARGET_TEST/f)        
+    clear_prev(TARGET_TRAIN, TARGET_TEST)
+      
     for c in composers:
         files=os.listdir(SOURCE/c)
         for f in files:
@@ -98,6 +110,8 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
                 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--example", dest="example", action="store_true", help="Use sample data (ignores all other flags)")
+    parser.set_defaults(example=False)
     parser.add_argument("--composer", dest="composer", help="Composer name (defaults to all). Use bach,brahms,beethoven for multiple composers.") 
     parser.add_argument("--sample_freq", dest="sample_freq", help="Split beat into 4 or 12 parts (default 4 for Chordwise, 12 for Notewise)")
     parser.add_argument("--chordwise", dest="chordwise", action="store_true", help="Use chordwise encoding (defaults to notewise)")
@@ -112,7 +126,16 @@ if __name__ == "__main__":
     parser.add_argument("--sample", dest="sample", help="Fraction of files to include: allows smaller sample set for faster training (range 0-1, default 1)", type=float)
     parser.set_defaults(sample=1)
     args = parser.parse_args()
-        
+
+    TARGET_TRAIN=Path('./data/train')
+    TARGET_TEST=Path('./data/test')
+    EXAMPLE_TRAIN=Path('./data/example_data/train')
+    EXAMPLE_TEST=Path('./data/example_data/test')
+    
+    if args.example:
+        example(TARGET_TRAIN,TARGET_TEST,EXAMPLE_TRAIN,EXAMPLE_TEST)
+        exit()
+
     ensemble='chamber' if args.chamber else 'piano_solo'
     encoding='chordwise' if args.chordwise else 'notewise'
     note_range='note_range38' if args.small_note_range else 'note_range62'
@@ -129,8 +152,7 @@ if __name__ == "__main__":
     else:
         composer=os.listdir(SOURCE)
     
-    TARGET_TRAIN=Path('./data/train')
-    TARGET_TEST=Path('./data/test')
+
     
     main(SOURCE, TARGET_TRAIN, TARGET_TEST, composer, args.tt_split, args.chordwise, args.sample)
     
