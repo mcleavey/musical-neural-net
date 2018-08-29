@@ -20,6 +20,7 @@ ln -s ./replace/this/with/your/path/to/fastai/library fastai
 to create a symbolic link to the fastai library.
 
 <h2>Basic:</h2>
+Run the Jupyter Notebook *BasicIntro.ipynb* or follow the individual instructions here. 
 To create generations with a pretrained notewise model, using only the default settings, run:
 
 ```
@@ -27,7 +28,7 @@ python make_test_train.py --example
 python generator.py -model notewise_generator -output notewise_generation_samples
 ```
 
-The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples. I recommend the free program <a href="https://musescore.org/en">MuseScore</a> to translate the midi files into sheet music.
+The output samples will be in data/output/notewise_generation_samples, or open *Playlist.ipynb* to listen to the output samples. I recommend the free program <a href="https://musescore.org/en">MuseScore</a> to translate the midi files into sheet music.
 
 Note, you must first make sure the requirements (above) are installed.
 
