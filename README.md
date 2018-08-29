@@ -7,11 +7,11 @@ Detailed paper is **TO DO**
 <h2>Requirements:</h2>
 <ul>
 <li>PyTorch version 0.3.0.post4</li>
-<li><a href="https://github.com/fastai/fastai">FastAI</a>: install link in musical-neural-net home directory</li>
+<li><a href="https://github.com/fastai/fastai">FastAI</a>: in musical-neural-net directory run ` ln -s ./path/to/fastai/library fastai `  </li>
 <li><a href="http://schristiancollins.com/generaluser.php">GeneralUser</a>: install in data folder (this is needed to translate midi files to mp3)</li>
 </ul>
 
-<h2>TLDR:</h2>
+<h2>Basic:</h2>
 To create generations with a pretrained notewise model, using only the default settings, run:
 
 ```
@@ -20,6 +20,8 @@ python generator.py -model notewise_generator -output notewise_generation_sample
 ```
 
 The output samples will be in data/output/notewise_generation_samples, or open Playlist.ipynb (as a Jupyter Notebook) to listen to the output samples.
+
+Note, you must first make sure the requirements (above) are installed.
 
 
 <h2>Data:</h2>
