@@ -7,9 +7,17 @@ Detailed paper is **TO DO**
 <h2>Requirements:</h2>
 <ul>
 <li>PyTorch version 0.3.0.post4</li>
-<li><a href="https://github.com/fastai/fastai">FastAI</a>: in musical-neural-net directory run ` ln -s ./path/to/fastai/library fastai `  </li>
+<li><a href="https://github.com/fastai/fastai">FastAI</a>
+  </li>
 <li><a href="http://schristiancollins.com/generaluser.php">GeneralUser</a>: install in data folder (this is needed to translate midi files to mp3)</li>
 </ul>
+Note: From inside the musical-neural-net home directory, run: 
+
+```
+ln -s ./replace/this/with/your/path/to/fastai/library fastai 
+```
+
+to create a symbolic link to the fastai library.
 
 <h2>Basic:</h2>
 To create generations with a pretrained notewise model, using only the default settings, run:
