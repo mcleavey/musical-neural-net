@@ -17,13 +17,16 @@ from fastai.lm_rnn import *
 import dill as pickle
 
 PATH = Path('./data/')
-MOD_PATH = Path('./models/')
+MOD_PATH = Path('./models/generator/')
 
 def train_and_save(learner, lr, epochs, fname, metrics=None):
-    print("Training "+str(fname))
+    print("\nTraining "+str(fname))
     learner.fit(lr, 1, wds=1e-6, cycle_len=epochs, use_clr=(32,10), metrics=metrics)
-    print("Saving "+str(fname))
+    print("\nSaving "+str(fname))
     torch.save(learner.model.state_dict(), fname)
+    fname=(str(fname)).split("/")[-1][:-4]
+    print("Saving encoding "+fname)
+    learner.save_encoder(fname)
 
 def load_pretrained_model(model_to_load, training, bs):
     params=pickle.load(open(f'{MOD_PATH}/{model_to_load}_params.pkl','rb'))

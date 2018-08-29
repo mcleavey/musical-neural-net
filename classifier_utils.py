@@ -6,11 +6,11 @@ from fastai.lm_rnn import *
 from torchtext import vocab, data
 from torchtext.datasets import language_modeling
 
-class MusicDataset(torchtext.data.Dataset):
+class ComposerDataset(torchtext.data.Dataset):
     def __init__(self, path, text_field, label_field, **kwargs):
         fields = [('text', text_field), ('label', label_field)]
         examples = []
-        for label in ['real', 'fake']:
+        for label in os.listdir(path):
             for fname in glob(os.path.join(path, label, '*.txt')):
                 with open(fname, 'r') as f: text = f.readline()
                 examples.append(data.Example.fromlist([text, label], fields))
@@ -25,5 +25,4 @@ class MusicDataset(torchtext.data.Dataset):
         return super().splits(
             root, text_field=text_field, label_field=label_field,
             train=train, validation=None, test=test, **kwargs)
-    
     

@@ -12,7 +12,7 @@ import dill as pickle
 import argparse
 
 PATH = Path('./data/')
-OUT = Path('./models/')
+OUT = Path('./models/generator/')
 TRAIN = 'train'
 VALIDATION = 'test'
 
