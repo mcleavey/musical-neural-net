@@ -21,8 +21,8 @@ python midi-to-encoding.py
 ```
 
 to translate midi files to text files in the various notewise and chordwise options. <br>
-Preprocessed notewise text files are available <a href="http://www.christinemcleavey.com/files/notewise.tar.gz">here.</a>
-Preprocessed chordwise text files are available <a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">here.</a>
+Preprocessed notewise text files are available <a href="http://www.christinemcleavey.com/files/notewise.tar.gz">here.</a><br>
+Preprocessed chordwise text files are available <a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">here.</a><br>
 Download either or both of these files and put them in data/composers. Then run:
 
 ```
