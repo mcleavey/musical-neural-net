@@ -21,14 +21,15 @@ python midi-to-encoding.py
 ```
 
 to translate midi files to text files in the various notewise and chordwise options. <br>
-Preprocessed notewise text files are available <a href="http://www.christinemcleavey.com/files/notewise.tar.gz">here.</a><br>
-Preprocessed chordwise text files are available <a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">here.</a><br>
-Download either or both of these files and put them in data/composers. Then run:
+My dataset is available here:<br>
+Put these in data/composers/piano_solo<br>
+<a href="http://www.christinemcleavey.com/files/notewise.tar.gz">Notewise piano solo text files</a><br>
+<a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">Chordwise piano solo text files</a><br>
+Put these in data/composers/chamber<br>
+<a href="http://www.christinemcleavey.com/files/notewise.tar.gz">Notewise piano/violin text files</a><br>
+<a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">Chordwise piano/violin text files</a><br>
 
-```
-tar -zxvf notewise.tar.gz
-tar -zxvf chordwise.tar.gz
-```
+Run ` tar -zxvf <name>.tar.gz ` to expand each one.
 
 
 <h2>Training and Generation:</h2>
@@ -40,4 +41,12 @@ tar -zxvf chordwise.tar.gz
 Each script has default settings which should be reasonable, but use --help to see the different options and parameters which can be modified.<br>
 Playlist.ipynb is a simple Jupyter Notebook which creates a nicely formatted playlist for listening to all the generations.
 <h2>Music Critic:</h2>
+<ul>
+  <li>make_critic_data.py - create the training and test datasests (requires a trained generation model to create the fake data)</li>
+  <li>critic.py - trains a classifier to predict if a sample is human-composed or LSTM-composed
+</ul>
 <h2>Composer Classifier:</h2>
+<ul>
+  <li>make_composer_data.py - create the training and test datasests (all from human composed pieces)</li>
+  <li>composer_classifier.py - trains a classifier to predict which human composed the piece
+</ul>
