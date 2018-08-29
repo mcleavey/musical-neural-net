@@ -3,13 +3,14 @@ data/output
 data/train
 data/test
 data/composers
-data/GeneralUsers
+data/GeneralUser
+models
 critic_data/models
 critic_data/test
 critic_data/train
 tmp
 fastai
 __pycache__
-ipynb_checkpoints
+.ipynb_checkpoints
 critic_data/.ipynb_checkpoints
 data/.ipynb_checkpoints

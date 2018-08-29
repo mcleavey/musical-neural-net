@@ -17,7 +17,7 @@ from fastai.lm_rnn import *
 import dill as pickle
 
 PATH = Path('./data/')
-MOD_PATH = PATH/'models'
+MOD_PATH = Path('./models/')
 
 def train_and_save(learner, lr, epochs, fname, metrics=None):
     print("Training "+str(fname))

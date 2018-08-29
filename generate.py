@@ -16,7 +16,7 @@ import numpy as np
 
 
 PATH = Path('./data/')
-MOD_PATH = PATH/'models'
+MOD_PATH = Path('./models/')
 TRAIN = 'train'
 VALIDATION = 'test'
 OUT = PATH/'output'
