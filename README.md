@@ -21,14 +21,18 @@ python midi-to-encoding.py
 ```
 
 to translate midi files to text files in the various notewise and chordwise options. <br>
+<br>
 My dataset is available here:<br>
-Put these in data/composers/midi/piano_solo<br>
-<a href="http://www.christinemcleavey.com/files/notewise.tar.gz">Notewise piano solo text files</a><br>
-<a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">Chordwise piano solo text files</a><br>
-Put these in data/composers/midi/chamber<br>
-<a href="http://www.christinemcleavey.com/files/notewise.tar.gz">Notewise piano/violin text files</a><br>
-<a href="http://www.christinemcleavey.com/files/chordwise.tar.gz">Chordwise piano/violin text files</a><br>
-
+In data/composers/notewise:
+<ul>
+<li><a href="http://www.christinemcleavey.com/files/notewise_piano_solo.tar.gz">Notewise piano solo text files</a></li>
+<li><a href="http://www.christinemcleavey.com/files/notewise_chamber.tar.gz">Notewise piano/violin text files</a></li>
+</ul>
+In data/composers/notewise:
+<ul>
+<li><a href="http://www.christinemcleavey.com/files/chordwise_piano_solo.tar.gz">Chordwise piano solo text files</a></li>
+<li><a href="http://www.christinemcleavey.com/files/chordwise_chamber.tar.gz">Chordwise piano/violin text files</a></li>
+</ul>
 (Run ` tar -zxvf <name>.tar.gz ` to expand each one.)
 
 
