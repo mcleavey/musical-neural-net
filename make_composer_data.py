@@ -2,6 +2,7 @@ import os, shutil
 import argparse
 from pathlib import Path
 import random
+from tqdm import tqdm
 
 
 def change_rests(filestr):
@@ -62,32 +63,29 @@ def remove_duration(DIR):
 
 
         
-def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample):
+def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample, bptt):
     """ Clears the current train/test folders and copies new files there
     Input:
         SOURCE - path to original copies of the text files 
-        TARGET_TRAIN - data/train
-        TARGET_TEST - data/test
+        TARGET_TRAIN - composer_data/train
+        TARGET_TEST - composer_data/test
         composers - list of composers to include in the train/test creation 
         tt_split - test/train split (.1 = 10% test, 90% train)
         chordwise - bool: use chordwise encoding?  (if not, use notewise encoding)
         sample - use only a subset of the data (.5 = use 50% of all available data)
     Output:
-        Copies of files in data/train and data/test, ready for use by train.py
+        Copies of files in composer_data/train and composer_data/test, ready for use by composer_classifier.py
     """
     
     TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
     TARGET_TEST.mkdir(parents=True, exist_ok=True)   
-    for composer in os.listdir(TARGET_TRAIN):
-        for f in os.listdir(TARGET_TRAIN/composer):
-            os.unlink(TARGET_TRAIN/composer/f)
-        os.rmdir(TARGET_TRAIN/composer)
-    for composer in os.listdir(TARGET_TEST):
-        for f in os.listdir(TARGET_TEST/composer):
-            os.unlink(TARGET_TEST/composer/f)
-        os.rmdir(TARGET_TEST/composer)
+    print("Clearing old files")
+    shutil.rmtree(TARGET_TRAIN)
+    shutil.rmtree(TARGET_TEST)
+
         
-    for c in composers:
+    print("Creating new dataset")
+    for c in tqdm(composers):
         TRAIN=TARGET_TRAIN/c
         TRAIN.mkdir(parents=True, exist_ok=True)
         TEST=TARGET_TEST/c
@@ -97,10 +95,17 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
         for f in files:
             if random.random()>sample:
                 continue
-            if random.random()<tt_split:
-                shutil.copy(SOURCE/c/f, TEST)
-            else:
-                shutil.copy(SOURCE/c/f, TRAIN)
+            file=open(SOURCE/c/f)
+            text=(file.read()).split(" ")[1:-1]
+            file.close()
+
+            for i in range(len(text)//bptt):
+                dest=TEST if random.random()<tt_split else TRAIN
+                fname=str(i)+"_"+f
+                file=open(dest/fname, "w")
+                file.write(" ".join(text[i*bptt:(i+1)*bptt]))
+                file.close()
+                
         if chordwise:
             print("Chordwise encoding: removing duration marks and expanding rests")
             remove_duration(TRAIN)
@@ -109,6 +114,7 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--composer", dest="composer", help="Composer name (defaults to all). Use bach,brahms,beethoven for multiple composers.") 
+    parser.add_argument("-bptt", dest="bptt", help="Sequence length (corresponds to generated model bptt)", type=int, required=True)
     parser.add_argument("--sample_freq", dest="sample_freq", help="Split beat into 4 or 12 parts (default 4 for Chordwise, 12 for Notewise)")
     parser.add_argument("--chordwise", dest="chordwise", action="store_true", help="Use chordwise encoding (defaults to notewise)")
     parser.set_defaults(chordwise=False) 
@@ -117,8 +123,8 @@ if __name__ == "__main__":
     parser.add_argument("--small_note_range", dest="small_note_range", action="store_true", help="Set 38 note range (defaults to 62)")
     parser.add_argument("--train_out", dest="train_out")
     parser.add_argument("--test_out", dest="test_out")
-    parser.add_argument("--test_train_split", dest="tt_split", help="Fraction of files to go to test folder (default .25).", type=float)
-    parser.set_defaults(tt_split=.25)    
+    parser.add_argument("--test_train_split", dest="tt_split", help="Fraction of files to go to test folder (default .05).", type=float)
+    parser.set_defaults(tt_split=.05)    
     parser.add_argument("--sample", dest="sample", help="Fraction of files to include: allows smaller sample set for faster training (range 0-1, default 1)", type=float)
     parser.set_defaults(sample=1)
     args = parser.parse_args()
@@ -142,5 +148,5 @@ if __name__ == "__main__":
     TARGET_TRAIN=Path('./composer_data/train')
     TARGET_TEST=Path('./composer_data/test')
     
-    main(SOURCE, TARGET_TRAIN, TARGET_TEST, composer, args.tt_split, args.chordwise, args.sample)
+    main(SOURCE, TARGET_TRAIN, TARGET_TEST, composer, args.tt_split, args.chordwise, args.sample, args.bptt)
     

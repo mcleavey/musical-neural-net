@@ -1,0 +1,1268 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Classical Archives: Your Downloads</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l gen true for "https://www.classicalarchives.com/" r (SS~~000 1))'/>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "Single file v2.0" l gen true for "https://www.classicalarchives.com" r (nz 1 vz 1 lz 1 oz 1 cb 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.classicalarchives.com" r (n 0 s 0 v 0 l 0))'/>
+<meta http-equiv="content-language" content="en"/>
+<meta name="Robots" content="INDEX, FOLLOW"/>
+<meta name="Author" content="Classical Archives LLC"/>
+<meta name="Title" content="CLASSICAL MUSIC ARCHIVES - CLASSICAL MUSIC"/>
+<meta name="Subject" content="Classical Music Archives"/>
+<meta name="Publisher" content="Pierre R. Schwob"/>
+<meta name="Language" content="English"/>
+<meta name="Rights" content="Copyright (c) Classical Archives, LLC"/>
+<meta name="Description" content="The largest classical music site on the web. Hundreds of thousands of classical music files. Most composers and their music are represented. Biographies, reviews, playlists and store."/>
+<meta name="Keywords" content="classical music,classical archives,listen to classical music,play classical music,download classical music,listen to complete works,play complete works,listen to full classical music,play entire classical music works,browse classical music,classical music downloads,classical music streams,classical music streaming,classical music albums,classical music works,classical music composers,classical music artists,classical music performers,classical music instruments,classical music periods,free classical music,classical music MIDI,classical music files,free classical music MIDI,classical music performances,free classical music performances,classical music videos,classical music player,classical music blog,classical music interviews,performers interviews,classical music editorial,music festivals,classical music festivals,classical music concerts,musicology,composer biographies,classical music collection,classical music library,classical music labels,classical music store,classical music online,online classical music,online music store,MIDI,MP3,AAC,audio,music,playlists,orchestras,baroque,classical,romantic,modern,concerts,opera,chamber music,symphony,concerto,sonata,recital,classicalarchives,classicalarchives.com,free internet radio,classical radio"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+<link rel="alternate" type="application/rss+xml" href="/news.xml" />
+
+
+<link rel="stylesheet" type="text/css" href="/css/ca-2.css?r=85878" />
+
+
+<!--[if IE 6]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:static;
+    /* overflow:visible; */
+}
+</style>
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+.box .bd, .box .bd .box .bd {
+    position:relative;
+    /* overflow:auto; */
+}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="//www.google-analytics.com/ga.js"></script>
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cma"></script>
+
+<script type="text/javascript">
+var cma_base_url = 'https://www.classicalarchives.com';
+var cookie_domain = '.classicalarchives.com';
+var is_subscriber = true;
+</script>
+
+
+<script type="text/javascript" src="/js/ca.js?r=86451"></script>
+
+
+
+        <style type="text/css">
+            a.link {
+                color: #800;
+                font-weight: bold;
+            }
+            li.heading {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            span.heading {
+                font-size: 14px;
+            }
+            li.question {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            a.question {
+                font-weight: bold;
+            }
+            ul.indent {
+                margin-left: 15px;
+            }
+
+            .downloadtable {width:100%;}
+            .downloadtable td {
+                height:22px;
+                padding:4px 0 0 0;
+            }
+            DIV.dlExpDate { color:#980001; }
+            .dlHd {background:url(/images/nv/nv_sprite.png) repeat-x 0 0;}
+            .dlOrder {padding:5px 10px;}
+            .dlPurch {padding:5px 10px;}
+            .dlWork {font-weight:bold;padding-left:20px!important;}
+            .dlTrack {padding-left:40px!important;}
+            .dlSize {padding-right:10px!important;text-align:right;white-space:nowrap;}
+            .dlButton {width:110px!important;text-align:right;}
+
+            .wiazf {font-size:77%;display:block;margin-right:6px;}
+        </style>
+        <script language="javascript" type="text/javascript">
+            function setToDownloaded(elId) {
+                try {
+                    YAHOO.util.Dom.addClass($(elId),'yui-button-redownload');
+                    YAHOO.BTN[elId].set("label", 'Re-download');
+                } catch(x) {
+                    YAHOO.util.Dom.removeClass($(elId),'yui-button-redownload');
+                }
+                return true;
+            }
+            // toggle
+            function toggle_list(e) {
+                var e = window.event || e;
+                var target = e.target || e.srcElement;
+
+                if (target && target.nodeName) {
+                    while (target.parentNode && target.nodeName != "LI" && target.nodeName != "BODY")
+                        target = target.parentNode;
+                }
+
+                if (target.hasChildNodes()) {
+                    var children = target.childNodes;
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].nodeName == "UL") {
+                            children[i].style.display = (children[i].style.display == "none" || children[i].style.display == "") ? "block" : "none";
+                            break;
+                        }
+                    }
+                }
+            }
+            document.onclick = toggle_list;
+
+            function setNotice() {
+                YAHOO.util.Connect.asyncRequest('POST', '/ajax/s-request-dlmanager-notice.html', {
+                    success : function(o) {
+                        try {
+                            var rs = YAHOO.lang.JSON.parse(o.responseText);
+                            if (YAHOO.lang.isObject(rs)) {
+                                if (YAHOO.lang.isBoolean(rs.s)) {
+                                    if (rs.s === true) {
+                                        YAHOO.CMA.doRedirect(rs.r);
+                                        YAHOO.util.Dom.addClass("emailNotification",'txtRed');
+                                        $("emailNotification").innerHTML = "<strong>Thank you.</strong> You will be notified as soon as the Download Manager becomes available.";
+                                    } else {
+                                        var okBtn = function() {
+                                            this.hide();
+                                            YAHOO.CMA.doRedirect(rs.r);
+                                        };
+                                        if (YAHOO.lang.isNumber(rs.f.c)) {
+                                            if (rs.f.c == 0) {
+                                                showMsgBox('info', 'No Changes Made', 'Please review your information and try again.', null, okBtn, null);
+                                            } else {
+                                                showMsgBox('error', 'Error', rs.f.m, null, okBtn, null);
+                                            }
+                                        } else {
+                                                showMsgBox('error', 'Error', 'Error Code: '+rs.f.c, null, okBtn, null);
+                                        }
+                                        YAHOO.CMA.loading.hide();
+                                        YAHOO.CMA.loading.destroy();
+                                    }
+                                }
+                            }
+                        } catch(x) {
+                            okBtn = function() {
+                                this.hide();
+                                YAHOO.CMA.doRedirect(rs.r);
+                            };
+                            showMsgBox('error', 'Error', x, null, okBtn, null);
+                            YAHOO.CMA.loading.hide();
+                            YAHOO.CMA.loading.destroy();
+                        }
+                    },
+                    failure : function(o) {
+                        okBtn = function() {
+                            this.hide();
+                            YAHOO.CMA.CAPM.show();
+                        };
+                        showMsgBox('error', 'Connection Failed!', 'We were not able to save your account changes. Please try again.', null, okBtn, null)
+                        YAHOO.CMA.loading.hide();
+                        YAHOO.CMA.loading.destroy();
+                    }
+                });
+            }
+
+            function clearTracks() {
+                showConfirmation('Please Confirm', '', 'This will remove the grayed-out tracks that you have previously downloaded from this page.<p>(Note: We cannot detect if a download was successful, only that you initiated it.)</p><p>Are you sure you want to clear these tracks from this page?</p>',
+                    'Yes', function() {
+                        $('downloadForm').submit();
+                    },
+                    'No', function() {
+                        this.hide();
+                    },
+                    true);
+                return false;
+            }
+        </script>
+    </head>
+    <body id="cma">
+        
+
+
+<script>
+_udn = ".classicalarchives.com";
+</script>
+
+<iframe id="yui-history-iframe" src="/images/nv/nv_sprite.png"></iframe>
+<input id="yui-history-field" type="hidden" />
+<a name="top" id="top"></a>
+
+<div>
+
+    <div id="doc3" class="sides">
+        <div id="hd">
+            
+
+
+
+            <div id="cma-header">
+                <div id="cma-header-prim">
+                    <a href="/" class="logo"><img src="/images/a_logo.png" alt="Home" /></a>
+                    
+                    <a href="https://blog.classicalarchives.com/" class="blog"><img src="/images/blog.png" alt="Blog" /></a>
+                    <a href="/howto/tutorials.html" class="howto"><img src="/images/howto.png" alt="How To" /></a>
+
+                    <div id="cmasearch" class="search yui-hidden">
+                        <form id="cmasearchform" method="get" action="/search" onsubmit="return cmaSearch.submitState;">
+                            <div id="cmasearchbx">
+                                <div id="cmasearcherr" class="yui-hidden">Please enter a search term</div>
+                                <div id="cmasearching" class="yui-hidden">Searching...</div>
+                                <div id="cmasearchdesc" class="yui-hidden">Search for Music</div>
+                                <input id="cmasearchtxt" type="text" name="q" class="yui-hidden" />
+                            </div><input id="cmasearchbtn" type="submit" title="Search" value=""/>
+                            <ul class="cmanv srchnv">
+                                <li class="expand"><a href="/advanced_search.html"><span class="bd">Advanced Search</span><span class="end"></span></a></li>
+                            </ul>
+                        </form>
+<script type="text/javascript">
+var cmaSearch = YAHOO.CMA.Search.clone();
+cmaSearch.init('cmasearchtxt', 'cmasearchbtn', 'cmasearchform', 'cmasearch');
+</script>
+                    </div>
+
+                </div>
+                
+                <style>
+                    #cma-header-misc-nav .navgiftsbtn {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px -22px !important;}
+                    #cma-header-misc-nav .navgiftsbtn:hover {width:150px;height:22px; background-image:url('/images/CTA/160705/navbar_send_gift_cta.png') !important;background-repeat:no-repeat;background-position:22px 0px !important;}
+                </style>
+                <div id="cma-header-misc-nav">
+                    <a id="navgiftslink" class="yui-hidden" href="/secure/gift/select.html?bid=nbg"><div class="navgiftsbtn" style="float:right;width:185px;position:relative;top:-4px;"></div></a>
+                </div>
+                <script>
+                    if (location.protocol == "http:" && location.href.indexOf("secure") == -1)
+                        YAHOO.util.Dom.removeClass("navgiftslink", "yui-hidden");
+                </script>
+                <div id="cma-header-sec-nav">
+                </div>
+                <div id="cma-header-prim-nav">
+                </div>
+                
+                <div style="float:right; padding:10px 15px 0 0;">
+                    <a href="/secure/cart/display.html" class="link" style="color:#000; text-decoration:none;">
+                        <span style="font-size:10px;" id="cma-header-cart-counts"></span>
+                        <img style="vertical-align:middle;" src="/images/b_view-cart.png" alt="View Cart" />
+                    </a>
+                </div>
+                <div id="cma-header-member">
+                    <div id="cma-header-testimonials" style="float:left; margin-top:14px" class="yui-hidden">
+                        <a href="/testimonials.html">
+                            <img style="vertical-align:middle;" src="/images/testimonials_link.jpg" alt="Testimonials" />
+                        </a>
+                    </div>
+                    <div id="cma-header-member-login" class="yui-hidden">
+
+                    </div>
+                    <div id="cma-header-member-welcome" class="yui-hidden">
+                        <a href="/secure/logout.html" class="memberLogout more">LOGOUT&nbsp;<img src="/images/b_black-arrow.gif" alt="" class="arrow lm"/></a>
+                        <span class="memberWelcomeMsg">Welcome <a href="/secure/youraccount.html" id="welcome-name"></a></span>
+                    </div>
+                </div>
+
+                <div class="yui-hidden" id="cma-stage-music">
+
+                </div>
+<script type="text/javascript">
+YAHOO.CMANAV.data = null;
+YAHOO.CMANAV.navigator = null;
+YAHOO.util.Event.onContentReady("cma-header-prim-nav", function () {
+    YAHOO.util.Connect.asyncRequest('GET', '/ajax/nav-data.json', {
+        success: function(o) {
+            try {
+                YAHOO.CMANAV.data = YAHOO.lang.JSON.parse(o.responseText);
+
+                YAHOO.CMANAV.navigator = new YAHOO.widget.Navigator("cma-header-prim-nav", {
+                        "navigation":YAHOO.CMANAV.data,
+                        "secondaryNavigation":"cma-header-sec-nav"
+                    }
+                );
+
+                var navID = "2";
+                var navIDParam = param("navID");
+
+                var navIDCookie = readCookie('cma_navid');
+                if (navID == "2" && navIDParam) {
+                    navID = navIDParam;
+                    createCookie(
+                        "cma_navid"
+                        , navID
+                        , 0
+                    );
+                } else if (navID == "2" && navIDCookie) {
+                    navID = unescape(navIDCookie);
+                }
+                YAHOO.CMANAV.navigator.set("default", navID);
+                YAHOO.CMANAV.navigator.render();
+            } catch (x) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','Sorry, but there was a problem parsing this page.', x);
+                return;
+            }
+        },
+        failure: function(o) {
+            if(o.status > 0) {
+                YAHOO.CMANAV.data = null;
+                YAHOO.CMA.dMsg('error','Error!','An error occurred. Please try again or contact us if the error persists.', 'Code: '+o.status);
+            }
+        }
+    });
+}, this);
+
+                </script>
+            </div>
+
+            <div id="cma-stage" class="cma-stage" class="yui-hidden"></div>
+        </div>
+        <div id="bd">
+            <div id="cma-doc">
+                <div id="cma-stage-message" class="yui-hidden"></div>
+                <div class="stage-content">&nbsp;</div>
+                <div id="cma-main" class="content pBottom yui-hidden">
+
+                    <div id="MMSG"></div>
+<div id="bcNav"><ul>
+<li class="first"><a href="/">Home</a></li>
+<li>Your Downloads</li>
+</ul></div>
+
+        <table class="master" cellspacing="0">
+            <tr>
+                <td id="main">
+                    <div id="content">
+                        <!-- CONTENT -->
+                        <form name="removal_form" id="downloadForm" method="post">
+                            <input type="hidden" name="remove" value="remove"/>
+                            <div class="box">
+                                <div class="nav"></div>
+                                <div class="hd"><h1>Your Downloads</h1></div>
+
+                                <div class="bd pad" style="overflow:hidden;">
+
+                                    <div id="download_instructions" class="bd borderBottom">
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding:0 8px 0 0">
+
+                                                    <strong>Download with our Download Manager.</strong>
+                                                    <ol class="dec">
+                                                        <li>
+                                                            <span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Install it</a></span></span>
+                                                        </li>
+
+                                                        <li>
+                                                            Open it.
+                                                            <br/>
+                                                            <span style="font-size:11px">
+                                                                (Start &gt; All&nbsp;Programs &gt; CMA&nbsp;Download&nbsp;Manager)
+                                                            </span>
+                                                        </li>
+                                          <li>
+                                                            Log in.
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Start Downloading&quot;.
+                                                        </li>
+                                                    </ol>
+
+                                                </td>
+                                                <td>
+                                                    <strong>Or, download with your browser.</strong>
+                                                    <br/>
+                                                    <ol class="dec">
+
+                                                        <li>
+                                                            <strong>RIGHT</strong>-click any &quot;Download&quot; button.
+                                                        </li>
+                                                        <li>
+                                                            Choose &quot;Save Link As...&quot;.<br/>
+                                                        </li>
+
+                                                        <li>
+                                                            Choose a download folder
+                                                            <br/>
+                                                            (e.g., your Desktop).
+                                                        </li>
+                                                        <li>
+                                                            Click &quot;Save&quot; to begin download.
+                                                        </li>
+                                                        <li>
+                                                            Repeat all steps for each download.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="box mBottom">
+                                        <div class="bd borderBottom dlHd" style="overflow:hidden;">
+
+                                            <div class="rs dlOrder"><strong>Free downloads made on:</strong> Aug 29, 2018 (00:00:00 UTC)</div>
+
+                                            <div class="clearSm"></div>
+                                        </div>
+                                        <div class="bd">
+                                            <div class="dlExpDate" align="center" width="100%">You have until Sep 28, 2018 to download these tracks.</div>
+                                        </div>
+                                        <div class="bd pad" style="overflow:hidden;">
+                                            <table class="downloadtable" cellspacing="0">
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <strong>Album:</strong> ClassicalArchives Collection
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Cello Sonata in F, Op.5, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio sostenuto. Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        83 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/OMjxyPrBFymRH-0rBCxYMTZSCdW3FGM_fYjZscMc3PvziHCt0l3yNgz_zCgiWIBlVZ5BgUIyTKHJ00JmHNwYpvRVzpWEzW1TpPIs7pwu1TzVKI1kTIE_oQMQfLeV77xntyV6JO78c1kSJJyMx2MS-Q/gOZ6pqSn0CbkscLPG78qLw/op5no1a_.mid" onclick="return setToDownloaded('dlBtn_1_1_1_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Rondo. Allegro vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        39 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_1_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Tlrt6YlZGSbXCA-UU99bxZ7RTVIYsWXio6z4tdajqAaKIwsoiuolSlzLz0lCS2p4wZcYiBEFCB0Spq7oRlaTMDRrVGCTj8C_PB8fk77Lb4xNYTCh82bX1IwfxpSMgcSVO-EZ6y0F49U5Wi9w1ERwZA/jiP9NnT4X9PGDbGMl3bJ1A/op5no1r_.mid" onclick="return setToDownloaded('dlBtn_1_1_1_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Flute Sonata in Bb, Op.Anh.4 (dubious)
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        38 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/IrCNfktBR4FmJNBfMS9l4thb8gT-vky_LZpxrsN-E3nQcjzAWhEjCjOflOwRZrSgl-JqQ_5ThIzbHEj4C8_sUSL1jKwa1BaaX_OzjsS7pJ6-5NbDOve7v3dHz-mipPeXMHG9Bci59j81lgonGbUx5w/2oBuqTWUBAeKHhlP6ZQsIQ/beet_son.mid" onclick="return setToDownloaded('dlBtn_1_1_2_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Polonaise
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/EtbDApH_povDHnXsZPINq9IN8p2fRgkbkH3GmMB8XtGo3S2nrXNFZSklUr1jd9oRJGLKS57sX32RBQ2Ieyu50LX18qu9YWWdR9Ca3Vj1wi-kWhg3kb_DmNBOwwy5oR4HE7IZ3vgyJ2dhc_gM5R-ZRg/ZxEni_n00JW7xJ_74xG34Q/beet_so.mid" onclick="return setToDownloaded('dlBtn_1_1_2_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Largo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        8 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/idOIMX0Svz_Dhq74b75R8C_i20IvTs_hsZ-foBJWeFBiIkCcJ0_q2Gb8j2Lnw6HpYeICNX6KZURFtAdfp0c3FkJAGzINIkAWk9pQxc0yhXdni24yIS3RAdrllUjqQDSWJhA4mOkLsddQZu9d239p5Q/fr8pYFYeBM3boOl_0s_sHw/beet_s.mid" onclick="return setToDownloaded('dlBtn_1_1_2_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Theme and Variations
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        19 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_2_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/n4f8Y20E3ZTuN5jSZ3e-NM55QjxFj8NVt2clOlVG5Q5Xo9Worlv9coJIBeg-SNYMLC8ULXQDuyjgZ6RqXAbSVtEjw-PXQZjVLWdlQMYhArrZiMl57t9WdRoX3KeO8a0NEg-bSQMcupTmzT6jNH0YTg/blQ3HLHtubkr4_Iu-G3zVg/beet_s-1.mid" onclick="return setToDownloaded('dlBtn_1_1_2_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.9 in A, Op.47 ('Kreutzer')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Adagio sostenuto. Presto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        60 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/5yg3n_QjtZoO-KaPh_4Z4F87PZSIBM3ARzmXNm6W9SQdczQYMqolqSmVY2eJL0V5F0s4JA_uLrqbhSgrJfVumbWA0c37vSU02QLnPMxhn04X-poT4BrM2ZFswYoxI-xBEQFPaWEXPu3acImczm1c-w/GaDc_zj3u-G5rHSXTUm5eA/op47_1.mid" onclick="return setToDownloaded('dlBtn_1_1_3_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Andante con variazioni
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        65 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZkaYBtAmZVkG4JglmP-w9TLteOD84fMTDM5m__RpGDgxoSM10SEg2QIdaHfPInW2cKfhlcGoyfw1uwJT6Ug3injSYMAfGRFrX5o9p_p8FxOJOPXz0TwLD_PdTouMzqUTwgNKbHU7-xvCn92Qs18eLw/WywAziRzvVmfWCs8mrZ2vA/op47_2.mid" onclick="return setToDownloaded('dlBtn_1_1_3_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Finale: Presto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_3_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GuEnNeF82UZOwrsOQY4IJSF4EuPE_bkGsF7R5fcmA-lzUTsG5uXKrX5FApeVS4V1yAYcNbiX3-RsdJSug9c-AaXqPuBikpxoq5lVEEGgqvqBAA_jEX9WSWFHMKrac7CtxJgqu85kQHx9EaoI6SDIZQ/Pv9_NU9fcqK7Vkq92-F27Q/op47_3.mid" onclick="return setToDownloaded('dlBtn_1_1_3_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.6 in A, Op.30, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        51 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/60h8tFuYx-LZEqqnWgU33p6fjVe6c7aRTgQPIs54wX-u_v4MCXJj-1dpnJvZX4HKGA1pNZW0zqw3ih9H1Pde9SessJst8_jbS1VVvI9u4meZKKMzhf0Lpe2OR1HFY6dJWQG1LZQqlEoHCFHjgB3J8Q/tZbEmWiH18_GS8epoB0DEQ/lvb30n1a.mid" onclick="return setToDownloaded('dlBtn_1_1_4_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio molto espressivo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        25 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/oL5f4SX8FBIYZYnTfs9KQea7jIAP91Fk9VQ__NaiQxnFKF1H6LKQfPN2WWiAzTG5AvyfWoQ7LGPrmUafkjezGT5ZvMeQ49QqDC5cVzdVQ7_hwjd0obz6WsdEF8UpPOJ2Z9vU2T0K9IP5dwgz8zqzTA/RNygkbsmLi46TR_2Y9NxRg/lvb30n1b.mid" onclick="return setToDownloaded('dlBtn_1_1_4_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegretto con variazioni
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        61 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_4_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GhejgYy1PwpmHqmKNaHta9KPoxFSYKntmTginS8h6gBwA5GuqR7K_okU8Ua_5iY6rJgFWCC0taRvcja_B58kZfsBfv4oLpB3ejjxUxs6OoawfZ51EFyk4KZfoWBeI4ldUMCNHfauMXD-sWxk99Bu1g/W7GH9gGUL_eG1Y25QFoiZA/lvb30n1c.mid" onclick="return setToDownloaded('dlBtn_1_1_4_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Adelaide, Op.46
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Adelaide, Op.46
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_5_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/sf9ftGskbU7bKda8o72jnMUx0L99Xpi2FMO0evkUz__ICJjjiYuudI55AnpVFmyB-EW9Tfr5AQwbLjiuUAdmBJaDuPjd7SWEYd0gQY3P6dusP0ct0ITiMTMOyD763ZA4eBCXIVVwdjK0_e_7ZXRqGQ/POTi1iXLQbum86y2oK6ZwA/bt_adela.mid" onclick="return setToDownloaded('dlBtn_1_1_5_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.3 in Eb, Op.12, No.3
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro con spirito
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        69 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/GLXOVcc7jHizYZK9ZpZm_F3wSG0xPdz9Df2qPUdTauB-2ALy3icFwe_vjNK2XTX6WtV9c7NVLUc7gc-YPpWHexkLcgd_1BJHTXv20caiHtKsL_-fjVhq_wzZbgR-qitfV7-lCJrXH94CoG3CHBbhmQ/Fmk3offir4gJ3u1nPqzSbQ/lvb12n3a.mid" onclick="return setToDownloaded('dlBtn_1_1_6_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio con molto espressione
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        29 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/mTB2iZUSObHplJeHVPPJHvUBJVx-mg5ZCJlpUjrMULjHY0Dg7JJzm0BPsA4S9VWYn96fyolr80dnLDLTHDCQZ_gjWU1424TGpqh-MoJHbd0f6RuEn3TCWm4Fb6blnYcmCMLv6YuDW3FuucFNdshHug/gBrwiQ9iN1ezf9E8Pc1mXw/lvb12n3b.mid" onclick="return setToDownloaded('dlBtn_1_1_6_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Rondo: Allegro molto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        46 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_6_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/3vPoUT-Y8tHZFtKe__yv5T7eJK1c-SxBH_YpPip2LhLZkLsuiaGfSFTBBfGNFBnYKVXUw5yVuDFNmVJMs4hyxtxicnn4h2fm_Dkr6au-ipfNUfQuqM641ihMvYZ5t-X08wOz2yZofgEXV16xI-KB1A/blaJ87Nq-jH8Dchh0tyK8Q/lvb12n3c.mid" onclick="return setToDownloaded('dlBtn_1_1_6_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.7 in C-, Op.30, No.2 ('Eroica')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro con brio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        76 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ZLHqqMo4SyO5QuBGK4CrhgAZgl33csFNl5TjB3_QQJIlYLa00251BgrPFuO5hBvID-OaY4STC_WivJvjtHAX5tpNmWXu2dJIR9ZAqC5WNlHWwC4Tr-oqajM_tNpTPJMXtw_EycYLIhtnAmceqsZ9tw/s1S9KQ8nQSYwbKi_LOudmQ/bevs7a.mid" onclick="return setToDownloaded('dlBtn_1_1_7_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio cantabile
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        50 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/cVBopUbeVvrBBqaa6xO4EbS0U5V_mqpiWBTB_3ZQ0OeMs-0tyltG82xp4TnCto9wtyUJdkDKB0eHhI5-EObf9TuZ4xmusjEqgsyxuSG935x71GSU_cqB-fbnAer7_yDq0i4s-6WFjPTiuQOzcWxUvw/ap8F60NymPvkN970Uup85g/bevs7b.mid" onclick="return setToDownloaded('dlBtn_1_1_7_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Scherzo: Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        35 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/c5XaGYcQ6Ps3Zxg1VRJtBu721N_mW7qw0KfhlcXPAH8pLZQKSheDWa_RnuLBR27WdiWxcFvNO-tk_x7LM8MHlayICzfiOogufy0X-uPwpPPMmYyynQXCCqsQ-36Pjt53zMiEyrKIHmFjjTJisMg-TA/-atzV3rpukhmVatmvA4cKQ/bevs7c.mid" onclick="return setToDownloaded('dlBtn_1_1_7_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Finale: Allegro. Presto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        74 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_7_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/paIws8rAuIVDDBOytJQ11ex1DjKvAwjF_aK_Wc1UNuBgrFPD0D4Yx9RNBq010K6sjNAgDC8MWOLCMgebjIyPLIh0XYgQGBOzRGfFPB73AyUeAayrMndLdJFseH6276Ni80NOGOozN9jXpckmalNKAQ/zQXfF4pu635PJeEWUhgQYg/bevs7d.mid" onclick="return setToDownloaded('dlBtn_1_1_7_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Horn Sonata in F, Op.17
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/-qjqkPgyihkrpvHbxL-pCv-01f9LxtjMf6KzmsDnk0S-Xt0T5_WmvnvjYfBU1AXaSKOZchHhygQrxhmRkF9x0U7lEkWKnk3F-KMAthZYYUNNejJk_zE6U_FDDkUEPfBpYsBY27IocqmNk5u6yJPj9g/r1bx6XEzrfgD5-OfxXQS0w/hrn17_3.mid" onclick="return setToDownloaded('dlBtn_1_1_8_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro moderato
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        46 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/YpSnPFeT3iwgK7dr3zLXNH-EmRO5GdbcJxzZPkGjo_pwLC8Qz54kU6BFVCO1jK689Oh6BZ-Orlv1wsCN3sWRmaoOPUzgcCW_Ugu6lT9sFs3od_svy6z-CJvdvq4BGUemnTpFF7nUxVytGzJ50LNDGQ/lqzScfK04lQztxqkwC1iAA/hrn17_1.mid" onclick="return setToDownloaded('dlBtn_1_1_8_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Poco adagio, quasi andante
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        3 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_8_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/7RaLZLEkaMFY2n4eoWKyTAlyNeXIvmXdVzM5Q17dV3bHrXnQnkuv_kojp2_2LjBXOtUBoHlucSnxJM_mgwqMuvQDu7k7H3iVkOFYRiwQH8qW_YxHENul4L-ubpVUL4YePsAcTG03o9kPsFAoP0PZyQ/7gl38oBawF7FQB-CeClkyg/hrn17_2.mid" onclick="return setToDownloaded('dlBtn_1_1_8_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.4 in A-, Op.23
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Presto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        59 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/kzbj-p39yODFxF_nfpQyxCC6xnqrO7f9tS4nbWN2PNJ3WS2M0oda1OgVAi-ZvSjmiWQnpMHe0foL0BfVXuJjysEt6zQ0m21C9xdMAgHsPg2YvHVcDBhNLoIk8vhO0kPSjPr4bbyItHAihecOzzXC9Q/UcMMUM922AfdDPv_vlTT2Q/lvb23a.mid" onclick="return setToDownloaded('dlBtn_1_1_9_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Andante scherzoso, più allegretto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        43 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/t_bCeU0m1NX34S4DXFifBkzMgrwdg8muZ4YO8DBYL5giqx0kkQFWCcBmNvoZ4_O8b2GztEszcVdZjtpE0bV03HVuHeLlhboIpg9DWfoGl1kEPMK5mWXMyTI4hz52EWFwUvEugwepwmwFYROFV8bXyg/PBEN323Au26qhnBqIGTP-Q/lvb23b.mid" onclick="return setToDownloaded('dlBtn_1_1_9_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro molto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        44 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_9_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/L7vaPqjwdjQG-qNFdIG3vgjL3HPcOafIkmYt6qc7ySMxO3BjalwUvRNrFj339_ONjzleBQfmYL5X2hNDl4ZKLc-zKwNQUT08XWZa_tiIQifXE7EjwCqB99ynbB99FYDf4eDx5nYwVjzDlS3GSzcDqg/brfpGZ_EHVY6dc2BiWLYug/lvb23c.mid" onclick="return setToDownloaded('dlBtn_1_1_9_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.2 in A, Op.12, No.2
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro vivace
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        51 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/iSSaJ5-SBAX3gBu769LWU92nhUYs7ZIbIBeVgEcmWB_06X02ZXR4OFfm4l3kHNIROfYp05WPXETomT3ywdujsfRqk-bdHht3qWDFar46bhKiYv8di0cU7mfqkg1Yva69-x7j07DTwgNnSxhsIO1FIQ/_5Iy2IN48RmCu31SYh0_sA/lvb12n2a.mid" onclick="return setToDownloaded('dlBtn_1_1_10_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Andante più tosto. Allegretto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        17 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/Lwjh48jSA77eSpcjFFOj9BDWDYN1TXVx3ud7L0BV4TrKGnvZNX_FzCEpkq3aqHlD_BkpMKJRAnEd2GU7JjFpJPWufAKibVakhrnjjsk5Jr-cqnoV-UUtjc2MqwR3NsJ7bsVynR-eOQNd7WZz257Mdw/9GKBVyR_q1b8_i-HzDzovg/lvb12n2b.mid" onclick="return setToDownloaded('dlBtn_1_1_10_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Allegro piacévole
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_10_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/NKJtHJsuU-086YFORrUWF_KNuRqz9papBRUdhDqcVNCxBRV-Q4ipHDyGRIFRyLxbDBvybch4E8hkPO72CC0hmlMF64UYdwS9KTNRrdFajuc040KxhALYGEp80HRbuxkZ0KbQ-3bmC9xeQvIeqd9GdQ/3pyHxDnyg5B_c72ggR7iTw/lvb12n2c.mid" onclick="return setToDownloaded('dlBtn_1_1_10_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Mandolin Sonatina in C-, WoO44a
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Mandolin Sonatina in C-, WoO44a
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        16 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_11_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/davZZZE-RIScXDW_JNm7wdVqpBqF1J-0kNxDGi6NfyUh0cP4UgrDJ5u1bZJ1zIEXKkLC_Jl1sT4YCtfFV0aFloVjxGd4-LfNw5h4s1_FrGP90Q8IObOYIxzUPJU3ZMSdbSqqZL1hdwihoC_c4_pcTQ/_et4V3C1PEnT1NkIhaKuLw/mandocma.mid" onclick="return setToDownloaded('dlBtn_1_1_11_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.5 in F, Op.24 ('Spring')
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        85 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9cQxfqWmIodo8d6QGy7XIiaKhMAbyR-SUrUEG3_X6H9h5o36DjYnZfls7JXCUBubnOtof8Pj-wTdhSPIzOXGSQPSVsypYB3dCxkntvVa56If8_xsd6U3z6ILkmamZ4QGyadzEc1F4VAfHBzsApb5Tw/VjiCkqeMVRwHZPaAxis8Jg/lvb24a.mid" onclick="return setToDownloaded('dlBtn_1_1_12_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Adagio molto espressivo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        24 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/vQvjc2Jw2BMSac3mLcSCVHPjSW414z0qkgTQQCx23Ibx4D0cMR4yKUvflorJ7uA97eTK_CXantVnjXvSd_lJPblP7LNJn0gmoxdfIduGacQ3Kbzbm-zDByUbfOv8K83gGgJPP9UWflMnoS42MwmVcw/pp-LfMDUwZjTXJc9ifLwJw/lvb24b.mid" onclick="return setToDownloaded('dlBtn_1_1_12_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Scherzo: Allegro molto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        15 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/k52mwJMC8RWEMwJa2kUmez8lXoQIwaGmg3_wiREEUMvynAULc9Y37jzUI5FkAFtbz6v3L4IfeGpS_CaB16nn8BzmofaLDioAjlBfpVjGNXJq8wjiOcZLPqAlUnFj5f1GBPh3Iq4ppdQXfp4pyTGYSQ/ARImoVEvMyRx1ORwgCkvsQ/lvb24c.mid" onclick="return setToDownloaded('dlBtn_1_1_12_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        4.Rondo: Allegro ma non troppo
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        61 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_12_4" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/ARZquJYPC4QwXLhizL-ERrv1oamhUEHGusU-UqovRCg7HJm0PtIbbNu3j9yCUTKQ6fcTdkTQRSG3CarpBZRl-Z7wuGbTEdOCcI94uFCHHY5efVKUie-9CwMfvsBQ6WJQ0Td8CmA70FCfuXphkVuEVQ/LdNpqZ_mTSQJU8Vgwbwi-w/lvb24d.mid" onclick="return setToDownloaded('dlBtn_1_1_12_4');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Violin Sonata No.1 in D, Op.12, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        1.Allegro con brio
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        61 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/dKXqvXUnTQJ7pSuS83J8rEZNQC1PNqRA5lNQGLolS-uBD2mVUDMGN3SBTG3Wk88oiC2EUbj_4zxC5o2kFWDA_j7gOiZwUhM4JzZIHaGCtdCXMbgt-7DeUzaA1_VAfxws34hMsfFz2uzqzEb26CHkrA/_NnQtCD8NOttB7Vtp-2DKQ/lvb12n1a.mid" onclick="return setToDownloaded('dlBtn_1_1_13_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        2.Tema con variazioni: Andante con moto
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_2" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/xfs_eAO_pNeKCPt0qydRWKuTSo4Byx6P-KfGcDYbOT7QtycEtfRWFQdwVy4qsIUc-Q_yDHkLjRimZ2nIVhFWZZ7jMjjkIbuiWFQaCPLzkxy76XgCYP264H9MtNltQ8kPVJ3T2mfxSh31UG-aX5wN7A/Uu2DQU9OH_q3rCUQmzKhIA/lvb12n1b.mid" onclick="return setToDownloaded('dlBtn_1_1_13_2');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        3.Rondo: Allegro
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        36 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_13_3" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/9vO9a1hDSz7uBCG2B1R7AOnCneFz94FQVUF3ZS3VqoJuwEyZteYulIVDrQiZxs2U5O-OVvUemzc_DmEm8yhhGXZmsjgDHHPw3b-q4TC2G9OHKLe2sE9Mj4tdFuX7Pmx7oViSrpG9pyOkVRBPZ0g5Fw/wx_rZuCktmZ03Lqb1m34Wg/lvb12n1c.mid" onclick="return setToDownloaded('dlBtn_1_1_13_3');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlWork" colspan="2">
+                                                        Ludwig van Beethoven: Cello Sonata No.4 in C, Op.102, No.1
+                                                    </td>
+                                                    <td class="dlButton">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="dlTrack">
+                                                        Cello Sonata No.4 in C, Op.102, No.1
+                                                    </td>
+                                                    <td class="dlSize">
+                                                        49 KB
+                                                    </td>
+
+                                                    <td class="dlButton">
+                                                        <span id="dlBtn_1_1_14_1" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><a style="width:90px;text-align:center;" href="https://www.classicalarchives.com/d/y0k_BZClS8Lc3xzjA793SCIUJrqAboAOqMgKZt_MYHzEaLE56CAC-lbl8-fgymaQ95ttehCmcxPK3o2UM65c7i9GTzvyp-hbrhHcxdHp-BodjwvSbGZJefixHSyMExosTNtzZN3zo4S9yBGwxHd1QQ/a3sopGagj3-RC1IcBuxb5g/beces4.mid" onclick="return setToDownloaded('dlBtn_1_1_14_1');">Download</a></span></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <div class="tl"></div>
+                                        <div class="tr"></div>
+                                        <div class="bl"></div>
+                                        <div class="br"></div>
+                                    </div>
+
+                                </div>
+
+                                        <div class="ft">
+                                            <div style="float:right;">
+                                                <ul>
+                                                    <li><span id="clearBtnBot" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" hidefocus="true" onclick="return clearTracks()">Clear Already Downloaded Tracks</button></span></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearSm"></div>
+                                        </div>
+
+                                <div class="tl"></div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </form>
+                    <!-- /CONTENT -->
+                    </div>
+                </td>
+
+                <!-- SIDEBAR -->
+                <td id="gutter"><div></div></td>
+                <td id="sidebar"><div id="sbfix"></div>
+                    <div class="box">
+                        <div class="nav"></div>
+                        <div class="hd"><h1>Try our Download Manager</h1></div>
+                        <div class="bd pad">
+                            <h2 style="margin-top:0;">Download with just One Click!</h2>
+                            <p><a href="/download-manager/"><img src="/images/CTA/140701/a_dlmanager.png" alt="Free Download Manager"/></a></p>
+                            <p style="text-align:center;"><span class="yui-button yui-push-button" style="margin:0;" onmouseover="cBtn(this);"><span class="first-child"><a href="/download-manager/">Get the Download Manager Now!</a></span></span></p>
+
+                            <p style="text-align:center;"><em style="font-size:77%;">Requires Windows & <a href="http://java.sun.com/javase/downloads/" target="_blank">Java 6</a></em></p>
+
+                        </div>
+                        <div class="ft yui-hidden" id="accprefFooter">
+                            <ul>
+                                <li><span id="SaveAccPref" class="yui-button yui-push-button" onmouseover="cBtn(this);"><span class="first-child"><button type="button" onclick="saveAccPref('s-save-account-preferences.html');" hidefocus="true">Save Changes</button></span></span></li>
+                            </ul>
+                            <div class="clearSm"></div>
+                        </div>
+                        <div class="tl"></div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </td>
+                <!-- /SIDEBAR -->
+
+            </tr>
+        </table>
+
+
+
+                </div>
+                <div class="content pBottom">
+                    <noscript>
+                        <div id="JSEMSG">
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                            <div class="Bdy">
+                                <h2>Please enable Javascript in your browser's settings, and reload this page.</h2>
+                                In Internet Explorer 7+: click "Tools", "Internet Options", "Security", "Default Level", "OK"<br/><br/>
+                                In Firefox 2+: click "Tools", "Options", "Content", "Enable Javascript", "OK"<br/><br/>
+                                If you continue to see this message, your security software is interfering with your browser.
+                                Please contact your security software's customer service or (if your computer has a service warranty) your computer's manufacturer, and ask how to configure it to allow Javascript.<br/>
+                            </div>
+                            <div class="Msg">
+                                Javascript is required to use this site.
+                            </div>
+                        </div>
+                    </noscript>
+                    &nbsp;
+                </div>
+                <div class="content">
+
+
+                    <div class="yui-g cpline">
+                        <div class="cpinfo">&copy; 1994-2018 Classical Archives LLC &mdash;  The Ultimate Classical Music Destination &trade;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ft">
+            <div id="cma-bot" class="sides">
+                <div class="footer">
+
+
+<div class="yui-gb first">
+    <div class="yui-u first">
+        <ul>
+            
+            <li class="first"><a href="javascript:openapmradio()">Free Internet Radio</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/help-bubble.html',null,'Help'); return false;">Help</a></li>
+            <li><a href="/secure/password.html">Forgot password</a></li>
+            <li><a href="/choose_player.html">Browser Compatibility Test</a></li>
+            <li><a href="/help.html">How to play / download / burn music</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/musicology-bubble.html',null,'Musicology Correction'); return false;">Submit musicology correction</a></li>
+            <li><a href="/help.html">Tutorials &amp; FAQs</a></li>
+            <li><a href="/howto/tutorials.html">How To</a></li>
+            <li><a href="/secure/message.html" onclick="YAHOO.CMA.AjaxErrPnl.startRequest('/help/subscription-bubble.html',null,'Subscription Help'); return false;">My Subscription</a></li>
+            <li><a href="/secure/message.html">Send Feedback</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/sitemap.html">Sitemap</a></li>
+            <li>&nbsp;</li>
+            <li class="first"><a href="/submit/">Submit Your Music</a></li>
+            <li class="first">Tutorials</li>
+            <li><a href="javascript:tutOverview();">Overview</a></li>
+            <li><a href="javascript:tutComposers();">Composers</a></li>
+            <li><a href="javascript:tutWorks();">Works</a></li>
+            <li><a href="javascript:tutArtists();">Artists</a></li>
+            <li><a href="javascript:tutAlbums();">Albums</a></li>
+            <li><a href="javascript:tutPlaylists();">Playlists</a></li>
+            
+            <li>&nbsp;</li>
+            <li class="first"><a href="/google_button.html">Google Toolbar Button (IE &amp; FF only)</a></li>
+        </ul>
+    </div>
+    <div class="yui-u">
+        <ul>
+            <li class="first"><a href="/intro.html">Introduction to Classical Archives</a></li>
+            <li>&nbsp;</li>
+            
+            <li class="first"><a href="https://blog.classicalarchives.com/">Blog</a></li>
+            <li class="first"><a href="/about.html">About Us</a></li>
+            <li class="first"><a href="/secure/message.html">Contact Us</a></li>
+            <li class="first"><a href="/link.html">Link to Us</a></li>
+            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html#ip">Copyrights &amp; Permissions</a></li>
+            <li>&nbsp;</li>
+            <li id="tFlag" class="first">
+                
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="swfversion"></div>
+<script type="text/javascript">embedVersionPlugin();</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="google-analytics-tracking">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-346506-3']);
+        _gaq.push(['_setDomainName', '.classicalarchives.com']);
+        _gaq.push(['_trackPageview']);
+    </script>
+</div>
+<div id="MsgBox2" class="yui-hidden">
+    <div class="hd">&nbsp;</div>
+    <div class="bd">
+        <iframe id="surveyFrame" width="470" height="450" scrolling="auto" frameborder="0" title="Survey" style="margin:10px;"></iframe>
+    </div>
+    <div class="ft"></div>
+</div>
+
+
+    </body>
+</html>

@@ -23,7 +23,7 @@ def train(model, training, use_pretrain, epochs, bs):
            dropout=0.1, dropouti=0.4, wdrop=0.5, dropoute=0.05, dropouth=0.3)
     m.reg_fn = partial(seq2seq_reg, alpha=2, beta=1)
     m.clip=25.
-    
+
     if use_pretrain:
         model_name=model+"_"+training
         print("Loading weights: "+model)
@@ -96,8 +96,8 @@ if __name__ == "__main__":
     parser.add_argument("-model", help="Generator model in ./models/generator", required=True)
     parser.add_argument("--training", help="Training level (light, med, full, extra - default light)")
     parser.set_defaults(training="light")
-    parser.add_argument("--no_pretrain", dest="pretrain", action="store_false", help="Start with randomized weights (default starts with generator model weights)")
-    parser.set_defaults(pretrain=True)
+    parser.add_argument("--pretrain", dest="pretrain", action="store_true", help="Starts with generator model weights (default is random initialization)")
+    parser.set_defaults(pretrain=False)
     parser.add_argument("--epochs", dest="epochs", help="Epochs per training level (default 3)", type=int)
     parser.set_defaults(epochs=3)
     parser.add_argument("--bs", dest="bs", help="Batch size (default 32)", type=int)

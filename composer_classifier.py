@@ -1,4 +1,5 @@
 from classifier_utils import *
+from utils import *
 import dill as pickle
 import argparse
 
@@ -31,7 +32,7 @@ def train(model, training, use_pretrain, epochs, bs):
         
     lrs=[3e-3, 3e-4, 3e-6, 3e-8]
     trainings=["_light.pth", "_med.pth", "_full.pth", "_extra.pth"] 
-    save_names=[model_out+b for b in trainings]
+    save_names=[model+b for b in trainings]
     save_names=[OUT_MOD_PATH/s for s in save_names]
         
     for i in range(len(lrs)):
@@ -44,8 +45,8 @@ if __name__ == "__main__":
     parser.add_argument("-model", help="Generator model in ./models/generator", required=True)
     parser.add_argument("--training", help="Training level (light, med, full, extra - default light)")
     parser.set_defaults(training="light")
-    parser.add_argument("--no_pretrain", dest="pretrain", action="store_false", help="Start with randomized weights (default starts with generator model weights)")
-    parser.set_defaults(pretrain=True)
+    parser.add_argument("--pretrain", dest="pretrain", action="store_true", help="Starts with generator model weights (default is random initialization)")
+    parser.set_defaults(pretrain=False)
     parser.add_argument("--epochs", dest="epochs", help="Epochs per training level (default 3)", type=int)
     parser.set_defaults(epochs=3)
     parser.add_argument("--bs", dest="bs", help="Batch size (default 32)", type=int)
