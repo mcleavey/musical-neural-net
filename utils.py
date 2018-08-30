@@ -138,7 +138,7 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
     main_stream = music21.stream.Stream([violin_stream, piano_stream])
     return main_stream
 
-def write_to_mp3(stream, fname, sample_freq, note_offset, out, chordwise):
+def write_mid_mp3_wav(stream, fname, sample_freq, note_offset, out, chordwise):
     stream_out=string_inds_to_stream(stream, sample_freq, note_offset, chordwise)
     write_midi(stream_out, fname, out)
     base=out/fname[:-4]
