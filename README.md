@@ -81,9 +81,17 @@ Playlist.ipynb is a simple Jupyter Notebook which creates a nicely formatted pla
 <h2>Pretrained Models:</h2>
 Sample pretrained models are included in this repository. They were trained using the default settings (all composers, notewise using a sample frequency 12, chordwise using a sample frequency 4). 
 <ul>
-  <li>notewise_generator:  ` python generator.py -model notewise_generator -output notewise_generation_samples `  </li>
+  <li>notewise_generator</li>
   <li>chordwise_generator </li>
   <li>chamber_generator (uses notewise encoding)</li>
   <li>notewise_critic</li>
   <li>notewise_composer_classifier</li>
-  </ul>
+</ul>
+  
+For example, use:
+
+```
+python generator.py -model notewise_generator -output notewise_generation_samples --random_freq 0.8 --trunc 3
+```
+
+to generate musical samples.
