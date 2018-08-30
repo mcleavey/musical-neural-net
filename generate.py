@@ -83,7 +83,7 @@ def create_generation_batch(model, num_words, random_choice_frequency,
         res,*_ = model(w.unsqueeze(0))   
     return musical_prompts,results    
 
-def main(model_to_load, training, gen_size, sample_freq, chordwise, chamber, 
+def main(model_to_load, training, gen_size, sample_freq, chordwise, 
          note_offset, use_test_prompt, output_folder, generator_bs, trunc, random_freq, prompt_size):
 
     print("Loading network")     
@@ -127,8 +127,6 @@ if __name__ == "__main__":
     parser.add_argument("--sample_freq", dest="sample_freq", help="Split beat into 4 or 12 parts (default 4 for Chordwise, 12 for Notewise)", type=int)
     parser.add_argument("--chordwise", dest="chordwise", action="store_true", help="Use chordwise encoding (defaults to notewise)")
     parser.set_defaults(chordwise=False) 
-    parser.add_argument("--chamber", dest="chamber", action="store_true", help="Chamber music (defaults to piano solo)")
-    parser.set_defaults(chamber=False) 
     parser.add_argument("--small_note_range", dest="small_note_range", action="store_true", help="Set 38 note range (defaults to 62)")
     parser.set_defaults(small_note_range=False)    
     parser.add_argument("--use_test_prompt", dest="use_test_prompt", action="store_true", help="Use prompt from validation set.")
@@ -146,5 +144,5 @@ if __name__ == "__main__":
     random.seed(os.urandom(10))
 
     main(args.model, args.training, args.size, sample_freq, args.chordwise,
-         args.chamber, note_offset, args.use_test_prompt, args.output, args.bs,
+         note_offset, args.use_test_prompt, args.output, args.bs,
          args.trunc, args.random_freq, args.prompt_size)
