@@ -10,6 +10,7 @@ Detailed paper is <a href="http://christinemcleavey.com/files/music-generator-pa
 <li><a href="https://github.com/fastai/fastai">FastAI</a>
   </li>
 <li><a href="http://schristiancollins.com/generaluser.php">GeneralUser</a>: install in data folder (this is needed to translate midi files to mp3)</li>
+  <li><a href="http://web.mit.edu/music21/">MIT's music21</a></li>
 </ul>
 Note: From inside the musical-neural-net home directory, run: 
 
