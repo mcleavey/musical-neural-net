@@ -15,12 +15,6 @@ import random
 import numpy as np
 
 
-PATH = Path('./data/')
-MOD_PATH = Path('./models/')
-TRAIN = 'train'
-VALIDATION = 'test'
-OUT = PATH/'output'
-
     
 def load_long_prompts(folder):
     """ folder is either the path to train or to test
@@ -123,7 +117,7 @@ def create_generation_batch(model, num_words, random_choice_frequency,
         res,*_ = model(w.unsqueeze(0))   
     return musical_prompts,results    
 
-def main(model_to_load, training, gen_size, sample_freq, chordwise, 
+def main(model_to_load, training, test, train, gen_size, sample_freq, chordwise, 
          note_offset, use_test_prompt, output_folder, generator_bs, trunc, random_freq, prompt_size):
 
     PATHS=create_paths()
@@ -131,7 +125,7 @@ def main(model_to_load, training, gen_size, sample_freq, chordwise,
     lm,params,TEXT=load_pretrained_model(model_to_load, PATHS, training, generator_bs)
     bptt=prompt_size if prompt_size else params["bptt"]
     
-    prompts=load_long_prompts(PATH/VALIDATION) if use_test_prompt else load_long_prompts(PATH/TRAIN)
+    prompts=load_long_prompts(PATHS["data"]/test) if use_test_prompt else load_long_prompts(PATHS["data"]/train)
     print("Preparing to generate a batch of "+str(generator_bs)+" samples.")    
     musical_prompts,results=create_generation_batch(model=lm.model, num_words=gen_size,  
                                                     bs=generator_bs, bptt=bptt,
@@ -140,7 +134,7 @@ def main(model_to_load, training, gen_size, sample_freq, chordwise,
                                                     params=params, TEXT=TEXT)
 
     # Create the output folder if it doesn't already exist
-    out=OUT/output_folder
+    out=PATHS["output"]/output_folder
     out.mkdir(parents=True, exist_ok=True)
     
     # For each generated sample, write mid, mp3, wav, and txt files to the output folder (as 1.mid, etc)
@@ -178,6 +172,8 @@ if __name__ == "__main__":
     parser.add_argument("--use_test_prompt", dest="use_test_prompt", action="store_true", help="Use prompt from validation set.")
     parser.set_defaults(use_test_prompt=False)
     parser.add_argument("--prompt_size", dest="prompt_size", help="Set prompt size (default is model bptt)", type=int)    
+    parser.add_argument("--test", dest="test", help="Specify folder name in data that holds test data (default 'test')")
+    parser.add_argument("--train",dest="train", help="Specify folder name in data that holds train data (default 'train')")
     args = parser.parse_args()
 
     if args.sample_freq is None:
@@ -189,6 +185,9 @@ if __name__ == "__main__":
 
     random.seed(os.urandom(10))
 
-    main(args.model, args.training, args.size, sample_freq, args.chordwise,
+    test = args.test if args.test else "test"
+    train = args.train if args.train else "train"
+    
+    main(args.model, args.training, test, train, args.size, sample_freq, args.chordwise,
          note_offset, args.use_test_prompt, args.output, args.bs,
          args.trunc, args.random_freq, args.prompt_size)
