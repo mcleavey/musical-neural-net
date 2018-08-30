@@ -16,30 +16,45 @@ from fastai.nlp import *
 from fastai.lm_rnn import *
 import dill as pickle
 
-PATH = Path('./data/')
-MOD_PATH = Path('./models/generator/')
 
+def create_paths():
+    PATHS={}
+    PATHS['data']=Path('./data/')
+    PATHS['critic_data']=Path('./critic_data/')
+    PATHS['composer_data']=Path('./composer_data/')
+    PATHS['notewise_example_data']=PATHS['data']/'notewise_example_data'   
+    PATHS['chordwise_example_data']=PATHS['data']/'chordwise_example_data'       
+    PATHS['chamber_example_data']=PATHS['data']/'chamber_example_data'       
+    PATHS['models']=Path('./models/')
+    PATHS['generator']=PATHS['models']/'generator'
+    PATHS['critic']=PATHS['models']/'critic'
+    PATHS['composer']=PATHS['models']/'composer'
+    PATHS['output']=PATHS['data']/'output'
+    
+    for k in PATHS.keys():
+        PATHS[k].mkdir(parents=True, exist_ok=True)
+
+    return PATHS
+    
 def train_and_save(learner, lr, epochs, fname, metrics=None):
     print("\nTraining "+str(fname))
     learner.fit(lr, 1, wds=1e-6, cycle_len=epochs, use_clr=(32,10), metrics=metrics)
     print("\nSaving "+str(fname))
     torch.save(learner.model.state_dict(), fname)
-    fname=(str(fname)).split("/")[-1][:-4]
-    print("Saving encoding "+fname)
-    learner.save_encoder(fname)
 
-def load_pretrained_model(model_to_load, training, bs):
-    params=pickle.load(open(f'{MOD_PATH}/{model_to_load}_params.pkl','rb'))
-    TEXT=pickle.load(open(f'{MOD_PATH}/{model_to_load}_text.pkl','rb'))
+
+def load_pretrained_model(model_to_load, PATHS, training, bs):
+    params=pickle.load(open(f'{PATHS["generator"]}/{model_to_load}_params.pkl','rb'))
+    TEXT=pickle.load(open(f'{PATHS["generator"]}/{model_to_load}_text.pkl','rb'))
     lm = LanguageModel(to_gpu(get_language_model(params["n_tok"], params["em_sz"], params["nh"], 
                                                     params["nl"], params["pad"])))
 
     mod_name=model_to_load+"_"+training+".pth"
-    lm.model.load_state_dict(torch.load(MOD_PATH/mod_name)) 
+    lm.model.load_state_dict(torch.load(PATHS["generator"]/mod_name)) 
     lm.model[0].bs=bs
     return lm, params, TEXT
 
-def dump_param_dict(TEXT, md, bs, bptt, em_sz, nh, nl, model_out):
+def dump_param_dict(PATHS, TEXT, md, bs, bptt, em_sz, nh, nl, model_out):
     d={}
     d["n_tok"]=md.nt
     d["pad"]=md.pad_idx
@@ -49,8 +64,8 @@ def dump_param_dict(TEXT, md, bs, bptt, em_sz, nh, nl, model_out):
     d["nh"]=nh
     d["nl"]=nl
     
-    pickle.dump(d, open(f'{MOD_PATH}/{model_out}_params.pkl','wb'))
-    pickle.dump(TEXT, open(f'{MOD_PATH}/{model_out}_text.pkl','wb'))
+    pickle.dump(d, open(f'{PATHS["generator"]}/{model_out}_params.pkl','wb'))
+    pickle.dump(TEXT, open(f'{PATHS["generator"]}/{model_out}_text.pkl','wb'))
     
     
 def write_midi(s, filename, output_folder):

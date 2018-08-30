@@ -3,21 +3,18 @@ from utils import *
 import dill as pickle
 import argparse
 
-PATH = Path('./data/')
-COMPOSER_PATH = Path('./composer_data/')
-LOAD_MOD_PATH = Path('./models/generator/')
-OUT_MOD_PATH = Path('./models/composer/')
 
-OUT_MOD_PATH.mkdir(parents=True, exist_ok=True)
-
-def train(model, training, use_pretrain, epochs, bs):        
-    TEXT=pickle.load(open(f'{LOAD_MOD_PATH}/{model}_text.pkl','rb'))    
-    params=pickle.load(open(f'{LOAD_MOD_PATH}/{model}_params.pkl','rb'))
+def train(model, training, use_pretrain, epochs, bs):    
+    PATHS=create_paths()
+    TEXT=pickle.load(open(f'{PATHS["generator"]}/{model}_text.pkl','rb'))    
+    params=pickle.load(open(f'{PATHS["generator"]}/{model}_params.pkl','rb'))
     
+    print("Loading dataset")
     MUSIC_LABEL = data.Field(sequential=False)
-    splits = ComposerDataset.splits(TEXT, MUSIC_LABEL, COMPOSER_PATH)
-    md = TextData.from_splits(PATH, splits, bs)
+    splits = ComposerDataset.splits(TEXT, MUSIC_LABEL, PATHS["composer_data"])
+    md = TextData.from_splits(PATHS["data"], splits, bs)
 
+    print("Initializing model")
     opt_fn = partial(optim.Adam, betas=(0.7, 0.99))
     m = md.get_model(opt_fn, 1500, bptt=params["bptt"], emb_sz=params["em_sz"], n_hid=params["nh"], n_layers=params["nl"], 
            dropout=0.1, dropouti=0.4, wdrop=0.5, dropoute=0.05, dropouth=0.3)
@@ -25,15 +22,12 @@ def train(model, training, use_pretrain, epochs, bs):
     m.clip=25.
     
     if use_pretrain:
-        model_name=model+"_"+training
-        print("Loading weights: "+model)
-        m.load_encoder(f'model_name')
-        m.freeze_to(-1)
+        raise NotImplementedError
         
     lrs=[3e-3, 3e-4, 3e-6, 3e-8]
     trainings=["_light.pth", "_med.pth", "_full.pth", "_extra.pth"] 
     save_names=[model+b for b in trainings]
-    save_names=[OUT_MOD_PATH/s for s in save_names]
+    save_names=[PATHS["composer"]/s for s in save_names]
         
     for i in range(len(lrs)):
         train_and_save(m, lrs[i], epochs, save_names[i], metrics=[accuracy])
@@ -41,6 +35,7 @@ def train(model, training, use_pretrain, epochs, bs):
 
 
 if __name__ == "__main__":
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("-model", help="Generator model in ./models/generator", required=True)
     parser.add_argument("--training", help="Training level (light, med, full, extra - default light)")
@@ -53,7 +48,6 @@ if __name__ == "__main__":
     parser.set_defaults(bs=32)
 
     args = parser.parse_args()
-
 
     random.seed(os.urandom(10))
 

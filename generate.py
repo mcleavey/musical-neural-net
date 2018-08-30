@@ -126,8 +126,9 @@ def create_generation_batch(model, num_words, random_choice_frequency,
 def main(model_to_load, training, gen_size, sample_freq, chordwise, 
          note_offset, use_test_prompt, output_folder, generator_bs, trunc, random_freq, prompt_size):
 
+    PATHS=create_paths()
     print("Loading network")     
-    lm,params,TEXT=load_pretrained_model(model_to_load, training, generator_bs)
+    lm,params,TEXT=load_pretrained_model(model_to_load, PATHS, training, generator_bs)
     bptt=prompt_size if prompt_size else params["bptt"]
     
     prompts=load_long_prompts(PATH/VALIDATION) if use_test_prompt else load_long_prompts(PATH/TRAIN)
