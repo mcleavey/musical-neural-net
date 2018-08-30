@@ -1,6 +1,6 @@
-# musical-neural-net
+# Clara: A Neural Net Music Generator
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music<br>
-Project structure overview is <a href="http://christinemcleavey.com/music-generator-project-structure/">here</a>.<br>
+Project overview is <a href="http://christinemcleavey.com/clara-a-neural-net-music-generator/">here</a>.<br>
 Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
 Detailed paper is <a href="http://christinemcleavey.com/files/music-generator-paper.pdf">here</a>.
 
