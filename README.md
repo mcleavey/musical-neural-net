@@ -84,6 +84,6 @@ Sample pretrained models are included in this repository. They were trained usin
   <li>notewise_generator:  ` python generator.py -model notewise_generator -output notewise_generation_samples `  </li>
   <li>chordwise_generator </li>
   <li>chamber_generator (uses notewise encoding)</li>
-  <li>notewise_critic and chordwise_critic</li>
-  <li>notewise_composer_classifier and chordwise_composer_classifier</li>
+  <li>notewise_critic</li>
+  <li>notewise_composer_classifier</li>
   </ul>
