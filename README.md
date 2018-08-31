@@ -2,7 +2,7 @@
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music<br>
 Project overview is <a href="http://christinemcleavey.com/clara-a-neural-net-music-generator/">here</a>.<br>
 Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
-Detailed paper is <a href="http://christinemcleavey.com/files/music-generator-paper.pdf">here</a>.
+Detailed paper is <a href="http://christinemcleavey.com/files/clara-musical-lstm.pdf">here</a>.
 
 <h2>Requirements:</h2>
 <ul>
