@@ -1,8 +1,8 @@
-# musical-neural-net
+# Clara: A Neural Net Music Generator
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music<br>
-Project structure overview is <a href="http://christinemcleavey.com/music-generator-project-structure/">here</a>.<br>
+Project overview is <a href="http://christinemcleavey.com/clara-a-neural-net-music-generator/">here</a>.<br>
 Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
-Detailed paper is <a href="http://christinemcleavey.com/files/music-generator-paper.pdf">here</a>.
+Detailed paper is <a href="http://christinemcleavey.com/files/clara-musical-lstm.pdf">here</a>.
 
 <h2>Requirements:</h2>
 <ul>
@@ -81,9 +81,17 @@ Playlist.ipynb is a simple Jupyter Notebook which creates a nicely formatted pla
 <h2>Pretrained Models:</h2>
 Sample pretrained models are included in this repository. They were trained using the default settings (all composers, notewise using a sample frequency 12, chordwise using a sample frequency 4). 
 <ul>
-  <li>notewise_generator:  ` python generator.py -model notewise_generator -output notewise_generation_samples `  </li>
+  <li>notewise_generator</li>
   <li>chordwise_generator </li>
   <li>chamber_generator (uses notewise encoding)</li>
-  <li>notewise_critic and chordwise_critic</li>
-  <li>notewise_composer_classifier and chordwise_composer_classifier</li>
-  </ul>
+  <li>notewise_critic</li>
+  <li>notewise_composer_classifier</li>
+</ul>
+  
+For example, use:
+
+```
+python generator.py -model notewise_generator -output notewise_generation_samples --random_freq 0.8 --trunc 3
+```
+
+to generate musical samples.
