@@ -7,22 +7,16 @@ from fastai.rnn_train import *
 from fastai.nlp import *
 from fastai.lm_rnn import *
 from utils import *
-
 import dill as pickle
 import argparse
 
-PATH = Path('./data/')
-OUT = Path('./models/generator/')
-TRAIN = 'train'
-VALIDATION = 'test'
 
-OUT.mkdir(parents=True, exist_ok=True)
 
 # Unlike language models (which need a tokenizer to recognize don't as similar to 'do not', 
 # here I have specific encodings for the music, and we can tokenize directly just by splitting by space.
 def music_tokenizer(x): return x.split(" ")
     
-def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_multiplier, epochs):
+def main(model_to_load, model_out, test, train, bs, bptt, em_sz, nh, nl, min_freq, dropout_multiplier, epochs):
     """ Loads test/train data, creates a model, trains, and saves it
     Input: 
         model_to_load - if continuing training on previously saved model
@@ -41,30 +35,34 @@ def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_mu
         Models are saved at data/models
 
     """
+    
+    PATHS=create_paths()
+    
     # Check test and train folders have files
-    train=os.listdir(PATH/TRAIN)
-    test=os.listdir(PATH/VALIDATION)
-    if len(train)<2:
-        print(f'Not enough files in {PATH/TRAIN}. First run make_test_train.py')
+    train_files=os.listdir(PATHS["data"]/train)
+    test_files=os.listdir(PATHS["data"]/test)
+    if len(train_files)<2:
+        print(f'Not enough files in {PATHS["data"]/train}. First run make_test_train.py')
         return
-    if len(test)<2:
-        print(f'Not enough files in {PATH/VALIDATION}. First run make_test_train.py, or increase test_train_split')
+    if len(test_files)<2:
+        print(f'Not enough files in {PATHS["data"]/test}. First run make_test_train.py, or increase test_train_split')
         return    
         
     
     TEXT = data.Field(lower=True, tokenize=music_tokenizer)
+    
     # Adam Optimizer with slightly lowered momentum 
     optimizer_function = partial(optim.Adam, betas=(0.7, 0.99))  
-    FILES = dict(train=TRAIN, validation=VALIDATION, test=VALIDATION)    
+    FILES = dict(train=train, validation=test, test=test)    
     
     # Build a FastAI Language Model Dataset from the training and validation set
     # Mark as <unk> any words not used at least min_freq times
-    md = LanguageModelData.from_text_files(PATH, TEXT, **FILES, bs=bs, bptt=bptt, min_freq=min_freq)
+    md = LanguageModelData.from_text_files(PATHS["data"], TEXT, **FILES, bs=bs, bptt=bptt, min_freq=min_freq)
     print("\nCreated language model data.")
     print("Vocab size: "+str(md.nt))
     
     # Save parameters so that it's fast to rebuild network in generate.py
-    dump_param_dict(TEXT, md, bs, bptt, em_sz, nh, nl, model_out)
+    dump_param_dict(PATHS, TEXT, md, bs, bptt, em_sz, nh, nl, model_out)
     
     # AWD LSTM model parameters (with dropout_multiplier=1, these are the values recommended 
     # by the AWD LSTM paper. For notewise encoding, I found that higher amounts of dropout
@@ -79,12 +77,12 @@ def main(model_to_load, model_out, bs, bptt, em_sz, nh, nl, min_freq, dropout_mu
 
     if model_to_load:
         print("Loading: "+model_to_load)
-        learner.model.load_state_dict(torch.load(OUT/model_to_load))       
+        learner.model.load_state_dict(torch.load(PATHS["generator"]/model_to_load))       
 
     lrs=[3e-3, 3e-4, 3e-6, 3e-8]
     trainings=["_light.pth", "_med.pth", "_full.pth", "_extra.pth"] 
     save_names=[model_out+b for b in trainings]
-    save_names=[OUT/s for s in save_names]
+    save_names=[PATHS["generator"]/s for s in save_names]
         
     for i in range(len(lrs)):
         train_and_save(learner, lrs[i], epochs, save_names[i])
@@ -111,6 +109,12 @@ if __name__ == "__main__":
     parser.add_argument("--dropout", dest="dropout", help="Dropout multiplier (default: 1, range 0-5.)", type=float) 
     parser.set_defaults(dropout=1)    
     parser.add_argument("--load_model", dest="model_to_load", help="Optional partially trained model state dict")
+    parser.add_argument("--test", dest="test", help="Specify folder name in data that holds test data (default 'test')")
+    parser.add_argument("--train",dest="train", help="Specify folder name in data that holds train data (default 'train')")    
     args = parser.parse_args()
 
-    main(args.model_to_load,args.prefix, args.bs, args.bptt, args.em_sz, args.nh, args.nl, args.min_freq, args.dropout, args.epochs)
+    test = args.test if args.test else "test"
+    train = args.train if args.train else "train"
+    
+    main(args.model_to_load, args.prefix, test, train, args.bs, args.bptt, args.em_sz,
+         args.nh, args.nl, args.min_freq, args.dropout, args.epochs)

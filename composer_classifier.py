@@ -18,7 +18,7 @@ def train(model_to_load, training, use_pretrain, epochs, bs):
     music_data = TextData.from_splits(PATHS["data"], splits, bs)
 
     print("Initializing model")
-    optimizer_function = partial(optim.Adam, betas=(0.7, 0.99))  # Adam optimizer with lower momentum
+    optimizer_function = partial(optim.Adam, betas=(0.6, 0.95))  # Adam optimizer with lower momentum
     
     model = music_data.get_model(optimizer_function, 1500, bptt=params["bptt"], emb_sz=params["em_sz"], 
                                  n_hid=params["nh"], n_layers=params["nl"], dropout=0.1, dropouti=0.4,
@@ -34,7 +34,7 @@ def train(model_to_load, training, use_pretrain, epochs, bs):
     # each cycle. The model is saved as _light after the first cycle, as _med after
     # the second cycle, etc. Each cycle is "epochs" long
     
-    lrs=[3e-3, 3e-4, 3e-6, 3e-8]
+    lrs=[3e-4, 3e-4, 3e-6, 3e-8]
     trainings=["_light.pth", "_med.pth", "_full.pth", "_extra.pth"] 
     save_names=[model_to_load+b for b in trainings]
     save_names=[PATHS["composer"]/s for s in save_names]
