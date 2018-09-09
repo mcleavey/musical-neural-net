@@ -139,7 +139,7 @@ def main(model_to_load, training, test, train, gen_size, sample_freq, chordwise,
     
     # For each generated sample, write mid, mp3, wav, and txt files to the output folder (as 1.mid, etc)
     for i in range(len(results)):
-        write_mid_mp3_wav(results[i], str(i)+".mid", sample_freq, note_offset, out, chordwise)
+        write_mid_mp3_wav(results[i], str(i).zfill(2)+".mid", sample_freq, note_offset, out, chordwise)
         fname=str(i)+".txt"
         f=open(out/fname,"w")
         f.write(results[i])
@@ -147,7 +147,7 @@ def main(model_to_load, training, test, train, gen_size, sample_freq, chordwise,
         
     # For each human-composed sample, write mid, mp3, and wav files to the output folder (as prompt1.mid, etc)
     for i in range(len(musical_prompts)):
-        write_mid_mp3_wav(musical_prompts[i], "prompt"+str(i)+".mid", sample_freq, note_offset, out, chordwise)
+        write_mid_mp3_wav(musical_prompts[i], "prompt"+str(i).zfill(2)+".mid", sample_freq, note_offset, out, chordwise)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
