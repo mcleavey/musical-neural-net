@@ -18,7 +18,7 @@ Note: From inside the musical-neural-net home directory, run:
 ln -s ./replace/this/with/your/path/to/fastai/library fastai 
 ```
 
-to create a symbolic link to the fastai library.
+to create a symbolic link to the fastai library. Alternately, <a href="https://medium.com/@youngladesh/setup-and-run-fast-ai-in-amazon-aws-7fd028351a1e">this blog</a> has a clear description of how to get an AWS machine up and running with FastAI already good to go.
 
 <h2>Basic:</h2>
 Run the Jupyter Notebook BasicIntro.ipynb or follow the individual instructions here. 
