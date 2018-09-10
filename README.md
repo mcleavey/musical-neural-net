@@ -1,4 +1,5 @@
 # Clara: A Neural Net Music Generator
+Generate new songs with a pretrained model <a href="http://54.166.122.18:8000/" target="_blank">here</a>.
 Train an <a href="https://arxiv.org/pdf/1708.02182.pdf">AWD-LSTM</a> to generate piano or violin/piano music<br>
 Project overview is <a href="http://christinemcleavey.com/clara-a-neural-net-music-generator/">here</a>.<br>
 Sample generations are <a href="http://christinemcleavey.com/human-or-ai/">here</a>.<br>
