@@ -19,7 +19,8 @@ Note: From inside the musical-neural-net home directory, run:
 ln -s ./replace/this/with/your/path/to/fastai/library fastai 
 ```
 
-to create a symbolic link to the fastai library. Alternately, <a href="https://medium.com/@youngladesh/setup-and-run-fast-ai-in-amazon-aws-7fd028351a1e">this blog</a> has a clear description of how to get an AWS machine up and running with FastAI already good to go.
+to create a symbolic link to the fastai library. Alternately, <a href="https://medium.com/@youngladesh/setup-and-run-fast-ai-in-amazon-aws-7fd028351a1e">this blog</a> has a clear description of how to get an AWS machine up and running with FastAI already good to go.<br><br>
+You will also likely need to use sudo apt install to get fluidsynth, mpg321, and twolame.
 
 <h2>Basic:</h2>
 Run the Jupyter Notebook BasicIntro.ipynb or follow the individual instructions here. 
@@ -57,7 +58,7 @@ Put these in data/composers/notewise:
 <li><a href="http://www.christinemcleavey.com/files/chordwise_piano_solo.tar.gz">Chordwise piano solo text files</a></li>
 <li><a href="http://www.christinemcleavey.com/files/chordwise_chamber.tar.gz">Chordwise piano/violin text files</a></li>
 </ul>
-(Run tar -zxvf <name>.tar.gz to expand each one.)
+(Run tar -zxvf thisfilename.tar.gz to expand each one.)
 
 
 <h2>Training and Generation:</h2>
