@@ -28,7 +28,7 @@ class MyHandler(SimpleHTTPRequestHandler):
             self.send_header('Content-type','text/html')
             self.end_headers()  
             
-            main("notewise4b", "full", "test", "train", 600, 4, False, 33, False, "temp", 16, 3, 1, 200)            
+            main("notewise4", "light", "test", "train", 600, 4, False, 33, False, "temp", 16, 2, .8, 200)            
             playlist_html, playlist_css, playlist_js=make_http_playlist(music_dir)
             self.wfile.write(bytes(playlist_html, "utf8"))
             self.wfile.write(bytes(playlist_css, "utf8"))
