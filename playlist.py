@@ -83,6 +83,9 @@ def make_http_playlist(music_dir):
     # Website Colors: ffe74c-ff5964-ffffff-38618c-35a7ff
     playlist_html=""
     audio_html=""
+    head=""
+    end_html=""
+    image_html=""
     count=0
     for root, dirs, files in os.walk(music_dir):
         for file in sorted(files):
@@ -101,22 +104,23 @@ def make_http_playlist(music_dir):
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head> <body><div class="jumbotron">
-  <h1 class="display-4" align="center">Neural Net Generations</h1>
-  </div>'''
+<h2 class="display-4" align="center">Clara: A Musical Neural Net Generator</h2>
+<p align="center" class="lead">by Christine Payne</p>
+</div>'''
                 image_html=u'''<div id="composing" class="center" text-align="center"><h2>Composing new pieces, please wait...</h2><br><img src="./composing.gif"></div>'''
-                audio_html = u'''<div id="view_playlist" class="center"><div style="width:60%; margin:auto"><audio id="audio" preload="auto" tabindex="0" controls="" type="audio/wav">
+                audio_html = u'''<div id="view_playlist" class="center"><audio id="audio" preload="auto" tabindex="0" controls="" type="audio/wav">
                     <source type="audio/wav" src="{}">Sorry, your browser does not support HTML5 audio.
-                    </audio><br> <button id="next" class="btn btn-outline-secondary">Play Next Song</button> 
-                    <a class="btn btn-outline-secondary" href="./music" role="button" id="new">Generate New Songs (Takes ~1 Minute)</a>
-                    </div>
-                    <hr>Right click on any of the files to download them:<br>
+                    </audio> 
+                      
                     '''.format(os.path.join(root, file))
                 playlist_html = u'''<li class="active"><a href="{0}">{1}</a>
                     </li>\n'''.format(os.path.join(root, file), file)                
             else:
                 playlist_html +=u'''<li><a href="{0}">{1}</a></li>\n'''.format(os.path.join(root, file), file)
             count += 1
-    end_html=u'''</div>
+    end_html=u'''<a class="btn btn-outline-secondary" href="./music" role="button" id="new">Generate New Songs (Takes
+    ~1 Minute)</a>
+    </div>
 
 
 
@@ -136,9 +140,9 @@ def make_http_playlist(music_dir):
     #playlist .active a{color:#FF5964;text-decoration:none;}
     #playlist li a:hover{text-decoration:none;color:#38618c}
     ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
      }
     img {
     display: block;
@@ -148,7 +152,7 @@ def make_http_playlist(music_dir):
     }
     .center {
     margin: auto;
-    width: 60%;
+    width: 80%;
     border: 3px solid #35a7ff;
     padding: 10px;
     }
