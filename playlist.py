@@ -81,8 +81,10 @@ def make_playlist(music_dir):
     
 def make_http_playlist(music_dir):
     # Website Colors: ffe74c-ff5964-ffffff-38618c-35a7ff
+    head=""
     playlist_html=""
     audio_html=""
+    end_html=""
     count=0
     for root, dirs, files in os.walk(music_dir):
         for file in sorted(files):
