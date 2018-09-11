@@ -43,16 +43,23 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
 
         # Write to train/real and train/fake, or test/real and test/fake 
         # Choose randomly whether train or test, according to the test_train_split (tt_split) frequency
-        dest=TEST if random.random()<tt_split else TRAIN
+        
+        num_samples=0
         for i in range(generator_bs):
+            dest=TEST if random.random()<tt_split else TRAIN
             for mini in range(gen_size//bptt):
                 fname=prefix+str(j)+"_"+str(i)+"_"+str(mini)+".txt"
                 f=open(dest/'fake'/fname,"w")
-                f.write(results[i])
+                f.write(results[i][mini*bptt:(mini+1)*bptt])
                 f.close()
-                f=open(dest/'real'/fname,"w")
-                f.write(musical_prompts[i][mini*bptt:(mini+1)*bptt])
-                f.close()
+                num_samples+=1
+
+        musical_prompts=generate_musical_prompts(prompts, gen_size, num_samples)
+        for i in range(num_samples):
+            dest=TEST if random.random()<tt_split else TRAIN
+            f=open(dest/'real'/fname,"w")
+            f.write(musical_prompts[i])
+            f.close()            
 
 
 if __name__ == "__main__":
