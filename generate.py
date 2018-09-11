@@ -32,6 +32,27 @@ def load_long_prompts(folder):
 
 def music_tokenizer(x): return x.split(" ")
     
+
+def generate_musical_prompts(prompts, bptt, bs):
+    prompt_size=bptt
+    musical_prompts=[]
+    
+    # Randomly select bs different prompts and hold them in musical_prompts
+    for i in range(bs):
+        this_prompt=[]
+        timeout=0
+        while timeout<100 and len(this_prompt)-prompt_size<=1:
+            sample=random.randint(0,len(prompts)-1)
+            this_prompt=prompts[sample].split(" ")
+            timeout+=1
+        assert len(this_prompt)-prompt_size>1, f'After 100 tries, unable to find prompt file longer than {bptt}. Run with smaller --bptt'
+            
+        offset=random.randint(0, len(this_prompt)-prompt_size-1)     
+        musical_prompts.append(" ".join(this_prompt[offset:prompt_size+offset]))
+
+    return musical_prompts
+
+
 def create_generation_batch(model, num_words, random_choice_frequency, 
                             trunc_size, bs, bptt, prompts, params, TEXT):
     """ Generate a batch of musical samples
@@ -53,26 +74,8 @@ def create_generation_batch(model, num_words, random_choice_frequency,
     This is very loosely based on an example in the FastAI notebooks, but is modified to include randomized prompts,
     to generate a batch at a time rather than a single example, and to include truncated random sampling.
     """
-    prompt_size=bptt
-    samples=[]
-    offsets=[]
-    musical_prompts=[]
-    
-    # Randomly select bs different prompts and hold them in musical_prompts
-    for i in range(bs):
-        this_prompt=[]
-        timeout=0
-        while timeout<100 and len(this_prompt)-prompt_size<=1:
-            sample=random.randint(0,len(prompts)-1)
-            this_prompt=prompts[sample].split(" ")
-            timeout+=1
-        assert len(this_prompt)-prompt_size>1, f'After 100 tries, unable to find prompt file longer than {bptt}. Run with smaller --bptt'
-            
-        offset=random.randint(0, len(this_prompt)-prompt_size-1) 
-        samples.append(sample)
-        offsets.append(offset)    
-        musical_prompts.append(" ".join(this_prompt[offset:prompt_size+offset]))
-    
+
+    musical_prompts=generate_musical_prompts(prompts, bptt, bs)
 
     results=['']*bs
     model.eval()
