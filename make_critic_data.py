@@ -7,10 +7,11 @@ PATH = Path('./data/')
 TEST=Path("./critic_data/test")
 TRAIN=Path("./critic_data/train")
 
-def main(num_to_generate, replace, prefix, model_to_load, training, gen_size, use_test_prompt, generator_bs, tt_split):
-    
+def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, gen_size, use_test_prompt, generator_bs, tt_split):
+    PATHS=create_paths()
+
     # Load pretrained model and training/test text
-    lm,params,TEXT=load_pretrained_model(model_to_load, training, generator_bs)
+    lm,params,TEXT=load_pretrained_model(model_to_load, PATHS, training, generator_bs)
     
     # Load all prompts according to if user wants to use training set or test set prompts
     prompts=load_long_prompts(PATH/"test") if use_test_prompt else load_long_prompts(PATH/"train")
@@ -78,5 +79,5 @@ if __name__ == "__main__":
 
     random.seed(os.urandom(10))
 
-    main(args.num, args.replace, args.prefix, args.model, args.training, args.size, args.use_test_prompt,
+    make_critic_data(args.num, args.replace, args.prefix, args.model, args.training, args.size, args.use_test_prompt,
           args.bs, args.tt_split)    
