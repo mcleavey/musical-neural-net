@@ -47,12 +47,14 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
         # Choose randomly whether train or test, according to the test_train_split (tt_split) frequency
         
         num_samples=0
+        results=[r.split(" ") for r in results]
         for i in range(generator_bs):
             dest=TEST if random.random()<tt_split else TRAIN
             for mini in range(gen_size//bptt):
                 fname=prefix+str(j)+"_"+str(i)+"_"+str(mini)+".txt"
+
                 f=open(dest/'fake'/fname,"w")
-                f.write(results[i][mini*bptt:(mini+1)*bptt])
+                f.write(" ".join(results[i][mini*bptt:(mini+1)*bptt]))
                 f.close()
                 num_samples+=1
 
