@@ -47,10 +47,10 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
         num_samples=0
         for i in range(generator_bs):
             dest=TEST if random.random()<tt_split else TRAIN
-            for mini in range(gen_size//bptt):
+            for mini in range(gen_size//gen_size):
                 fname=prefix+str(j)+"_"+str(i)+"_"+str(mini)+".txt"
                 f=open(dest/'fake'/fname,"w")
-                f.write(results[i][mini*bptt:(mini+1)*bptt])
+                f.write(results[i][mini*gen_size:(mini+1)*gen_size])
                 f.close()
                 num_samples+=1
 
