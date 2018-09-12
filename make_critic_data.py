@@ -28,6 +28,8 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
             for f in os.listdir(fake):
                 os.unlink(fake/f)   
 
+    bptt=params["bptt"]
+
     # Loop: generate examples and write to file (do this as many times as needed to reach num_to_generate)
     num_iter=num_to_generate//generator_bs+1
     for j in range(0, num_iter):
@@ -36,7 +38,7 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
         # Generates a batch of prompts and results, each time with a randomized random_choice_frequency
         # and trunc_size (to get a variety of different kinds of generated outputs)
         musical_prompts,results=create_generation_batch(model=lm.model, num_words=gen_size,  
-                                                    bs=generator_bs, bptt=gen_size,
+                                                    bs=generator_bs, bptt=bptt,
                                                     random_choice_frequency=random.random(),
                                                     trunc_size=random.randint(1,10), prompts=prompts,
                                                     params=params, TEXT=TEXT)
@@ -47,14 +49,14 @@ def make_critic_data(num_to_generate, replace, prefix, model_to_load, training, 
         num_samples=0
         for i in range(generator_bs):
             dest=TEST if random.random()<tt_split else TRAIN
-            for mini in range(gen_size//gen_size):
+            for mini in range(gen_size//bptt):
                 fname=prefix+str(j)+"_"+str(i)+"_"+str(mini)+".txt"
                 f=open(dest/'fake'/fname,"w")
-                f.write(results[i][mini*gen_size:(mini+1)*gen_size])
+                f.write(results[i][mini*bptt:(mini+1)*bptt])
                 f.close()
                 num_samples+=1
 
-        musical_prompts=generate_musical_prompts(prompts, gen_size, num_samples)
+        musical_prompts=generate_musical_prompts(prompts, bptt, num_samples)
         for i in range(num_samples):
             dest=TEST if random.random()<tt_split else TRAIN
             f=open(dest/'real'/fname,"w")
