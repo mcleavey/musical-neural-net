@@ -116,27 +116,40 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
         if score[i] in ["", " ", "<eos>", "<unk>"]:
             continue
         elif score[i][:3]=="end":
+            if score[i][-3:]=="eoc":
+                time_offset+=1
             continue
         elif score[i][:4]=="wait":
             time_offset+=int(score[i][4:])
             continue
         else:
             # Look ahead to see if an end<noteid> was generated
-            # soon after.  Just brute forcing it for now - I'll 
-            # come back to redo this if it's too slow
+            # soon after.  
             duration=1
             has_end=False
+            note_string_len = len(score[i])
             for j in range(1,200):
                 if i+j==len(score):
                     break
                 if score[i+j][:4]=="wait":
                     duration+=int(score[i+j][4:])
-                if score[i+j]=="end"+score[i] or score[i+j]==score[i]:
+                if score[i+j][:3+note_string_len]=="end"+score[i] or score[i+j][:note_string_len]==score[i]:
                     has_end=True
                     break
+                if score[i+j][-3:]=="eoc":
+                    duration+=1
+                elif score[i+j][-4:]=="eoc2":
+                    duration+=2
             if not has_end:
                 duration=12
-                
+
+            add_wait = 0
+            if score[i][-3:]=="eoc":
+                score[i]=score[i][:-3]
+                add_wait = 1
+            elif score[i][-4:]=="eoc2":
+                score[i]=score[i][:-4]
+                add_wait = 2
             new_note=music21.note.Note(int(score[i][1:])+note_offset)    
             new_note.duration = music21.duration.Duration(duration*speed)
             new_note.offset=time_offset*speed
@@ -144,6 +157,9 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
                 violin_notes.append(new_note)
             else:
                 piano_notes.append(new_note)
+            
+            time_offset+=add_wait
+                
     violin=music21.instrument.fromString("Violin")
     piano=music21.instrument.fromString("Piano")
     violin_notes.insert(0, violin)

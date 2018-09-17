@@ -16,7 +16,7 @@ VIOLINLIKE=["Violin", "Viola", "Cello", "Violincello", "Violoncello", "Flute",
 PIANOLIKE=["Piano", "Harp", "Harpsichord", "Organ", ""]
 
 
-def assignInstrument(instr):
+def assign_instrument(instr):
     # Determine if instrument is Piano-like or Violin-like
     if str(instr) in PIANOLIKE:
         return 0
@@ -26,7 +26,7 @@ def assignInstrument(instr):
         print("Warning, unknown instrument: "+str(instr))
         return -1
     
-def streamToStringArr(s, chamber, note_range, note_offset, sample_freq):  
+def stream_to_chordwise(s, chamber, note_range, note_offset, sample_freq):  
     numInstruments=2 if chamber else 1
     maxTimeStep = floor(s.duration.quarterLength * sample_freq)+1
     score_arr = np.zeros((maxTimeStep, numInstruments, note_range))
@@ -39,7 +39,7 @@ def streamToStringArr(s, chamber, note_range, note_offset, sample_freq):
 
     for n in s.recurse().addFilter(noteFilter):
         if chamber:
-            instrumentID=assignInstrument(n.activeSite.getInstrument())
+            instrumentID=assign_instrument(n.activeSite.getInstrument())
             if instrumentID==-1:
                 return []
         notes.append((n.pitch.midi-note_offset, floor(n.offset*sample_freq), floor(n.duration.quarterLength*sample_freq), instrumentID))
@@ -47,7 +47,7 @@ def streamToStringArr(s, chamber, note_range, note_offset, sample_freq):
     for c in s.recurse().addFilter(chordFilter):
         pitchesInChord=c.pitches
         if chamber:
-            instrumentID=assignInstrument(n.activeSite.getInstrument())     
+            instrumentID=assign_instrument(n.activeSite.getInstrument())     
             if instrumentID==-1:
                 return []
 
@@ -175,7 +175,7 @@ def translate_piece(fname, composer, chamber, sample_freqs, note_ranges, note_of
     for sample_freq in sample_freqs:
         for note_range in note_ranges:
     
-            score_string_arr = streamToStringArr(midi_stream, chamber, note_range, note_offsets[note_range], sample_freq)
+            score_string_arr = stream_to_chordwise(midi_stream, chamber, note_range, note_offsets[note_range], sample_freq)
             if len(score_string_arr)==0:
                 print("Skipping file: Unknown instrument")
                 return

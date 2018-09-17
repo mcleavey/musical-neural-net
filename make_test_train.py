@@ -2,6 +2,7 @@ import os, shutil
 import argparse
 from pathlib import Path
 import random
+from tqdm import tqdm
 
 
 
@@ -46,21 +47,57 @@ def remove_duration(DIR):
     # Chordwise (probably there needs to be a parallel model predicting the duration for
     # each note in the predicted chord). Directly using the 2s makes the vocab size
     # too large.
-    for file in os.listdir(DIR):
+    for file in tdqm(os.listdir(DIR)):
         f=open(DIR/file, "r+")
         temp=f.read()
         f.close()
         os.unlink(DIR/file)
-        temp=temp.replace("2","0")
-        temp=change_rests(temp)
-        temp=temp.split(" ")
-        piece_len=len(temp)//12
+
         for i in range(12):
             fname=file[:-4]+"_"+str(i)+".txt"
             f=open(DIR/fname, "w")
             f.write(" ".join(temp[i*piece_len:(i+1)*piece_len]))
             f.close()
 
+def remove_wait(DIR):
+    # Currently, for Chordwise, I don't use note durations. In 
+    # midi-to-encoding I keep them there (0 marks no note, 1 marks the 
+    # start of the note, and 2 marks the end of a note). Here I remove the 2s.
+    # I don't currently have a good way to handle note durations when predicting
+    # Chordwise (probably there needs to be a parallel model predicting the duration for
+    # each note in the predicted chord). Directly using the 2s makes the vocab size
+    # too large.
+    print("Using directory:"+str(DIR))
+    files=os.listdir(DIR)
+    for j in tqdm(range(len(files))):
+        f=open(DIR/files[j], "r+")
+        temp=f.read()
+        f.close()
+        os.unlink(DIR/files[j])
+        temp=temp.split(" ")
+        i=1
+        while i<len(temp):
+            if temp[i][:4]=="wait" and temp[i-1][:4]!="wait":
+                if temp[i]=="wait1":
+                    temp[i-1]=temp[i-1]+"eoc"
+                    temp[i]=""
+                else:
+                    temp[i-1]=temp[i-1]+"eoc2"
+                    if temp[i]=="wait2":
+                        temp[i]=""
+                    else:
+                        temp[i]="wait"+str(int(temp[i][4:])-2)
+
+                i+=1
+            i+=1
+
+        piece_len=len(temp)//12
+        for i in range(12):
+            fname=files[j][:-4]+"_"+str(i)+".txt"
+            f=open(DIR/fname, "w")
+            f.write(" ".join(temp[i*piece_len:(i+1)*piece_len]))
+            f.close()            
+            
 
 def clear_prev(TARGET_TRAIN, TARGET_TEST):
     TARGET_TRAIN.mkdir(parents=True, exist_ok=True)
@@ -78,7 +115,7 @@ def example(TARGET_TRAIN, TARGET_TEST, EXAMPLE_TRAIN, EXAMPLE_TEST):
     shutil.copytree(EXAMPLE_TEST, TARGET_TEST)
 
         
-def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample):
+def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, sample, no_wait):
     """ Clears the current train/test folders and copies new files there
     Input:
         SOURCE - path to original copies of the text files 
@@ -95,6 +132,7 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
     clear_prev(TARGET_TRAIN, TARGET_TEST)
       
     for c in composers:
+        print(SOURCE/c)
         files=os.listdir(SOURCE/c)
         for f in files:
             if random.random()>sample:
@@ -107,6 +145,10 @@ def main(SOURCE, TARGET_TRAIN, TARGET_TEST, composers, tt_split, chordwise, samp
         print("Chordwise encoding: removing duration marks and expanding rests")
         remove_duration(TARGET_TRAIN)
         remove_duration(TARGET_TEST)
+    elif no_wait:
+        print("Notewise encoding: removing wait1, wait2")
+        remove_wait(TARGET_TRAIN)
+        remove_wait(TARGET_TEST)
                 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -116,6 +158,8 @@ if __name__ == "__main__":
     parser.add_argument("--sample_freq", dest="sample_freq", help="Split beat into 4 or 12 parts (default 4 for Chordwise, 12 for Notewise)")
     parser.add_argument("--chordwise", dest="chordwise", action="store_true", help="Use chordwise encoding (defaults to notewise)")
     parser.set_defaults(chordwise=False) 
+    parser.add_argument("--no_wait", dest="no_wait", action="store_true", help="Re-encode wait1 markers (notewise only)")
+    parser.set_defaults(no_wait=False)     
     parser.add_argument("--chamber", dest="chamber", action="store_true", help="Chamber music (defaults to piano solo)")
     parser.set_defaults(chamber=False) 
     parser.add_argument("--small_note_range", dest="small_note_range", action="store_true", help="Set 38 note range (defaults to 62)")
@@ -154,7 +198,7 @@ if __name__ == "__main__":
     
 
     
-    main(SOURCE, TARGET_TRAIN, TARGET_TEST, composer, args.tt_split, args.chordwise, args.sample)
+    main(SOURCE, TARGET_TRAIN, TARGET_TEST, composer, args.tt_split, args.chordwise, args.sample, args.no_wait)
     
     
     # TODO: ADD assertions about the args (ie, tt_split within 0-1, sample_freq corresponds with files)
