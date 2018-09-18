@@ -88,7 +88,7 @@ def remove_wait(DIR):
                     temp[i]=""
                 else:
                     temp[i]="wait"+str(int(temp[i][4:])-1)
-            elif condense_octaves and temp[i][:1]=="p" or temp[i][:4]=="endp":
+            elif condense_octaves and (temp[i][:1]=="p" or temp[i][:4]=="endp"):
                 k=1
                 while i+k<len(temp):
                     if temp[i+k][:4]=="wait":
