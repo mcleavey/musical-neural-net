@@ -68,8 +68,8 @@ Put these in data/composers/notewise:
 <li>train.py - train an AWD-LSTM (adjust model parameters, dropout, and training regime)</li>
 <li>generate.py - generate new samples (adjust generation size)</li>
 </ul>
-Each script has default settings which should be reasonable, but use --help to see the different options and parameters which can be modified.<br>
-If you use the data files I've linked above, those are quite large, and will take a long time to train. If you are looking to experiment with different training networks, I'd highly recommend at first using --sample .2 (or similar) with make_test_train.py, so that you have a much smaller dataset to play with and can iterate faster.
+Each script has default settings which should be reasonable, but use --help to see the different options and parameters which can be modified.<br><br>
+If you use the data files I've linked above, those are quite large, and will take a long time to train. If you are looking to experiment with different training networks, I'd highly recommend at first using --sample .1 (10% of the data) with make_test_train.py, so that you have a much smaller dataset to play with and can iterate faster.<br><br>
 Playlist.ipynb is a simple Jupyter Notebook which creates a nicely formatted playlist for listening to all the generations.
 <h2>Music Critic:</h2>
 <ul>
