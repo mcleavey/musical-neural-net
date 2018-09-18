@@ -54,7 +54,7 @@ def remove_duration(DIR):
         os.unlink(DIR/file)
 
         for i in range(12):
-            fname=file[:-4]+"_"+str(i)+".txt"
+            fname=file[:-4]+"___"+str(i)+".txt"
             f=open(DIR/fname, "w")
             f.write(" ".join(temp[i*piece_len:(i+1)*piece_len]))
             f.close()
@@ -69,31 +69,46 @@ def remove_wait(DIR):
     # too large.
     print("Using directory:"+str(DIR))
     files=os.listdir(DIR)
+    condense_octaves = False   # Experimented to see if representing octaves as a single token would
+                               # help. Initial results were ok but not great, made it more difficult for
+                               # model to learn voice leading.
     for j in tqdm(range(len(files))):
         f=open(DIR/files[j], "r+")
         temp=f.read()
         f.close()
         os.unlink(DIR/files[j])
         temp=temp.split(" ")
+        
         i=1
         while i<len(temp):
-            if temp[i][:4]=="wait" and temp[i-1][:4]!="wait":
+#            print(" ".join(temp[i-1:i+5]))
+            if temp[i][:4]=="wait" and temp[i-1][:4]!="wait" and temp[i-1][-3:]!="eoc":
+                temp[i-1]=temp[i-1]+"eoc"
                 if temp[i]=="wait1":
-                    temp[i-1]=temp[i-1]+"eoc"
                     temp[i]=""
                 else:
-                    temp[i-1]=temp[i-1]+"eoc2"
-                    if temp[i]=="wait2":
-                        temp[i]=""
-                    else:
-                        temp[i]="wait"+str(int(temp[i][4:])-2)
-
-                i+=1
+                    temp[i]="wait"+str(int(temp[i][4:])-1)
+            elif condense_octaves and temp[i][:1]=="p" or temp[i][:4]=="endp":
+                k=1
+                while i+k<len(temp):
+                    if temp[i+k][:4]=="wait":
+                        break
+                    if temp[i][:1]=="p" and temp[i+k][:1]=="p":
+                        if int(temp[i][1:])+12==int(temp[i+k][1:]):
+                            temp[i]="p_octave_"+temp[i][1:]
+                            temp[i+k]=""
+                            break
+                    if temp[i][:4]=="endp" and temp[i+k][:4]=="endp":
+                        if int(temp[i][4:])+12==int(temp[i+k][4:]):
+                            temp[i]="endp_octave_"+temp[i][4:]
+                            temp[i+k]=""
+                            break                        
+                    k+=1                    
             i+=1
 
         piece_len=len(temp)//12
         for i in range(12):
-            fname=files[j][:-4]+"_"+str(i)+".txt"
+            fname=files[j][:-4]+"___"+str(i)+".txt"
             f=open(DIR/fname, "w")
             f.write(" ".join(temp[i*piece_len:(i+1)*piece_len]))
             f.close()            

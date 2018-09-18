@@ -112,6 +112,20 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
     piano_notes=[]
     violin_notes=[]
     time_offset=0
+    
+    i=0
+    while i<len(score):
+        if score[i][:9]=="p_octave_":
+            add_wait=""
+            if score[i][-3:]=="eoc":
+                add_wait="eoc"
+                score[i]=score[i][:-3]
+            this_note=score[i][9:]
+            score[i]="p"+this_note
+            score.insert(i+1, "p"+str(int(this_note)+12)+add_wait)
+            i+=1
+        i+=1
+        
     for i in range(len(score)):
         if score[i] in ["", " ", "<eos>", "<unk>"]:
             continue
@@ -138,8 +152,7 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
                     break
                 if score[i+j][-3:]=="eoc":
                     duration+=1
-                elif score[i+j][-4:]=="eoc2":
-                    duration+=2
+
             if not has_end:
                 duration=12
 
@@ -147,16 +160,20 @@ def arrToStreamNotewise(score, sample_freq, note_offset):
             if score[i][-3:]=="eoc":
                 score[i]=score[i][:-3]
                 add_wait = 1
-            elif score[i][-4:]=="eoc2":
-                score[i]=score[i][:-4]
-                add_wait = 2
-            new_note=music21.note.Note(int(score[i][1:])+note_offset)    
-            new_note.duration = music21.duration.Duration(duration*speed)
-            new_note.offset=time_offset*speed
-            if score[i][0]=="v":
-                violin_notes.append(new_note)
-            else:
-                piano_notes.append(new_note)
+
+            try: 
+                new_note=music21.note.Note(int(score[i][1:])+note_offset)    
+                new_note.duration = music21.duration.Duration(duration*speed)
+                new_note.offset=time_offset*speed
+                if score[i][0]=="v":
+                    violin_notes.append(new_note)
+                else:
+                    piano_notes.append(new_note)                
+            except:
+                print("Unknown note: " + score[i])
+
+            
+
             
             time_offset+=add_wait
                 
