@@ -48,7 +48,6 @@ def load_pretrained_model(model_to_load, PATHS, training, bs):
     TEXT=pickle.load(open(f'{PATHS["generator"]}/{model_to_load}_text.pkl','rb'))
     lm = LanguageModel(to_gpu(get_language_model(params["n_tok"], params["em_sz"], params["nh"], 
                                                     params["nl"], params["pad"])))
-
     mod_name=model_to_load+"_"+training+".pth"
     lm.model.load_state_dict(torch.load(PATHS["generator"]/mod_name)) 
     lm.model[0].bs=bs
