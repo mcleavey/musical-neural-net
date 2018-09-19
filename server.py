@@ -74,7 +74,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", dest="model", help="Generative Model")
     parser.set_defaults(model="mod")
-    parser.add_argument("--training", dest="training", help="Training (default light)"
+    parser.add_argument("--training", dest="training", help="Training (default light)")
     parser.set_defaults(training="light")
     parser.add_argument("--random_freq", dest="random_freq", help="Frequency of randomized choice (default .8)")
     parser.set_defaults(random_freq=.8)
