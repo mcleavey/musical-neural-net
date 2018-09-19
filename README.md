@@ -52,11 +52,13 @@ My dataset is available here (you can download any or all):<br>
 Put these in data/composers/notewise:
 <ul>
 <li><a href="http://www.christinemcleavey.com/files/notewise_piano_solo.tar.gz">Notewise piano solo text files</a></li>
+<li><a href="http://www.christinemcleavey.com/files/jazz.tar.gz">Notewise jazz piano solo text files</a></li>
 <li><a href="http://www.christinemcleavey.com/files/notewise_chamber.tar.gz">Notewise piano/violin text files</a></li>
 </ul>
-Put these in data/composers/notewise:
+Put these in data/composers/chordwise:
 <ul>
 <li><a href="http://www.christinemcleavey.com/files/chordwise_piano_solo.tar.gz">Chordwise piano solo text files</a></li>
+<li><a href="http://www.christinemcleavey.com/files/jazz_chords.tar.gz">Chordwise jazz piano solo text files</a></li>  
 <li><a href="http://www.christinemcleavey.com/files/chordwise_chamber.tar.gz">Chordwise piano/violin text files</a></li>
 </ul>
 (Run tar -zxvf thisfilename.tar.gz to expand each one.)
