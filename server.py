@@ -1,12 +1,20 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler, SimpleHTTPRequestHandler
 from socketserver import ThreadingMixIn
 import threading
+import argparse
+
 
 USE_HTTPS = False
 from playlist import make_http_playlist
 from generate import *
 
 music_dir = u'./data/output/temp'
+
+model="mod"
+training="light"
+random_freq=.8
+trunc=2
+
 
 class MyHandler(SimpleHTTPRequestHandler):
     def do_POST(self):
@@ -28,7 +36,7 @@ class MyHandler(SimpleHTTPRequestHandler):
             self.send_header('Content-type','text/html')
             self.end_headers()  
             
-            main("notewise4", "light", "test", "train", 600, 4, False, 33, False, "temp", 16, 2, .8, 200)            
+            main(model, training, "test", "train", 600, 4, False, 33, False, "temp", 16, trunc, random_freq, 240)            
             playlist_html, playlist_css, playlist_js=make_http_playlist(music_dir)
             self.wfile.write(bytes(playlist_html, "utf8"))
             self.wfile.write(bytes(playlist_css, "utf8"))
@@ -63,4 +71,16 @@ def run():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", dest="model", help="Generative Model")
+    parser.set_defaults(model="mod")
+    parser.add_argument("--training", dest="training", help="Training (default light)"
+    parser.set_defaults(training="light")
+    parser.add_argument("--random_freq", dest="random_freq", help="Frequency of randomized choice (default .8)")
+    parser.set_defaults(random_freq=.8)
+    parser.add_argument("--trunc", dest="trunc", help="Number of top predictions to consider (default 2)")
+    parser.set_defaults(trunc=2)
+
+    args = parser.parse_args()
+    model,training,random_freq,trunc=args.model,args.training,args.random_freq,args.trunc                    
     run()
