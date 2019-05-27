@@ -47,7 +47,7 @@ def stream_to_chordwise(s, chamber, note_range, note_offset, sample_freq):
     for c in s.recurse().addFilter(chordFilter):
         pitchesInChord=c.pitches
         if chamber:
-            instrumentID=assign_instrument(n.activeSite.getInstrument())     
+            instrumentID=assign_instrument(c.activeSite.getInstrument())     
             if instrumentID==-1:
                 return []
 
