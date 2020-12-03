@@ -74,12 +74,12 @@ If you use the data files I've linked above, those are quite large, and will tak
 Playlist.ipynb is a simple Jupyter Notebook which creates a nicely formatted playlist for listening to all the generations.
 <h2>Music Critic:</h2>
 <ul>
-  <li>make_critic_data.py - create the training and test datasests (requires a trained generation model to create the fake data)</li>
+  <li>make_critic_data.py - create the training and test datasets (requires a trained generation model to create the fake data)</li>
   <li>critic.py - trains a classifier to predict if a sample is human-composed or LSTM-composed
 </ul>
 <h2>Composer Classifier:</h2>
 <ul>
-  <li>make_composer_data.py - create the training and test datasests (all from human composed pieces)</li>
+  <li>make_composer_data.py - create the training and test datasets (all from human composed pieces)</li>
   <li>composer_classifier.py - trains a classifier to predict which human composed the piece
 </ul>
 
